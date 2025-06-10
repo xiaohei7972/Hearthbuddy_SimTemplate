@@ -2,7 +2,7 @@
 
  炉石兄弟sim
   
- # CardDefs.xml文件获取地址
+ ## CardDefs.xml文件获取地址
  
  https://github.com/HearthSim/hsdata
 
