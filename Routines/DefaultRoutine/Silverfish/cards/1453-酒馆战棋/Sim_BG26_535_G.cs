@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：10 生命值：10
+	//随从 法师 费用：0 攻击力：10 生命值：10
 	//Rock Rock
 	//摇滚岩石
 	//[x]After you play an Elemental,give your minions +4 Attack.<i>  (Swaps to Health next turn!)</i>@[x][x]After you play an Elemental,give your minions +4 Health.<i>  (Swaps to Attack next turn!)</i>

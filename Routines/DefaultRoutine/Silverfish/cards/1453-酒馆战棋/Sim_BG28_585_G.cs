@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：8 生命值：10
+	//随从 德鲁伊 费用：0 攻击力：8 生命值：10
 	//Snarling Conductor
 	//嚎叫司机
 	//At the start of your turn, discard a spell to gain8 Gold.

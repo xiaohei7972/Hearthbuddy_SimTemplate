@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：4
+	//随从 法师 费用：0 攻击力：4 生命值：4
 	//Living Azerite
 	//活化艾泽里特
 	//[x]Whenever you cast aTavern spell, Elementalsin the Tavern have +1/+1this game.

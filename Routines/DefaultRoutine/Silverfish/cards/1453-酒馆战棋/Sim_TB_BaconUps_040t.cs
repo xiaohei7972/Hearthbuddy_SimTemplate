@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：0 生命值：10
+	//随从 圣骑士 费用：0 攻击力：0 生命值：10
 	//Vault Safe
 	//保险柜
 	//<b>Taunt</b>

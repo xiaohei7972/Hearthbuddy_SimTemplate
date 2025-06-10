@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：8 生命值：8
+	//随从 圣骑士 费用：0 攻击力：8 生命值：8
 	//Frantic Alarm-o-Bot
 	//狂乱的报警机器人
 	//<b>Magnetic</b><b>Windfury</b>

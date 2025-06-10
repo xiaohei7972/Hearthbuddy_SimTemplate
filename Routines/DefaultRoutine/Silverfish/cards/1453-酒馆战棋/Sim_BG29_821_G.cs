@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：6 生命值：20
+	//随从 术士 费用：0 攻击力：6 生命值：20
 	//Crafty Aranasi
 	//狡猾的阿兰纳丝
 	//[x]Whenever this takesdamage, deal 5 damage to_a random enemy minion,twice.

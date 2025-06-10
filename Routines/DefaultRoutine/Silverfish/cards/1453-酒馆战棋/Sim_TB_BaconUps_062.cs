@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：8
+	//随从 术士 费用：0 攻击力：4 生命值：8
 	//Nathrezim Overseer
 	//纳斯雷兹姆监工
 	//<b>Battlecry:</b> Give a friendly Demon +4/+4.

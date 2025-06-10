@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 萨满祭司 费用：0
+	//法术 中立 费用：0
 	//Fire Invocation
 	//火焰祈咒
 	//Double your left-most minion's Attack.

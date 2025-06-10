@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：12 生命值：2
+	//随从 猎人 费用：0 攻击力：12 生命值：2
 	//Shifty Snake
 	//狡捷灵蛇
 	//[x]<b>Deathrattle:</b> Yourteammate gets 2 random<b>Deathrattle</b> minions.

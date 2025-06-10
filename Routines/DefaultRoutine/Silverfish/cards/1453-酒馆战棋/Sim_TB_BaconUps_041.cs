@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：4 生命值：12
+	//随从 圣骑士 费用：0 攻击力：4 生命值：12
 	//Security Rover
 	//安保巡游者
 	//[x]Whenever this miniontakes damage, summon a4/6 Mech with <b>Taunt</b>.

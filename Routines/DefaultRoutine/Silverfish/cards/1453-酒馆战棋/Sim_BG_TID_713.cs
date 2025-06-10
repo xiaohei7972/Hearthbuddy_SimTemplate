@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：5 生命值：4
+	//随从 法师 费用：0 攻击力：5 生命值：4
 	//Bubblette
 	//可爱泡泡
 	//[x]After this minion takes exactly one damage,destroy it. <i>(Pop!)</i>

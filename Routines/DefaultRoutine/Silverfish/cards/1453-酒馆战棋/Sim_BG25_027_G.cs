@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：6 生命值：10
+	//随从 战士 费用：0 攻击力：6 生命值：10
 	//Hunter of Gatherers
 	//采集者猎手
 	//Whenever this gains Attack, give your minions +4 Health.

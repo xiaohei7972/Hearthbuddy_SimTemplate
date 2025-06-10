@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：14 生命值：2
+	//随从 圣骑士 费用：0 攻击力：14 生命值：2
 	//Dr. Boombox
 	//砰砰箱博士
 	//<b>Deathrattle:</b> Deal 14damage to the 2 nearestenemy minions.

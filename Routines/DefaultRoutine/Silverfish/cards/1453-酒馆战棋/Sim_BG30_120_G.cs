@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：6 生命值：6
+	//随从 牧师 费用：0 攻击力：6 生命值：6
 	//Ice Fisher
 	//冰上钓客
 	//After you buy a minion, gain stats equal to double its Tier.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：12
+	//随从 巫妖王 费用：0 攻击力：4 生命值：12
 	//Thundering Abomination
 	//雷鸣憎恶
 	//[x]Whenever you summon aminion in combat, give it+6/+6. If there's no space,_______gain +6/+6 permanently.____

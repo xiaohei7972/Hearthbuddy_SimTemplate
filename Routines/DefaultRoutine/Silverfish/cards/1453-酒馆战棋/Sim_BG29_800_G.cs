@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：2 生命值：6
+	//随从 猎人 费用：0 攻击力：2 生命值：6
 	//Trusty Pup
 	//幼龄忠犬
 	//Whenever this takes damage, gain +2 Attack permanently.

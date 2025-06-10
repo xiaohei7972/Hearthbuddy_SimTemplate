@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：11
+	//随从 无效的 费用：0 攻击力：4 生命值：11
 	//Ghoul-acabra
 	//食尸卡布拉
 	//[x]After a friendly<b>Deathrattle</b> minion dies,give your minions +2/+2permanently.

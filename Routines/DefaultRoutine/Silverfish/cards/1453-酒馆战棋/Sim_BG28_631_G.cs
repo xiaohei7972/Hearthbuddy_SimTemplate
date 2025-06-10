@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：10 生命值：2
+	//随从 恶魔猎手 费用：0 攻击力：10 生命值：2
 	//Vengeful Slitherer
 	//复仇的滑行者
 	//[x]<b>Spellcraft:</b> Give your minions+2 Health until next turn.Any that die next combatgain it permanently!

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 圣骑士 费用：0
+	//法术 中立 费用：0
 	//Competitive Spirit
 	//争强好胜
 	//<b>Secret:</b> When your turn starts, give your minions +1/+1.

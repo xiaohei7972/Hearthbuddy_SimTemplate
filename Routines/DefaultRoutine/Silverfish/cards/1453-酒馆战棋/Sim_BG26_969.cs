@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：3 生命值：2
+	//随从 战士 费用：0 攻击力：3 生命值：2
 	//Low-Flier
 	//低保真飞龙
 	//[x]At the end of your turn, give+1 Attack to your minions___with less Attack than this.

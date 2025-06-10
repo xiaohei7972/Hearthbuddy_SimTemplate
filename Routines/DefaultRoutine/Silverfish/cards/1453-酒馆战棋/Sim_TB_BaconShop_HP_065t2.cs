@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//英雄技能 恶魔猎手 费用：0
+	//英雄技能 中立 费用：0
 	//Spectral Sight
 	//幽灵视觉
 	//<b>Passive</b>The first minion you buy each turn is free.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：12 生命值：12
+	//随从 圣骑士 费用：0 攻击力：12 生命值：12
 	//Sub Scrubber
 	//潜水清扫机
 	//After you play a Mech,gain +4/+4.

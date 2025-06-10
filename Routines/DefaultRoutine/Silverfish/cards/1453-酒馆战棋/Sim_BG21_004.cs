@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：6
+	//随从 术士 费用：0 攻击力：4 生命值：6
 	//Insatiable Ur'zul
 	//贪食的乌祖尔
 	//[x]<b><b>Taunt</b>.</b> After you play aDemon, consume a minionin the Tavern to gainits stats.

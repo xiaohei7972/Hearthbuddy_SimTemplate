@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：7 生命值：1
+	//随从 圣骑士 费用：0 攻击力：7 生命值：1
 	//Void Ray
 	//虚空辉光舰
 	//[x]<b>Divine Shield</b>. Whenever afriendly minion attacks,give it and this minion__+5 Attack permanently.

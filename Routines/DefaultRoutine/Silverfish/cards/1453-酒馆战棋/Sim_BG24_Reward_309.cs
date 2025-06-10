@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_QUEST_REWARD 中立 费用：1
+	//BATTLEGROUND_QUEST_REWARD 中立 费用：0
 	//Devils in the Details
 	//细节中的恶魔
 	//[x]At the end of your turn, yourleft and right-most minionsconsume a minion in theTavern to gain its stats.

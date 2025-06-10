@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：6 生命值：5
+	//随从 牧师 费用：0 攻击力：6 生命值：5
 	//Peggy Brittlebone
 	//佩吉·布里特伯
 	//After a card is added to your hand, give another friendly Pirate +1/+1.

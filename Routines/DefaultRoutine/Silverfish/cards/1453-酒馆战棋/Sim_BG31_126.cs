@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：6 生命值：5
+	//随从 巫妖王 费用：0 攻击力：6 生命值：5
 	//Wandering Wight
 	//游荡畸形妖
 	//After you summon a minion in combat, give it Health equal to its Attack.

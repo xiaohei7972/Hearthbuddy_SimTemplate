@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：2 生命值：2
+	//随从 猎人 费用：0 攻击力：2 生命值：2
 	//Buzzing Vermin
 	//嗡鸣害虫
 	//[x]<b>Taunt</b><b>Deathrattle:</b> Summontwo {0}/{1} Beetles.

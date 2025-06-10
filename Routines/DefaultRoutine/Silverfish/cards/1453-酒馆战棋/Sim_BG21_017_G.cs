@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：8 生命值：8
+	//随从 牧师 费用：0 攻击力：8 生命值：8
 	//Briny Bootlegger
 	//海上走私贩
 	//[x]At the end of your turn, ifyou control another Pirate,get 2 Gold Coins.

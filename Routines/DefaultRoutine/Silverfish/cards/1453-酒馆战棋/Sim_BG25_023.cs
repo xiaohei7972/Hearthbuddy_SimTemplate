@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：2
+	//随从 巫妖王 费用：0 攻击力：4 生命值：2
 	//Soulsplitter
 	//灵魂切分者
 	//[x]<b>Reborn</b><b>Start of Combat:</b> Give a___friendly Undead <b>Reborn</b>.

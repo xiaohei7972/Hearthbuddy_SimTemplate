@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：0 生命值：9
+	//随从 无效的 费用：0 攻击力：0 生命值：9
 	//Sandstone Drake
 	//沙石幼龙
 	//[x]At the end of your turn, gain+1 Attack. Repeat for eachcard you played this turn.

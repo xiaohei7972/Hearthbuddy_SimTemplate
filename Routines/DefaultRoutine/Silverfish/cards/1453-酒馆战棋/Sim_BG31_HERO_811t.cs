@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 无效的 费用：0 攻击力：2 生命值：2
+	//随从 中立 费用：0 攻击力：2 生命值：2
 	//Larva
 	//幼虫
 	//[x]At the start of each turn,choose a Zerg minion tomorph into. It keeps statsand enchantments.

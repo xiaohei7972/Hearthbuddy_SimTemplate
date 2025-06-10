@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 圣骑士 费用：0
+	//法术 中立 费用：0
 	//Avenge
 	//复仇
 	//<b>Secret:</b> When one of your minions dies, give a random friendly minion +3/+2.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：10 生命值：8
+	//随从 牧师 费用：0 攻击力：10 生命值：4
 	//First Mate Pip
 	//大副皮普
 	//<i>(Only 2 copies of this minion were needed to make it Golden.)</i>

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：6
+	//随从 牧师 费用：0 攻击力：4 生命值：6
 	//Tony Two-Tusk
 	//托尼·双牙
 	//[x]<b>Avenge (4):</b> Makeanother friendly PirateGolden permanently.

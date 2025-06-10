@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：5 生命值：4
+	//随从 恶魔猎手 费用：0 攻击力：5 生命值：4
 	//Private Chef
 	//私房主厨
 	//[x]<b>Spellcraft:</b> Choose a minion.Get a different randomminion of its type, then<b>Pass</b> it.

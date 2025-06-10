@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//英雄技能 牧师 费用：2
+	//英雄技能 中立 费用：2
 	//I Spy
 	//间谍探查
 	//[x]<b>Discover</b> a plain copy ofa minion from your next opponent's warband.

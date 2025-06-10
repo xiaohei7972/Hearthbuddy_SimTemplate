@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：1 攻击力：1 生命值：1
+	//随从 战士 费用：1 攻击力：2 生命值：1
 	//Darkrider
 	//黑暗的龙骑士
 	//<b>Battlecry:</b> If you're holdinga Dragon, <b>Discover</b> a Dragonwith a <b>Dark Gift</b>.

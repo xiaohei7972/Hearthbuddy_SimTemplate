@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：6 生命值：10
+	//随从 术士 费用：0 攻击力：6 生命值：10
 	//Pilgrimp
 	//朝圣小鬼
 	//2 Demons each turn cost Health instead of Gold to buy. <i>(@ left!)</i>

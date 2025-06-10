@@ -7,8 +7,8 @@ namespace HREngine.Bots
 	//BATTLEGROUND_SPELL 中立 费用：1
 	//Them Apples
 	//意外之果
-	//Give minions in the Tavern +1/+2.
-	//使酒馆中的随从获得+1/+2。
+	//Give minions in the Tavern +{0}/+{1}.
+	//使酒馆中的随从获得+{0}/+{1}。
 	class Sim_BG28_966 : SimTemplate
 	{
 		

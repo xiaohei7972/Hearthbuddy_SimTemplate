@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//英雄技能 无效的 费用：0
+	//英雄技能 中立 费用：0
 	//Arcane Knowledge
 	//奥术知识
 	//[x]The next Tavern spellyou buy costs (1) less.<i>(Unlocks on Turn 3.)</i>

@@ -12,5 +12,6 @@ namespace HREngine.Bots
 	class Sim_HERO_01ayhp2 : SimTemplate
 	{
 		
+		
 	}
 }

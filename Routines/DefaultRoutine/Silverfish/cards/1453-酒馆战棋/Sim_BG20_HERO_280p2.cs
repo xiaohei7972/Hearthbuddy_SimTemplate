@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//英雄技能 恶魔猎手 费用：0
+	//英雄技能 中立 费用：0
 	//Gain Momentum
 	//汲取动力
 	//[x]<b>Passive.</b> Buy 4 minions in1 turn to give your handand board +2/+2 and_progress this. <i>(@ left!)</i>

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：18 生命值：18
+	//随从 猎人 费用：0 攻击力：18 生命值：18
 	//The Nine Frogs
 	//九蛙
 	//[x]After you buy a minion, get 2random Tavern spells fromthe same Tier. <i>(@ left!)</i>

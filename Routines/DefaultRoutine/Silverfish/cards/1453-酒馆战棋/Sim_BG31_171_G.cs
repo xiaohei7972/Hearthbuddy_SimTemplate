@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：12 生命值：12
+	//随从 圣骑士 费用：0 攻击力：12 生命值：12
 	//Moonsteel Juggernaut
 	//月铁毁灭战舰
 	//[x]At the end of your turn,get two {1}/{1} <b>Magnetic</b>Satellites and improvethis.

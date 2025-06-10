@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：1 生命值：28
+	//随从 法师 费用：0 攻击力：1 生命值：28
 	//Granite Guardian
 	//花岗岩守护者
 	//[x]<b>Taunt</b>Whenever this is attacked,reduce the attacker'sHealth to 1.

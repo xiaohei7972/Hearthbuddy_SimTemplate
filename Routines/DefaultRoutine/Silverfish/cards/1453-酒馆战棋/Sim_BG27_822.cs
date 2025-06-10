@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：7 生命值：6
+	//随从 猎人 费用：0 攻击力：7 生命值：6
 	//Niuzao
 	//砮皂
 	//Whenever this attacks, deal damage equal to its Attack to another random enemy minion.

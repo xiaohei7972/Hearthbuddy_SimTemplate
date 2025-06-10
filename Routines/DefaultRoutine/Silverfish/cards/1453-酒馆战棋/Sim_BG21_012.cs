@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：3 生命值：5
+	//随从 战士 费用：0 攻击力：3 生命值：5
 	//Prestor's Pyrospawn
 	//普瑞斯托的火炎子嗣
 	//[x]Whenever another friendlyDragon attacks, deal3 damage to its target.

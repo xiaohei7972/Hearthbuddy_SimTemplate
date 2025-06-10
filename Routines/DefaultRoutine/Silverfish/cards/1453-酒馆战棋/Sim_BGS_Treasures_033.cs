@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 无效的 费用：0
+	//法术 中立 费用：0
 	//New Recruit
 	//物色新人
 	//[x]The Tavern offers anextra minion this game.

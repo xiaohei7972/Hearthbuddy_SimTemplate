@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：10 生命值：10
+	//随从 战士 费用：0 攻击力：10 生命值：10
 	//Cobalt Scalebane
 	//深蓝刃鳞龙兽
 	//At the end of your turn, give another random friendly minion +6 Attack.

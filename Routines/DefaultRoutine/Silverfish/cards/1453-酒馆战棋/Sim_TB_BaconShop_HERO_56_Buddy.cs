@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：6 生命值：6
+	//随从 战士 费用：0 攻击力：6 生命值：6
 	//Vaelastrasz
 	//瓦拉斯塔兹
 	//<b>Battlecry and Start of Combat:</b> Give your other minions +3/+3.

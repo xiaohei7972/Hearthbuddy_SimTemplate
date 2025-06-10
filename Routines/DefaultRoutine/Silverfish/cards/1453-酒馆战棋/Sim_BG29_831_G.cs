@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：8 生命值：12
+	//随从 牧师 费用：0 攻击力：8 生命值：12
 	//Long John Copper
 	//长牙约翰·库珀
 	//[x]Whenever this takesdamage, get twoGold Coins. <i>(3 timesper combat.)</i>@[x]Whenever this takesdamage, get twoGold Coins. <i>({0} left!)</i>

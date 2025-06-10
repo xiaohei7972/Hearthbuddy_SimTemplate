@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：8 生命值：10
+	//随从 萨满祭司 费用：0 攻击力：8 生命值：10
 	//Heedless Hoarder
 	//粗心的囤积者
 	//When you sell this, givea friendly Murloc doublethis minion's stats.

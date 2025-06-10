@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：4
+	//随从 巫妖王 费用：0 攻击力：4 生命值：4
 	//Wisp in the Shell
 	//壳中小精灵
 	//[x]<b>Battlecry:</b> Give a friendlyminion +@ Health. <i>(Improvedby each friendly minion thatdied last combat!)</i>

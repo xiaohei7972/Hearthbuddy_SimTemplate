@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：3 生命值：10
+	//随从 恶魔猎手 费用：0 攻击力：3 生命值：10
 	//Soft-hearted Siren
 	//柔心海妖
 	//[x]Whenever this takesdamage, get a random<b>Spellcraft</b> spell. <i>(3 timesper combat.)</i>@[x]Whenever this takesdamage, get a random<b>__Spellcraft</b> spell. <i>({0} left!)</i>

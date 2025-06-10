@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：10 生命值：12
+	//随从 德鲁伊 费用：0 攻击力：10 生命值：12
 	//Dynamic Duo
 	//劲爆二人组
 	//[x]<b>Taunt</b>After a <b>Blood Gem</b> isplayed on another friendly__Quilboar, gain +2/+2.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：3 攻击力：3 生命值：3
+	//随从 圣骑士 费用：5 攻击力：3 生命值：3
 	//Flickering Lightbot
 	//灯火机器人
 	//[x]<b>Gigantify</b>Costs (1) less for eachHoly spell you've castthis game.

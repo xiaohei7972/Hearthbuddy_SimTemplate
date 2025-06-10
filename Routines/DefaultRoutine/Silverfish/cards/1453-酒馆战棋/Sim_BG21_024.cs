@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：2 生命值：5
+	//随从 圣骑士 费用：0 攻击力：2 生命值：5
 	//Grease Bot
 	//滑油机器人
 	//<b>Divine Shield</b>After a friendly minion loses<b>Divine Shield</b>, give it+2/+1 permanently.

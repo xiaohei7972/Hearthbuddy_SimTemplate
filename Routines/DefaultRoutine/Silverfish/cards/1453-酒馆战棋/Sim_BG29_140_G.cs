@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：2 生命值：2
+	//随从 术士 费用：0 攻击力：2 生命值：2
 	//False Implicator
 	//假冒鬼儡
 	//[x]At the end of your turn,consume a minion in theTavern to gain doubleits stats.

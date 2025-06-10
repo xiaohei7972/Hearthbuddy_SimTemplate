@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：6 生命值：4
+	//随从 术士 费用：0 攻击力：6 生命值：4
 	//Imprisoner
 	//小鬼囚徒
 	//<b>Taunt</b><b>Deathrattle:</b> Summon a 2/2 Imp.

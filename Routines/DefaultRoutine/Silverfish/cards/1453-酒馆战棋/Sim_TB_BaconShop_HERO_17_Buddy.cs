@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：4
+	//随从 圣骑士 费用：0 攻击力：4 生命值：4
 	//Elementium Squirrel Bomb
 	//源质松鼠炸弹
 	//[x]<b>Deathrattle:</b> Deal 2 damageto a random enemy minionfor each of your Mechs thatdied this combat.

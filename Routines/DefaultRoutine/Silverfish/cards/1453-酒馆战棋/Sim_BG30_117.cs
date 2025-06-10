@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：3 生命值：3
+	//随从 恶魔猎手 费用：0 攻击力：3 生命值：3
 	//Volcanic Visitor
 	//火山访客
 	//[x]<b>Spellcraft: Choose One -</b>Give your minions +2 Attackuntil next turn; or +2Health until next turn.

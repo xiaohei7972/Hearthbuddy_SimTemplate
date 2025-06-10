@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：3 生命值：1
+	//随从 猎人 费用：0 攻击力：5 生命值：4
 	//Silithid Burrower
 	//异种钻地虫
-	//[x]<b>Taunt</b><b>Deathrattle:</b> Give your Beasts+1/+1 permanently.
-	//<b>嘲讽</b>。<b>亡语：</b>使你的野兽永久获得+1/+1。
+	//[x]<b>Deathrattle:</b> Give yourBeasts +{0}/+{0}.<b>Avenge (1):</b> Improve this by+1/+1 permanently.
+	//<b>亡语：</b>使你的野兽获得+{0}/+{0}。<b>复仇（1）：</b>此效果永久提升+1/+1。
 	class Sim_BG29_871 : SimTemplate
 	{
 		

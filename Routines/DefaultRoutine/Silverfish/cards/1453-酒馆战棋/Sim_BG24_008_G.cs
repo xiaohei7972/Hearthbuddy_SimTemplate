@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：2 生命值：2
+	//随从 圣骑士 费用：0 攻击力：2 生命值：2
 	//Cogwork Copter
 	//齿驱扑翼机
 	//[x]<b>Divine Shield</b>After a friendly minion loses<b>Divine Shield</b>, give a minion__in your hand +2/+2.

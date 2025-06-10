@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：5 攻击力：4 生命值：6
+	//随从 术士 费用：4 攻击力：3 生命值：5
 	//Overgrown Horror
 	//疯长的恐魔
 	//[x]<b>Taunt</b><b>Battlecry:</b> Reduce the Costof minions in your handwith <b>Dark Gifts</b> by (2).

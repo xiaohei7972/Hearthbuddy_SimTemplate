@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：6 生命值：20
+	//随从 无效的 费用：0 攻击力：6 生命值：20
 	//Cyborg Drake
 	//赛博格幼龙
 	//[x]<b>Divine Shield</b>Your minions with<b>Divine Shield</b> have+12 Attack.

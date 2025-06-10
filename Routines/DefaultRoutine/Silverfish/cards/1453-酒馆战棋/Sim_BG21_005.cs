@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：9 生命值：5
+	//随从 术士 费用：0 攻击力：9 生命值：5
 	//Famished Felbat
 	//饥饿的魔蝠
 	//At the end of your turn, your Demons each consume a minion in the Tavern to gain its stats.

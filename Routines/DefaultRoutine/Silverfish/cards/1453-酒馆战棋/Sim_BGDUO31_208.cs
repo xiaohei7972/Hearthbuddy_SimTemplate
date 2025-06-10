@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：4
+	//随从 巫妖王 费用：0 攻击力：4 生命值：4
 	//San'layn Scribe
 	//萨莱因铭文师
 	//Has +4/+4 for each of your team's San'layn Scribes that died this game <i>(wherever this is)</i>.

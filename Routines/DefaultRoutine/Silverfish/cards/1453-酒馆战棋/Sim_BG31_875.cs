@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：3 生命值：6
+	//随从 术士 费用：0 攻击力：3 生命值：6
 	//Tardy Traveler
 	//迟到的旅行者
 	//When you sell this, get a copy of a Tavern spell in the Tavern.

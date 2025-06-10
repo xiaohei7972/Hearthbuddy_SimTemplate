@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：2
+	//随从 无效的 费用：0 攻击力：4 生命值：2
 	//Fiery Felblood
 	//魔血岩浆
 	//<b>Deathrattle:</b> Minions in the Tavern have +4 Attackthis game.

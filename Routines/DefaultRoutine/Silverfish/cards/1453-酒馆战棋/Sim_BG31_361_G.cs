@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：6 生命值：4
+	//随从 猎人 费用：0 攻击力：6 生命值：4
 	//Bellowing Tyrant
 	//暴吼兽王
 	//[x]<b>Taunt</b>Has +6/+4 for each Beastyou've summoned this game<i>(wherever this is)</i>.

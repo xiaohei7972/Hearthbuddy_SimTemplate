@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：5 生命值：3
+	//随从 德鲁伊 费用：0 攻击力：5 生命值：3
 	//Paint Smudger
 	//油彩画家
 	//[x]Whenever you cast a Tavernspell, play a <b>Blood_Gem</b> onanother friendly Quilboar.

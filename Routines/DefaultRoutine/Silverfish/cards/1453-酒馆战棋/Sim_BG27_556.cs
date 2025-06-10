@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：3 生命值：4
+	//随从 萨满祭司 费用：0 攻击力：3 生命值：4
 	//Diremuck Forager
 	//凶饿的觅食者
 	//[x]<b>Start of Combat:</b> Give aminion in your hand+2/+2, then summon itfor this combat only.

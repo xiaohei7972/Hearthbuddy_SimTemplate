@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 萨满祭司 费用：0
+	//法术 中立 费用：0
 	//Earth Invocation
 	//大地祈咒
 	//Give 4 random friendly minions "<b>Deathrattle:</b> Summon a 1/1 Elemental."

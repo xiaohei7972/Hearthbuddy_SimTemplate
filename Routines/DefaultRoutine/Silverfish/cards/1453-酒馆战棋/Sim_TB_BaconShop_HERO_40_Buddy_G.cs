@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：2 生命值：2
+	//随从 猎人 费用：0 攻击力：2 生命值：2
 	//Maxwell, Mighty Steed
 	//“威武战驹”麦克斯韦
 	//[x]When you sell this, get 2<b>Buddies</b> of your Hero Power.

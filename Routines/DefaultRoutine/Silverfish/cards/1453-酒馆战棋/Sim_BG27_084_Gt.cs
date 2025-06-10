@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 无效的 费用：0
+	//法术 中立 费用：0
 	//Sprightly Sprucing
 	//机变精修
 	//Give a Beast +2/+2and <b>Reborn</b>.

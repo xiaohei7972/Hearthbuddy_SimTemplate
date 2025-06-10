@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：12 生命值：14
+	//随从 法师 费用：0 攻击力：12 生命值：14
 	//Gusty Trumpeter
 	//狂风小号手
 	//After you sell 5 Elementals,get 2 random Elementals.<i>(@ left!)</i>

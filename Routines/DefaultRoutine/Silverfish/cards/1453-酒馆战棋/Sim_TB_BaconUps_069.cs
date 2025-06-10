@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：4 生命值：10
+	//随从 圣骑士 费用：0 攻击力：4 生命值：10
 	//Screwjank Clunker
 	//废旧螺栓机甲
 	//<b>Battlecry:</b> Give a friendly Mech +4/+4.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：12 生命值：6
+	//随从 无效的 费用：0 攻击力：12 生命值：6
 	//Arfus
 	//阿尔福斯
 	//[x]After a friendly minion is<b>Reborn</b>, give it thisminion's Attack twice.

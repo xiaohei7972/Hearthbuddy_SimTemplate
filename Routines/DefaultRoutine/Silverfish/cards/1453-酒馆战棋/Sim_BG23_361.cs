@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：2
+	//随从 术士 费用：0 攻击力：4 生命值：2
 	//Legion Overseer
 	//军团监工
 	//Minions in the_Tavern have +2/+1.

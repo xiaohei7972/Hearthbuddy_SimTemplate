@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：2 生命值：28
+	//随从 战士 费用：0 攻击力：2 生命值：28
 	//Stormbringer
 	//风暴使者
 	//[x]After a different friendlyDragon gains Attack,this also gains it twice.

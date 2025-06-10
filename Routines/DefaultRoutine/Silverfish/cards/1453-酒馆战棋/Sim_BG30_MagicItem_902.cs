@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：2
+	//BATTLEGROUND_TRINKET 中立 费用：4
 	//Holy Mallet
 	//神圣重槌
 	//[x]<b>Start of Combat:</b> Giveyour left and right-mostminions <b>Divine Shield</b>.

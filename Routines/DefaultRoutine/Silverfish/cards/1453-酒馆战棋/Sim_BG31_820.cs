@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：3 生命值：6
+	//随从 牧师 费用：0 攻击力：3 生命值：6
 	//Spacefarer
 	//空间眺望者
 	//Whenever another friendly Pirate gains Attack, gain +3 Health.

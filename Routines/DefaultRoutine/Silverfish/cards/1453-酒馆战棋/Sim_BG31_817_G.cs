@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：8 生命值：8
+	//随从 法师 费用：0 攻击力：8 生命值：8
 	//Windfall Tornado
 	//骤落飓风
 	//[x]When you sell this,<b>Discover</b> 2 Elementalsand give them this minion'sstats.

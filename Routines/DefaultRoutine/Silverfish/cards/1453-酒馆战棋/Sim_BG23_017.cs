@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：18 生命值：3
+	//随从 德鲁伊 费用：0 攻击力：18 生命值：3
 	//Sanguine Champion
 	//鲜血勇士
 	//[x]<b>Battlecry and Deathrattle:</b>Your <b>Blood Gems</b> give anextra +1/+1 this game.

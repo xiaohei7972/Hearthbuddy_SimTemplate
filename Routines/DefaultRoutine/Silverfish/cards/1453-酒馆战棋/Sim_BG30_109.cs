@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：9 生命值：1
+	//随从 战士 费用：0 攻击力：9 生命值：1
 	//Wannabe Gargoyle
 	//仿效石像鬼
 	//<b>Reborn</b>This is <b>Reborn</b> with full Attack.

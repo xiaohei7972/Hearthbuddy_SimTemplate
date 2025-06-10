@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：2 生命值：2
+	//随从 无效的 费用：0 攻击力：2 生命值：2
 	//Mechorse
 	//机械小马
 	//<b>Deathrattle:</b> Summon a 1/1 Mechapony.

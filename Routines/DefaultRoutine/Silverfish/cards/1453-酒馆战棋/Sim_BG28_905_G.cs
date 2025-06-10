@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：8
+	//随从 术士 费用：0 攻击力：4 生命值：8
 	//Bazaar Dealer
 	//集市摊贩
 	//2 Tavern spells each turn cost Health instead ofGold to buy. <i>(@ left!)</i>

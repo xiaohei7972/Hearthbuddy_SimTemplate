@@ -14,18 +14,7 @@ namespace HREngine.Bots
 
         public override void onDeathrattle(Playfield p, Minion m)
         {
-            // 遍历己方卡组,寻找具有嘲讽的随从牌
-			foreach(CardDB.Card tankCard in p.ownDeck)
-			{
-                CardDB.Card card = CardDB.Instance.getCardDataFromID(tankCard.cardIDenum);
-                if(card.type == CardDB.cardtype.MOB && card.tank){
-					// 给抽到的嘲讽牌-2费
-                    card.cost -= 2;
-					p.drawACard(tankCard.cardIDenum, m.own, true);
-                    break;
-                }
-			}
-
+            p.drawACard(CardDB.cardIDEnum.VAC_406, m.own, true);
         }
     }
 }

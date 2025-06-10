@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 德鲁伊 费用：0 攻击力：14 生命值：14
+	//随从 猎人 费用：0 攻击力：14 生命值：14
 	//Ironhide Direhorn
 	//铁皮恐角龙
 	//<b>Overkill:</b> Summon a 10/10_Ironhide Runt.

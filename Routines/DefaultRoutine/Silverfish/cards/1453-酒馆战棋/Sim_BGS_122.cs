@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：4
+	//随从 法师 费用：0 攻击力：4 生命值：4
 	//Stasis Elemental
 	//静滞元素
 	//<b>Battlecry:</b> Add a random Elemental to the Tavern and <b>Freeze</b> it.

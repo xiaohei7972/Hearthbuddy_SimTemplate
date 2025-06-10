@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//英雄 战士 费用：0
+	//英雄 中立 费用：0
 	//Bonethresher Sneed
 	//碎骨魔机斯尼德
 	//

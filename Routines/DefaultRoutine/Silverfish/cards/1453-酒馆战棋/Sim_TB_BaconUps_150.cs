@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：2 生命值：14
+	//随从 牧师 费用：0 攻击力：2 生命值：14
 	//Yo-Ho-Ogre
 	//喊号食人魔
 	//<b>Taunt</b>After this survives damage, your left-most minion attacks immediately.

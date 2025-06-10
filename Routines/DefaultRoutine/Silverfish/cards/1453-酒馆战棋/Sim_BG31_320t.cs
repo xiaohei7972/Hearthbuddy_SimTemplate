@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 无效的 费用：0
+	//法术 中立 费用：0
 	//Take the Gems
 	//挖走宝石
 	//Get 2 <b>Blood Gems</b>.

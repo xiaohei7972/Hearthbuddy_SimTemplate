@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 无效的 费用：3
+	//法术 无效的 费用：4
 	//Lift Off
 	//升空
 	//Draw 2 Terran cards. Summon a 2/1 <b>Starship Piece</b> with an effect when launched.

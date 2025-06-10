@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：12 生命值：8
+	//随从 法师 费用：0 攻击力：12 生命值：8
 	//Feisty Freshwater
 	//活泼的淡水元素
 	//[x]<b>Deathrattle:</b> You and yourteammate each gain four _<b>Refreshes</b> that cost (0).

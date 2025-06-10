@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：3
+	//BATTLEGROUND_TRINKET 中立 费用：5
 	//Fridge Magnet
 	//冰箱磁贴
 	//[x]<b>Avenge (3):</b> Get a random<b>Magnetic</b> minion.

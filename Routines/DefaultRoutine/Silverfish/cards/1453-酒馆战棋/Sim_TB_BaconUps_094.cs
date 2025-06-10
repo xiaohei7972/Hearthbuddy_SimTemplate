@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：2 生命值：4
+	//随从 圣骑士 费用：0 攻击力：2 生命值：4
 	//Micro Machine
 	//微型战斗机甲
 	//At the start of each turn, gain +2 Attack.

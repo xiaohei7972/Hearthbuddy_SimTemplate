@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：1 生命值：4
+	//随从 战士 费用：0 攻击力：1 生命值：4
 	//Evolving Chromawing
 	//异变多彩龙
 	//[x]After you upgrade theTavern, gain +1 Attack__for each friendly Dragon.

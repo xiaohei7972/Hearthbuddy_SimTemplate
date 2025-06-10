@@ -7,7 +7,7 @@ namespace HREngine.Bots
 	//BATTLEGROUND_TRINKET 中立 费用：2
 	//Kodo Leather Pouch
 	//科多兽皮袋
-	//After you buy a card, give two random friendly minions +4/+4.
+	//[x]After you buy a card,give two randomfriendly minions +4/+4.
 	//在你购买一张牌后，使两个随机友方随从获得+4/+4。
 	class Sim_BG30_MagicItem_414t : SimTemplate
 	{

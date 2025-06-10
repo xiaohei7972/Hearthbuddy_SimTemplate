@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：8 生命值：8
+	//随从 牧师 费用：0 攻击力：8 生命值：8
 	//Tuskarr Raider
 	//海象人海盗
 	//<b>Battlecry:</b> Give a minion +@/+@. <i>(Improved by each Pirate you've played this game!)</i>

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//英雄技能 潜行者 费用：2
+	//英雄技能 中立 费用：2
 	//See the Light
 	//亲见圣光
 	//[x]Choose a minion in theTavern. Set its stats to 2and add it to your hand.

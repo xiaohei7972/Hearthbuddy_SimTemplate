@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：6 生命值：14
+	//随从 牧师 费用：0 攻击力：6 生命值：14
 	//Vanessa VanCleef
 	//梵妮莎·范克里夫
 	//Whenever this attacks, give your Pirates +4/+2 permanently.

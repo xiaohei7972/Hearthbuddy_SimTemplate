@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：14
+	//随从 巫妖王 费用：0 攻击力：4 生命值：14
 	//Grave Narrator
 	//墓后解说员
 	//[x]<b>Avenge (3):</b> Your teammategets 2 random minions of_their most common type.

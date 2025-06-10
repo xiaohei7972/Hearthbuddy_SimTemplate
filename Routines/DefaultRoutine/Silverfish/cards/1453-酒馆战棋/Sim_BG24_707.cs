@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：4
+	//随从 德鲁伊 费用：0 攻击力：4 生命值：4
 	//Bristlemane Scrapsmith
 	//刺鬃废料铁匠
 	//[x]After a friendly <b>Taunt</b>minion dies,get a <b>Blood Gem</b>.
