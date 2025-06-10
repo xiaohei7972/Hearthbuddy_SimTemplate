@@ -1,0 +1,17 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace HREngine.Bots
+{
+	//英雄 中立 费用：0
+	//Humpty Patchwerk
+	//蛋头帕奇维克
+	//
+	//
+	class Sim_TB_BaconShop_HERO_34_SKIN_D : SimTemplate
+	{
+		
+		
+	}
+}

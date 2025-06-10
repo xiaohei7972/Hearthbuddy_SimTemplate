@@ -1,0 +1,17 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace HREngine.Bots
+{
+	//LETTUCE_ABILITY 中立 费用：0
+	//Swash Buckling Sash {0}
+	//浮夸腰带{0}
+	//Sky Guard gives an additional +@ Attack.
+	//天空守卫额外获得+@攻击力。
+	class Sim_LT21_07E1_04 : SimTemplate
+	{
+		
+		
+	}
+}
