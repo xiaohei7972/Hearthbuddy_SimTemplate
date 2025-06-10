@@ -13,6 +13,7 @@ namespace HREngine.Bots
     {
         public override void onDeathrattle(Playfield p, Minion m)
         {
+            /*
             List<int> MinionentitiyID = new List<int>();
             foreach (Minion m in p.ownMinions)
             {
@@ -21,7 +22,9 @@ namespace HREngine.Bots
                     MinionentitiyID.Add(m.entitiyID);
                 }
             }
-			MinionentitiyID.
+             p.allMinionsGetDamage(2, MinionentitiyID);
+            */
+
             p.allMinionsGetDamage(2, MinionentitiyID);
         }
 
