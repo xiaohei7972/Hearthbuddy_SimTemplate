@@ -1,0 +1,17 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace HREngine.Bots
+{
+	//随从 潜行者 费用：3 攻击力：1 生命值：5
+	//Jr. Navigator
+	//初级导航员
+	//[x]Whenever you targetthis minion with a spell,add 2 copies of the spellto your hand.
+	//每当你以本随从为目标施放一个法术，将法术牌的两张复制置入你的手牌。
+	class Sim_ULDA_017 : SimTemplate
+	{
+		
+		
+	}
+}
