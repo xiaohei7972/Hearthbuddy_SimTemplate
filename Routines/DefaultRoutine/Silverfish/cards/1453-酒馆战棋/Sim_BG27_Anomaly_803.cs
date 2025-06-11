@@ -7,8 +7,8 @@ namespace HREngine.Bots
 	//BATTLEGROUND_ANOMALY 中立 费用：0
 	//Anomalous Evidence
 	//畸变证据
-	//At the start of your turn, choose from 2 new Quest Rewards.<i>(Unlocks on Turn 4.)</i>@At the start of your turn, choose from 2 new Quest Rewards.
-	//在你的回合开始时，从2个新的任务奖励中选择一个。<i>（第4回合解锁。）</i>@在你的回合开始时，从2个新的任务奖励中选择一个。
+	//At the start of your turn, choose from 2 new Quest Rewards.
+	//在你的回合开始时，从2个新的任务奖励中选择一个。
 	class Sim_BG27_Anomaly_803 : SimTemplate
 	{
 		

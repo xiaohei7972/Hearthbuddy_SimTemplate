@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 萨满祭司 费用：0 攻击力：4 生命值：4
+	//随从 中立 费用：0 攻击力：4 生命值：4
 	//Tad
 	//塔德
 	//When you sell this,get 2 random Murlocs.

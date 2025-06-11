@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：0 攻击力：8 生命值：24
+	//随从 中立 费用：0 攻击力：8 生命值：24
 	//Carrier
 	//航母
 	//[x]<b>Avenge (4):</b> Summon a {1}/{1}Interceptor. Then improvethis permanently.

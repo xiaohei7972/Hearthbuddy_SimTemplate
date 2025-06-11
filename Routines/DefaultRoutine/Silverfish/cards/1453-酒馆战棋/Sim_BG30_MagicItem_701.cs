@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：3
+	//BATTLEGROUND_TRINKET 中立 费用：2
 	//The Eye of Sargeras
 	//萨格拉斯之眼
 	//[x]Every fourth card youbuy costs Health insteadof Gold. <i>({0} left!)</i>@[x]Every fourth card youbuy costs Health insteadof Gold. <i>(Ready!)</i>

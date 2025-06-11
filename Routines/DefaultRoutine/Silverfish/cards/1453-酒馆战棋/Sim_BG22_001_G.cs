@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：0 攻击力：12 生命值：12
+	//随从 中立 费用：0 攻击力：12 生命值：12
 	//Baby Krush
 	//幼年克鲁什
 	//[x]Whenever this attacks,summon a 16/16Devilsaur to attackthe target first.

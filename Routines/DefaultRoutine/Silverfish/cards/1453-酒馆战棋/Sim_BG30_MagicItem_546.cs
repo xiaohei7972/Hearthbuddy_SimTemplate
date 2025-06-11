@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：0
+	//BATTLEGROUND_TRINKET 中立 费用：4
 	//Jar o' Gems
 	//罐装宝石
 	//[x]Each combat, after 2friendly minions attack,play a <b>Blood Gem</b> on allyour Quilboar. <i>(@ left!)</i>

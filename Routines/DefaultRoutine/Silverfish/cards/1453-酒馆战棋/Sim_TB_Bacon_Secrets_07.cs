@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 中立 费用：0
+	//法术 圣骑士 费用：0
 	//Autodefense Matrix
 	//自动防御矩阵
 	//<b>Secret:</b> When one of your minions is attacked, give it <b>Divine Shield</b>.

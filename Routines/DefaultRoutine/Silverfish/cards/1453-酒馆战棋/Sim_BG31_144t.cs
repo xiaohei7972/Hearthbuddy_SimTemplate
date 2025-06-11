@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 中立 费用：0
+	//法术 无效的 费用：0
 	//Divine Adaptation
 	//神圣进化
 	//Gain +3 Attack and <b>Divine Shield</b>.

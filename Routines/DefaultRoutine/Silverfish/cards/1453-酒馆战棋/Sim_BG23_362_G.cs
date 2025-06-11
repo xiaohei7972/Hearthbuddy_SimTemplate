@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：6 生命值：12
+	//随从 中立 费用：0 攻击力：6 生命值：12
 	//Atramedes
 	//艾卓曼德斯
 	//[x]Whenever this attacks,deal 3 damage to the targetand its neighbors twice.

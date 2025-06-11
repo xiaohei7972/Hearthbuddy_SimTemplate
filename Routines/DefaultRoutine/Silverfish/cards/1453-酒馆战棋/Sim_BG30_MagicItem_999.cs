@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：3
+	//BATTLEGROUND_TRINKET 中立 费用：2
 	//Fancy Spellbook
 	//玄奥的法术书
 	//After you spend 7 Gold, get a random Tavern spell. <i>(@ Gold left!)</i>

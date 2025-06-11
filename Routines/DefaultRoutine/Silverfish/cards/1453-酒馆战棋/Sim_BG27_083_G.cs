@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 恶魔猎手 费用：0 攻击力：8 生命值：12
+	//随从 中立 费用：0 攻击力：8 生命值：12
 	//Slitherspear, Lord of Gains
 	//肌肉领主滑矛
 	//[x]At the end of your turn,give your other Naga +@/+@.<i>(Improved by each different_____spell you've cast this turn!)</i>___

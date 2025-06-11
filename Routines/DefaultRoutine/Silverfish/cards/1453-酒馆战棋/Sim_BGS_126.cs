@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 法师 费用：0 攻击力：6 生命值：3
+	//随从 中立 费用：0 攻击力：6 生命值：3
 	//Wildfire Elemental
 	//野火元素
 	//After this attacks andkills a minion, dealexcess damage to an adjacent minion.

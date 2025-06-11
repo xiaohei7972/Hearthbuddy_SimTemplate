@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 恶魔猎手 费用：0 攻击力：4 生命值：16
+	//随从 中立 费用：0 攻击力：4 生命值：16
 	//Waverider
 	//乘波骑士
 	//[x]<b>Spellcraft:</b> Give a minion+4/+4 and <b>Windfury</b>until next turn.

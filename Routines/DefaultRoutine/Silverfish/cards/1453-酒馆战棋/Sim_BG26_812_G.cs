@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 牧师 费用：0 攻击力：12 生命值：12
+	//随从 中立 费用：0 攻击力：12 生命值：12
 	//Record Smuggler
 	//唱片走私犯
 	//[x]At the start of your turn,gain 4 Gold. If you controlat least three Pirates,gain 4 more.

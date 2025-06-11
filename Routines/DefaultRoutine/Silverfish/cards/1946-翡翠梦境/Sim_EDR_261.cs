@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 猎人 费用：3
+	//法术 猎人 费用：2
 	//Amphibian's Spirit
 	//两栖之灵
 	//[x]Give a minion +2/+2and "<b>Deathrattle:</b> Give afriendly minion +2/+2and this <b>Deathrattle</b>."

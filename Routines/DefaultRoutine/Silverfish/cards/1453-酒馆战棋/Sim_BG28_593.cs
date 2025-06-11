@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：1 生命值：1
+	//随从 中立 费用：0 攻击力：1 生命值：1
 	//Bronze Sandspewer
 	//吐沙青铜龙
 	//[x]<b>Divine Shield</b>If you have 7 minions atthe end of your turn, gain+2/+1.

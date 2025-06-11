@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 萨满祭司 费用：0 攻击力：9 生命值：6
+	//随从 中立 费用：0 攻击力：9 生命值：6
 	//Young Murk-Eye
 	//小瞎眼
 	//[x]At the end of your turn,trigger the <b>Battlecry</b> of an_adjacent minion.

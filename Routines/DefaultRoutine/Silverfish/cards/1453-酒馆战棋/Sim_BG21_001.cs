@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：0 攻击力：4 生命值：5
+	//随从 中立 费用：0 攻击力：4 生命值：5
 	//Palescale Crocolisk
 	//苍鳞鳄鱼
 	//<b>Avenge (2) and Deathrattle:</b> Give another friendly Beast +6/+6.

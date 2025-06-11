@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 法师 费用：0 攻击力：8 生命值：8
+	//随从 中立 费用：0 攻击力：8 生命值：8
 	//Sleeping Sea Glass
 	//沉睡的海玻璃
 	//[x]<b>Choose One -</b> Triple thisminion's Attack; or Health.

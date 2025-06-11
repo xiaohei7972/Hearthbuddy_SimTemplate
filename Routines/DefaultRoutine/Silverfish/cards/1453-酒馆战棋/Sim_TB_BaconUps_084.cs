@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：0 攻击力：10 生命值：8
+	//随从 中立 费用：0 攻击力：10 生命值：8
 	//Gentle Megasaur
 	//温顺的巨壳龙
 	//<b>Battlecry:</b> <b>Adapt</b> your_Murlocs twice.

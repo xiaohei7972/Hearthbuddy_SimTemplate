@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：0 攻击力：6 生命值：4
+	//随从 中立 费用：0 攻击力：6 生命值：4
 	//Sewer Rat
 	//下水道老鼠
 	//<b>Deathrattle:</b> Summon a 4/6 Turtle with <b>Taunt</b>.

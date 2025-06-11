@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：0 攻击力：4 生命值：1
+	//随从 中立 费用：0 攻击力：4 生命值：1
 	//Manasaber
 	//魔刃豹
 	//<b>Deathrattle:</b> Summon two 0/1 Cublings with <b>Taunt</b>.

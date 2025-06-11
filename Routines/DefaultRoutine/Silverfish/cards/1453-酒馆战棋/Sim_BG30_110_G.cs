@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：0 攻击力：8 生命值：8
+	//随从 中立 费用：0 攻击力：8 生命值：8
 	//Mirage Conjurer
 	//幻象咒术师
 	//<b>Choose One -</b> Triple the Attack of all minions in the Tavern; or Triple their Health.

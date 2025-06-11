@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：0 攻击力：4 生命值：14
+	//随从 战士 费用：0 攻击力：4 生命值：14
 	//Festeroot Hulk
 	//腐树巨人
 	//After a friendly minion attacks, gain +2 Attack.

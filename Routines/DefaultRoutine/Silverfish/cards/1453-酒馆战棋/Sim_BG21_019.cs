@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 牧师 费用：0 攻击力：9 生命值：8
+	//随从 中立 费用：0 攻击力：9 生命值：8
 	//Nosy Looter
 	//好奇的掠夺者
 	//[x]Every two turns, get arandom Golden minion.<i>(@ |4(turn, turns) left!)</i>

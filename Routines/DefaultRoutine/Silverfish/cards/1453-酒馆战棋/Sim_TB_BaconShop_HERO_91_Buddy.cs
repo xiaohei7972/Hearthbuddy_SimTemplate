@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 法师 费用：0 攻击力：4 生命值：4
+	//随从 中立 费用：0 攻击力：4 生命值：4
 	//Phyresz
 	//弗里斯杰
 	//[x]When you sell this,<b>Discover</b> a plain copy of adifferent minion that youhave exactly one of.

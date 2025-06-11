@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 牧师 费用：0 攻击力：3 生命值：5
+	//随从 中立 费用：0 攻击力：3 生命值：5
 	//Spellbound Seafarer
 	//咒缚海员
 	//After you buy 3 cards,get a random Tavern spell.<i>(@ left!)</i>

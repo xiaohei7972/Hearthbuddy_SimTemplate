@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：1 生命值：1
+	//随从 中立 费用：0 攻击力：1 生命值：1
 	//Upbeat Frontdrake
 	//蓄势主唱幼龙
 	//[x]At the end of every 3 turns,get a random Dragon.<i>({0} |4(turn, turns) left!)</i>@[x]At the end of every 3 turns,get a random Dragon.<i>(End of this turn!)</i>

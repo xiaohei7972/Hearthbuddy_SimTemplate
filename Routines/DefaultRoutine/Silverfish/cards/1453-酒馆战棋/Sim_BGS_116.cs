@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 法师 费用：0 攻击力：4 生命值：5
+	//随从 中立 费用：0 攻击力：3 生命值：4
 	//Refreshing Anomaly
 	//刷新畸体
 	//[x]<b>Battlecry:</b> Gain 2<b>Refreshes</b> that cost (0).

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 萨满祭司 费用：3 攻击力：4 生命值：6
+	//随从 中立 费用：3 攻击力：4 生命值：6
 	//Coldlight Seer
 	//寒光先知
 	//<b>Battlecry:</b> Give your other Murlocs +4 Health.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 恶魔猎手 费用：0 攻击力：4 生命值：8
+	//随从 中立 费用：0 攻击力：4 生命值：8
 	//Imperial Defender
 	//皇家守护者
 	//[x]Whenever you cast a<b>Spellcraft</b> spell on adifferent friendly minion,___you also cast it on this.

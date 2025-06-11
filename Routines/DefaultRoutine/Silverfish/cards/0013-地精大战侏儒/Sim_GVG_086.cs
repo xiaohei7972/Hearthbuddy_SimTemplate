@@ -8,7 +8,7 @@ namespace HREngine.Bots
 	//Siege Engine
 	//重型攻城战车
 	//Whenever you gain Armor, give this minion +1 Attack.
-	//每当你获得护甲值，使本随从获得+1攻击力。
+	//每当你获得值，使本随从获得+1攻击力。
 	class Sim_GVG_086 : SimTemplate
 	{
 		

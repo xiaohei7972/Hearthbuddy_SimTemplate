@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 法师 费用：0 攻击力：3 生命值：3
+	//随从 中立 费用：0 攻击力：3 生命值：3
 	//Sellemental
 	//商贩元素
 	//[x]When you sell this,get a 3/3 Elemental.

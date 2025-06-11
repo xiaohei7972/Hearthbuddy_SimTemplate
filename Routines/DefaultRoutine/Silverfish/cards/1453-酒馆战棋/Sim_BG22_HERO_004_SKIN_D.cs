@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//英雄 中立 费用：0
+	//英雄 法师 费用：0
 	//Azerite Varden
 	//艾泽里特瓦尔登
 	//

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 萨满祭司 费用：0 攻击力：4 生命值：5
+	//随从 中立 费用：0 攻击力：4 生命值：5
 	//Neon Agent
 	//荧灯特工
 	//[x]<b><b>Divine Shield</b>, Windfury</b>Whenever this attacks, get a_random <b>Battlecry</b> minion._

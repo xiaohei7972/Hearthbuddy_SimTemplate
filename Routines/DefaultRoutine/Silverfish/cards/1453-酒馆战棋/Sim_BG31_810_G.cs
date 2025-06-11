@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 法师 费用：0 攻击力：12 生命值：6
+	//随从 中立 费用：0 攻击力：12 生命值：6
 	//Ultraviolet Ascendant
 	//极紫外升腾者
 	//<b>Start of Combat:</b> Give your other Elementals +{0}/+{1}. <i>(Upgrades after you play an Elemental!)</i>

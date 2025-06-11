@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：0 攻击力：6 生命值：2
+	//随从 中立 费用：0 攻击力：6 生命值：2
 	//Annihilan Battlemaster
 	//安尼赫兰战场军官
 	//[x]<b>Battlecry:</b> Gain +@ Health.<i>(Improved by each Healthyour hero is missing!)</i>

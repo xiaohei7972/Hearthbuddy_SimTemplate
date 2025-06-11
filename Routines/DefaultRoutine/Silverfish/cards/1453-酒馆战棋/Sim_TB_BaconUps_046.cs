@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：0 攻击力：2 生命值：10
+	//随从 中立 费用：0 攻击力：2 生命值：10
 	//Junkbot
 	//回收机器人
 	//Whenever a friendly Mech dies, gain +4/+4.

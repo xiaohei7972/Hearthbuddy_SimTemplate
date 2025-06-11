@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：0 攻击力：6 生命值：12
+	//随从 中立 费用：0 攻击力：6 生命值：12
 	//Banana Slamma
 	//香蕉猛猿
 	//[x]After you summon aBeast in combat,triple its stats.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：4 生命值：12
+	//随从 中立 费用：0 攻击力：4 生命值：12
 	//Kalecgos, Arcane Aspect
 	//奥术守护者卡雷苟斯
 	//[x]After you trigger a <b>Battlecry</b>,give your Dragons +1/+2.

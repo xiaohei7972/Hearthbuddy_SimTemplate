@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：8 生命值：6
+	//随从 中立 费用：0 攻击力：8 生命值：6
 	//Doting Dracthyr
 	//护雏的龙希尔
 	//At the end of your turn, give your teammate's minions +2 Attack.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 法师 费用：0 攻击力：10 生命值：6
+	//随从 中立 费用：0 攻击力：10 生命值：6
 	//Emergent Flame
 	//骤燃烈焰
 	//[x]<b>Battlecry:</b> Give an Elemental+@/+@. <i>(Improved by__each <b>Refresh</b> this turn!)</i>

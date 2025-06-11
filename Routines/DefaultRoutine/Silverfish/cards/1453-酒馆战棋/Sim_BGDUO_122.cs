@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 恶魔猎手 费用：0 攻击力：5 生命值：5
+	//随从 中立 费用：0 攻击力：5 生命值：5
 	//Storm Splitter
 	//风暴分流者
 	//Once per turn, after you <b>Pass</b> a Tavern spell, get a new copy of it.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：8 生命值：10
+	//随从 德鲁伊 费用：0 攻击力：8 生命值：10
 	//Virmen Sensei
 	//兔妖教头
 	//<b>Battlecry:</b> Give a friendly Beast +4/+4.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//英雄技能 中立 费用：1
+	//英雄技能 圣骑士 费用：1
 	//Conviction (Rank 2)
 	//定罪（等级2）
 	//[x]Give four randomfriendly minions +{0}/+{1}.<i>(Upgrades at Tavern Tier 5.)</i>

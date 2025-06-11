@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 德鲁伊 费用：0 攻击力：6 生命值：6
+	//随从 中立 费用：0 攻击力：6 生命值：6
 	//Necrolyte
 	//亡灵侍僧
 	//[x]<b>Battlecry:</b> Play 4 <b>BloodGems</b> on a friendly minion.It steals all <b>Blood Gems</b>from its neighbors.

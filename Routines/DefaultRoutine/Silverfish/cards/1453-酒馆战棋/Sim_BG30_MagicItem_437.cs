@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：5
+	//BATTLEGROUND_TRINKET 中立 费用：2
 	//Staff of the Scourge
 	//天灾之杖
 	//<b>Avenge (5):</b> Give a random friendly minion <b>Reborn</b>.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 法师 费用：0 攻击力：6 生命值：8
+	//随从 中立 费用：0 攻击力：6 生命值：8
 	//Moss of the Schloss
 	//宫殿苔藓
 	//When another friendly Elemental dies, gain its maximum stats. <i>(Twice per combat)</i>.

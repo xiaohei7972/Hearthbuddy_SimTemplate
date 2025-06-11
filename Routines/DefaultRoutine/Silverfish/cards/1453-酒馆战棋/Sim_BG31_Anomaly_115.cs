@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_ANOMALY 中立 费用：0
+	//BATTLEGROUND_ANOMALY 无效的 费用：0
 	//Magic Shop
 	//魔法商店
 	//Spell Tickets are in the Tavern! Get 3 to <b>Discover</b> a Tavern spellof your Tier. <i>(@ left!)</i>

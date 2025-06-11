@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：0 攻击力：4 生命值：4
+	//随从 战士 费用：0 攻击力：4 生命值：4
 	//Diablo, Lord of Terror
 	//迪亚波罗，恐惧之王
 	//[x]<b>Deathrattle:</b> Give youropponent 2 loot!<i>(If this survives, Diablogets 2 loot instead.)</i>

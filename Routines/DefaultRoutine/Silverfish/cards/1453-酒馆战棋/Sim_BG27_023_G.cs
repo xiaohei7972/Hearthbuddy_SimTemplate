@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 萨满祭司 费用：0 攻击力：10 生命值：6
+	//随从 中立 费用：0 攻击力：10 生命值：6
 	//Murcules
 	//摩拉克力斯
 	//Whenever this kills a minion, give a minion in your hand +4/+4.

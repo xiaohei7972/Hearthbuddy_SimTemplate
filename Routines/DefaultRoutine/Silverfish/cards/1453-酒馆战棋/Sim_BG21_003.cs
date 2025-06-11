@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：0 攻击力：4 生命值：3
+	//随从 中立 费用：0 攻击力：4 生命值：3
 	//Reanimating Rattler
 	//唤生响尾蛇
 	//At the end of your turn, give another friendly Beast <b>Reborn</b>.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 法师 费用：0 攻击力：5 生命值：2
+	//随从 中立 费用：0 攻击力：5 生命值：2
 	//Spark-ling
 	//火花幼灵
 	//<b>Battlecry:</b> Give all other minions +1/+1.

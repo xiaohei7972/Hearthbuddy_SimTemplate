@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：0 攻击力：6 生命值：12
+	//随从 中立 费用：0 攻击力：6 生命值：12
 	//Indomitable Mount
 	//顽强的坐骑
 	//[x]<b>Deathrattle:</b> Summon arandom Golden Beastfrom Tier 3, 4, and 5.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：0 攻击力：12 生命值：12
+	//随从 中立 费用：0 攻击力：12 生命值：12
 	//Box Cars
 	//对子六
 	//[x]At the start of your turn,roll two 6-sided dice.<b>Discover</b> a Tavern spell fromeach of those Tiers.

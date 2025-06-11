@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 萨满祭司 费用：0 攻击力：12 生命值：12
+	//随从 中立 费用：0 攻击力：12 生命值：12
 	//Choral Mrrrglr
 	//合唱鱼人
 	//[x]<b>Start of Combat:</b> Gainthe stats of all the minionsin your hand twice.

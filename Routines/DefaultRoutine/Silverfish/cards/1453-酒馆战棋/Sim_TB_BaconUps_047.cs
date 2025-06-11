@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：2 生命值：14
+	//随从 圣骑士 费用：0 攻击力：2 生命值：14
 	//Bolvar, Fireblood
 	//浴火者伯瓦尔
 	//<b>Divine Shield</b>After a friendly minion loses_<b>Divine Shield</b>, gain +4 Attack.

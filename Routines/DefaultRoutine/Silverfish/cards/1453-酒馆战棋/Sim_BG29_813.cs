@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：2 生命值：3
+	//随从 中立 费用：0 攻击力：2 生命值：3
 	//Persistent Poet
 	//执念诗心龙
 	//<b><b>Divine Shield</b>.</b> Adjacent Dragons permanently keep your enchantments from combat.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：0 攻击力：12 生命值：12
+	//随从 中立 费用：0 攻击力：12 生命值：12
 	//Weebomination
 	//迷你憎恶
 	//[x]<b>Battlecry:</b> Give a minion +@Health. <i>(Improved by eachHealth your hero is missing!)</i>

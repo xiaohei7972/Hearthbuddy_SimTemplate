@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 法师 费用：0 攻击力：12 生命值：12
+	//随从 中立 费用：0 攻击力：12 生命值：12
 	//Whirlwind Tempest
 	//暴走旋风
 	//Your minions with <b>Windfury</b> have <b>Mega-Windfury</b>.

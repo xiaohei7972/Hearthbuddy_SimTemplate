@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 无效的 费用：0 攻击力：2 生命值：1
+	//随从 中立 费用：0 攻击力：2 生命值：1
 	//Ominous Seer
 	//厄运先知
 	//<b>Battlecry:</b> The nextTavern spell you buycosts (1) less.

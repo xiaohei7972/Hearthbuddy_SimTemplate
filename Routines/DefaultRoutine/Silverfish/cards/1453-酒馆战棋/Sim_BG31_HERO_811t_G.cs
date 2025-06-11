@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：4
+	//随从 无效的 费用：0 攻击力：4 生命值：4
 	//Larva
 	//幼虫
 	//[x]At the start of each turn,choose a Golden Zerg minionto morph into. It keeps statsand enchantments.

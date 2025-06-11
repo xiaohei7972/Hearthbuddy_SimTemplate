@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 德鲁伊 费用：0 攻击力：10 生命值：2
+	//随从 中立 费用：0 攻击力：10 生命值：2
 	//Prickly Piper
 	//刺头吹笛人
 	//[x]<b>Deathrattle:</b> Your <b>BloodGems</b> give an extra+2 Attack this game.

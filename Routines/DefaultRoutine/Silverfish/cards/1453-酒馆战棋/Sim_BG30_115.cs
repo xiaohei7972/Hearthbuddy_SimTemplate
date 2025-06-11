@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 无效的 费用：0 攻击力：4 生命值：3
+	//随从 中立 费用：0 攻击力：4 生命值：3
 	//Depraved Felfin
 	//堕落的邪鳍
 	//After you <b>Discover</b> a minion, gain the stats of the other options.

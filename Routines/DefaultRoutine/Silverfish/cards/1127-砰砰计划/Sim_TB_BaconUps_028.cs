@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：3 攻击力：4 生命值：4
+	//随从 中立 费用：3 攻击力：4 生命值：4
 	//Kaboom Bot
 	//爆爆机器人
 	//<b>Deathrattle:</b> Deal {0}_damage to a random enemy minion, twice.@<b>Deathrattle:</b> Deal <b>*{0}*</b>_damage to a random enemy minion, twice.

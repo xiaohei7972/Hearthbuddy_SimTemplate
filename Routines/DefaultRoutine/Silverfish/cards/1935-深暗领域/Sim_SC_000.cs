@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//地标 无效的 费用：2
+	//地标 无效的 费用：1
 	//Spawning Pool
 	//孵化池
 	//[x]Get a 1/1 Zergling.<b>Deathrattle:</b> Your Zergminions have <b>Rush</b>this turn.

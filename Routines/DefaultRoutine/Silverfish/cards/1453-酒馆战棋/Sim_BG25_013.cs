@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：0 攻击力：1 生命值：4
+	//随从 中立 费用：0 攻击力：1 生命值：4
 	//Rot Hide Gnoll
 	//腐皮豺狼人
 	//Has +1 Attack for each friendly minion that died this combat.

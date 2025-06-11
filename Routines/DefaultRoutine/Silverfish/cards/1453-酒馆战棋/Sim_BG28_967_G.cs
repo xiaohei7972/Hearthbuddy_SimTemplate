@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：0 攻击力：0 生命值：20
+	//随从 中立 费用：0 攻击力：0 生命值：20
 	//Trembling Trolley
 	//颤动车厢
 	//<b>Avenge (4):</b> Get 2 random Tavern spells.

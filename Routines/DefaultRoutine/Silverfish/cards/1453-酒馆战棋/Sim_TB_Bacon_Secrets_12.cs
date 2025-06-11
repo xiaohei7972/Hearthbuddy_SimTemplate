@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 中立 费用：0
+	//法术 法师 费用：0
 	//Ice Block
 	//寒冰屏障
 	//<b>Secret:</b> When your hero takes fatal damage, prevent it and become <b>Immune</b> this turn.

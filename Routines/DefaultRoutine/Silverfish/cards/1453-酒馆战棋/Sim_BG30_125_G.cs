@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：0 攻击力：6 生命值：6
+	//随从 中立 费用：0 攻击力：6 生命值：6
 	//Cadaver Caretaker
 	//遗骸看管者
 	//<b>Deathrattle:</b> Summon six 1/1 Skeletons.

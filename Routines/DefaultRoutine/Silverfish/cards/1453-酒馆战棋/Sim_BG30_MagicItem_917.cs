@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：4
+	//BATTLEGROUND_TRINKET 中立 费用：2
 	//Rusty Trident
 	//锈蚀的三叉戟
 	//[x]<b>Start of Combat:</b> Give yourNaga "<b>Deathrattle:</b> Get arandom <b>Spellcraft</b> spell."

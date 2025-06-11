@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 德鲁伊 费用：0 攻击力：6 生命值：8
+	//随从 中立 费用：0 攻击力：6 生命值：8
 	//Gem Smuggler
 	//宝石走私商
 	//<b>Battlecry:</b> Play 2<b>Blood Gems</b> on all your other minions.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：0 攻击力：5 生命值：2
+	//随从 中立 费用：0 攻击力：5 生命值：2
 	//Icesnarl the Mighty
 	//冰嚎，强力猛狼
 	//[x]After a friendly minionkills an enemy, gain+1 Health permanently.

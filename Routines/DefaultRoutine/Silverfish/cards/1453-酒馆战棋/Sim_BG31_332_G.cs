@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 无效的 费用：0 攻击力：8 生命值：18
+	//随从 中立 费用：0 攻击力：8 生命值：18
 	//Salty Hog
 	//野猪老水手
 	//[x]Whenever you add 3 cardsto your hand, give your other_minions +2/+2. <i>(@ left!)</i>

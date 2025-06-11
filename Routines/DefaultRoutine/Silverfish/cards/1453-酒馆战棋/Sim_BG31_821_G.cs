@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 牧师 费用：0 攻击力：14 生命值：6
+	//随从 中立 费用：0 攻击力：14 生命值：6
 	//Cruise Controller
 	//巡游舵手
 	//[x]<b>Deathrattle:</b> For the restof this combat, after yousummon a Pirate, give it+10 Attack.

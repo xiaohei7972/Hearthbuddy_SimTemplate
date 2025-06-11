@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 法师 费用：0 攻击力：6 生命值：8
+	//随从 中立 费用：0 攻击力：6 生命值：8
 	//Snow Baller
 	//冰雪投球手
 	//[x]When you sell this, giveyour minions +@ Health.Improve your futureBallers.

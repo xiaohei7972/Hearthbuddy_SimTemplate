@@ -12,6 +12,5 @@ namespace HREngine.Bots
 	class Sim_BG31_HERO_800pt : SimTemplate
 	{
 		
-		
 	}
 }

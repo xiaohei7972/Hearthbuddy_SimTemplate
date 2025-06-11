@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：0 攻击力：12 生命值：4
+	//随从 中立 费用：0 攻击力：12 生命值：4
 	//Hawkstrider Herald
 	//陆行鸟先锋
 	//<b>Start of Combat:</b> Trigger your two left-most <b>Deathrattles</b> twice.

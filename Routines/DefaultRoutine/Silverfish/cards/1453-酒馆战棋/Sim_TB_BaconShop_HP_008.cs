@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//英雄技能 中立 费用：1
+	//英雄技能 牧师 费用：1
 	//Smart Savings
 	//理财之道
 	//[x]<b>Passive</b>After you sell a minion,gain 1 Gold next turn.@[x]<b>Passive</b>After you sell a minion,gain 1 Gold next turn.<i>({0} Gold saved.)</i>

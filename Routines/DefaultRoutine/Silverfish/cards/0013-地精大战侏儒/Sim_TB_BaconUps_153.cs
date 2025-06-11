@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：8 攻击力：12 生命值：18
+	//随从 中立 费用：8 攻击力：12 生命值：18
 	//Foe Reaper 4000
 	//死神4000型
 	//Also damages the minions next to whomever it attacks.

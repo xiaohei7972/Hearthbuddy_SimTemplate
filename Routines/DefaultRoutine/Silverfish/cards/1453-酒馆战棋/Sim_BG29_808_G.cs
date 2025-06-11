@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：0 攻击力：16 生命值：4
+	//随从 中立 费用：0 攻击力：16 生命值：4
 	//Spiked Savior
 	//尖角救星
 	//[x]<b><b>Taunt</b>. <b>Reborn</b>.</b> <b>Deathrattle:</b> Give yourminions +1 Health and deal 1damage to them, twice.

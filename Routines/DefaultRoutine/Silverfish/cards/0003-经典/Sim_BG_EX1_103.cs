@@ -13,13 +13,13 @@ namespace HREngine.Bots
     {
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {
-            foreach (Minion m in p.ownMinons)
-            {
-                if(m.handcard.card.Race == 14){
-                    m.minionGetBuffed(m, 1, 0);
-                }
+            // foreach (Minion m in p.ownMinions)
+            // {
+            //     if(m.handcard.card.Race == 14){
+            //         m.minionGetBuffed(m, 0, 2);
+            //     }
 
-            }
+            // }
         }
 
 

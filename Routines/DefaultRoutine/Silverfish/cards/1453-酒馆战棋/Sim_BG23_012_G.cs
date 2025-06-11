@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 恶魔猎手 费用：0 攻击力：4 生命值：4
+	//随从 中立 费用：0 攻击力：4 生命值：4
 	//Corrupted Myrmidon
 	//已腐蚀的侍从
 	//[x]<b>Start of Combat:</b> Triplethis minion's stats.

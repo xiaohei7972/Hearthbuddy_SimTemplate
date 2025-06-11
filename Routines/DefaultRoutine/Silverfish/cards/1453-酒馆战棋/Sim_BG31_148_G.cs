@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 萨满祭司 费用：0 攻击力：10 生命值：6
+	//随从 中立 费用：0 攻击力：10 生命值：6
 	//Hackerfin
 	//黑客鱼人
-	//[x]<b>Battlecry:</b> Give your otherminions +{0}/+{1}. <i>(Improvedby each different <b>Bonus______Keyword</b> in your warband!)</i>__
-	//<b>战吼：</b>使你的其他随从获得+{0}/+{1}。<i>（你的战队中每有一个不同的<b>额外关键词</b>都会提升！）</i>
+	//[x]<b>Battlecry:</b> Give your otherminions +6/+4 for each___<b>Bonus Keyword</b> they have._
+	//<b>战吼：</b>你的其他随从每拥有一个<b>额外关键词</b>，使其获得+6/+4。
 	class Sim_BG31_148_G : SimTemplate
 	{
 		

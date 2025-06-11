@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 牧师 费用：0 攻击力：3 生命值：13
+	//随从 中立 费用：0 攻击力：3 生命值：13
 	//Audacious Anchor
 	//冒进的锚手
 	//[x]<b>Start of Combat:</b> Battlethe nearest enemyminion to the death!

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 恶魔猎手 费用：0 攻击力：4 生命值：5
+	//随从 中立 费用：0 攻击力：4 生命值：5
 	//Pashmar the Vengeful
 	//复仇者帕什玛
 	//[x]<b>Avenge (3):</b> Get a<b>Spellcraft</b> spellof your Tier or lower.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 牧师 费用：0 攻击力：6 生命值：2
+	//随从 中立 费用：0 攻击力：6 生命值：2
 	//Rapscallion Recruiter
 	//渣滓招募官
 	//<b>Deathrattle:</b> Summon2 Scallywags.

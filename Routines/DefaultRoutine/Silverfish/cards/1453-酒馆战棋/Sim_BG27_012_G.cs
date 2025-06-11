@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 恶魔猎手 费用：0 攻击力：4 生命值：8
+	//随从 中立 费用：0 攻击力：4 生命值：8
 	//Seaborn Summoner
 	//海中召唤师
 	//[x]<b>Spellcraft:</b> Choose aminion. Add two minions__of its type to the Tavern.

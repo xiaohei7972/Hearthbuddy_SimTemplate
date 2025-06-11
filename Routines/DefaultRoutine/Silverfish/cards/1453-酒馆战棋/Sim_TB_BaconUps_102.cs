@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：4 生命值：4
+	//随从 中立 费用：0 攻击力：4 生命值：4
 	//Red Whelp
 	//红色雏龙
 	//[x]<b>Start of Combat:</b> Deal 1damage for each friendlyDragon to a randomenemy minion, twice.

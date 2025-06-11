@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：12 生命值：8
+	//随从 中立 费用：0 攻击力：12 生命值：8
 	//Valithria Dreamwalker
 	//踏梦者瓦莉瑟瑞娅
 	//Whenever a Dragon enters your warband or the Tavern, gain +2/+2.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 德鲁伊 费用：0 攻击力：6 生命值：9
+	//随从 中立 费用：0 攻击力：6 生命值：9
 	//Bristleback Knight
 	//刺背骑士
 	//[x]<b>Windfury</b>, <b>Divine Shield</b>The first time this survivesdamage each combat,gain <b><b>Divine Shield</b>.</b>

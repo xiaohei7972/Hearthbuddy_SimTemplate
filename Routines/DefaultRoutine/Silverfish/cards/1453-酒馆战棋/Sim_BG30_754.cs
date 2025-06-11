@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：0 攻击力：2 生命值：7
+	//随从 中立 费用：0 攻击力：2 生命值：7
 	//Putrid Pupil
 	//腐臭学徒
 	//[x]After you summon 5 minionsin combat, get a randomTavern spell. <i>(@ left!)</i>

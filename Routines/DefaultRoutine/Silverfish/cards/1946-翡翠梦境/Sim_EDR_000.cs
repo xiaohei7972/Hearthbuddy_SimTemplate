@@ -11,7 +11,7 @@ namespace HREngine.Bots
 	//<b>对战开始时：</b>双方玩家的法力值上限提高5点。<b>战吼：</b>获得3个法力水晶。
 	class Sim_EDR_000 : SimTemplate
 	{
-        public override void getBattlecryEffect(Playfield p, Minion own)
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {
             p.mana = Math.Min(10, p.mana+1);
             p.ownMaxMana = Math.Min(10, p.ownMaxMana+3);

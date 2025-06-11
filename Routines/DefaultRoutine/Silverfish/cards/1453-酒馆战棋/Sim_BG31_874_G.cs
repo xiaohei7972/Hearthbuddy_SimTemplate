@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：0 攻击力：6 生命值：6
+	//随从 中立 费用：0 攻击力：6 生命值：6
 	//Furious Driver
 	//狂怒的骑手
 	//[x]<b>Battlecry:</b> Your otherDemons each consume aminion in the Tavern togain double its stats.

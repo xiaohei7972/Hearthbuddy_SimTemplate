@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 法师 费用：0 攻击力：8 生命值：10
+	//随从 中立 费用：0 攻击力：8 生命值：10
 	//Gentle Djinni
 	//温和的灯神
 	//[x]<b>Taunt</b><b>Battlecry and Deathrattle:</b>__Get 2 random Elementals._

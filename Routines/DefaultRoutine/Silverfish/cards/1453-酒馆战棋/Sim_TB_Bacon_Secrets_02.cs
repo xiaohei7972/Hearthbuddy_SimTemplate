@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 中立 费用：0
+	//法术 猎人 费用：0
 	//Snake Trap
 	//毒蛇陷阱
 	//<b>Secret:</b> When one of your minions is attacked, summon three 1/1 Snakes.

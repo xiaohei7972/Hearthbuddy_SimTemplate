@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 无效的 费用：0 攻击力：4 生命值：2
+	//随从 中立 费用：0 攻击力：4 生命值：2
 	//Thorncaptain
 	//刺棘船长
 	//Whenever a card is added to your hand, gain +1 Health until next turn.

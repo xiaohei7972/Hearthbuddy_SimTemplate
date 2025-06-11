@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：0 攻击力：5 生命值：5
+	//随从 中立 费用：0 攻击力：5 生命值：5
 	//Free-Flying Feathermane
 	//奋飞羽鬃兽
 	//After a friendly Beast dies,summon this from your handfor this combat only.

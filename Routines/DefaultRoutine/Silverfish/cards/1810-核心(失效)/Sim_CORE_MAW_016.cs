@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 圣骑士 费用：4
+	//法术 圣骑士 费用：2
 	//Order in the Court
 	//法庭秩序
 	//[x]Reorder your deck from highest Cost to lowestCost. Draw a card.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：5
+	//BATTLEGROUND_TRINKET 中立 费用：4
 	//Comfy Coffin
 	//舒适的棺椁
 	//[x]After you cast a Tavernspell, your Undead have+1 Attack this game<i>(wherever they are)</i>.

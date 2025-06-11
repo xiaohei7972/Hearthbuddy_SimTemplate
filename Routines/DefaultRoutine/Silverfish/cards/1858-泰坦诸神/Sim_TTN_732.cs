@@ -8,7 +8,7 @@ namespace HREngine.Bots
 	//Invent-o-matic
 	//发明机器人
 	//Whenever you <b>Magnetize</b>a minion, give it +1/+1.
-	//每当你<b>磁力吸附</b>一个随从时，使其获得+1/+1。
+	//每当你<b>磁力</b>吸附一个随从时，使其获得+1/+1。
 	class Sim_TTN_732 : SimTemplate
 	{
 		

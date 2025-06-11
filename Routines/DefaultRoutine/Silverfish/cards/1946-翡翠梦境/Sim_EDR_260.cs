@@ -14,7 +14,7 @@ namespace HREngine.Bots
         public override void onDeathrattle(Playfield p, Minion m)
         {
             //获取幻影id
-            CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDb.cardIDEnum.EDR_260t);
+            CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EDR_260t);
             //添加两张幻影到牌库
             for (int i = 1; i <= 2; i++)
             {

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 中立 费用：0
+	//法术 无效的 费用：0
 	//Instant Infusion
 	//迅速灌注
 	//Get 3 <b>Blood Gems</b>.

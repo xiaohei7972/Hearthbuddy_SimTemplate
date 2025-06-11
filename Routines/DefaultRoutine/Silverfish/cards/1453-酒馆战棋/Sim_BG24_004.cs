@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：12 生命值：4
+	//随从 中立 费用：0 攻击力：12 生命值：4
 	//Warpwing
 	//折跃之翼
 	//<b>Immune</b> while attacking.

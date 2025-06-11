@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：0 攻击力：8 生命值：16
+	//随从 中立 费用：0 攻击力：8 生命值：16
 	//Holo Rover
 	//移动投影仪
 	//[x]Whenever this attacks,get 2 random <b>Magnetic</b>Mechs.

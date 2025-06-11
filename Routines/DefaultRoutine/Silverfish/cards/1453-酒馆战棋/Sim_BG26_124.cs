@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 牧师 费用：0 攻击力：8 生命值：4
+	//随从 中立 费用：0 攻击力：8 生命值：4
 	//Upbeat Impressionist
 	//蓄势模仿者
 	//[x]At the end of every 2 turns,make a random Piratein your hand Golden.<i>({0} |4(turn, turns) left!)</i>@[x]At the end of every 2 turns,make a random Piratein your hand Golden.<i>(End of this turn!)</i>

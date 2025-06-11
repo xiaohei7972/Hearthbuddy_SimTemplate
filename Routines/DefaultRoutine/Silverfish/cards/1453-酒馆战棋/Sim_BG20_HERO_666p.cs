@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//英雄技能 中立 费用：0
+	//英雄技能 战士 费用：0
 	//Realm of Terror
 	//恐惧领域
 	//[x]<b>Passive.</b> Every 4 turns, ALLenemies fight the Lord ofTerror and your warband_for loot. <i>({0} |4(turn, turns) left!)</i>@[x]<b>Passive.</b> Every 4 turns, ALLenemies fight the Lord ofTerror and your warband_for loot. <i>(Next combat!)</i>

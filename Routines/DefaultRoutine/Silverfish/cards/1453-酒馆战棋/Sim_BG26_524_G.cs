@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：0 攻击力：10 生命值：8
+	//随从 中立 费用：0 攻击力：10 生命值：8
 	//Malchezaar, Prince of Dance
 	//舞蹈王子玛克扎尔
 	//4 <b>Refreshes</b> each turn cost Health instead of Gold.<i>(@ left!)</i>

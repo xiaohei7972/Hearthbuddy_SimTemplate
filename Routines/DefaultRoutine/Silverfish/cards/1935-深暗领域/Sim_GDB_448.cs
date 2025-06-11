@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 萨满祭司 费用：7 攻击力：6 生命值：6
+	//随从 萨满祭司 费用：6 攻击力：6 生命值：6
 	//Murmur
 	//摩摩尔
 	//[x]Your <b>Battlecry</b> minionscost (1), but immediatelydie after being played.

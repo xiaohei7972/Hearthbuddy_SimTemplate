@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 萨满祭司 费用：0 攻击力：4 生命值：10
+	//随从 中立 费用：0 攻击力：4 生命值：10
 	//Very Hungry Winterfinner
 	//巨饿冬鳍鱼人
 	//<b>Taunt</b>Whenever this takes damage, give a minion in your hand +4/+2.

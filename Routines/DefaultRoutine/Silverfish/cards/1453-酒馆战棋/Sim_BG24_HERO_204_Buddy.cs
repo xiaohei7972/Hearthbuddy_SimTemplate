@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：0 攻击力：2 生命值：2
+	//随从 中立 费用：0 攻击力：2 生命值：2
 	//Enhance-o Medico
 	//强化医疗机
 	//[x]Minions in the Tavernwith <b>Taunt</b>, <b>Reborn</b>, <b>Windfury</b>, or <b>Divine Shield</b>have +2/+2 for each.

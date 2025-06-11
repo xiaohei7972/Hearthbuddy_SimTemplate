@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：0 攻击力：12 生命值：20
+	//随从 中立 费用：0 攻击力：12 生命值：20
 	//Imp Mama
 	//小鬼妈妈
 	//[x]Whenever this miniontakes damage, summon2 random Demons andgive them <b>Taunt</b>.

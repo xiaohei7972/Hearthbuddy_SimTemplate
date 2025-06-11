@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//英雄技能 圣骑士 费用：1
+	//英雄技能 圣骑士 费用：2
 	//Blessing of the Dragon
 	//巨龙的祝福
 	//[x]Shuffle two EmeraldPortals into your deck.<i>(Your Portals summon<b>@</b>-Cost Dragons.)</i>

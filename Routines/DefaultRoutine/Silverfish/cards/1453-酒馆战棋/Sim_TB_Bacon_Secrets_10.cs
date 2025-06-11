@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 中立 费用：0
+	//法术 圣骑士 费用：0
 	//Redemption
 	//救赎
 	//<b>Secret:</b> When a friendly minion dies, return it to life with 1 Health.

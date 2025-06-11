@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 德鲁伊 费用：0 攻击力：6 生命值：16
+	//随从 中立 费用：0 攻击力：6 生命值：16
 	//Groundshaker
 	//震地者
 	//After a <b>Blood Gem</b> is played on this, give your other minions +4 Attack until next turn.

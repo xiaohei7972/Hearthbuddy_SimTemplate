@@ -11,9 +11,9 @@ namespace HREngine.Bots
 	//<b>战吼：</b>选择一条旅行路线，从中获取两张可能会表现完美的卡牌。
 	class Sim_WORK_027 : SimTemplate
 	{
-        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-        {
 
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
             // 根据玩家选择的选项（choice）来决定添加哪张卡牌
             CardDB.cardIDEnum selectedCardID = CardDB.cardIDEnum.None;
 
@@ -30,7 +30,7 @@ namespace HREngine.Bots
                 selectedCardID = CardDB.cardIDEnum.WORK_027t3; // 紧凑之行
             }
 
-
+            
         }
     }
 }

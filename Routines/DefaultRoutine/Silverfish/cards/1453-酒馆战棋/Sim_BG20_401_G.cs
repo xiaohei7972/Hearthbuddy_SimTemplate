@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 无效的 费用：0 攻击力：16 生命值：8
+	//随从 中立 费用：0 攻击力：16 生命值：8
 	//Holy Mecherel
 	//机鱼圣者
 	//<b>Divine Shield</b>After another friendly minion loses <b>Divine Shield</b>, gain <b>Divine Shield</b>.

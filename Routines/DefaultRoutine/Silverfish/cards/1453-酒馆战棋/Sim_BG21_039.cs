@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：0 攻击力：5 生命值：4
+	//随从 中立 费用：0 攻击力：5 生命值：4
 	//Kathra'natir
 	//卡萨纳提尔
 	//[x]Your other Demonshave +2 Attack.Your hero is <b>Immune</b>.

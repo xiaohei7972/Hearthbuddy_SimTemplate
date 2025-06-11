@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 恶魔猎手 费用：0 攻击力：5 生命值：4
+	//随从 中立 费用：0 攻击力：5 生命值：4
 	//Slippery Slider
 	//滑道滑行者
 	//[x]<b>Spellcraft:</b> <b>Refresh</b> theTavern with an extraTavern spell that costs(1) less.

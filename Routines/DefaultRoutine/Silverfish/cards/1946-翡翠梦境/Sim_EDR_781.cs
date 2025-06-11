@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 牧师 费用：3 攻击力：2 生命值：3
+	//随从 牧师 费用：2 攻击力：2 生命值：3
 	//Harbinger of the Blighted
 	//凋零先驱
 	//[x]Whenever this enters yourhand from the battlefield,summon two random2-Cost minions.

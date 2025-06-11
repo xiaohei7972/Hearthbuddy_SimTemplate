@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：0 攻击力：4 生命值：6
+	//随从 中立 费用：0 攻击力：4 生命值：6
 	//Corpse Recycler
 	//尸体回收师
 	//[x]<b>Avenge (4):</b> This minionsells for 2 more Gold.@[x]<b>Avenge (4):</b> This minionsells for 2 more Gold.__<i>(Sells for {0} extra Gold!)</i>

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：0 攻击力：12 生命值：4
+	//随从 中立 费用：0 攻击力：16 生命值：8
 	//Batty Terrorguard
 	//狂蝠恐惧卫士
 	//[x]After you cast a Tavern spell,another friendly Demonconsumes a minion in the____Tavern to gain twice its stats.__

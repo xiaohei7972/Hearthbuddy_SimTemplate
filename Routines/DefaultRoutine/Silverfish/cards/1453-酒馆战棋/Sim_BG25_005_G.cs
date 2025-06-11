@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：0 攻击力：6 生命值：12
+	//随从 中立 费用：0 攻击力：6 生命值：12
 	//Jelly Belly
 	//黏冻大肚怪
 	//After a friendly minion is <b>Reborn</b>, gain +6/+6.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 法师 费用：0 攻击力：3 生命值：9
+	//随从 中立 费用：0 攻击力：3 生命值：9
 	//Marine Matriarch
 	//水灵圣母
 	//[x]Whenever this takesdamage, get a randomTavern spell. <i>(3 timesper combat.)</i>@[x]Whenever this takesdamage, get a randomTavern spell. <i>({0} left!)</i>

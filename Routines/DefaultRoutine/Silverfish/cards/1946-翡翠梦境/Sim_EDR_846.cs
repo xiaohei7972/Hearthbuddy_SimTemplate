@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 中立 费用：8
+	//法术 中立 费用：7
 	//Shaladrassil
 	//莎拉达希尔
 	//[x]Get all 5 Dream cards.If you've played a higherCost card while holdingthis, corrupt them!

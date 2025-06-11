@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 恶魔猎手 费用：0 攻击力：8 生命值：16
+	//随从 中立 费用：0 攻击力：8 生命值：16
 	//Daggerspine Thrasher
 	//刺脊刺击者
 	//[x]Whenever you cast a spell,gain <b>Divine Shield</b>,<b>Windfury</b>, or <b>Venomous</b>.

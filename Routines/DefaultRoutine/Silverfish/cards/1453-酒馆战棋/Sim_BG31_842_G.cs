@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 无效的 费用：0 攻击力：8 生命值：8
+	//随从 中立 费用：0 攻击力：8 生命值：8
 	//Nether Construct
 	//虚空构造体
 	//[x]<b>Choose One</b> - Minions in theTavern have +8/+8 this game;or Consume all minions in the____Tavern to gain twice their stats.__

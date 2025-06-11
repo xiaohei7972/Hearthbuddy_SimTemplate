@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 无效的 费用：0 攻击力：8 生命值：8
+	//随从 中立 费用：0 攻击力：8 生命值：8
 	//Dreadbeard
 	//恐惧胡子王
 	//[x]At the end of your turn,deal 1 damage to your heroand get two Gold Coins.

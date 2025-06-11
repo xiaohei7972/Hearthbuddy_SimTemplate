@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：0 攻击力：14 生命值：14
+	//随从 潜行者 费用：0 攻击力：14 生命值：14
 	//Ghastcoiler
 	//阴森巨蟒
 	//<b>Deathrattle:</b> Summon4 random <b>Deathrattle</b> minions.

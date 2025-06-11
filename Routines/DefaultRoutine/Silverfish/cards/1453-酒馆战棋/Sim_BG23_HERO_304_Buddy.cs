@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 恶魔猎手 费用：0 攻击力：3 生命值：2
+	//随从 中立 费用：0 攻击力：3 生命值：2
 	//Coilfang Elite
 	//盘牙精英
 	//[x]After a <b>Spellcraft</b> minionappears in the Tavern,get a copy of its spell.

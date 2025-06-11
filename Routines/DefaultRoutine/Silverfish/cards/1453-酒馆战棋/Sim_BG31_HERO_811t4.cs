@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：2 生命值：2
+	//随从 无效的 费用：0 攻击力：2 生命值：2
 	//Hydralisk
 	//刺蛇
 	//[x]<b><b>Windfury</b>.</b> Whenever thisattacks, permanently gainAttack equal to your Tier.<i>(Morphs each turn!)</i>

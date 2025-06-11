@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 恶魔猎手 费用：0 攻击力：8 生命值：8
+	//随从 中立 费用：0 攻击力：8 生命值：8
 	//Eelbound Archer
 	//鳗缚弓箭手
 	//[x]<b>Spellcraft:</b> Give a minion+16_Attack until next turn.

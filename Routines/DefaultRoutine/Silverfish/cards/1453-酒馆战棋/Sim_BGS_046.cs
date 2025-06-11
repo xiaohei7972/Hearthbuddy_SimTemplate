@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 牧师 费用：0 攻击力：8 生命值：5
+	//随从 中立 费用：0 攻击力：8 生命值：5
 	//Nat Pagle, Extreme Angler
 	//“钓鱼王”纳特·帕格
 	//[x]When this attacksand kills a minion,get a random minion.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 法师 费用：0 攻击力：3 生命值：3
+	//随从 中立 费用：0 攻击力：3 生命值：3
 	//Arcane Assistant
 	//奥术助手
 	//<b>Battlecry:</b> Give your other Elementals +1/+1.

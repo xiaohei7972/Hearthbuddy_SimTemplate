@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：0 攻击力：4 生命值：5
+	//随从 中立 费用：0 攻击力：4 生命值：5
 	//Support System
 	//增援系统
 	//[x]At the end of your turn,give a minion in yourteammate's warband<b>Divine Shield</b>.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 牧师 费用：0 攻击力：10 生命值：12
+	//随从 中立 费用：0 攻击力：10 生命值：12
 	//Fleet Admiral Tethys
 	//舰队上将特塞斯
 	//[x]Whenever you spend9 Gold, get 2 randomPirates. <i>(@ Gold left!)</i>

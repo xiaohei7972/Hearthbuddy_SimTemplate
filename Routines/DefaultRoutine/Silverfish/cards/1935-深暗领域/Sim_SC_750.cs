@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 无效的 费用：5
+	//法术 无效的 费用：4
 	//Chrono Boost
 	//时空提速
 	//Draw 2 Protoss cards. Summon a 3/4 Zealot with <b>Charge</b>.

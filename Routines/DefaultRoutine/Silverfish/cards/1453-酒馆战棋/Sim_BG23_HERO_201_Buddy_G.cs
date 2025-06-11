@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：0 攻击力：8 生命值：8
+	//随从 中立 费用：0 攻击力：8 生命值：8
 	//Tamuzo
 	//塔穆佐
 	//<b>Avenge (2):</b> Upgrade 'Tentacular' by +2/+2.

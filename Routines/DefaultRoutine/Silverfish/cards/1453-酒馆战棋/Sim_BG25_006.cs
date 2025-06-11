@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：0 攻击力：3 生命值：2
+	//随从 中立 费用：0 攻击力：3 生命值：2
 	//Lich Doctor
 	//巫妖医生
 	//[x]<b>Taunt</b>. At the start of yourturn, give your minions that_died last combat +1/+1.

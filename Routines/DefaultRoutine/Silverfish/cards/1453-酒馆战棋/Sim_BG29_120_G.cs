@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：0 攻击力：12 生命值：4
+	//随从 中立 费用：0 攻击力：12 生命值：4
 	//Hateful Hag
 	//恨意魔巫
 	//[x]Whenever this attacks,give the two minions to__the right of this <b>Reborn</b>.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 中立 费用：0
+	//法术 无效的 费用：0
 	//Sprightly Support
 	//机变加强
 	//Give a Beast +8 Attack.

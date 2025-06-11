@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//英雄 无效的 费用：8
+	//英雄 无效的 费用：7
 	//Artanis
 	//阿塔尼斯
 	//[x]<b>Battlecry:</b> Summon two3/4 Zealots with <b>Charge</b>.Your Protoss minions cost(2) less this game.

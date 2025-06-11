@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 法师 费用：0 攻击力：10 生命值：8
+	//随从 中立 费用：0 攻击力：10 生命值：8
 	//Snow Elemental
 	//冰雪元素
 	//[x]The Tavern offers 2 extra<b>Frozen</b> Elementals_whenever it is <b>Refreshed</b>.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：0 攻击力：2 生命值：5
+	//随从 中立 费用：0 攻击力：2 生命值：5
 	//Watfin
 	//蛙生
 	//After you guess correctly with 'Detective for Hire', get a plain copy of the minion.

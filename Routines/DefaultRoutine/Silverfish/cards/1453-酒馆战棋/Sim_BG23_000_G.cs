@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 恶魔猎手 费用：0 攻击力：2 生命值：6
+	//随从 中立 费用：0 攻击力：2 生命值：6
 	//Mini-Myrmidon
 	//迷你侍从
 	//<b>Spellcraft:</b> Give a minion +4 Attack until next turn.

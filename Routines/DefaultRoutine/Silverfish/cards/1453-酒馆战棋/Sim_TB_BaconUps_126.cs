@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 牧师 费用：0 攻击力：4 生命值：4
+	//随从 中立 费用：0 攻击力：4 生命值：4
 	//Deck Swabbie
 	//甲板杂兵
 	//<b>Battlecry:</b> Reducethe Cost of upgradingthe Tavern by (2).

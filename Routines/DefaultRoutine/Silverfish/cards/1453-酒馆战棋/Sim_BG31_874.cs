@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：0 攻击力：3 生命值：3
+	//随从 中立 费用：0 攻击力：3 生命值：3
 	//Furious Driver
 	//狂怒的骑手
 	//<b>Battlecry:</b> Your other Demons each consume a minion in the Tavern to gain its stats.

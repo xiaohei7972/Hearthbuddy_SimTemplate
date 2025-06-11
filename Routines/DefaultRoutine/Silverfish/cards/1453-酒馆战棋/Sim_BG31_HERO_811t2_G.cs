@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：4
+	//随从 无效的 费用：0 攻击力：4 生命值：4
 	//Zergling
 	//跳虫
 	//<b>Start of Combat:</b> Summon2 copies of this minion. <i>(Morphs each turn!)</i>

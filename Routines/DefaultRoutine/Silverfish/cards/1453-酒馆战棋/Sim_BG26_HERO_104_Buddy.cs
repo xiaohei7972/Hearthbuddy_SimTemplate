@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：0 攻击力：3 生命值：3
+	//随从 中立 费用：0 攻击力：3 生命值：3
 	//Akali, Rock Rhino
 	//摇滚犀牛阿卡里
 	//[x]At the end of every 2 turns, get a plain copy of theleft-most card in your hand.<i>({0} |4(turn, turns) left!)</i>@[x]At the end of every 2turns, get a plain copy of theleft-most card in your hand.<i>(End of this turn!)</i>

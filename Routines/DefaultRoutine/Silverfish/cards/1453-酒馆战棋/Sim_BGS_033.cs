@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：4 生命值：4
+	//随从 中立 费用：0 攻击力：4 生命值：4
 	//Hangry Dragon
 	//急饿巨龙
 	//[x]At the start of your turn,gain +2/+2 if you wonthe last combat.

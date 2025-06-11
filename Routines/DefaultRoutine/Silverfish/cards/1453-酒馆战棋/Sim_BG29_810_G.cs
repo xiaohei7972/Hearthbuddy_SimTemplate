@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：4 生命值：6
+	//随从 中立 费用：0 攻击力：4 生命值：6
 	//Thousandth Paper Drake
 	//千纸幼龙
 	//[x]<b>Start of Combat:</b> Give yourtwo left-most Dragons+1/+2 and <b>Windfury</b>.

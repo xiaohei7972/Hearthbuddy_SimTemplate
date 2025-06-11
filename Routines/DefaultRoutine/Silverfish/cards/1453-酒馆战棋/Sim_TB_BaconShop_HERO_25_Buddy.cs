@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：0 攻击力：5 生命值：5
+	//随从 中立 费用：0 攻击力：5 生命值：5
 	//Unearthed Underling
 	//破土杂兵
 	//Whenever your hero takes damage, rewind it and gain stats equal to that amount.

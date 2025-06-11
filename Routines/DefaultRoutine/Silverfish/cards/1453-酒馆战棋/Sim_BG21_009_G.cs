@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 萨满祭司 费用：0 攻击力：4 生命值：12
+	//随从 中立 费用：0 攻击力：4 生命值：12
 	//SI:Sefin
 	//军情鳍处鱼人
 	//<b>Avenge (4):</b> Give 2 friendly Murlocs <b>Poisonous</b> permanently.

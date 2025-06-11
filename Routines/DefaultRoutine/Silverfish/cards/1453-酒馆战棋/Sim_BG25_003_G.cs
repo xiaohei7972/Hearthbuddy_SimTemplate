@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：0 攻击力：12 生命值：2
+	//随从 中立 费用：0 攻击力：12 生命值：2
 	//Relentless Sentry
 	//无情的哨卫
 	//<b>Avenge (4):</b> Gain <b>Taunt</b>and <b><b>Reborn</b>.</b>

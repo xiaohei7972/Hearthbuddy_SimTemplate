@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：0 攻击力：8 生命值：12
+	//随从 中立 费用：0 攻击力：8 生命值：12
 	//Karmic Chameleon
 	//业报变色龙
 	//<b>Avenge (5):</b> Transform into a Golden copy of the minion to the left of this.

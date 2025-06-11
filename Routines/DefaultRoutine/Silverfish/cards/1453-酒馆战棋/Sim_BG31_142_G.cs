@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 萨满祭司 费用：0 攻击力：8 生命值：2
+	//随从 中立 费用：0 攻击力：8 生命值：2
 	//Reckless Cliffdiver
 	//鲁莽的跳崖鱼人
 	//<b>Reborn</b>. Has +2 Attack for each <b>Battlecry</b> you've triggered this game<i>(wherever this is)</i>.

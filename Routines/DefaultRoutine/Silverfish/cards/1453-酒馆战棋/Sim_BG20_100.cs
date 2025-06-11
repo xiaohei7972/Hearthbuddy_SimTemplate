@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 德鲁伊 费用：0 攻击力：3 生命值：1
+	//随从 中立 费用：0 攻击力：3 生命值：1
 	//Razorfen Geomancer
 	//剃刀沼泽地卜师
 	//<b>Battlecry:</b> Get a<b>Blood Gem</b>.

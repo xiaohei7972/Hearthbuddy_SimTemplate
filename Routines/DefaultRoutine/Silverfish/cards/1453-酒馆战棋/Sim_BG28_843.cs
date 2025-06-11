@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_SPELL 中立 费用：3
+	//BATTLEGROUND_SPELL 无效的 费用：3
 	//Titus' Tribute
 	//提图斯的装备
 	//Your <b>Deathrattles</b> trigger twice untilnext turn.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：0 攻击力：1 生命值：1
+	//随从 牧师 费用：0 攻击力：1 生命值：1
 	//Pogo-Hopper
 	//蹦蹦兔
 	//[x]<b>Battlecry:</b> Gain +2/+2 foreach other Pogo-Hopperyou played this game.

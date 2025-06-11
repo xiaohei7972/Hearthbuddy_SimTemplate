@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 无效的 费用：0 攻击力：12 生命值：12
+	//随从 中立 费用：0 攻击力：12 生命值：12
 	//Captain Bonerender
 	//裂骨船长
 	//[x]After you summon adifferent minion in combat,summon two extra copiesof it.

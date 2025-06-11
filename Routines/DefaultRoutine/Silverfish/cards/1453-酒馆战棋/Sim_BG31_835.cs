@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：0 攻击力：7 生命值：7
+	//随从 中立 费用：0 攻击力：7 生命值：7
 	//Deathly Striker
 	//致命打击者
 	//[x]<b>Avenge (4):</b> Get a randomUndead. <b>Deathrattle:</b>Summon it from your handfor this combat only.

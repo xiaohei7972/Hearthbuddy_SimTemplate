@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 德鲁伊 费用：0 攻击力：10 生命值：16
+	//随从 中立 费用：0 攻击力：10 生命值：16
 	//Hot-Air Surveyor
 	//热气球测绘员
 	//<b>Blood Gems</b> played from your hand cast 2 extra times.

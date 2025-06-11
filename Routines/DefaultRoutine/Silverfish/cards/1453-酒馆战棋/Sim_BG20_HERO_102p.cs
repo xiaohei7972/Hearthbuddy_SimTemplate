@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//英雄技能 中立 费用：1
+	//英雄技能 战士 费用：1
 	//For the Horde!
 	//为了部落！
 	//[x]Give a minion inthe Tavern +{1}/+{2}.<i>(Doubles every {0} turns!)</i>@[x]Give a minion inthe Tavern +{1}/+{2}.<i>(Doubles in {0} |4(turn, turns)!)</i>

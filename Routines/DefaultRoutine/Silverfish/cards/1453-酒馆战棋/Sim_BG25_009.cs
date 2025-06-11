@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：0 攻击力：8 生命值：1
+	//随从 中立 费用：0 攻击力：8 生命值：1
 	//Eternal Summoner
 	//永恒召唤者
 	//[x]<b><b>Reborn</b>.</b> <b>Deathrattle:</b>Summon 1 Eternal Knight.

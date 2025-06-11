@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 德鲁伊 费用：0 攻击力：4 生命值：4
+	//随从 中立 费用：0 攻击力：4 生命值：4
 	//Crater Miner
 	//坑谷矿工
 	//[x]<b>Choose One - </b>Get 4 <b>BloodGems</b>; or Get two random1-Cost Tavern spells.

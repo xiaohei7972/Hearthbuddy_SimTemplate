@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：4
+	//随从 无效的 费用：0 攻击力：4 生命值：4
 	//Baneling
 	//爆虫
 	//[x]<b>Deathrattle:</b> Deal damageequal to this minion's Attackto a random enemy minion,_____twice. <i>(Morphs each turn!)</i>___

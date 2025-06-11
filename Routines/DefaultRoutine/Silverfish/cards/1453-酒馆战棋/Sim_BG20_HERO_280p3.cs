@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//英雄技能 中立 费用：0
+	//英雄技能 恶魔猎手 费用：0
 	//Close the Portal
 	//关闭传送门
 	//[x]<b>Passive.</b> Buy 5 minions in1 turn to give ALL yourminions this game +2/+2__and complete this. <i>({0} left!)</i>@[x]<b>Passive.</b> Buy 5 minions in1 turn to give ALL yourminions this game +2/+2.<i>(Complete!)</i>

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 牧师 费用：0 攻击力：3 生命值：5
+	//随从 中立 费用：0 攻击力：3 生命值：5
 	//Dual-Wield Corsair
 	//双持海盗
 	//[x]Whenever you spend 5 Gold,give two friendly Pirates+4/+4. <i>(@ Gold left!)</i>

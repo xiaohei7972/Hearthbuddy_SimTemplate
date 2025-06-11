@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：0 攻击力：16 生命值：10
+	//随从 中立 费用：0 攻击力：16 生命值：10
 	//Recurring Nightmare
 	//再生梦魇
 	//[x]<b>Deathrattle:</b> Give a differentfriendly Undead "<b>Deathrattle:</b>Summon a GoldenRecurring Nightmare."

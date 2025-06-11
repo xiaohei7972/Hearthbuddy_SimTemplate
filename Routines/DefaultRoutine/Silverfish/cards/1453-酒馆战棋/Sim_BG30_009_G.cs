@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：2 生命值：10
+	//随从 中立 费用：0 攻击力：2 生命值：10
 	//Smoldering Gardener
 	//阴燃园丁
 	//[x]When you sell this, get two2/1 Smolderwings with"<b>Battlecry:</b> Give a Dragon+5 Attack."

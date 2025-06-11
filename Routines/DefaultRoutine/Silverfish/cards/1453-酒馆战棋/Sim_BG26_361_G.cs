@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 无效的 费用：0 攻击力：4 生命值：14
+	//随从 中立 费用：0 攻击力：4 生命值：14
 	//Plagued Tidewalker
 	//踏潮疫病鱼人
 	//<b>Venomous</b>

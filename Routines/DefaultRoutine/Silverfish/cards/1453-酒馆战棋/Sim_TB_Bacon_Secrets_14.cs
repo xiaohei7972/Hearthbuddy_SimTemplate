@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 中立 费用：0
+	//法术 圣骑士 费用：1
 	//Reckoning
 	//清算
 	//<b>Secret:</b> After an enemy minion deals 3 or more damage, destroy it.

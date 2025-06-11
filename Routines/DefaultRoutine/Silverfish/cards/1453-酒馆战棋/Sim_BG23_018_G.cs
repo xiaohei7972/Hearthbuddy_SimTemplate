@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 德鲁伊 费用：0 攻击力：10 生命值：12
+	//随从 中立 费用：0 攻击力：12 生命值：14
 	//Darkgaze Elder
 	//暗视长者
-	//[x]Whenever you spend 6 Gold,play two <b>Blood Gems</b> onall your Quilboar.<i>(@ Gold left!)</i>
-	//每当你花掉6枚铸币，对你的所有野猪人各使用两张<b>鲜血宝石</b>。<i>（还剩@枚！）</i>
+	//[x]Whenever you spend 5 Gold,play a <b>Blood Gem</b> on fourfriendly Quilboar, twice.<i>(@ Gold left!)</i>
+	//每当你花掉5枚铸币，对四个友方野猪人各使用一张<b>鲜血宝石</b>，触发两次。<i>（还剩@枚！）</i>
 	class Sim_BG23_018_G : SimTemplate
 	{
 		

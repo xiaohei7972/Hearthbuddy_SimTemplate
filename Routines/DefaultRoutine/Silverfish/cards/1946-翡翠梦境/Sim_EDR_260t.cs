@@ -11,8 +11,11 @@ namespace HREngine.Bots
     //<b>抽到时召唤</b><b>嘲讽</b>
     class Sim_EDR_260t : SimTemplate
     {
+
         //获取幻影id
-        CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDb.cardIDEnum.EDR_260t);
+
+        CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EDR_260t);
+
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice) // 施放
         {
             int pos = (ownplay) ? p.ownMinions.Count : p.enemyMinions.Count; // 位置

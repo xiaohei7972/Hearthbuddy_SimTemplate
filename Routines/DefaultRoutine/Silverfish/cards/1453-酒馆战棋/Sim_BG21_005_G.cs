@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：0 攻击力：18 生命值：10
+	//随从 中立 费用：0 攻击力：18 生命值：10
 	//Famished Felbat
 	//饥饿的魔蝠
 	//[x]At the end of your turn, yourDemons each consume aminion in the Tavern togain double its stats.

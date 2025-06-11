@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：0 攻击力：3 生命值：4
+	//随从 中立 费用：0 攻击力：3 生命值：4
 	//Zilliax: Crystal Module
 	//奇利亚斯水晶模块
 	//[x]<b>Reborn</b><i>This minion can triple withany Zilliax Modules.</i>

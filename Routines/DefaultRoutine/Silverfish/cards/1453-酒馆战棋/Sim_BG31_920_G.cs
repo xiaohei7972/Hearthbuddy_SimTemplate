@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 恶魔猎手 费用：0 攻击力：8 生命值：10
+	//随从 中立 费用：0 攻击力：8 生命值：10
 	//Darkcrest Strategist
 	//暗潮战略专家
 	//<b>Spellcraft:</b> Get two random Tier @ Naga. <i>(Upgrades each turn!)</i>

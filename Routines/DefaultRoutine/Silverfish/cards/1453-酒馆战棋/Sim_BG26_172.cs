@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：0 攻击力：5 生命值：1
+	//随从 中立 费用：0 攻击力：5 生命值：1
 	//Xylo-bones
 	//木琴骷髅
 	//After you summon a minion in combat, gain +2 Health permanently.

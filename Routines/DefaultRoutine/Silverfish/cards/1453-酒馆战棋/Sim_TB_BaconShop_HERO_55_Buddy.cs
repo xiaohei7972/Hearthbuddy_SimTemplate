@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 萨满祭司 费用：0 攻击力：4 生命值：3
+	//随从 中立 费用：0 攻击力：4 生命值：3
 	//Sparkfin Soothsayer
 	//闪鳍预言者
 	//[x]<b>Battlecry:</b> Transformminions in the Tavern into_Murlocs of the same Tier.

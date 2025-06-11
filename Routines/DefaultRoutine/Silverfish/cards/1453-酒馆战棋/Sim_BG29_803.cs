@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：0 攻击力：2 生命值：4
+	//随从 中立 费用：0 攻击力：2 生命值：4
 	//Goldshell Warden
 	//金壳固卫龟
 	//<b>Battlecry:</b> Give your other Beasts +2/+4.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：0 攻击力：6 生命值：4
+	//随从 中立 费用：0 攻击力：6 生命值：4
 	//The Uninvited Guest
 	//不速来客
 	//[x]<b>Start of Combat:</b> Give yourother minions "<b>Deathrattle:</b>__Summon a 6/4 Shadow."

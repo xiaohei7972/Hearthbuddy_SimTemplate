@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：0 攻击力：3 生命值：3
+	//随从 中立 费用：0 攻击力：3 生命值：3
 	//Accord-o-Tron
 	//手风琴机器人
 	//[x]<b>Magnetic</b>At the start of your turn,gain 1 extra Gold.

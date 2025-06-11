@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：0 攻击力：3 生命值：2
+	//随从 中立 费用：0 攻击力：3 生命值：2
 	//Mind Muck
 	//心灵泥魔
 	//[x]<b>Battlecry:</b> Choose a friendlyDemon. It consumes aminion in the Tavernto gain its stats.

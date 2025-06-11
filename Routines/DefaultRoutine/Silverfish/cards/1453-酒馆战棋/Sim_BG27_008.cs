@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 无效的 费用：0 攻击力：4 生命值：4
+	//随从 中立 费用：0 攻击力：4 生命值：4
 	//Mechanized Gift Horse
 	//机械木马
 	//[x]<b>Deathrattle:</b> Summon two2/2 Mechorses with"<b>Deathrattle:</b> Summon a1/1 Mechapony."

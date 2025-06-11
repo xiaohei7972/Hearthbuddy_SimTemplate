@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：0 攻击力：4 生命值：8
+	//随从 中立 费用：0 攻击力：4 生命值：8
 	//Sore Loser
 	//输不起的输家
 	//[x]Your other Undead haveextra Attack equalto double your Tier.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 萨满祭司 费用：3 攻击力：2 生命值：4
+	//随从 萨满祭司 费用：3 攻击力：2 生命值：3
 	//Living Garden
 	//活体园林
 	//[x]<b>Battlecry:</b> <b>Imbue</b> your HeroPower. Reduce the Cost of a_minion in your hand by (1).

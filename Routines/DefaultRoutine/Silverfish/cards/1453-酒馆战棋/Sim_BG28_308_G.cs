@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：0 攻击力：20 生命值：16
+	//随从 中立 费用：0 攻击力：20 生命值：16
 	//Archlich Kel'Thuzad
 	//大巫妖克尔苏加德
 	//[x]At the end of your turn,destroy adjacent Undeadand resummon exactcopies.

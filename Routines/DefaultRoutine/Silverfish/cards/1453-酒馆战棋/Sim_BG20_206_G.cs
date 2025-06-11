@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 德鲁伊 费用：0 攻击力：18 生命值：10
+	//随从 中立 费用：0 攻击力：18 生命值：10
 	//Captain Flat Tusk
 	//獠牙队长
 	//[x]Whenever you spend3 Gold, get 2 <b>Blood Gems</b>.<i>(@ Gold left!)</i>

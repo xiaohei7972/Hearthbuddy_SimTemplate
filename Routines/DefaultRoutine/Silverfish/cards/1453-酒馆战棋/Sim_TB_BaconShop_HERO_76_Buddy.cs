@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 法师 费用：0 攻击力：6 生命值：4
+	//随从 中立 费用：0 攻击力：6 生命值：4
 	//Spirit of Air
 	//空气之灵
 	//[x]<b>Deathrattle:</b> Give a randomfriendly minion <b>Windfury</b>,___<b>Divine Shield</b>, and <b>Taunt</b>.___

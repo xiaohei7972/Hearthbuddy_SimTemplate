@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：0 攻击力：4 生命值：1
+	//随从 中立 费用：0 攻击力：4 生命值：1
 	//Arcanotron, Activated
 	//激活的奥能金刚
 	//<b>Taunt</b>Whenever you cast a Tavern spell, give a friendly Mech +3/+2.

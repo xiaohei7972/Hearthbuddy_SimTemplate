@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 无效的 费用：0 攻击力：1 生命值：1
+	//随从 中立 费用：0 攻击力：1 生命值：1
 	//Magmaloc
 	//熔岩鱼人
 	//[x]At the end of your turn,gain +1/+1. Repeat foreach minion you playedthis turn.

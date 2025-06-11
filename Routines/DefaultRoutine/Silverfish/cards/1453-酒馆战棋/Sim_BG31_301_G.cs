@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：10 生命值：12
+	//随从 中立 费用：0 攻击力：10 生命值：12
 	//Efficient Engineer
 	//高效机师
 	//[x]<b>Battlecry:</b> Trigger a friendlyminion's end of turn effectstwice <i>(except YoungMurk-Eye)</i>.

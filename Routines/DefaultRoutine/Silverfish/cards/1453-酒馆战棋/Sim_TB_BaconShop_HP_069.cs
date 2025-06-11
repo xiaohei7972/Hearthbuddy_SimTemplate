@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//英雄技能 中立 费用：0
+	//英雄技能 恶魔猎手 费用：0
 	//Wingmen
 	//左膀右臂
 	//[x]<b>Passive.</b> <b>Start of Combat:</b>Your left and right-mostminions gain +2/+1__and attack immediately.

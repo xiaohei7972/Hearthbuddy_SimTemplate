@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：8 生命值：8
+	//随从 中立 费用：0 攻击力：8 生命值：8
 	//Yu'lon, Fortune Granter
 	//福禄神龙玉珑
 	//[x]<b>Start of Combat:</b> Make yourlowest-Tier minion Golden<i>(except Yu'lon,Fortune Granter)</i>.

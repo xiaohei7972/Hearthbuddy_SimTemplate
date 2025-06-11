@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 中立 费用：0
+	//法术 萨满祭司 费用：0
 	//Water Invocation
 	//流水祈咒
 	//Give your right-most minion +3 Healthand <b>Taunt</b>.

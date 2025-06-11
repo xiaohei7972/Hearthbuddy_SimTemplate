@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：0 攻击力：6 生命值：6
+	//随从 中立 费用：0 攻击力：6 生命值：6
 	//Soul Devourer
 	//灵魂吞噬者
 	//[x]<b>Battlecry:</b> Consume afriendly Demon to gaindouble its stats and6 Gold.

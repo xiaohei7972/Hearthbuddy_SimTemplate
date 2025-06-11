@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：2 生命值：6
+	//随从 中立 费用：0 攻击力：2 生命值：6
 	//Sinestra
 	//希奈丝特拉
 	//Whenever a friendly minion gains Attack during combat, give it +1 Health permanently.

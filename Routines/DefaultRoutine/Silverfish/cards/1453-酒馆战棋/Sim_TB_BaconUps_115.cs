@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：4 生命值：8
+	//随从 法师 费用：0 攻击力：4 生命值：8
 	//Glyph Guardian
 	//雕文护卫者
 	//Whenever this attacks, triple its Attack.

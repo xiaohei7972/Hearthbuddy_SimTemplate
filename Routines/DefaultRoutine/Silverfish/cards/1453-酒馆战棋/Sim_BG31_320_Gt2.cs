@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 中立 费用：0
+	//法术 无效的 费用：0
 	//Mine Deeper
 	//深入挖掘
 	//Get two random 1-Cost Tavern spells.

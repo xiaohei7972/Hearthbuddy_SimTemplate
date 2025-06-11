@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 德鲁伊 费用：0 攻击力：6 生命值：20
+	//随从 中立 费用：0 攻击力：6 生命值：20
 	//Bristlebach
 	//作曲鬃师
 	//<b>Avenge (2):</b> Play 4 <b>Blood Gems</b> on all your Quilboar.

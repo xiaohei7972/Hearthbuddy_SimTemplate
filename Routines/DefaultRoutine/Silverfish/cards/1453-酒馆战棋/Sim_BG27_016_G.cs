@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：0 攻击力：20 生命值：20
+	//随从 中立 费用：0 攻击力：20 生命值：20
 	//Champion of Sargeras
 	//萨格拉斯的勇士
 	//Minions in the_Tavern have +20/+20.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：2 生命值：3
+	//随从 中立 费用：0 攻击力：2 生命值：3
 	//Time Saver
 	//时间存护者
 	//[x]If you have any unspent Goldat the end of your turn,__this sells for 3 more Gold.@[x]If you have any unspent Goldat the end of your turn,__this sells for 3 more Gold.<i>(Sells for {0} extra Gold!)</i>

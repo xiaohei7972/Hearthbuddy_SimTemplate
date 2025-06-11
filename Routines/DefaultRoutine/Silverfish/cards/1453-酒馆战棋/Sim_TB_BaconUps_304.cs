@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：0 攻击力：8 生命值：10
+	//随从 中立 费用：0 攻击力：8 生命值：10
 	//Bigfernal
 	//鬼狱火
 	//After you summon a Demon in combat, gain double its stats.

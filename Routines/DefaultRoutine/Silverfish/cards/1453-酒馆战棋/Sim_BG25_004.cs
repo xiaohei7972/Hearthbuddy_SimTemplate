@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：0 攻击力：2 生命值：7
+	//随从 中立 费用：0 攻击力：2 生命值：7
 	//Possessive Banshee
 	//附灵女妖
 	//<b>Battlecry:</b> Give an Undead +2/+7.

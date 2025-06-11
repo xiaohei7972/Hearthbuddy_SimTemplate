@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：0 攻击力：6 生命值：12
+	//随从 中立 费用：0 攻击力：6 生命值：12
 	//Colossus
 	//巨像
 	//[x]Whenever this attacks, deal{1} damage to the target'sneighbors. <i>(Upgrades whenyou spend Gold!)</i>

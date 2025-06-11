@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：4 生命值：4
+	//随从 中立 费用：0 攻击力：4 生命值：4
 	//Reverber Drake
 	//混响幼龙
 	//[x]<b>Battlecry:</b> Cast 'EchoingRoar' on a friendly Dragontwice.

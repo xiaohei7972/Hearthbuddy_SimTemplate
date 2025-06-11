@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 恶魔猎手 费用：0 攻击力：6 生命值：8
+	//随从 中立 费用：0 攻击力：6 生命值：8
 	//Zesty Shaker
 	//热情沙锤手
 	//[x]Once per turn, when a<b>Spellcraft</b> spell is played on_this, get 2 new copies of it.

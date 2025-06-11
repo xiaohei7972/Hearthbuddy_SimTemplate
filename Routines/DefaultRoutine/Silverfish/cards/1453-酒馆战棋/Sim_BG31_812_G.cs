@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 法师 费用：0 攻击力：6 生命值：2
+	//随从 中立 费用：0 攻击力：6 生命值：2
 	//Ichoron the Protector
 	//守护者艾库隆
 	//<b>Divine Shield</b>Whenever you play an Elemental, give it <b>Divine Shield</b>.
