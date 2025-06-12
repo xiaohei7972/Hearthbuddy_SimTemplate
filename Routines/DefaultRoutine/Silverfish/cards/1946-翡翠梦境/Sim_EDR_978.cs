@@ -11,12 +11,11 @@ namespace HREngine.Bots
 	//<b>嘲讽</b>。<b>亡语：</b>将一张踏青驼鹿置于你的牌库底，其法力值消耗为（1）点。
 	class Sim_EDR_978 : SimTemplate
 	{
-
-		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.Sim_EDR_978);
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EDR_978);
 
         public override void onDeathrattle(Playfield p, Minion m)
         {
-            kid.costs = 1;
+            kid.cost = 1;
             p.AddToDeck(kid);
         }
 
