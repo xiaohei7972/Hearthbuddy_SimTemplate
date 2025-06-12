@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：3
+	//BATTLEGROUND_TRINKET 中立 费用：1
 	//Hoggy Bank
 	//猪猪储蓄罐
 	//[x]<b>Start of Combat:</b>Give your Quilboar"<b>Deathrattle:</b> Get a<b>Blood Gem</b>."

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：6 生命值：6
+	//随从 圣骑士 费用：0 攻击力：6 生命值：6
 	//Zoobot
 	//机械动物管理员
 	//<b>Battlecry:</b> Give a random friendly Beast, Dragon, and Murloc +2/+2.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//英雄 恶魔猎手 费用：0
+	//英雄 中立 费用：0
 	//Ashfallen Firewalker
 	//踏火艺人陨烬
 	//

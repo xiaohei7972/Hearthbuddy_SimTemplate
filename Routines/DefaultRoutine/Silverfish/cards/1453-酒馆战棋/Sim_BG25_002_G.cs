@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：10
+	//随从 巫妖王 费用：0 攻击力：4 生命值：10
 	//Ghoul of the Feast
 	//宴会食尸鬼
 	//<b>Avenge (2):</b> Give afriendly minion of eachtype +6 Attack.

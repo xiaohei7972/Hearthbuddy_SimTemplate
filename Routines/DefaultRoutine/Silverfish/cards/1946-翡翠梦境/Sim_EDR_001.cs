@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//<b>战吼：</b>随机获取一张梦境牌。
 	class Sim_EDR_001 : SimTemplate
 	{
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			p.drawACard(CardDB.cardNameEN.yseraawakens, true, true);
+        }
 		
 	}
 }

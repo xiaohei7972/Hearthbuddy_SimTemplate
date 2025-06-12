@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：12 生命值：12
+	//随从 牧师 费用：0 攻击力：12 生命值：12
 	//Cap'n Hoggarr
 	//霍格船长
 	//[x]Whenever you buy a Pirate,gain 2 Gold.

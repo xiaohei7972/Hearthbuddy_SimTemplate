@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：9 生命值：6
+	//随从 术士 费用：0 攻击力：9 生命值：6
 	//Man'ari Messenger
 	//堕落者信使
 	//<b>Battlecry:</b> Minions inyour team's Taverns have +1/+1 this game.

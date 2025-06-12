@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：10 生命值：14
+	//随从 圣骑士 费用：0 攻击力：10 生命值：14
 	//Sneed's Old Shredder
 	//斯尼德的伐木机
 	//<b>Deathrattle:</b> Summon 2 random <b>Legendary</b> minions.

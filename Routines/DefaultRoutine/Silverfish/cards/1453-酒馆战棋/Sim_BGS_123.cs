@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：2 生命值：2
+	//随从 法师 费用：0 攻击力：2 生命值：2
 	//Tavern Tempest
 	//酒馆旋风
 	//<b>Battlecry:</b> Get a random Elemental.

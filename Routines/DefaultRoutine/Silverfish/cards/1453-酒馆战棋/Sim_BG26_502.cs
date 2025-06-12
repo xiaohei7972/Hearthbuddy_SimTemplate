@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：2 生命值：2
+	//随从 恶魔猎手 费用：0 攻击力：2 生命值：2
 	//Deep Blue Crooner
 	//深沉蓝调歌手
 	//<b>Spellcraft:</b> Give a minion +@/+@ until next turn. Improve your future Deep Blues.

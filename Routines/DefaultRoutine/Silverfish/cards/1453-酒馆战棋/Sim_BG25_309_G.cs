@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：16
+	//随从 战士 费用：0 攻击力：4 生命值：16
 	//General Drakkisath
 	//达基萨斯将军
 	//[x]<b>Battlecry:</b> Get two 2/1Smolderwings with"<b>Battlecry:</b> Give aDragon +5 Attack."

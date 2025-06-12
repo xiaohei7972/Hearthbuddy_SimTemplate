@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：2 生命值：3
+	//随从 猎人 费用：0 攻击力：2 生命值：3
 	//Silver Goose
 	//银羽白鹅
 	//[x]Whenever this takesdamage, summon a 2/2Fledgling with <b>Taunt</b>.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 潜行者 费用：4 攻击力：4 生命值：4
+	//随从 潜行者 费用：3 攻击力：3 生命值：3
 	//Kaldorei Priestess
 	//卡多雷女祭司
 	//[x]<b>Battlecry:</b> Give all enemyminions -2 Attack untilyour next turn. <b>Imbue</b>your Hero Power.

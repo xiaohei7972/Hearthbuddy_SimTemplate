@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：1 生命值：1
+	//随从 恶魔猎手 费用：0 攻击力：1 生命值：1
 	//Reef Riffer
 	//疾涛吉他手
 	//<b>Spellcraft:</b> Give a minion stats equal to your Tier until next turn.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//英雄技能 无效的 费用：0
+	//英雄技能 中立 费用：0
 	//Azshara's Ambition
 	//艾萨拉的野心
 	//[x]<b>Passive.</b> When yourwarband reaches 30 totalAttack, begin your NagaConquest.@[x]<b>Passive.</b> When yourwarband reaches 30 totalAttack, begin your NagaConquest. <i>({0} left!)</i>

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：12 生命值：8
+	//随从 巫妖王 费用：0 攻击力：12 生命值：8
 	//Living Nightmare
 	//活体梦魇
 	//[x]After you buy a card,minions in the Tavernhave +4/+2 this turn.

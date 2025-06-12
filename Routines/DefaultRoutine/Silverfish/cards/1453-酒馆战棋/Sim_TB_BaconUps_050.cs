@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：12 生命值：8
+	//随从 圣骑士 费用：0 攻击力：12 生命值：8
 	//Piloted Sky Golem
 	//载人飞天魔像
 	//<b>Deathrattle:</b> Summon two random 4-Cost minions.

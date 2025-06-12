@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：6 生命值：10
+	//随从 德鲁伊 费用：0 攻击力：6 生命值：10
 	//Fearless Foodie
 	//无畏的食客
 	//<b>Choose One - </b>Your <b>Blood Gems</b> give an extra +2/+2 this game; or Get 8 <b>Blood Gems</b>.

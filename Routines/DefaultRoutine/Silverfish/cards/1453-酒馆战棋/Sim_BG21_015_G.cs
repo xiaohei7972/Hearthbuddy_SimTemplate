@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：10 生命值：10
+	//随从 战士 费用：0 攻击力：10 生命值：10
 	//Tarecgosa
 	//泰蕾苟萨
 	//This permanently doubles and keeps your enchantments from combat.

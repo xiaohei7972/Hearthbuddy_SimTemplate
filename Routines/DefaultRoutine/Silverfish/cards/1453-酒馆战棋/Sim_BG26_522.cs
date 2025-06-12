@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：4
+	//随从 术士 费用：0 攻击力：4 生命值：4
 	//Keyboard Igniter
 	//鬼火钢琴家
 	//[x]<b>Battlecry:</b> Give your otherDemons +2/+2 and deal 2 damage to your hero.

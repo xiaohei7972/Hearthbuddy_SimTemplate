@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：8 生命值：8
+	//随从 德鲁伊 费用：0 攻击力：8 生命值：8
 	//Charlga
 	//卡尔加
 	//At the end of your turn,play 2 <b>Blood Gems</b> on allyour other minions.

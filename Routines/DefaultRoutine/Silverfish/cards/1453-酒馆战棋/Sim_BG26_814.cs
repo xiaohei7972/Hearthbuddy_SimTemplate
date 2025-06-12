@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：3 生命值：2
+	//随从 牧师 费用：0 攻击力：3 生命值：2
 	//Lovesick Balladist
 	//苦情民谣歌手
 	//<b>Battlecry:</b> Give a Pirate+@ Health. <i>(Improved by each Gold you spent this turn!)</i>

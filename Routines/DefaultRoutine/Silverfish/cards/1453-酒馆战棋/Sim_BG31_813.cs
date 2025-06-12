@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：2 生命值：2
+	//随从 法师 费用：0 攻击力：2 生命值：2
 	//Twilight Primordium
 	//暮光原体
 	//[x]<b>Battlecry:</b> Give an Elemental+{0}/+{1}. <i>(Improved byeach other minion youplayed this turn!)</i>

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//英雄技能 战士 费用：0
+	//英雄技能 中立 费用：0
 	//Glory of Combat
 	//战斗的荣耀
 	//<b>Passive.</b> After a friendly minion kills an enemy, give it +1 Attack permanently.

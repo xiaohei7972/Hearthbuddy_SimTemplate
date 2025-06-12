@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：2
+	//随从 战士 费用：0 攻击力：4 生命值：2
 	//Smolderwing
 	//燃翼
 	//<b>Battlecry:</b> Give a Dragon +10 Attack.

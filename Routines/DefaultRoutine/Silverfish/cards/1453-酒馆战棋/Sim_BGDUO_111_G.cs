@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：2 生命值：2
+	//随从 德鲁伊 费用：0 攻击力：2 生命值：2
 	//Generous Geomancer
 	//大方的地卜师
 	//<b>Deathrattle:</b> You and your teammate each get 2 <b>Blood Gems</b>.

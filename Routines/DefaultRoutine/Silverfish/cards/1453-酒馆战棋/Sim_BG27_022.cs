@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：18 生命值：1
+	//随从 圣骑士 费用：0 攻击力：18 生命值：1
 	//Adaptable Barricade
 	//自适应路障
 	//[x]<b><b>Taunt</b>.</b> Whenever this isattacked, it shifts its statsto survive with 1_Health<i>(if possible).</i>

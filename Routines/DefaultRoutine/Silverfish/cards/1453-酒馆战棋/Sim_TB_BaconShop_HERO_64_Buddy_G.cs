@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：10 生命值：10
+	//随从 牧师 费用：0 攻击力：10 生命值：10
 	//Dagwik Stickytoe
 	//达戈维克·黏趾
 	//At the end of your turn, give a random friendly Golden minion +10/+10.

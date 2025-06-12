@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 德鲁伊 费用：6 攻击力：4 生命值：5
+	//随从 德鲁伊 费用：6 攻击力：3 生命值：4
 	//Doomkin
 	//末日枭兽
 	//<b>Battlecry:</b> Take one ofyour opponent's empty Mana_Crystals.

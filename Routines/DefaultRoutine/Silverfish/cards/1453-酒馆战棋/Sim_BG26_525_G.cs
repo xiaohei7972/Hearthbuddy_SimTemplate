@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：8 生命值：8
+	//随从 术士 费用：0 攻击力：8 生命值：8
 	//Imposing Percussionist
 	//奇瑰打击乐手
 	//[x]<b><b>Battlecry:</b> Discover</b>2 Demons. Deal damageto your hero equal to theirTiers.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：5 生命值：7
+	//随从 德鲁伊 费用：0 攻击力：5 生命值：7
 	//Turbo Hogrider
 	//极速野猪骑士
 	//[x]After you play <b>Choose One</b>card, play a <b>Blood Gem</b> onall your other Quilboar.

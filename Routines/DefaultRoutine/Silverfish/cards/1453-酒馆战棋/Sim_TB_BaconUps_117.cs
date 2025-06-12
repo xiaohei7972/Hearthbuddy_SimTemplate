@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：6 生命值：14
+	//随从 战士 费用：0 攻击力：6 生命值：14
 	//Drakonid Enforcer
 	//龙人执行者
 	//After a friendly minion loses <b>Divine Shield</b>, gain_+4/+4.

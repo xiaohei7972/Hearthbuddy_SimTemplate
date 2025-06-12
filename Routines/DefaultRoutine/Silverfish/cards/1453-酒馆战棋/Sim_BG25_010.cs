@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：2 生命值：1
+	//随从 巫妖王 费用：0 攻击力：2 生命值：1
 	//Handless Forsaken
 	//断手被遗忘者
 	//<b>Deathrattle:</b> Summon a 2/1 Hand with <b>Reborn</b>.

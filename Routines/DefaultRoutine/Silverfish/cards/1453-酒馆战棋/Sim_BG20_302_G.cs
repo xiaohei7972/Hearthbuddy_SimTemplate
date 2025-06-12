@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：6 生命值：12
+	//随从 德鲁伊 费用：0 攻击力：6 生命值：12
 	//Aggem Thorncurse
 	//阿格姆·棘咒
 	//[x]After a <b>Blood Gem</b> is playedon this, play 2 <b>Blood Gems</b>on a different friendlyminion of each type.

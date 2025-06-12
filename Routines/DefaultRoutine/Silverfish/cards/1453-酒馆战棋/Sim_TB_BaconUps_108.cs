@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：6 生命值：6
+	//随从 战士 费用：0 攻击力：6 生命值：6
 	//Twilight Emissary
 	//暮光使者
 	//<b>Taunt</b><b>Battlecry:</b> Give a friendly Dragon +4/+4.

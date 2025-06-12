@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 无效的 费用：0
+	//法术 中立 费用：0
 	//Deadly Adaptation
 	//致死进化
 	//Gain +3 Health and <b>Venomous</b>.

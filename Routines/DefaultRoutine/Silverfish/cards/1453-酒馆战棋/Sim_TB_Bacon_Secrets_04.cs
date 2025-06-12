@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 法师 费用：0
+	//法术 中立 费用：0
 	//Splitting Image
 	//裂魂残像
 	//<b>Secret:</b> When one of your minions is attacked, summon a copy of it.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：6 生命值：12
+	//随从 法师 费用：0 攻击力：6 生命值：12
 	//Varden's Aquarrior
 	//瓦尔登的水波勇士
 	//[x]'Twice as Nice' alsogives both minions stats__equal to your Tier twice.

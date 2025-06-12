@@ -8,7 +8,7 @@ namespace HREngine.Bots
 	//Prosthetic Hand
 	//义肢假手
 	//<b>Magnetic</b>, <b>Reborn</b>Can <b>Magnetize</b> toMechs or Undead.
-	//<b>磁力</b>。<b>复生</b>可以<b>磁力</b>吸附在机械或亡灵上。
+	//<b>磁力</b>。<b>复生</b>可以<b>磁力吸附</b>在机械或亡灵上。
 	class Sim_DEEP_015 : SimTemplate
 	{
 		

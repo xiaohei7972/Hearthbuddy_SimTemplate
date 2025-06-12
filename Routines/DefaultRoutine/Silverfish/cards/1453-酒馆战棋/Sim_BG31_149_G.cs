@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：6
+	//随从 萨满祭司 费用：0 攻击力：4 生命值：6
 	//Bubble Gunner
 	//气泡枪手
 	//<b>Battlecry:</b> Gain 2 random <b>Bonus Keywords</b>.

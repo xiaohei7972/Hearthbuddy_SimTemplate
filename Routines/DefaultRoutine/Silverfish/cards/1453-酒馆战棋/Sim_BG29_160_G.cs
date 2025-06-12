@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：2 生命值：6
+	//随从 德鲁伊 费用：0 攻击力：4 生命值：10
 	//Bristling Buffoon
 	//炸刺猪头
 	//[x]Whenever this takesdamage, get two<b>Blood Gems</b>. <i>(3 timesper combat.)</i>@[x]Whenever this takes damage,get two <b>Blood Gems</b>.<i>({0} left!)</i>

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：6 生命值：6
+	//随从 萨满祭司 费用：0 攻击力：6 生命值：6
 	//Saltscale Honcho
 	//盐鳞队长
 	//After you play a Murloc, give a friendly Murloc other than it +2 Health.

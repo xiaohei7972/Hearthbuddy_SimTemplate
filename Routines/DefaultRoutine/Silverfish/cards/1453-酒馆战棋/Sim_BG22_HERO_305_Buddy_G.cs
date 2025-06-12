@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：8 生命值：4
+	//随从 战士 费用：0 攻击力：8 生命值：4
 	//Many Whelps
 	//雏龙群
 	//Whenever you summon a Whelp, gain +4/+4 permanently.

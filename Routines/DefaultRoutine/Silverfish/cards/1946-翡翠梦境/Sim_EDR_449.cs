@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 潜行者 费用：2 攻击力：3 生命值：1
+	//随从 潜行者 费用：2 攻击力：3 生命值：2
 	//Lunarwing Messenger
 	//月翼信使
 	//<b>Lifesteal</b><b>Battlecry:</b> <b>Imbue</b> your Hero_Power.

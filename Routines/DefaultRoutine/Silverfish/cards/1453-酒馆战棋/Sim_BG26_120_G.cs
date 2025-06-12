@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：8 生命值：8
+	//随从 法师 费用：0 攻击力：8 生命值：8
 	//Upbeat Upstart
 	//蓄势新秀
 	//[x]<b><b>Taunt</b>.</b> At the end of every 2turns, set this minion's Healthto double the highest in yourwarband. <i>({0} |4(turn, turns) left!)</i>@[x]<b><b>Taunt</b>.</b> At the end of every 2turns, set this minion's Healthto double the highest in your___warband. <i>(End of this turn!)</i>

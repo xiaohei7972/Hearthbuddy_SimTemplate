@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：6
+	//BATTLEGROUND_TRINKET 中立 费用：5
 	//Pagle's Fishing Rod
 	//帕格的鱼竿
 	//[x]Get a random Tier 7minion. At the start ofeach turn, get another.

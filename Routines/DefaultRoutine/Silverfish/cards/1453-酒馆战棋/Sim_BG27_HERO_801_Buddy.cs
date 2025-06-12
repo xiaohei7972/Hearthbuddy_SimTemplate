@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：5 生命值：2
+	//随从 战士 费用：0 攻击力：5 生命值：2
 	//Veranus, Stormlord's Mount
 	//维拉努斯，风暴之王的坐骑
 	//[x]At the end of your turn,__transform the minion to the__left of this into one from a___Tier higher <i>(up to Tier 7!)</i>

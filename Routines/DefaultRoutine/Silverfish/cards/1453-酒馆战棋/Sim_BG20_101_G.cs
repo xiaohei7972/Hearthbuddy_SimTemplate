@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：8
+	//随从 德鲁伊 费用：0 攻击力：4 生命值：8
 	//Roadboar
 	//路霸野猪人
 	//<b>Frenzy:</b> Get 2 <b>Blood Gems</b>.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//英雄 牧师 费用：0
+	//英雄 中立 费用：0
 	//MC Scabbs
 	//MC斯卡布斯
 	//

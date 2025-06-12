@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：6 生命值：6
+	//随从 猎人 费用：0 攻击力：6 生命值：6
 	//Leapfrogger
 	//跳蛙骑士
 	//<b>Deathrattle:</b> Give a friendly Beast +2/+2 and this <b>Deathrattle</b>.

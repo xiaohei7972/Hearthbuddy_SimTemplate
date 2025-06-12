@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：8 生命值：8
+	//随从 无效的 费用：0 攻击力：8 生命值：8
 	//Transmuted Bramblewitch
 	//棘化荆蔓女巫
 	//[x]When this attacks, setthe defender's stats to_3/3. <i>(Twice per combat.)</i>

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//英雄技能 恶魔猎手 费用：0
+	//英雄技能 中立 费用：0
 	//Final Showdown
 	//一决胜负
 	//[x]<b>Passive</b>Buy 3 minions in 1 turnto give them +2/+2 and_progress this. <i>(@ left!)</i>

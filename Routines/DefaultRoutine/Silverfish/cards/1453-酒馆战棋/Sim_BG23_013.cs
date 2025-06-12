@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：2 生命值：6
+	//随从 恶魔猎手 费用：0 攻击力：6 生命值：7
 	//Tidemistress Athissa
 	//潮汐主母阿茜萨
-	//Whenever you cast a spell, give your Naga +1/+1.
-	//每当你施放一个法术，使你的纳迦获得+1/+1。
+	//Whenever you cast a spell, give 4 friendly Naga +1/+1.
+	//每当你施放一个法术，使4个友方纳迦获得+1/+1。
 	class Sim_BG23_013 : SimTemplate
 	{
 		

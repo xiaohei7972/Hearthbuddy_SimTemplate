@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：10
+	//随从 萨满祭司 费用：0 攻击力：4 生命值：10
 	//Upbeat Flutist
 	//蓄势长笛手
 	//[x]At the end of every 2 turns,give a random minionin your hand +18 Health.<i>({0} |4(turn, turns) left!)</i>@[x]At the end of every 2 turns,give a random minionin your hand +18 Health.<i>(End of this turn!)</i>

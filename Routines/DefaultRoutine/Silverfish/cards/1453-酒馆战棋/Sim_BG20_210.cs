@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：3 生命值：5
+	//随从 术士 费用：0 攻击力：3 生命值：5
 	//Hexruin Marauder
 	//妖术毁灭抢掠者
 	//[x]At the end of your turn,if you have 6 or fewerminions, gain +3/+3.

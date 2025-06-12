@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：8 生命值：6
+	//随从 巫妖王 费用：0 攻击力：8 生命值：6
 	//Solemn Serenader
 	//庄严乐师
 	//[x]After you use your Hero Poweron a minion, it gains thisminion's Attack. <i>(Swaps toHealth next turn!)</i>@[x]After you use your Hero Poweron a minion, it gains thisminion's Health. <i>(Swaps toAttack next turn!)</i>

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：4
+	//随从 恶魔猎手 费用：0 攻击力：4 生命值：4
 	//Shoal Commander
 	//滩头指挥官
 	//[x]<b>Spellcraft:</b> Give a minion+2/+2 for each friendlyNaga until next turn.

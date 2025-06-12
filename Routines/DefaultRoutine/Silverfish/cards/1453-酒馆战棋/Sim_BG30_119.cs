@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：5 生命值：5
+	//随从 牧师 费用：0 攻击力：5 生命值：5
 	//Sky Pirate Flagbearer
 	//擎旗空中海盗
 	//[x]<b>Start of Combat:</b> Give yourother Pirates "<b>Deathrattle:</b>_Summon a Scallywag."

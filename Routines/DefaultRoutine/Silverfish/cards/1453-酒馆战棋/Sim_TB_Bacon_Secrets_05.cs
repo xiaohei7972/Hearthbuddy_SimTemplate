@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 法师 费用：0
+	//法术 中立 费用：0
 	//Effigy
 	//轮回
 	//<b>Secret:</b> When a friendly minion dies, summon a random minion with the same Cost.

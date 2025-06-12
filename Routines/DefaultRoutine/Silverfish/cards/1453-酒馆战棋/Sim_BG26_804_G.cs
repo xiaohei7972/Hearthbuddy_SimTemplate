@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：16 生命值：16
+	//随从 猎人 费用：0 攻击力：16 生命值：16
 	//Octosari, Wrap God
 	//八爪巨怪，说唱卷王
 	//[x]<b>Deathrattle:</b> Summon a @/@Tentacle. <i>(It gains +4/+4 permanently after you summona minion in combat!)</i>

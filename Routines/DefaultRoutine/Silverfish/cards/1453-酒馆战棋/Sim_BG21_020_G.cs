@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：10
+	//随从 法师 费用：0 攻击力：4 生命值：10
 	//Dazzling Lightspawn
 	//炫目的光耀之子
 	//[x]<b>Avenge (2):</b> Elementalsin the Tavern have+2/+2 this game.

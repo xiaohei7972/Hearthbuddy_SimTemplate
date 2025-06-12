@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：3 生命值：2
+	//随从 无效的 费用：0 攻击力：3 生命值：2
 	//Spirit Raptor
 	//幽灵迅猛龙
 	//[x]After you call upon a newElement, this remembers it.<b>Deathrattle:</b> Call uponthose Elements.

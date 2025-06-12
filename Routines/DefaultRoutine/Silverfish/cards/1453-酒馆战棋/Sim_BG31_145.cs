@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：4
+	//随从 萨满祭司 费用：0 攻击力：4 生命值：4
 	//Fountain Chiller
 	//冽泉鱼人
 	//[x]<b>Battlecry:</b> Give a friendlyMurloc +{0}/+{1}. <i>(Improvedby each different <b>Bonus______Keyword</b> in your warband!)</i>____

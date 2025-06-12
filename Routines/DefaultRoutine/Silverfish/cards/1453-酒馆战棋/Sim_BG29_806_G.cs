@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：6 生命值：14
+	//随从 猎人 费用：0 攻击力：6 生命值：14
 	//Iridescent Skyblazer
 	//炫彩灼天者
 	//[x]Whenever a friendly Beasttakes damage, give afriendly Beast other than it+4/+2 permanently.

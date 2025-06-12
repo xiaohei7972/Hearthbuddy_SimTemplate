@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：1 生命值：1
+	//随从 圣骑士 费用：0 攻击力：1 生命值：1
 	//Transport Reactor
 	//转运反应堆
 	//[x]<b>Magnetic</b>Has +1/+1 for each timeyour team has <b>Passed</b> this___game <i>(wherever this is).</i>

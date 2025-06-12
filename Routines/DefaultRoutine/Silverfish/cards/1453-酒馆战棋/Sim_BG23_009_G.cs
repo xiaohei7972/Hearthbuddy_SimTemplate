@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：10
+	//随从 恶魔猎手 费用：0 攻击力：4 生命值：10
 	//Lava Lurker
 	//熔岩潜伏者
-	//[x]The first two <b>Spellcraft</b> enchantments on thiseach turn are permanent.
-	//每回合施放在本随从身上的前两个<b>塑造法术</b>附加效果永久有效。
+	//The first two <b>Spellcraft</b> spells played on this each turn are permanent.
+	//每回合对本随从使用的前两张<b>塑造法术</b>的法术牌永久有效。
 	class Sim_BG23_009_G : SimTemplate
 	{
 		

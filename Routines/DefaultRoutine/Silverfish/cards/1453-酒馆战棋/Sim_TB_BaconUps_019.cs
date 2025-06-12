@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 德鲁伊 费用：0 攻击力：6 生命值：4
+	//随从 猎人 费用：0 攻击力：6 生命值：4
 	//Mounted Raptor
 	//骑乘迅猛龙
 	//<b>Deathrattle:</b> Summon two random 1-Cost minions.

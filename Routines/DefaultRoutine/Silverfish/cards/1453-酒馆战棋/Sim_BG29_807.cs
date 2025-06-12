@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：9 生命值：3
+	//随从 猎人 费用：0 攻击力：9 生命值：3
 	//Trigore the Lasher
 	//鞭笞者特里高雷
 	//[x]Whenever another friendlyBeast takes damage, gain+1 Health permanently.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：2 生命值：10
+	//随从 萨满祭司 费用：0 攻击力：2 生命值：10
 	//Fairy Gillmother
 	//仙鱼教母
 	//[x]<b>Taunt</b>At the end of your turn,__get 2 random Murlocs.

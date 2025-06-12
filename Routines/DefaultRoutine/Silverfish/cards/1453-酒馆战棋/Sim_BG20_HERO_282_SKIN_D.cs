@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//英雄 术士 费用：0
+	//英雄 中立 费用：0
 	//Treason Tamsin
 	//叛变者塔姆辛
 	//

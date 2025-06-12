@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 圣骑士 费用：0
+	//法术 中立 费用：0
 	//Buy the Holy Light
 	//圣光在售
 	//Give a friendly minion <b>Divine Shield</b>.

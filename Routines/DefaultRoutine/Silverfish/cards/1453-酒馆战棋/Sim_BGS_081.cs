@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：5 生命值：5
+	//随从 牧师 费用：0 攻击力：5 生命值：5
 	//Salty Looter
 	//海上掠夺者
 	//[x]Has +1/+1 for each Pirateyou've summoned this___game <i>(wherever this is)</i>.

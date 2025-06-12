@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：6 生命值：6
+	//随从 术士 费用：0 攻击力：6 生命值：6
 	//Two-Faced Doomguard
 	//双面末日守卫
 	//[x]At the end of your turn, deal3 damage to your hero andgive your team's minions+3/+3, twice.

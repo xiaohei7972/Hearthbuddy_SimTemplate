@@ -8,7 +8,7 @@ namespace HREngine.Bots
 	//Twin Blades
 	//双刃
 	//[x]Give a friendly minion andyour hero +$a1 Attack thisturn and <b>Divine Shield</b>.
-	//使一个友方随从和你的英雄获得在本回合中的+$a1攻击力，以及<b>圣盾</b>。
+	//使一个友方随从和你的英雄获得<b>圣盾</b>以及本回合中的+$a1攻击力。
 	class Sim_SC_754p : SimTemplate
 	{
 		

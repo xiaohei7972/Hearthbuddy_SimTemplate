@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：6 生命值：4
+	//随从 猎人 费用：0 攻击力：6 生命值：4
 	//Forest Rover
 	//森林游虫
 	//[x]<b>Battlecry:</b> Your Beetleshave +2/+2 this game.<b>Deathrattle:</b> Summon two{0}/{1} Beetles.

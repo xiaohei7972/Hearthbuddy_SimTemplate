@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：2 生命值：2
+	//随从 恶魔猎手 费用：0 攻击力：2 生命值：2
 	//Warden of Old
 	//古神的卫士
 	//<b>Spellcraft:</b> Gain 1 Gold.

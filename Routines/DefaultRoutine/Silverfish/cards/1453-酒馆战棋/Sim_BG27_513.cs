@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：1 生命值：10
+	//随从 萨满祭司 费用：0 攻击力：1 生命值：10
 	//Tide Oracle Morgl
 	//潮汐先知摩戈尔
 	//[x]<b><b>Poisonous</b>.</b> When thisattacks and kills a minion,give its maximum stats to aminion in your hand.

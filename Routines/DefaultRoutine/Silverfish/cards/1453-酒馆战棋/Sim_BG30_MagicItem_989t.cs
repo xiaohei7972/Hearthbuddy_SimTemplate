@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：0
+	//BATTLEGROUND_TRINKET 中立 费用：2
 	//Artisanal Urn
 	//艺匠之瓮
 	//Your Undead have+8 Attack.

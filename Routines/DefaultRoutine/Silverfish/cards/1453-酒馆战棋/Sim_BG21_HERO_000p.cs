@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//英雄技能 圣骑士 费用：1
+	//英雄技能 中立 费用：1
 	//Conviction
 	//定罪
 	//[x]Give {2} friendly minions+{0}/+{1}. <i>(After youupgrade the Tavern,__choose an improvement!)</i>@[x]Give {2} friendlyminions +{0}/+{1}.

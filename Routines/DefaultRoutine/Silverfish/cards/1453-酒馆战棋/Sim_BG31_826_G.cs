@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：12 生命值：12
+	//随从 牧师 费用：0 攻击力：12 生命值：12
 	//Doubloon Grifter
 	//金币诈骗犯
 	//Whenever you get 4 Pirates, increase your maximum Gold by 2. <i>(@ left!)</i>

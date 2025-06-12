@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：4
+	//随从 无效的 费用：0 攻击力：4 生命值：4
 	//Shellemental
 	//甲壳元素
 	//[x]<b>Spellcraft:</b> Choose a minionin the Tavern. Give its statsto a random friendly minionuntil next turn.

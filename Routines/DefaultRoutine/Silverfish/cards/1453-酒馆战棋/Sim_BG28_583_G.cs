@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：8 生命值：12
+	//随从 德鲁伊 费用：0 攻击力：8 生命值：12
 	//Geomagus Roogug
 	//地卜大师鲁古格
 	//[x]<b>Divine Shield</b>. Whenever a<b>Blood Gem</b> is played on this,play 2 <b>Blood Gems</b> on a__different friendly minion.

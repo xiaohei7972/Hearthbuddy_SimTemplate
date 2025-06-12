@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：2 生命值：4
+	//随从 德鲁伊 费用：0 攻击力：2 生命值：4
 	//Boar Gamer
 	//野猪玩家
 	//[x]<b>Taunt</b>At the end of every 2 turns,get a random <b>Choose One</b>card. <i>({0} |4(turn, turns) left!)</i>@[x]<b>Taunt</b>At the end of every 2 turns,get a random <b>Choose One</b>_____card. <i>(End of this turn!)</i>__

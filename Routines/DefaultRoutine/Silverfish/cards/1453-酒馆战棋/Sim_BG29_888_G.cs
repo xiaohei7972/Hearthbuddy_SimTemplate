@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：2 生命值：8
+	//随从 战士 费用：0 攻击力：2 生命值：8
 	//Glim Guardian
 	//微光护卫者
 	//Whenever this attacks, gain +4/+2.

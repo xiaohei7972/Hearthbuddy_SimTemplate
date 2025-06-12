@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：2 生命值：10
+	//随从 萨满祭司 费用：0 攻击力：2 生命值：10
 	//Swampstriker
 	//沼泽前锋
 	//<b>Windfury</b>After you summon a Murloc, gain +2 Attack.

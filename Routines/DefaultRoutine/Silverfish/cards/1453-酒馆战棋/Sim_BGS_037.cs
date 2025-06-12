@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：3 生命值：3
+	//随从 战士 费用：0 攻击力：3 生命值：3
 	//Steward of Time
 	//时间管理者
 	//When you sell this, give all minions in the Tavern +2/+1.

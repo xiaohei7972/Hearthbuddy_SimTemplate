@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 猎人 费用：0
+	//法术 中立 费用：0
 	//Pack Tactics
 	//集群战术
 	//<b>Secret:</b> When a friendly minion is attacked, summon a 3/3 copy.

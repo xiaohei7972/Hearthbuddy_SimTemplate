@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 无效的 费用：0
+	//法术 中立 费用：0
 	//Magic Prize
 	//魔法奖励
 	//<b>Discover</b> a Tavern spellfrom <b>Tier @</b>.

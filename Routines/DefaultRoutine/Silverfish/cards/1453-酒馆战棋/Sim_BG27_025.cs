@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：3 生命值：3
+	//随从 恶魔猎手 费用：0 攻击力：3 生命值：3
 	//The Glad-iator
 	//角逗士
 	//<b>Divine Shield</b>Whenever you cast a spell, gain +1_Attack.

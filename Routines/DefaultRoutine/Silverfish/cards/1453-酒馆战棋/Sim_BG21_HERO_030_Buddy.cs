@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：6 生命值：4
+	//随从 圣骑士 费用：0 攻击力：6 生命值：4
 	//Piloted Whirl-O-Tron
 	//载人飓风机甲
 	//[x]<b>Start of Combat:</b> Copy allother friendly minions'<b>Deathrattles</b> <i>(except__Piloted Whirl-O-Tron)</i>.

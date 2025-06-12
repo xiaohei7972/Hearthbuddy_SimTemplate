@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 圣骑士 费用：0
+	//法术 中立 费用：0
 	//Hand of Salvation
 	//拯救之手
 	//<b>Secret:</b> When your second minion dies in a turn, return it to life.

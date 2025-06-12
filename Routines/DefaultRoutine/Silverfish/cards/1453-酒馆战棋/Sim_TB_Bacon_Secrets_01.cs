@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 猎人 费用：0
+	//法术 中立 费用：0
 	//Venomstrike Trap
 	//眼镜蛇陷阱
 	//<b>Secret:</b> When one of your minions is attacked, summon a 2/3_<b>Poisonous</b> Cobra.

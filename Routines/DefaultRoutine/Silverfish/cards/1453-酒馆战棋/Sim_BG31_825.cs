@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：3 生命值：4
+	//随从 牧师 费用：0 攻击力：3 生命值：4
 	//Grace Farsail
 	//格蕾丝·法希尔
 	//<b>Choose One - </b>Gain 2 Gold next turn; or Gain 4 Gold in two turns.

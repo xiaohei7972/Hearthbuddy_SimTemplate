@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：6 生命值：5
+	//随从 恶魔猎手 费用：0 攻击力：6 生命值：5
 	//Stormscale Siren
 	//雷鳞海妖
 	//[x]At the end of your turn,you cast your <b>Spellcraft</b>_minions' spells on them.

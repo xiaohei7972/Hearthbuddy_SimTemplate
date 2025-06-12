@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：0
+	//BATTLEGROUND_TRINKET 中立 费用：1
 	//Artisanal Urn
 	//艺匠之瓮
-	//Your Undead have+3 Attack.
-	//你的亡灵拥有+3攻击力。
+	//Your Undead have+4 Attack.
+	//你的亡灵拥有+4攻击力。
 	class Sim_BG30_MagicItem_989 : SimTemplate
 	{
 		

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：5 生命值：6
+	//随从 德鲁伊 费用：0 攻击力：5 生命值：6
 	//Pokey Thornmantle
 	//迟钝的刺鬃
 	//At the start of your turn, your <b>Blood Gems</b> give an extra +1/+1 this game.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//英雄技能 圣骑士 费用：1
+	//英雄技能 中立 费用：1
 	//Conviction (Rank 3)
 	//定罪（等级3）
 	//[x]Give all friendlyminions +{0}/+{1}.

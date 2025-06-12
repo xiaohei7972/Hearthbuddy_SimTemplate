@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 萨满祭司 费用：0
+	//法术 中立 费用：0
 	//Evolving Tavern
 	//酒馆异变
 	//Replace all minions in the Tavern with ones of a Tier higher.

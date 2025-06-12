@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：8 生命值：6
+	//随从 无效的 费用：0 攻击力：8 生命值：6
 	//Nightbane, Ignited
 	//骨火巨龙夜之魇
 	//<b>Taunt</b><b>Deathrattle:</b> Give 2 different friendly minions this minion's Attack.

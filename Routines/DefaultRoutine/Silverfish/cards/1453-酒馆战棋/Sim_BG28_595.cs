@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：8 生命值：8
+	//随从 战士 费用：0 攻击力：8 生命值：8
 	//Ignition Specialist
 	//生火专家
 	//[x]At the end of your turn, get2 random Tavern spells.

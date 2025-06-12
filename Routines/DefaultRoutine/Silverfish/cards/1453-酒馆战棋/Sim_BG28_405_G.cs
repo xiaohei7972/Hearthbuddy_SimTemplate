@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：10 生命值：16
+	//随从 恶魔猎手 费用：0 攻击力：10 生命值：16
 	//Silivaz the Vindictive
 	//复仇者希里瓦兹
 	//<b>Spellcraft: Discover</b> 2 Tavern spells.

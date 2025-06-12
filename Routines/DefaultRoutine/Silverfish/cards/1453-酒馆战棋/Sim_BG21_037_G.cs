@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：4 生命值：2
+	//随从 德鲁伊 费用：0 攻击力：4 生命值：2
 	//Gemsplitter
 	//宝石切分者
 	//<b>Divine Shield</b>After a friendly minion loses <b>Divine Shield</b>, get 2 <b>Blood Gems</b>.

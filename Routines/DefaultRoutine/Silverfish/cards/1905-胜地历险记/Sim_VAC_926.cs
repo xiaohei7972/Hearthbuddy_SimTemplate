@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 恶魔猎手 费用：6
+	//法术 恶魔猎手 费用：7
 	//Cliff Dive
 	//高崖跳水
 	//[x]Summon 2 minionsfrom your deck and givethem <b>Rush</b>. They go backat the end of your turn.

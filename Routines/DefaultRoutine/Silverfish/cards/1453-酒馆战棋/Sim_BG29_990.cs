@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：3 生命值：4
+	//随从 猎人 费用：0 攻击力：3 生命值：4
 	//Irate Rooster
 	//火暴雄鸡
 	//[x]<b>Start of Combat:</b> Deal 1damage to adjacentminions and give them+4 Attack.
