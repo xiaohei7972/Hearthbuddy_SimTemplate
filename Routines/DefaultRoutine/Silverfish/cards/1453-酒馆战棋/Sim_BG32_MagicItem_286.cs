@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：3
+	//BATTLEGROUND_TRINKET 中立 费用：1
 	//Lavish Cape
 	//奢华斗篷
 	//You cast a random Tavern spell for each different friendly minion type. At the start of each turn, repeat this.

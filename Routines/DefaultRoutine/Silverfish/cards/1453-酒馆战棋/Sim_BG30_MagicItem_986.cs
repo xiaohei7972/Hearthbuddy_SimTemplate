@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：2
+	//BATTLEGROUND_TRINKET 中立 费用：1
 	//Peacebloom Candle
 	//宁神蜡烛
 	//The first 2 Tavern spells you buy each turn are free. <i>(@ left!)</i>

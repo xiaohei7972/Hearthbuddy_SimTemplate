@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：2
+	//BATTLEGROUND_TRINKET 中立 费用：0
 	//Toxic Stinger
 	//毒性钉刺
 	//At the end of each turn, give a random friendly Murloc +10/+10 and <b>Venomous</b>.

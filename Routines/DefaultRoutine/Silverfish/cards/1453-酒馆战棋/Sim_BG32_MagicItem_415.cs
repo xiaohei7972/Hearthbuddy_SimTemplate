@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：1
+	//BATTLEGROUND_TRINKET 中立 费用：0
 	//Battle Horn
 	//战斗号角
 	//[x]<b>Discover</b> a <b>Battlecry</b>minion. <b>Avenge (2):</b>Trigger a friendly <b>Battlecry</b>.

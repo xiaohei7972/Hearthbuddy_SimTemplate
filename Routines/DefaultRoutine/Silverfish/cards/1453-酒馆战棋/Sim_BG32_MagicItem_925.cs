@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：4
+	//BATTLEGROUND_TRINKET 中立 费用：5
 	//Hackerfin Portrait
 	//黑客鱼人肖像
 	//Get a Hackerfin. At the end of each turn, trigger your Hackerfins' <b>Battlecries</b>.

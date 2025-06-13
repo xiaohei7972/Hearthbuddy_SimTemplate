@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：2
+	//BATTLEGROUND_TRINKET 中立 费用：0
 	//Innkeeper's Hearth
 	//旅店老板的炉火
 	//<b>Discover</b> two Tier 6 minions. Set their stats to 20/20.

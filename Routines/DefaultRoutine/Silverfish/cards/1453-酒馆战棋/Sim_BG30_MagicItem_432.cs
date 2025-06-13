@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：4
+	//BATTLEGROUND_TRINKET 中立 费用：3
 	//Belcher Portrait
 	//异术家肖像
 	//[x]Get an Operatic Belcher.Whenever a friendly minionloses <b>Venomous</b>, it gains+4/+4 permanently.

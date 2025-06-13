@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：1
+	//BATTLEGROUND_TRINKET 中立 费用：0
 	//Drakkari Portrait
 	//达卡莱肖像
 	//[x]Get a Drakkari Enchanter.Your Drakkari Enchantersare both Mechs andElementals.

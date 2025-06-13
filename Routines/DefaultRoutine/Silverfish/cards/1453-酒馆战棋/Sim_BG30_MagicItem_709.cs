@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：4
+	//BATTLEGROUND_TRINKET 中立 费用：2
 	//Electromagnetic Device
 	//电磁装置
 	//[x]<b>Discover</b> a <b>Magnetic</b>Mech. Whenever a friendlyminion is <b>Magnetized</b>,give it +3/+3.

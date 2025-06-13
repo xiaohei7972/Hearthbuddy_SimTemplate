@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：1
+	//BATTLEGROUND_TRINKET 中立 费用：2
 	//Splinter of Aurum
 	//黄金残片
 	//[x]When you have 15 Gold,get a random GoldenTier 5 minion.<i>(Once per game.)</i>

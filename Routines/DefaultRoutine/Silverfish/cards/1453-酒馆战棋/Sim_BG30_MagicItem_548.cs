@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：1
+	//BATTLEGROUND_TRINKET 中立 费用：0
 	//Glowscale Portrait
 	//闪鳞肖像
 	//Get a Glowscale.Your first <b>Spellcraft</b> enchantment each turn is permanent.

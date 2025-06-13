@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：2
+	//BATTLEGROUND_TRINKET 中立 费用：1
 	//Goldgrubber Portrait
 	//掘金者肖像
 	//Get a Goldgrubber and an Aureate Laureate.

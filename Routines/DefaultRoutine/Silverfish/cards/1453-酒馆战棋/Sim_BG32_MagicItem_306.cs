@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：1
+	//BATTLEGROUND_TRINKET 中立 费用：2
 	//Herald Sticker
 	//先锋标签
 	//[x]<b>Start of Combat:</b> Triggerall friendly <b>Deathrattles</b>.

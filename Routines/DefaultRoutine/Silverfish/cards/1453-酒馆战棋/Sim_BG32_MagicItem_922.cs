@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：3
+	//BATTLEGROUND_TRINKET 中立 费用：1
 	//Charming Panpipes
 	//魅音排箫
 	//[x]At the end of each turn,give your left-most minion+{0}/+{0}. After you casta spell, improve this.

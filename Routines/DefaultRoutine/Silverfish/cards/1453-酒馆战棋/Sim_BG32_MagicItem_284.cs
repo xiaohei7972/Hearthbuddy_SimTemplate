@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：5
+	//BATTLEGROUND_TRINKET 中立 费用：3
 	//Aggem Sticker
 	//阿格姆标签
 	//At the end of your turn, play 4 <b>Blood Gems</b> on a friendly minion of each type.

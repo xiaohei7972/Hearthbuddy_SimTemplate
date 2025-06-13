@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：4
+	//BATTLEGROUND_TRINKET 中立 费用：6
 	//Sacrificial Altar
 	//牺牲祭坛
 	//Remove all your minions. Gain 4 Gold for each removed.

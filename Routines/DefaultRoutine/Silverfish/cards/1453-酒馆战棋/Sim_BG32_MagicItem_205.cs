@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：3
+	//BATTLEGROUND_TRINKET 中立 费用：4
 	//Maw Caster Portrait
 	//噬渊施法者肖像
 	//[x]Get a Maw Caster.Whenever you destroy aminion outside combat,get a 3-Gold Coin Pouch.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：5
+	//BATTLEGROUND_TRINKET 中立 费用：2
 	//Empowerment Portrait
 	//强化肖像
 	//[x]Get an AzeriteEmpowerment. At thestart of each turn, getanother.

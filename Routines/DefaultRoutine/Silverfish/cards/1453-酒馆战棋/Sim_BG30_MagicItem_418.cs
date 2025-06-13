@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：1
+	//BATTLEGROUND_TRINKET 中立 费用：2
 	//Bronzebeard Portrait
 	//铜须肖像
 	//[x]Get a Brann Bronzebeard anda random <b>Battlecry</b> minion.Your Brann Bronzebeards areboth Murlocs and Dragons.

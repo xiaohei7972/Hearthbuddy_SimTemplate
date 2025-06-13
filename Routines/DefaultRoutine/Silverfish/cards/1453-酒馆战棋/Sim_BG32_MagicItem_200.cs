@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：6
+	//BATTLEGROUND_TRINKET 中立 费用：3
 	//All-Purpose Kibble
 	//全能辅食
 	//[x]Whenever a friendly Beastattacks, give it +{0} Attackand permanently improvethis.

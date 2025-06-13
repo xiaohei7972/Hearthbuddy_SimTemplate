@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：1
+	//BATTLEGROUND_TRINKET 中立 费用：0
 	//Nerglish Phrasebook
 	//鱼人语实用手册
 	//[x]After you play a minion,give the left-most minionin your hand +6/+6.

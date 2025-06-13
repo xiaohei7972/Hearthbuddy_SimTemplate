@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：3
+	//BATTLEGROUND_TRINKET 中立 费用：1
 	//Rewinder Portrait
 	//回溯者肖像
 	//[x]Get a Soul Rewinderand a Wrath Weaver.Your Soul Rewindersalso gain Attack.
