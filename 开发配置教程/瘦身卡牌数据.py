@@ -10,6 +10,7 @@ import re
 #各文件路径
 file_cardDefsPath =     f"{os.getcwd()}\\CardDefs.xml"
 
+
 # 要删除的子节点的标签名称列表
 nodes_to_remove = ['deDE','esES','esMX','frFR','itIT','jaJP','koKR','plPL','ptBR','ruRU','thTH','zhTW']
 
