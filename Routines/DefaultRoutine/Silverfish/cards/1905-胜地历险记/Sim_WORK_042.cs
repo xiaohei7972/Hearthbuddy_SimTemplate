@@ -18,7 +18,7 @@ namespace HREngine.Bots
 			if (p.ownMinions.Count != 0)
 			{
 				p.minionGetDestroyed(target);
-				kid = CardDB.Instance.getCardDataFromID(target.name);
+				kid = CardDB.Instance.getCardData(target.name);
 			}
 		}
 
