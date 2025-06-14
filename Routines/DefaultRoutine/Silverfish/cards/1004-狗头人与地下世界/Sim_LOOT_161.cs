@@ -19,14 +19,13 @@ namespace HREngine.Bots
             }
         }
 
-
-
         public override void onDeathrattle(Playfield p, Minion m)
         {
             if (kid == null) return;
 
 
             int pos = m.own ? p.ownMinions.Count : p.enemyMinions.Count;
+            p.callKid(kid, pos, true);
             p.callKid(kid, pos, true);
 
         }
