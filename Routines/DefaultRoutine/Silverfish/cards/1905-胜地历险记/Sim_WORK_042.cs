@@ -13,26 +13,25 @@ namespace HREngine.Bots
 	{
 		// CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardNameEN.unknown);
 		CardDB.Card kid = null;
-        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
 		{
-			if (p.ownMinions.Count != 0)
-			{
-				p.minionGetDestroyed(target);
-				kid = CardDB.Instance.getCardData(target.name);
-			}
+			if (p.ownMinions.Count == 0) return;
+
+			p.minionGetDestroyed(target);
+			kid = CardDB.Instance.getCardData(target.name);
 		}
 
-        public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
-        {
+		public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
+		{
 			if (kid == null) return;
-			
+
 			if (triggerEffectMinion.own == turnEndOfOwner)
 			{
 				int pos = triggerEffectMinion.own ? p.ownMinions.Count : p.enemyMinions.Count;
 				p.callKid(kid, pos, true);
 			}
-        }
-		
+		}
+
 		public override PlayReq[] GetPlayReqs()
 		{
 			return new PlayReq[]{
@@ -40,7 +39,6 @@ namespace HREngine.Bots
 				new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET), // 目标只能是随从
 				new PlayReq(CardDB.ErrorType2.REQ_FRIENDLY_TARGET), // 目标只能是友方
 				new PlayReq(CardDB.ErrorType2.REQ_TARGET_IF_AVAILABLE) // 没有目标时也可以使用
-
 			};
 
 		}

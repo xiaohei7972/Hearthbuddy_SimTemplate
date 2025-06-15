@@ -12,11 +12,11 @@ namespace HREngine.Bots
         CardDB.Card kid = null;
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {
-            if (p.ownMinions.Count != 0)
-            {
-                p.minionGetDestroyed(target);
-                kid = CardDB.Instance.getCardData(target.name);
-            }
+            if (p.ownMinions.Count == 0) return;
+
+            p.minionGetDestroyed(target);
+            kid = CardDB.Instance.getCardData(target.name);
+            
         }
 
         public override void onDeathrattle(Playfield p, Minion m)
