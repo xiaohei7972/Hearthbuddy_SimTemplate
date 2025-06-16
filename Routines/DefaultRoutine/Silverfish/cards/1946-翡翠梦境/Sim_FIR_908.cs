@@ -12,11 +12,14 @@ namespace HREngine.Bots
 	class Sim_FIR_908 : SimTemplate
 	{
 		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
-		{	if (p.ownMinions.Count == 0) return;
-			if (p.anzUsedOwnHeroPower > 0)
+		{
+			if (target != null)
 			{
-				p.minionGetBuffed(target, 1, 2);
-				p.minionGetRush(target);
+				if (p.anzUsedOwnHeroPower > 0)
+				{
+					p.minionGetBuffed(target, 1, 2);
+					p.minionGetRush(target);
+				}
 			}
 		}
 
