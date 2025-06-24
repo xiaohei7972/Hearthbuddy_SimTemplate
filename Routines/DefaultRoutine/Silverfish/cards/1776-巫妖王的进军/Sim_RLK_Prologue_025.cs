@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//对一个随从造成$3点伤害。如果消灭该随从，<b>发现</b>一张冰霜符文牌。
 	class Sim_RLK_Prologue_025 : SimTemplate
 	{
-		
+		public override PlayReq[] GetPlayReqs()
+        {
+            return new PlayReq[]{
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY), // 需要选择一个目标
+				new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET), // 目标只能是随从
+            };
+        }
 		
 	}
 }

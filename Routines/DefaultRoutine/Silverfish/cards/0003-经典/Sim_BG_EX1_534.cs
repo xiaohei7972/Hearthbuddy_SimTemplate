@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//<b>亡语：</b>召唤两只2/2的土狼。
 	class Sim_BG_EX1_534 : SimTemplate
 	{
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EX1_534t);
+
+        public override void onDeathrattle(Playfield p, Minion m)
+		{
+			p.callKid(kid,m.zonepos-1,m.own);
+			p.callKid(kid,m.zonepos-1,m.own);
+		}
 		
 	}
 }

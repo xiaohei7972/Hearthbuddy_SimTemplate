@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//<b>亡语：</b>召唤一个2/1的损坏的傀儡。
 	class Sim_BG_EX1_556 : SimTemplate
 	{
-		
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.skele21);
+
+		public override void onDeathrattle(Playfield p, Minion m)
+		{
+			p.callKid(kid, m.zonepos - 1, m.own);
+		}
+
 	}
 }
+
