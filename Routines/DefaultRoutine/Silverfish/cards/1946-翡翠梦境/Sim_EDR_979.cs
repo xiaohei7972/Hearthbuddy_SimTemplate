@@ -11,7 +11,18 @@ namespace HREngine.Bots
 	//<b>休眠</b>2回合。<b>休眠</b>状态下，在你的回合结束时，获得5点护甲值并抽一张牌。
 	class Sim_EDR_979 : SimTemplate
 	{
-		
-		
+		public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
+		{
+			if (triggerEffectMinion.dormant != 0)
+			{
+				if (triggerEffectMinion.own == turnEndOfOwner)
+				{
+					p.minionGetArmor(p.ownHero, 5);
+					p.drawACard(CardDB.cardNameEN.unknown,triggerEffectMinion.own);
+				}
+			}
+		}
+
+
 	}
 }

@@ -11,7 +11,14 @@ namespace HREngine.Bots
 	//在你的回合结束时，使你的英雄获得<b>圣盾</b>。
 	class Sim_EDR_942 : SimTemplate
 	{
-		
+		public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
+		{
+			if (triggerEffectMinion.own == turnEndOfOwner)
+			{
+				p.ownHero.divineshild = true;
+			}
+
+		}
 		
 	}
 }

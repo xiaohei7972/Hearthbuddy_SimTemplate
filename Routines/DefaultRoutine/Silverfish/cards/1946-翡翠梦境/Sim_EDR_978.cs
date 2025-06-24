@@ -13,10 +13,11 @@ namespace HREngine.Bots
 	{
 		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EDR_978);
 
-        public override void onDeathrattle(Playfield p, Minion m)
-        {
-            kid.cost = 1;
-            p.AddToDeck(kid);
+		public override void onDeathrattle(Playfield p, Minion m)
+		{
+			p.AddToDeck(kid);
+			kid = p.ownDeck[0];
+			kid.cost = 1;
         }
 
     

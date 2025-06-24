@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//<b>嘲讽</b><b>亡语：</b>对所有敌方随从造成9点伤害。
 	class Sim_FIR_778 : SimTemplate
 	{
-		
+        public override void onDeathrattle(Playfield p, Minion m)
+        {
+			p.allMinionOfASideGetDamage(!m.own,9);
+        }
 		
 	}
 }
