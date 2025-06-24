@@ -17,24 +17,23 @@ namespace HREngine.Bots
             // 只在随从所有者的回合结束时触发
             if (turnEndOfOwner == m.own)
             {
+                // int pos = (m.own) ? p.ownMinions.Count : p.enemyMinions.Count;
+                if (m.zonepos != 7)
+                {
+                    int Angr = m.Angr; // 获取当前随从的攻击力
+                    int Hp = m.Hp; // 获取当前随从的生命值
+                    p.callKid(kid, m.zonepos, m.own);
 
-                int Angr = m.Angr; // 获取当前随从的攻击力
-                int Hp = m.Hp; // 获取当前随从的生命值
-                int pos = (m.own) ? p.ownMinions.Count : p.enemyMinions.Count;
+                    // 获取刚召唤的随从，并设置其攻击力和生命值
+                    Minion elemental = p.ownMinions[m.zonepos];
+                    elemental.maxHp = Hp;
+                    elemental.Hp = Hp;
+                    elemental.Angr = Angr;
+                    elemental.handcard.card.cost = Math.Min(10, (Hp + Angr) / 2);
+                    // 不打算使用这个方法,这个方法似乎是直接复制信息
+                    // elemental.setMinionToMinion(m); // 使用这个方法可以复制攻击力和生命值
+                }
 
-
-                // 使用相应的属性值来召唤元素随从
-                if (pos == 7) return;
-                p.callKid(kid, pos, m.own);
-
-                // 获取刚召唤的随从，并设置其攻击力和生命值
-                Minion elemental = p.ownMinions[pos];
-                elemental.maxHp = Hp;
-                elemental.Hp = Hp;
-                elemental.Angr = Angr;
-                elemental.handcard.card.cost = Math.Min(10, (Hp + Angr) / 2);
-                // 不打算使用这个方法,这个方法似乎是直接复制所有信息
-                // elemental.setMinionToMinion(m); // 使用这个方法可以复制攻击力和生命值
             }
         }
     }
