@@ -1,10 +1,13 @@
  # Hearthbuddy_SimTemplate
 
  炉石兄弟sim
-  
+
+ 有什么sim卡报错的,将报错信息发到issues,有时间我可以写一写
+
  ## CardDefs.xml文件获取地址
  
  https://github.com/HearthSim/hsdata
+
 
  ## 2025-06-11
  - 添加了32.4补丁的新卡
