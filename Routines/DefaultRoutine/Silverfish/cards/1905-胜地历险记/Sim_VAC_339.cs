@@ -25,7 +25,7 @@ namespace HREngine.Bots
                     p.callKid(kid, m.zonepos, m.own);
 
                     // 获取刚召唤的随从，并设置其攻击力和生命值
-                    Minion elemental = p.ownMinions[m.zonepos];
+                    Minion elemental = p.ownMinions[m.zonepos - 1];
                     elemental.maxHp = Hp;
                     elemental.Hp = Hp;
                     elemental.Angr = Angr;
