@@ -11,7 +11,23 @@ namespace HREngine.Bots
 	//抽两张龙牌，使其获得+1/+1。
 	class Sim_WW_816 : SimTemplate
 	{
-		
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice, Handmanager.Handcard hc)
+		{
+			p.drawACard(CardDB.cardNameEN.unknown, ownplay);
+			p.drawACard(CardDB.cardNameEN.unknown, ownplay);
+			// for (int i = 0; i < 2; i++)
+			// {
+			// 	foreach (CardDB.Card card in p.ownDeck)
+			// 	{
+			// 		if ((TAG_RACE)card.race == TAG_RACE.DRAGON)
+			// 		{
+			// 			p.drawACard(card.cardIDenum, ownplay);
+			// 			continue;
+			// 		}
+			// 	}
+			// }
+
+		}
+
 	}
 }

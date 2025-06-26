@@ -11,7 +11,20 @@ namespace HREngine.Bots
 	//<b>抉择：</b>抽一张牌；或者获得一个空的法力水晶。
 	class Sim_AV_205p : SimTemplate
 	{
-		
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			CardDB.Card card = null;
+
+			if (choice == 0)
+			{
+				card = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.WON_014s);
+				card.sim_card.onCardPlay(p, ownplay, target, choice);
+			}
+			if (choice == 1)
+			{
+				card = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.AV_205pb);
+				card.sim_card.onCardPlay(p, ownplay, target, choice);
+			}
+		}
 	}
 }

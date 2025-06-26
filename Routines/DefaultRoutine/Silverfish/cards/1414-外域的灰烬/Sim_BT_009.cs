@@ -12,7 +12,7 @@ namespace HREngine.Bots
 		public override void onDormantEndsTrigger(Playfield p, Minion m)
 		{
 			p.callKid(kid, m.zonepos, m.own);
-			p.callKid(kid, m.zonepos + 1, m.own);
+			p.callKid(kid, m.zonepos - 1, m.own);
 		}
 
 	}

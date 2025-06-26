@@ -11,7 +11,12 @@ namespace HREngine.Bots
 	//<b>战吼：</b>将你的法力值上限变为20。获得一个空的法力水晶。抽一张牌。
 	class Sim_AV_205 : SimTemplate
 	{
-		
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			p.ownMaxMana++;
+			p.drawACard(CardDB.cardNameEN.unknown, own.own);
+
+		}
+
 	}
 }

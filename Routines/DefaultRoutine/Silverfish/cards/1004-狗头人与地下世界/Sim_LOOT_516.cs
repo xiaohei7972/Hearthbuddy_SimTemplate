@@ -19,12 +19,13 @@ namespace HREngine.Bots
 
 
         public override PlayReq[] GetPlayReqs()
-        {
-            return new PlayReq[] {
-                new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET),
-                new PlayReq(CardDB.ErrorType2.REQ_FRIENDLY_TARGET),
-                new PlayReq(CardDB.ErrorType2.REQ_TARGET_IF_AVAILABLE),
-            };
-        }
+		{
+			return new PlayReq[]{
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY), //需要目标
+                new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET), //目标只能是随从
+				new PlayReq(CardDB.ErrorType2.REQ_FRIENDLY_TARGET), // 目标只能是友方
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_IF_AVAILABLE), //无目标时也可以用
+			};
+		}
 	}
 }

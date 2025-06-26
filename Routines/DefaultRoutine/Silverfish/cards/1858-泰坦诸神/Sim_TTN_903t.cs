@@ -11,13 +11,15 @@ namespace HREngine.Bots
 	//抽牌直到手牌数量达到上限。
 	class Sim_TTN_903t : SimTemplate
 	{
+        CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.TTN_903t4);
+
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
+        {
             while (p.owncards.Count < 10)
             {
                 p.drawACard(CardDB.cardNameEN.unknown, true); // 抽牌直到手牌数量达到上限
             }
-            p.callKid(CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.TTN_903t4), p.ownMinions.Count, true, false);
+            p.callKid(kid, p.ownMinions.Count, true, false);
         }
     }
 }

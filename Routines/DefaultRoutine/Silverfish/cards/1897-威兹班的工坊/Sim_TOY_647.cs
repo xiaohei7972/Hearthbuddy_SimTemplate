@@ -17,11 +17,7 @@ namespace HREngine.Bots
             if (m.silenced == false && m.dormant > 0 && turnEndOfOwner == m.own)
             {
                 // 对所有敌人造成3点伤害
-                foreach (Minion enemy in p.enemyMinions)
-                {
-                    p.minionGetDamageOrHeal(enemy, 3);
-                }
-                p.minionGetDamageOrHeal(p.enemyHero, 3);
+                p.allCharsOfASideGetDamage(!m.own, 3);
             }
         }
 
