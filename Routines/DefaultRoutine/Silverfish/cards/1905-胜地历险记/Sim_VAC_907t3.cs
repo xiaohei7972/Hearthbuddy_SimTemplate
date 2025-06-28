@@ -13,8 +13,7 @@ namespace HREngine.Bots
 	{
 		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
-            p.mana = Math.Min(10, p.mana+3); // 复原3个 法力水晶
-            p.ownMaxMana = Math.Min(10, p.ownMaxMana+3); // 复原2个 法力水晶
+            p.mana = Math.Min(p.ownMaxMana, p.mana+3); // 复原3个 法力水晶
         }    
 		
 	}
