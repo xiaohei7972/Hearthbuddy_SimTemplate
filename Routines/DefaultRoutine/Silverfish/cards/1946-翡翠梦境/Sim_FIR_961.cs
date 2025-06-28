@@ -11,7 +11,24 @@ namespace HREngine.Bots
 	//<b>战吼：</b>如果你的手牌中有法力值消耗大于或等于（5）点的法术牌，获得<b>圣盾</b>和<b>吸血</b>。
 	class Sim_FIR_961 : SimTemplate
 	{
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			bool fiveCostCard = false;
+			foreach (Handmanager.Handcard owncard in p.owncards)
+			{
+				if (owncard.card.type == CardDB.cardtype.SPELL && owncard.card.cost >= 5)
+				{
+					fiveCostCard = true;
+					break;
+				}
+			}
+
+			if (fiveCostCard)
+			{
+				own.divineshild = true;
+				own.lifesteal = true;
+			}
+        }
 		
 	}
 }

@@ -30,7 +30,7 @@ namespace HREngine.Bots
 		public override PlayReq[] GetPlayReqs()
         {
             return new PlayReq[] {
-				new PlayReq(CardDB.ErrorType2.REQ_NUM_MINION_SLOTS, 2) //确保有位置召唤
+				new PlayReq(CardDB.ErrorType2.REQ_NUM_MINION_SLOTS, 1) //确保有位置召唤
             };
         }
 		

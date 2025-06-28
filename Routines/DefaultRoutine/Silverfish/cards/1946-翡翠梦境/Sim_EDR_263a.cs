@@ -11,7 +11,7 @@ namespace HREngine.Bots
 	//对敌方英雄造成$4点伤害。
 	class Sim_EDR_263a : SimTemplate
 	{
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice, Handmanager.Handcard hc)
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
 			int damage = (ownplay) ? p.getSpellDamageDamage(4) : p.getEnemySpellDamageDamage(4);
 			p.minionGetDamageOrHeal(ownplay ? p.enemyHero : p.ownHero, damage);

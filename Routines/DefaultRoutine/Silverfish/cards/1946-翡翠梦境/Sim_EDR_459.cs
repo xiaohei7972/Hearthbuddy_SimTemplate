@@ -11,7 +11,15 @@ namespace HREngine.Bots
 	//<b>战吼：</b>对所有其他友方随从造成3点伤害。<b>亡语：</b>对所有敌方随从造成3点伤害。
 	class Sim_EDR_459 : SimTemplate
 	{
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			p.allMinionOfASideGetDamage(own.own,3);
+		}
+
+        public override void onDeathrattle(Playfield p, Minion m)
+        {
+			p.allMinionOfASideGetDamage(!m.own,3);
+        }
 		
 	}
 }

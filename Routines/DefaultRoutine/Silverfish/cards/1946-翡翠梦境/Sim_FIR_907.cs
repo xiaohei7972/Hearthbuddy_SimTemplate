@@ -13,27 +13,27 @@ namespace HREngine.Bots
 	{
 		public override void useLocation(Playfield p, Minion triggerMinion, Minion target)
 		{   //根据地标耐久判断提升数
-			int enhance = triggerMinion.maxHp - triggerMinion.Hp + 1;
+			int enhance = triggerMinion.maxHp - triggerMinion.Hp;
 			// 根据数随机获取一张随从
-			CardDB.Card kid = p.getRandomCardForManaMinion(enhance);
+			CardDB.Card kid = p.getRandomCardForManaMinion(1 + enhance);
 			//召唤一个随从
 			p.callKid(kid, p.ownMinions.Count, true);
 			//获取护甲
-			p.minionGetArmor(p.ownHero, enhance);
+			p.minionGetArmor(p.ownHero, 1 + enhance);
 			//抽牌
-			for (int i = 0; i < enhance; i++)
+			for (int i = 0; i < 1 + enhance; i++)
 			{
 				p.drawACard(CardDB.cardNameEN.unknown, true);
 			}
-			p.mana = Math.Min(10, p.mana + enhance);
+			p.mana = Math.Min(p.ownMaxMana, p.mana + 1 + enhance);
 		}
 
-        public override PlayReq[] GetPlayReqs()
-        {
-			return new PlayReq[]{
-				new PlayReq(CardDB.ErrorType2.REQ_MINION_CAP,1)
-			};
-        }
+        // public override PlayReq[] GetUseAbilityReqs()
+        // {
+		// 	return new PlayReq[]{
+		// 		new PlayReq(CardDB.ErrorType2.REQ_NUM_MINION_SLOTS,1) // 需要一个位置
+		// 	};
+        // }
 		
 	}
 }

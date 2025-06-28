@@ -11,7 +11,24 @@ namespace HREngine.Bots
 	//<b>战吼，亡语：</b>随机召唤一个<b>休眠</b>的魔种。
 	class Sim_EDR_841 : SimTemplate
 	{
-		
-		
+		CardDB.Card kid1 = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EDR_840t1);
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			int pos = own.own ? p.ownMinions.Count : p.enemyMinions.Count;
+			p.callKid(kid1, pos, own.own);
+		}
+
+		public override void onDeathrattle(Playfield p, Minion m)
+		{
+			int pos = m.own ? p.ownMinions.Count : p.enemyMinions.Count;
+			p.callKid(kid1, pos, m.own);
+		}
+		public override PlayReq[] GetPlayReqs()
+		{
+			return new PlayReq[]{
+				new PlayReq(CardDB.ErrorType2.REQ_NUM_MINION_SLOTS, 2) // 最少需要两个空位
+			};
+		}
+
 	}
 }

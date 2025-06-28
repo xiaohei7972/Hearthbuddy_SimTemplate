@@ -11,7 +11,14 @@ namespace HREngine.Bots
 	//<b>战吼，亡语：</b>你的下一个英雄技能的法力值消耗为（0）点。
 	class Sim_EDR_847 : SimTemplate
 	{
-		
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
+			p.ownHeroPowerCostLessOnce -= p.ownHeroAblility.manacost;
+        }
+        public override void onDeathrattle(Playfield p, Minion m)
+		{
+			p.ownHeroPowerCostLessOnce -= p.ownHeroAblility.manacost;
+		}
 		
 	}
 }

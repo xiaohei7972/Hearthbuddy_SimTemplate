@@ -11,7 +11,17 @@ namespace HREngine.Bots
 	//<b>亡语：</b>召唤{0}。
 	class Sim_EDR_454t : SimTemplate
 	{
-		
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.None);
+		public override void onDeathrattle(Playfield p, Minion m)
+		{
+			if (m.deathrattle2 != null)
+			{
+				kid = CardDB.Instance.getCardDataFromID(m.deathrattle2.cardIDenum);
+				Helpfunctions.Instance.ErrorLog("龙蛋亡语是：" + m.deathrattle2.nameCN);
+				int pos = m.own ? p.ownMinions.Count : p.enemyMinions.Count;
+				p.callKid(kid, pos, m.own);
+			}
+		}
+
 	}
 }

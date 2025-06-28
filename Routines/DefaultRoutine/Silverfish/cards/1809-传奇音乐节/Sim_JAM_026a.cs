@@ -11,7 +11,11 @@ namespace HREngine.Bots
 	//复原你的英雄技能。
 	class Sim_JAM_026a : SimTemplate
 	{
-		
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			p.anzUsedOwnHeroPower = 0;
+			p.ownAbilityReady = true;
+		}
+
 	}
 }

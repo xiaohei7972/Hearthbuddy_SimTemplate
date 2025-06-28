@@ -11,7 +11,11 @@ namespace HREngine.Bots
 	//<b>亡语：</b>双方玩家各获得一个空的法力水晶。
 	class Sim_EDR_861 : SimTemplate
 	{
-		
+		public override void onDeathrattle(Playfield p, Minion m)
+		{
+			p.ownMaxMana++;
+			p.enemyMaxMana++;
+        }
 		
 	}
 }

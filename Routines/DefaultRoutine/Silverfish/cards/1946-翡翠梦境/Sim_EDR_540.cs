@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//每当你使用其他的你已经使用过的随从牌，抽一张牌。
 	class Sim_EDR_540 : SimTemplate
 	{
-		
+        public override void onCardIsGoingToBePlayed(Playfield p, Handmanager.Handcard hc, bool wasOwnCard, Minion triggerEffectMinion)
+        {
+			if (p.ownMinionsPlayedThisGame.Exists((MinionsPlayedThisGame) => MinionsPlayedThisGame == hc.card.cardIDenum))
+			{
+				p.drawACard(CardDB.cardNameEN.unknown, triggerEffectMinion.own);
+			}
+        }
 		
 	}
 }

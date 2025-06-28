@@ -11,16 +11,22 @@ namespace HREngine.Bots
 	//对一个随从造成$5点伤害。随机获取一张星灵法术牌。
 	class Sim_SC_760 : SimTemplate
 	{
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice, Handmanager.Handcard hc)
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
-			p.minionGetDamageOrHeal(target, 5);
-			p.drawACard(CardDB.cardNameEN.unknown, ownplay, true);
-        }
+			if (target != null)
+			{
+				int damage = ownplay ? p.getSpellDamageDamage(5) : p.getEnemySpellDamageDamage(5);
+				p.minionGetDamageOrHeal(target, damage);
+				p.drawACard(CardDB.cardIDEnum.SC_753, ownplay, ownplay);
+			}
+
+		}
 
         public override PlayReq[] GetPlayReqs()
 		{
 			return new PlayReq[]{
 				new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY), // 需要选择一个目标
+				new PlayReq(CardDB.ErrorType2.REQ_ENEMY_TARGET), //只能是敌方
 				new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET) // 目标只能是随从
 			};
 

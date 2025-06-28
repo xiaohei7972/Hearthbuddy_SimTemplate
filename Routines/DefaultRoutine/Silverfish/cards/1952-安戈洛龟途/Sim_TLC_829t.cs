@@ -11,10 +11,16 @@ namespace HREngine.Bots
 	//使一个随从获得+{0}/+{1}。
 	class Sim_TLC_829t : SimTemplate
 	{
-		 public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice, Handmanager.Handcard hc)
-        {
-			p.minionGetBuffed(target, hc.addattack, hc.addHp);
-        }
+		CardDB.Card card = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.TLC_829t);
 		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			if (target != null)
+			{
+				p.minionGetBuffed(target, card.TAG_SCRIPT_DATA_NUM_1, card.TAG_SCRIPT_DATA_NUM_2);
+
+			}
+		}
+
 	}
 }

@@ -11,10 +11,10 @@ namespace HREngine.Bots
 	//恢复#6点生命值。随机获取3张德鲁伊法术牌。
 	class Sim_EDR_848 : SimTemplate
 	{
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice, Handmanager.Handcard hc)
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
 			int heal = (ownplay) ? p.getSpellHeal(6) : p.getEnemySpellHeal(6);
-			p.minionGetDamageOrHeal(target, -heal);
+			p.minionGetDamageOrHeal(target, heal);
 			p.drawACard(CardDB.cardNameEN.unknown, ownplay, true);
 			p.drawACard(CardDB.cardNameEN.unknown, ownplay, true);
 			p.drawACard(CardDB.cardNameEN.unknown, ownplay, true);
@@ -24,7 +24,7 @@ namespace HREngine.Bots
 		{
 			return new PlayReq[]{
 				new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY), // 需要选择一个目标
-				// new PlayReq(CardDB.ErrorType2.REQ_FRIENDLY_TARGET), // 目标只能是友方
+				new PlayReq(CardDB.ErrorType2.REQ_FRIENDLY_TARGET), // 目标只能是友方
 				// new PlayReq(CardDB.ErrorType2.REQ_HAND_NOT_FULL) // 手牌未满
 			};
 

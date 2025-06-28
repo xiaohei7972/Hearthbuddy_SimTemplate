@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//<b>战吼：</b>如果你的牌库里没有相同的牌，则在本局对战中，你的英雄技能的法力值消耗为（0）点。
 	class Sim_FB_Champs_CFM_020 : SimTemplate
 	{
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
+            if (own.own && p.prozis.noDuplicates) p.ownHeroAblility.manacost = 0;
+        }
 		
 	}
 }

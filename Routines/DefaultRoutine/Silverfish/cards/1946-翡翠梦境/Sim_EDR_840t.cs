@@ -11,7 +11,17 @@ namespace HREngine.Bots
 	//<b>休眠</b>2回合。唤醒时，使你的英雄在当回合获得+3攻击力。
 	class Sim_EDR_840t : SimTemplate
 	{
-		
-		
+		public override void onDormantEndsTrigger(Playfield p, Minion m)
+		{
+			if (m.own)
+			{
+				p.ownHero.Angr += 3;
+			}
+			else
+			{
+				p.enemyHero.Angr += 3;
+			}
+		}
+
 	}
 }

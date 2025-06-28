@@ -11,7 +11,20 @@ namespace HREngine.Bots
 	//<b>抉择：</b>复原你的英雄技能；或者使你的下一个英雄技能的法力值消耗为（0）点。
 	class Sim_JAM_026 : SimTemplate
 	{
-		
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			if (choice == 1 || (p.ownFandralStaghelm > 0 && ownplay))
+			{
+				p.anzUsedOwnHeroPower = 0;
+				p.ownAbilityReady = true;
+			}
+
+			if (choice == 2 || (p.ownFandralStaghelm > 0 && ownplay))
+			{
+				p.ownHeroPowerCostLessOnce -= p.ownHeroAblility.manacost;
+			}
+			
+		}
+
 	}
 }

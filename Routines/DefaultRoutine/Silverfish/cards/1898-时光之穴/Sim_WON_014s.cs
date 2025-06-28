@@ -11,7 +11,7 @@ namespace HREngine.Bots
 	//获得一个空的法力水晶。
 	class Sim_WON_014s : SimTemplate
 	{
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice, Handmanager.Handcard hc)
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
 			p.ownMaxMana++;
 		}

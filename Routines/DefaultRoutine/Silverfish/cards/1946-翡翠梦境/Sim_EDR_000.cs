@@ -12,10 +12,10 @@ namespace HREngine.Bots
 	class Sim_EDR_000 : SimTemplate
 	{
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
-        {
-            p.mana = Math.Min(10, p.mana+3);
-            p.ownMaxMana = Math.Min(10, p.ownMaxMana+3);
-        }
+		{
+			p.mana = Math.Min(p.ownMaxMana, p.mana + 3);
+			p.ownMaxMana = Math.Min(15, p.ownMaxMana + 3);
+		}
 		
 	}
 }

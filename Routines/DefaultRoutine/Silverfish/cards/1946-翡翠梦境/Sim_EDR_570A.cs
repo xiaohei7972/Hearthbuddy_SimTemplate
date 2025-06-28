@@ -11,6 +11,11 @@ namespace HREngine.Bots
 	//对所有随从造成$1点伤害。
 	class Sim_EDR_570A : SimTemplate
 	{
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
+			int damage = ownplay ? p.getSpellDamageDamage(1) : p.getEnemySpellDamageDamage(1);
+			p.allMinionsGetDamage(damage);
+        }
 		
 		
 	}

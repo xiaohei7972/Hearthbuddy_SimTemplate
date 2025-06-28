@@ -13,17 +13,14 @@ namespace HREngine.Bots
 	{
 		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
-			CardDB.Card card = null;
 
-			if (choice == 0)
+			if (choice == 1 || (p.ownFandralStaghelm > 0 && ownplay))
 			{
-				card = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.WON_014s);
-				card.sim_card.onCardPlay(p, ownplay, target, choice);
+				p.drawACard(CardDB.cardNameEN.unknown, ownplay);
 			}
-			if (choice == 1)
+			if (choice == 2 || (p.ownFandralStaghelm > 0 && ownplay))
 			{
-				card = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.AV_205pb);
-				card.sim_card.onCardPlay(p, ownplay, target, choice);
+				p.ownMaxMana++;
 			}
 		}
 	}
