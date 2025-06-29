@@ -11,11 +11,12 @@ namespace HREngine.Bots
 	//在你的英雄攻击后，召唤一只1/1的猎犬。
 	class Sim_TOY_358 : SimTemplate
 	{
-
+        CardDB.card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.TOY_358t);
         public override void onHeroattack(Playfield p, Minion own, Minion target)
         {
+	    int pos = own.own ? p.ownMinions.Count : p.enemyMiniond.Count;
             // 召唤一只 1/1 的猎犬
-            p.callKid(CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.TOY_358t), p.ownMinions.Count, own.own);
+            p.callKid(kid, pos, own.own);
         }
     }
 }
