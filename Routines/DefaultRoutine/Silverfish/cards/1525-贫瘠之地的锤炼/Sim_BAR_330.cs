@@ -8,31 +8,29 @@ namespace HREngine.Bots
 	{
         //[x]<b>Deathrattle:</b> Draw a<b>Deathrattle</b> minion.
         //<b>亡语：</b>抽一张<b>亡语</b>随从牌。
-        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-        {
-            p.equipWeapon(CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.BAR_330), true);
-        }
+        CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.BAR_330);
 
-        public override void onDeathrattle(Playfield p, Minion m)
-        {
-            p.drawACard(CardDB.cardIDEnum.EX1_096, true);
-            // 遍历卡组
-            //foreach (KeyValuePair<CardDB.cardIDEnum, int> kvp in p.prozis.turnDeck)
-            //{
-            //    // ID 转卡
-            //    CardDB.cardIDEnum deckCard = kvp.Key;
-            //    CardDB.Card minion = CardDB.Instance.getCardDataFromID(deckCard);
-            //    if ( minion.type == CardDB.cardtype.MOB && minion.deathrattle)
-            //    {
-            //        p.drawACard(deckCard, true);
-            //        break;
-            //    }
-            //}
-        }
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			p.equipWeapon(weapon, ownplay);
+		}
 
-        public override void onHeroattack(Playfield p, Minion own, Minion target)
-        {
-            p.evaluatePenality -= 3;
-        }
+		public override void onDeathrattle(Playfield p, Minion m)
+		{
+			foreach (var cardEntry in p.prozis.turnDeck)
+			{
+				CardDB.Card card = CardDB.Instance.getCardDataFromID(cardEntry.Key);
+				if (card.deathrattle == true)
+				{
+					p.drawACard(cardEntry.Key, m.own);
+					break;
+				}
+			}
+		}
+
+        // public override void onHeroattack(Playfield p, Minion own, Minion target)
+        // {
+        //     p.evaluatePenality -= 3;
+        // }
     }
 }

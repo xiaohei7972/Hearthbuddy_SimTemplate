@@ -11,13 +11,15 @@ namespace HREngine.Bots
 	//<b>战吼：</b>将六张降落伞洗入你的牌库。当抽到降落伞时，召唤一个1/1并具有<b>冲锋</b>的海盗。
 	 class Sim_VAC_933 : SimTemplate
     {
+        CardDB.Card card = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.VAC_933t);
         // 战吼效果
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {
             // 将六张降落伞洗入牌库
             for (int i = 0; i < 6; i++)
             {
-                p.drawACard(CardDB.cardIDEnum.VAC_933t, own.own, true); // true表示将卡牌洗入牌库而非直接抽取
+                p.AddToDeck(card);
+                // p.drawACard(CardDB.cardIDEnum.VAC_933t, own.own, true); // true表示将卡牌洗入牌库而非直接抽取
             }
         }
     }

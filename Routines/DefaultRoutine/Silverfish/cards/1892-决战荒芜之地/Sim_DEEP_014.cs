@@ -11,6 +11,12 @@ namespace HREngine.Bots
 	//在你的英雄攻击后，抽一张牌。
 	class Sim_DEEP_014 : SimTemplate
 	{
+        CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.DEEP_014);
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
+            p.equipWeapon(weapon, ownplay);
+        }
+        
         public override void onHeroattack(Playfield p, Minion own, Minion target)
         {
             // 检查己方英雄是否装备了“疾速矿锄”

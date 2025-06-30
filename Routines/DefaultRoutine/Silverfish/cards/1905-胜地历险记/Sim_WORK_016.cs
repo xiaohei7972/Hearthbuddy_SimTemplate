@@ -11,7 +11,22 @@ namespace HREngine.Bots
 	//在你的英雄攻击后，对你的英雄造成3点伤害。
 	class Sim_WORK_016 : SimTemplate
 	{
-		
-		
+		CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.WORK_016);
+
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			p.equipWeapon(weapon, ownplay);
+		}
+
+		public override void onHeroattack(Playfield p, Minion own, Minion target)
+		{
+			// 检查己方英雄是否装备了“亵渎之矛”
+			if (own.own && p.ownWeapon.card.cardIDenum == CardDB.cardIDEnum.WORK_016)
+			{
+				p.minionGetDamageOrHeal(p.ownHero, 3);
+			}
+		}
+
+
 	}
 }

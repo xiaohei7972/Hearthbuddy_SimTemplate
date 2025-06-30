@@ -11,7 +11,11 @@ namespace HREngine.Bots
 	//<b>战吼：</b>召唤一个1/1的跳虫。
 	class Sim_SC_010 : SimTemplate
 	{
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.SC_010);
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
+			p.callKid(kid, own.zonepos, own.own);
+        }
 		
 	}
 }

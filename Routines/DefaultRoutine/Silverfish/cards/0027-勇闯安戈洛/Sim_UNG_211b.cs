@@ -13,7 +13,7 @@ namespace HREngine.Bots
 		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
             int heal = (ownplay) ? p.getSpellHeal(12) : p.getEnemySpellHeal(12);
-			p.minionGetDamageOrHeal(ownplay ? p.ownHero : p.enemyHero, -heal);
+			p.minionGetDamageOrHeal(ownplay ? p.ownHero : p.enemyHero, heal);
 		}
 	}
 }

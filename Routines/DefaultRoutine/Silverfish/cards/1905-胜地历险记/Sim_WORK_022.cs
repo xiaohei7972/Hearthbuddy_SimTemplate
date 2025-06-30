@@ -11,7 +11,11 @@ namespace HREngine.Bots
 	//在本回合中，使你的英雄获得+3攻击力和“同时对相邻随从造成伤害”。
 	class Sim_WORK_022 : SimTemplate
 	{
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			p.ownHero.Angr += 3;
+			//TODO：还没想好怎么写狂战斧效果
+        }
 		
 	}
 }

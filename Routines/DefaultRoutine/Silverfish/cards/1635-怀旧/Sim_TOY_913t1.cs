@@ -11,7 +11,12 @@ namespace HREngine.Bots
 	//<b>吸血</b>
 	class Sim_TOY_913t1 : SimTemplate
 	{
-		
+		CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.TOY_913t1);
+
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			p.equipWeapon(weapon, ownplay);
+		}
 		
 	}
 }

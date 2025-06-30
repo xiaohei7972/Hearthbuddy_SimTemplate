@@ -12,6 +12,30 @@ namespace HREngine.Bots
 	class Sim_VAC_529 : SimTemplate
 	{
 		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			// CardDB.ErrorType2.REQ_LOCATION_TARGET这个功能还没实现,因此还不能正确识别目标
+			if (target != null)
+			{
+				if (p.ownMinions.Count < 6)
+				{
+					Minion minion = new Minion();
+					p.callKid(target.handcard.card, own.zonepos, own.own);
+					int pos = own.own ? p.ownMinions.Count : p.enemyMinions.Count;
+					p.ownMinions[pos - 1].setMinionToMinion(target);
+				}
+			}
+		}
+
+        public override PlayReq[] GetPlayReqs()
+		{
+			return new PlayReq[]{
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY), // 需要选择一个目标
+				new PlayReq(CardDB.ErrorType2.REQ_FRIENDLY_TARGET), // 目标只能是友方
+				new PlayReq(CardDB.ErrorType2.REQ_LOCATION_TARGET), // 目标只能是地标
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_IF_AVAILABLE), // 没目标时也能用
+			};
+		}
 		
 	}
 }
