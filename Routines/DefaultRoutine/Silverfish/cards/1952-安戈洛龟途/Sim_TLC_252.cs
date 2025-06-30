@@ -17,6 +17,7 @@ namespace HREngine.Bots
 			if (target != null)
 			{
 				p.minionGetDestroyed(target);
+				// 我乱写的东西,我也不确定怎么给buff牌改数值
 				card.TAG_SCRIPT_DATA_NUM_1 = target.Angr;
 				card.TAG_SCRIPT_DATA_NUM_2 = target.Hp;
 				p.drawACard(card.cardIDenum, true, true);
@@ -29,7 +30,6 @@ namespace HREngine.Bots
 				new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY), // 需要选择一个目标
 				new PlayReq(CardDB.ErrorType2.REQ_FRIENDLY_TARGET), // 目标只能是友方
 				new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET), // 目标只能是随从
-				new PlayReq(CardDB.ErrorType2.REQ_TRADEABLE), // 可交易
 			};
 		}
 

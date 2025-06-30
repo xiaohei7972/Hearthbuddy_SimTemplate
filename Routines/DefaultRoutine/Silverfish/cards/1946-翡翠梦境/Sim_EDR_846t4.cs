@@ -11,7 +11,11 @@ namespace HREngine.Bots
 	//对所有敌人造成$5点伤害<i>（尤其是伊瑟拉！）</i>。
 	class Sim_EDR_846t4 : SimTemplate
 	{
-		
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
+			int damage = ownplay ? p.getSpellDamageDamage(5) : p.getEnemySpellDamageDamage(5);
+			p.allCharsOfASideGetDamage(!ownplay, damage);
+        }
 		
 	}
 }

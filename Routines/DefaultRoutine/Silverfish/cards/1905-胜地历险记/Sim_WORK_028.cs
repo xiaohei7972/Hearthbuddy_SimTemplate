@@ -13,21 +13,22 @@ namespace HREngine.Bots
 	{
 		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
-			// if (p.ownMinions.Count > 0)
-			// {
-			// 	foreach (Minion m in p.ownMinions)
-			// 	{
-			// 		m.reborn = true;
-			// 	}
-			// }
+			if (p.ownMinions.Count > 0)
+			{
+				p.ownMinions.ForEach((m) => m.reborn = true);
+				foreach (Minion m in p.ownMinions)
+				{
+					m.reborn = true;
+				}
+			}
 
-			// if (p.enemyMinions.Count > 0)
-			// {
-			// 	foreach (Minion m in p.enemyMinions)
-			// 	{
-			// 		m.reborn = true;
-			// 	}
-			// }
+			if (p.enemyMinions.Count > 0)
+			{
+				foreach (Minion m in p.enemyMinions)
+				{
+					m.reborn = true;
+				}
+			}
 
 			p.allMinionsGetDestroyed();
 		}

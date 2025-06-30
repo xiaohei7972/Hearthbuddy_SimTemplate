@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//在一个随从死亡后，获得其攻击力。
 	class Sim_EDR_484 : SimTemplate
 	{
-		
+		public override void onMinionDiedTrigger(Playfield p, Minion triggerEffectMinion, Minion diedMinion)
+		{
+			p.minionGetBuffed(triggerEffectMinion, diedMinion.Angr, 0);
+		}
 		
 	}
 }
