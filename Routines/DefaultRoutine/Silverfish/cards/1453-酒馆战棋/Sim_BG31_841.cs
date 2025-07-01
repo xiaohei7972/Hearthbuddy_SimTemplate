@@ -8,7 +8,7 @@ namespace HREngine.Bots
 	//Wisp in the Shell
 	//壳中小精灵
 	//[x]<b>Battlecry:</b> Give a friendlyminion +@ Health. <i>(Improvedby each friendly minion thatdied last combat!)</i>
-	//<b>战吼：</b>使一个友方随从获得+@生命值。<i>（每有一个在上一场战斗中死亡的友方随从都会提高！）</i>
+	//<b>战吼：</b>使一个友方随从获得+@生命值。<i>（每有一个在上一场战斗中死亡的友方随从都会提升！）</i>
 	class Sim_BG31_841 : SimTemplate
 	{
 		

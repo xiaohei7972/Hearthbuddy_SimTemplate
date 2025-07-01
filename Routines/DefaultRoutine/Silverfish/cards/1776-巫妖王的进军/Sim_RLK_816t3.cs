@@ -8,7 +8,7 @@ namespace HREngine.Bots
 	//Vision of Darkness
 	//黑暗幻象
 	//[x]<b>Discover</b> a Shadow spell.<i>(This stays in your hand.)</i>
-	//<b>发现</b>一张暗影法术牌。<i>（本牌保留在你手牌中。）</i>
+	//<b>发现</b>一张暗影法术牌。<i>（本牌会保留在你手中。）</i>
 	class Sim_RLK_816t3 : SimTemplate
 	{
 		
