@@ -26,12 +26,12 @@ namespace HREngine.Bots
 		public override void onAuraStarts(Playfield p, Minion m)
 		{
 			List<Minion> minions = m.own ? p.ownMinions : p.enemyMinions;
-			minions.ForEach((m => { if (m.handcard.card == kid1 || m.handcard.card == kid2 || m.handcard.card == weapon) p.minionGetTempBuff(m, 2, 0); }));
+			minions.ForEach((m2 => { if (m2.handcard.card == kid1 || m2.handcard.card == kid2 || m2.handcard.card == weapon) p.minionGetTempBuff(m2, 2, 0); }));
 		}
 		public override void onAuraEnds(Playfield p, Minion m)
 		{
 			List<Minion> minions = m.own ? p.ownMinions : p.enemyMinions;
-			minions.ForEach((m => { if (m.handcard.card == kid1 || m.handcard.card == kid2 || m.handcard.card == weapon) p.minionGetTempBuff(m, 2, 0); }));
+			minions.ForEach((m2 => { if (m2.handcard.card == kid1 || m2.handcard.card == kid2 || m2.handcard.card == weapon) p.minionGetTempBuff(m2, -2, 0); }));
 		}
 
 	}

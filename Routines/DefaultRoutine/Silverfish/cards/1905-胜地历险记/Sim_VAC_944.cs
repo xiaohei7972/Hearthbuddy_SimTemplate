@@ -11,10 +11,19 @@ namespace HREngine.Bots
 	//使一个随从获得+3/+3和“在你的回合开始时，对你的英雄造成3点伤害”。
 	class Sim_VAC_944 : SimTemplate
 	{
-        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-        {
-            // 使一个随从获得+3/+3
-            p.minionGetBuffed(target, 3, 3);
-        }
-    }
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			// 使一个随从获得+3/+3
+			p.minionGetBuffed(target, 3, 3);
+		}
+
+		public override PlayReq[] GetPlayReqs()
+		{
+			return
+			new PlayReq[]{
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY), // 需要一个目标
+				new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET), // 只能是随从
+			};
+		}
+	}
 }
