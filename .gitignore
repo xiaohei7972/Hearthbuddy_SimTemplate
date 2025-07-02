@@ -1,5 +1,5 @@
 *
-/开发配置教程
+
 # /用户配置教程
 # /Bots 
 # /CompiledAssemblies 
@@ -9,16 +9,16 @@
 # /MercStraLogs 
 # /Plugins
 # /Routines/DefaultRoutine
-
-
+!Routines
+!Routines/DefaultRoutine
 !Routines/DefaultRoutine/Silverfish/
-!Routines/DefaultRoutine/Silverfish/data
-!Routines/DefaultRoutine/Silverfish/cards
-!Routines/DefaultRoutine/Silverfish/cards/*
-!Routines/DefaultRoutine/Silverfish/cards/*/
+!Routines/DefaultRoutine/Silverfish/data/
+!Routines/DefaultRoutine/Silverfish/cards/
 !Routines/DefaultRoutine/Silverfish/ai/CardDB_cardIDEnum.cs
 !Routines/DefaultRoutine/Silverfish/ai/CardDB_cardNameCN.cs
 !Routines/DefaultRoutine/Silverfish/ai/CardDB_cardNameEN.cs
+
+!/开发配置教程
 !/开发配置教程/校验卡牌Sim.py 
 !/开发配置教程/校验卡牌Sim打印非UTF-8.py 
 !/开发配置教程/生成卡牌数据.py 
