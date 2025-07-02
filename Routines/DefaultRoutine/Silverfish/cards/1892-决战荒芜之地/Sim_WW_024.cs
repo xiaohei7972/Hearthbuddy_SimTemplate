@@ -14,7 +14,7 @@ namespace HREngine.Bots
 		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.WW_024t);//murlocscout
 		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
 		{
-            p.callKid(kid, own.zonepos, own.own);
+            p.callKid(kid, own.zonepos -1, own.own);
 			p.callKid(kid, own.zonepos, own.own);
 		}
 		

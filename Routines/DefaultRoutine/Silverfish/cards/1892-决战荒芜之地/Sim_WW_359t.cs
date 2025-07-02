@@ -11,7 +11,21 @@ namespace HREngine.Bots
 	//使一个随从<b>休眠</b>3回合。
 	class Sim_WW_359t : SimTemplate
 	{
-		
+		public override void useLocation(Playfield p, Minion triggerMinion, Minion target)
+		{
+			if (target != null && target.dormant == 0)
+			{
+				target.dormant = 3;
+			}
+		}
+
+        public override PlayReq[] GetUseAbilityReqs()
+        {
+            return new PlayReq[]{
+				new PlayReq(CardDB.ErrorType2.REQ_DRAG_TO_PLAY), // 需要一个目标
+				new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET), // 只能是随从
+			};
+        }
 		
 	}
 }

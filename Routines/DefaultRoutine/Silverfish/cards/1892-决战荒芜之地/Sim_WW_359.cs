@@ -11,7 +11,15 @@ namespace HREngine.Bots
 	//<b>战吼：</b>如果你的生命值小于或等于20点，开启荒芜之地监狱。
 	class Sim_WW_359 : SimTemplate
 	{
-		
+		CardDB.Card location = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.WW_359t);
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			Minion hero = own.own ? p.ownHero : p.enemyHero;
+			if (hero.Hp <= 20)
+			{
+				p.callKid(location, own.zonepos, own.own);
+			}
+		}
 		
 	}
 }
