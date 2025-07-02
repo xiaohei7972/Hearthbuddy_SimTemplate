@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//<b>嘲讽，战吼：</b>对你的英雄造成2点伤害。
 	class Sim_CORE_LOOT_013 : SimTemplate
 	{
-		
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			p.minionGetDamageOrHeal(own.own ? p.ownHero : p.enemyHero, 2);
+		}
+
 	}
 }

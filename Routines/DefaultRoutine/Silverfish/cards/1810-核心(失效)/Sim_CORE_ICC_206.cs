@@ -11,7 +11,23 @@ namespace HREngine.Bots
 	//选择一个友方随从，交给你的对手。
 	class Sim_CORE_ICC_206 : SimTemplate
 	{
-		
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			if (target != null)
+			{
+				p.minionGetControlled(target, !ownplay, false, true);
+			}
+
+		}
+
+		public override PlayReq[] GetPlayReqs()
+		{
+			return new PlayReq[] {
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY), // 需要一个目标
+				new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET), // 只能是随从
+				new PlayReq(CardDB.ErrorType2.REQ_FRIENDLY_TARGET), // 只能是友方
+			};
+		}
+
 	}
 }

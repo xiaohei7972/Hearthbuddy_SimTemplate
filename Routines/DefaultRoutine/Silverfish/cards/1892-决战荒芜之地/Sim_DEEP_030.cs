@@ -13,16 +13,17 @@ namespace HREngine.Bots
 	{
 		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
 		{
-            p.drawACard(CardDB.cardIDEnum.None, own.own);
-			p.minionGetDamageOrHeal(own.own ? p.ownHero : p.enemyHero, 4);
+			p.drawACard(CardDB.cardIDEnum.None, own.own);
+			p.minionGetDamageOrHeal(own.own ? p.ownHero : p.enemyHero, 2);
 		}
 
-		public override void onDeathrattle(Playfield p, Minion m)		
-        {
-            p.drawACard(CardDB.cardIDEnum.None, m.own);
-        }
+		public override void onDeathrattle(Playfield p, Minion m)
+		{
+			p.drawACard(CardDB.cardIDEnum.None, m.own);
+			p.minionGetDamageOrHeal(m.own ? p.ownHero : p.enemyHero, 2);
+		}
 
 
-		
+
 	}
 }

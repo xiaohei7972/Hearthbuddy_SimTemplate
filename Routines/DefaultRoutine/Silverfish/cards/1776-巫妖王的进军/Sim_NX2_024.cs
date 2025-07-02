@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//<b>突袭</b>。<b>亡语：</b>对你的英雄造成4点伤害。
 	class Sim_NX2_024 : SimTemplate
 	{
-		
+		public override void onDeathrattle(Playfield p, Minion m)
+		{
+			p.minionGetDamageOrHeal(m.own ? p.ownHero : p.enemyHero, 4);
+		}
 		
 	}
 }

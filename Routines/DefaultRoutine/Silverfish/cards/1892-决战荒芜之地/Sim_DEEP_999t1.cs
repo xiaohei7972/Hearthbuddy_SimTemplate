@@ -16,16 +16,20 @@ namespace HREngine.Bots
 		{
 			if (target != null && target.own == ownplay)
 			{
+				int damage = ownplay ? p.getSpellDamageDamage(2) : p.getEnemySpellDamageDamage(2);
 				// 使一个友方随从获得+2/+2
 				p.minionGetBuffed(target, 2, 2);
+				p.getEnemyCharTargetForRandomSingleDamage(damage, true);
 			}
+
 		}
 		public override PlayReq[] GetPlayReqs()
 		{
 			return new PlayReq[] {
-				new PlayReq(CardDB.ErrorType2.REQ_MINIMUM_ENEMY_MINIONS, 1), // 对面有没有随从都可以用 但为了不浪费两点伤害还是限制一下
-				new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET),
-				new PlayReq(CardDB.ErrorType2.REQ_FRIENDLY_TARGET),
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY), // 需要一个目标
+				new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET), // 只能是随从
+				new PlayReq(CardDB.ErrorType2.REQ_FRIENDLY_TARGET), // 只能是友方
+				// new PlayReq(CardDB.ErrorType2.REQ_MINIMUM_ENEMY_MINIONS, 1), // 对面有没有随从都可以用 但为了不浪费两点伤害还是限制一下
 			};
 		}
 	}

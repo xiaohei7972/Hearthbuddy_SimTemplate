@@ -14,6 +14,8 @@ namespace HREngine.Bots
 
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {
+            p.minionAttacksMinion(own, own.own ? p.ownHero : p.enemyHero);
+            /*
             // 如果是己方随从触发战吼，则攻击己方英雄
             if (own.own)
             {
@@ -25,6 +27,7 @@ namespace HREngine.Bots
                 int damage = own.Angr;
                 p.minionGetDamageOrHeal(p.enemyHero, damage); // 让随从对敌方英雄造成伤害
             }
+            */
         }
     }
 }

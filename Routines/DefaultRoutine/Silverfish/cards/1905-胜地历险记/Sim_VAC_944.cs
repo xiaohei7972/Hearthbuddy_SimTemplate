@@ -13,8 +13,12 @@ namespace HREngine.Bots
 	{
 		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
-			// 使一个随从获得+3/+3
-			p.minionGetBuffed(target, 3, 3);
+			if (target != null)
+			{
+				// 使一个随从获得+3/+3
+				p.minionGetBuffed(target, 3, 3);
+				//TODO:添加回合结束效果还在想
+			}
 		}
 
 		public override PlayReq[] GetPlayReqs()

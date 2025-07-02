@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//<b>突袭</b>。<b>战吼：</b>对你的英雄造成4点伤害。
 	class Sim_TTN_832 : SimTemplate
 	{
-		
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
+			p.minionGetDamageOrHeal(own.own ? p.ownHero : p.enemyHero, 4);
+        }
 		
 	}
 }

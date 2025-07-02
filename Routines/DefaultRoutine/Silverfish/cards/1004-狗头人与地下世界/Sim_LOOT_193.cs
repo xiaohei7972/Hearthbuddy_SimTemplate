@@ -11,7 +11,25 @@ namespace HREngine.Bots
 	//在你对手的回合<b>扰魔</b>。
 	class Sim_LOOT_193 : SimTemplate
 	{
-		
-		
+
+		// Minion还没写扰魔属性
+
+		// public override void onTurnStartTrigger(Playfield p, Minion triggerEffectMinion, bool turnStartOfOwner)
+		// {
+		// 	if (triggerEffectMinion.own == !turnStartOfOwner)
+		// 	{
+		// 		triggerEffectMinion.elusive = true;
+		// 	}
+		// }
+
+
+        // public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
+        // {
+        //     if (triggerEffectMinion.own == !turnStartOfOwner)
+		// 	{
+		// 		triggerEffectMinion.elusive = flase;
+		// 	}
+        // }
+
 	}
 }
