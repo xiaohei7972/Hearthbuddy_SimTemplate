@@ -1,9 +1,21 @@
+!Routines/DefaultRoutine/Silverfish/
 !Routines/DefaultRoutine/Silverfish/data
 !Routines/DefaultRoutine/Silverfish/cards
+!Routines/DefaultRoutine/Silverfish/cards/*
+!Routines/DefaultRoutine/Silverfish/cards/*/*
 !Routines/DefaultRoutine/Silverfish/ai/CardDB_cardIDEnum.cs
 !Routines/DefaultRoutine/Silverfish/ai/CardDB_cardNameCN.cs
 !Routines/DefaultRoutine/Silverfish/ai/CardDB_cardNameEN.cs
-!开发者配置教程/
 
 
 *
+# /开发配置教程
+# /用户配置教程
+# /Bots 
+# /CompiledAssemblies 
+# /JitProfiles 
+# /HsMod 
+# /Logs 
+# /MercStraLogs 
+# /Plugins
+# /Routines/DefaultRoutine
