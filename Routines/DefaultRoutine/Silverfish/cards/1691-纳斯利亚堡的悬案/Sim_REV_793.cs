@@ -4,20 +4,24 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//地标 战士 费用：1
-	//Sanguine Depths
-	//赤红深渊
-	//[x]{0}{1}
-	//{0}{1}
-	class Sim_REV_793 : SimTemplate
-	{
+    //地标 战士 费用：1
+    //Sanguine Depths
+    //赤红深渊
+    //[x]{0}{1}
+    //{0}{1}
+    class Sim_REV_793 : SimTemplate
+    {
         public override void useLocation(Playfield p, Minion triggerMinion, Minion target)
         {
-            // 对目标随从造成1点伤害
-            p.minionGetDamageOrHeal(target, 1);
+            if (target != null)
+            {
+                // 对目标随从造成1点伤害
+                p.minionGetDamageOrHeal(target, 1);
 
-            // 使目标随从获得+2攻击力（永久）
-            p.minionGetBuffed(target, 2, 0); // 给予永久的攻击力加成
+                // 使目标随从获得+2攻击力（永久）
+                p.minionGetBuffed(target, 2, 0); // 给予永久的攻击力加成    
+            }
+
         }
 
         public override PlayReq[] GetUseAbilityReqs()

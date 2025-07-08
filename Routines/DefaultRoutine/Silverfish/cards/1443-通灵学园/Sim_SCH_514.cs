@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_SCH_514 : SimTemplate //* 亡者复生 Raise Dead
+    //* 亡者复生 Raise Dead
+    //Deal $3 damage to your hero. Return two friendly minions that died this game to your hand.
+    //对你的英雄造成$3点伤害。将两个在本局对战中死亡的友方随从移回你的手牌。
+    class Sim_SCH_514 : SimTemplate
     {
-        //Deal $3 damage to your hero. Return two friendly minions that died this game to your hand.
-        //对你的英雄造成$3点伤害。将两个在本局对战中死亡的友方随从移回你的手牌。
-
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
             // 对己方英雄造成3点伤害
@@ -37,6 +37,14 @@ namespace HREngine.Bots
                 // 如果已经复活足够数量的随从，则退出循环
                 if (rebornCard <= 0) break;
             }
+        }
+
+        public override PlayReq[] GetPlayReqs()
+        {
+            return new PlayReq[]{
+                new PlayReq(CardDB.ErrorType2.REQ_FRIENDLY_MINION_DIED_THIS_GAME), // 本局对战有一个友方随从死亡
+            };
+
         }
     }
 }

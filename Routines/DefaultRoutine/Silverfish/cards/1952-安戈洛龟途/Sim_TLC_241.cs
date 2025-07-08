@@ -11,7 +11,17 @@ namespace HREngine.Bots
 	//当本随从存活时，你获取一张法力值消耗为（2）的神圣法术牌，该牌可以使一个随从获得+2/+2和<b>圣盾</b>。
 	class Sim_TLC_241 : SimTemplate
 	{
-		
+		Handmanager.Handcard hc = new Handmanager.Handcard();
+		public override void onAuraStarts(Playfield p, Minion m)
+		{
+			p.drawACard(CardDB.cardIDEnum.TLC_241t, m.own, true);
+			hc = p.owncards[p.owncards.Count - 1];
+		}
+
+        public override void onAuraEnds(Playfield p, Minion m)
+        {
+			p.removeCard(hc);
+        }
 		
 	}
 }

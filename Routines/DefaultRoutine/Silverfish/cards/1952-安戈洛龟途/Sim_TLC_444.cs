@@ -12,6 +12,13 @@ namespace HREngine.Bots
 	class Sim_TLC_444 : SimTemplate
 	{
 		
-		
+		public override PlayReq[] GetPlayReqs()
+		{
+			return new PlayReq[] {
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY), // 需要一个目标
+                new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET), // 只能是随从
+                new PlayReq(CardDB.ErrorType2.REQ_FRIENDLY_TARGET), // 只能是友方
+            };
+		}
 	}
 }

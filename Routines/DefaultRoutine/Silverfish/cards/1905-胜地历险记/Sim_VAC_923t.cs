@@ -14,8 +14,12 @@ namespace HREngine.Bots
 
 		public override void useLocation(Playfield p, Minion triggerMinion, Minion target)
 		{
-			p.minionGetBuffed(target, 3, 0);
-			target.rush = 1;
+			if (target != null)
+			{
+				p.minionGetBuffed(target, 3, 0);
+				target.rush = 1;
+			}
+
 		}
 
 		public override PlayReq[] GetUseAbilityReqs()

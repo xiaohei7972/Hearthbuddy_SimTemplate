@@ -11,7 +11,11 @@ namespace HREngine.Bots
 	//<b>亡语：</b>召唤一个0/1的永生花芽。
 	class Sim_TLC_234 : SimTemplate
 	{
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.TLC_234t);
+		public override void onDeathrattle(Playfield p, Minion m)
+		{
+			p.callKid(kid, m.zonepos - 1, m.own);
+        }
 		
 	}
 }

@@ -11,7 +11,15 @@ namespace HREngine.Bots
 	//<b>突袭</b>。<b>亡语：</b>召唤三个2/1的鱼人，使其各获得一项随机<b>额外效果</b>。
 	class Sim_TLC_240 : SimTemplate
 	{
-		
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.TLC_240t);
+		CardDB.Card kid1 = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.TLC_240t2);
+		CardDB.Card kid2 = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.TLC_240t3);
+		public override void onDeathrattle(Playfield p, Minion m)
+		{
+			p.callKid(kid, m.zonepos - 1, m.own);
+			p.callKid(kid1, m.zonepos - 1, m.own);
+			p.callKid(kid2, m.zonepos - 1, m.own);
+		}
+
 	}
 }

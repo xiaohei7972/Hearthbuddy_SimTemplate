@@ -11,7 +11,12 @@ namespace HREngine.Bots
 	//从你的牌库中<b>发现</b>一张随从牌。如果三张牌都是野兽，改为抽取全部三张牌。
 	class Sim_CORE_TRL_339 : SimTemplate
 	{
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+            p.drawACard(CardDB.cardNameEN.unknown, ownplay);
+            p.drawACard(CardDB.cardNameEN.unknown, ownplay);
+			p.drawACard(CardDB.cardNameEN.unknown, ownplay);
+		}
 		
 	}
 }

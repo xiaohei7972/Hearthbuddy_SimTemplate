@@ -11,11 +11,12 @@ namespace HREngine.Bots
 	//<b>突袭</b>。<b>战吼：</b>为你的对手召唤一只2/1的鱼虫。
 	class Sim_VAC_412 : SimTemplate
 	{
+        CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.VAC_412t);
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {
             // 召唤一只2/1的鱼虫给对手
             int pos = own.own ? p.enemyMinions.Count : p.ownMinions.Count;
-            p.callKid(CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.VAC_412t), pos, !own.own, false);
+            p.callKid(kid, pos, !own.own, false);
         }
 
     }

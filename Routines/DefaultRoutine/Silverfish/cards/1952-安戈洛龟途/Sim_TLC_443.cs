@@ -11,7 +11,11 @@ namespace HREngine.Bots
 	//<b>复生</b>。<b>亡语：</b>召唤一只2/2并具有<b>嘲讽</b>的亡灵野兽。
 	class Sim_TLC_443 : SimTemplate
 	{
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.TLC_443t);
+		public override void onDeathrattle(Playfield p, Minion m)
+		{
+			p.callKid(kid, m.zonepos - 1, m.own);
+		}
 		
 	}
 }

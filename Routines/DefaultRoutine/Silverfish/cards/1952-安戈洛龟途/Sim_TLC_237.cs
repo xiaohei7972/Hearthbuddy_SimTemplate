@@ -11,7 +11,14 @@ namespace HREngine.Bots
 	//<b>亡语：</b>召唤四只2/1的啸天龙宝宝。
 	class Sim_TLC_237 : SimTemplate
 	{
-		
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.TLC_237t);
+		public override void onDeathrattle(Playfield p, Minion m)
+		{
+			for (int i = 0; i < 4; i++)
+			{
+				p.callKid(kid, m.zonepos - 1, m.own);
+			}
+		}
+
 	}
 }
