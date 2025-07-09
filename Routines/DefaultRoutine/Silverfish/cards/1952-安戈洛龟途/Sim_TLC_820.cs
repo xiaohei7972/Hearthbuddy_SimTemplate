@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//<b>亡语：</b>获取一张法力值消耗为（1）的神圣法术牌，该牌可以使一个随从获得+2或-2生命值。
 	class Sim_TLC_820 : SimTemplate
 	{
-		
+		public override void onDeathrattle(Playfield p, Minion m)
+        {
+			p.drawACard(CardDB.cardIDEnum.TLC_813, m.own, true);
+        }
 		
 	}
 }

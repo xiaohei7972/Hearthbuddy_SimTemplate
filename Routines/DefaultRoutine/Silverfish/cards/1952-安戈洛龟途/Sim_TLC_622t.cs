@@ -11,7 +11,19 @@ namespace HREngine.Bots
 	//<b>嘲讽</b>在本随从受到伤害后，获得+1攻击力。
 	class Sim_TLC_622t : SimTemplate
 	{
-		
-		
+		public override void onMinionGotDmgTrigger(Playfield p, Minion triggerEffectMinion, int anzOwnMinionsGotDmg, int anzEnemyMinionsGotDmg, int anzOwnHeroGotDmg, int anzEnemyHeroGotDmg)
+		{
+			if (triggerEffectMinion.anzGotDmg > 0)
+			{
+				int tmp = triggerEffectMinion.anzGotDmg;
+				triggerEffectMinion.anzGotDmg = 0;
+				for (int i = 0; i < tmp; i++)
+				{
+					p.minionGetBuffed(triggerEffectMinion, 1, 0);
+				}
+
+			}
+		}
+
 	}
 }

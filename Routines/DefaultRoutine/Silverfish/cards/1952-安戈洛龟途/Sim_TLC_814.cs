@@ -11,7 +11,11 @@ namespace HREngine.Bots
 	//<b>亡语：</b>随机获取神圣和暗影法术牌各一张。
 	class Sim_TLC_814 : SimTemplate
 	{
-		
+        public override void onDeathrattle(Playfield p, Minion m)
+        {
+			p.drawACard(CardDB.cardNameEN.unknown, m.own, true);
+			p.drawACard(CardDB.cardNameEN.unknown, m.own, true);
+        }
 		
 	}
 }

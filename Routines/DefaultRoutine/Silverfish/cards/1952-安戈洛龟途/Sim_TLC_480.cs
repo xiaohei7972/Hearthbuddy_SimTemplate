@@ -11,7 +11,16 @@ namespace HREngine.Bots
 	//在你的回合结束时，将所有敌方随从的攻击力和生命值变为1。
 	class Sim_TLC_480 : SimTemplate
 	{
-		
+		public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
+		{
+			List<Minion> minions = triggerEffectMinion.own ? p.enemyMinions : p.ownMinions;
+			minions.ForEach((m) =>
+			{
+				m.maxHp = 1;
+				m.Hp = 1;
+				m.Angr = 1;
+			});
+        }
 		
 	}
 }

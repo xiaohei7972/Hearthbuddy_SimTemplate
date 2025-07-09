@@ -11,7 +11,14 @@ namespace HREngine.Bots
 	//<b>嘲讽</b>。<b>亡语：</b>随机召唤一只邪能野兽。
 	class Sim_TLC_479 : SimTemplate
 	{
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.TLC_446t2);
+		CardDB.Card kid1 = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.TLC_446t3);
+		CardDB.Card kid2 = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.TLC_446t4);
+
+        public override void onDeathrattle(Playfield p, Minion m)
+        {
+			p.callKid(kid, m.zonepos - 1, m.own);
+        }
 		
 	}
 }

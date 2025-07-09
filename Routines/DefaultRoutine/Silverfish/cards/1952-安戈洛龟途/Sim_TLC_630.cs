@@ -11,7 +11,19 @@ namespace HREngine.Bots
 	//每当本随从受到伤害，获取一张法力值消耗为（1）的格里什毒刺虫。
 	class Sim_TLC_630 : SimTemplate
 	{
-		
-		
+		public override void onMinionGotDmgTrigger(Playfield p, Minion triggerEffectMinion, int anzOwnMinionsGotDmg, int anzEnemyMinionsGotDmg, int anzOwnHeroGotDmg, int anzEnemyHeroGotDmg)
+		{
+			if (triggerEffectMinion.anzGotDmg > 0)
+			{
+				int tmp = triggerEffectMinion.anzGotDmg;
+				triggerEffectMinion.anzGotDmg = 0;
+				for (int i = 0; i < tmp; i++)
+				{
+					p.drawACard(CardDB.cardIDEnum.TLC_630t, triggerEffectMinion.own, true);
+				}
+
+			}
+		}
+
 	}
 }

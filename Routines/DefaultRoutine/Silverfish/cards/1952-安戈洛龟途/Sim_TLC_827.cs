@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//在你的回合结束时，获得+1攻击力<i>（即便在手牌或牌库中）</i>。
 	class Sim_TLC_827 : SimTemplate
 	{
-		
+        public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
+        {
+			if (triggerEffectMinion.own == turnEndOfOwner)
+			{
+				p.minionGetBuffed(triggerEffectMinion, 1, 0);
+			}
+        }
 		
 	}
 }

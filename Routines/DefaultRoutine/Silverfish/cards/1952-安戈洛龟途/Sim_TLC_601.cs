@@ -11,7 +11,18 @@ namespace HREngine.Bots
 	//消耗最多5点护甲值。每消耗一点，对所有随从造成1点伤害。
 	class Sim_TLC_601 : SimTemplate
 	{
-		
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			Minion hero = ownplay ? p.ownHero : p.enemyHero;
+			int damage = ownplay ? p.getSpellDamageDamage(1) : p.getEnemySpellDamageDamage(1);
+			for (int i = 0; i < 5 && hero.armor > 1; i++)
+			{
+				hero.armor -= 1;
+				p.allMinionsGetDamage(damage);
+			}
+			
+		}
 	}
+
 }
+
