@@ -27,7 +27,7 @@ namespace HREngine.Bots
 
                     // 设置小鸟的属性，攻击时免疫
                     bird.Angr = 3;
-                    bird.Hp = 2;
+                    bird.Hp = 3;
                     bird.immuneWhileAttacking = true;
 
                     // 让小鸟立即攻击选中的敌人

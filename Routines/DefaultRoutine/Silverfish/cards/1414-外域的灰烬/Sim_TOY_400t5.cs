@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//在你的回合结束时，造成6点伤害，随机分配到所有敌人身上。
 	class Sim_TOY_400t5 : SimTemplate
 	{
-		
+        public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
+        {
+			if (triggerEffectMinion.own == turnEndOfOwner)
+			{
+				p.allCharsOfASideGetRandomDamage(!triggerEffectMinion.own, 6);
+			}
+        }
 		
 	}
 }

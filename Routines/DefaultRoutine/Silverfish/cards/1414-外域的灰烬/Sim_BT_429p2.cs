@@ -18,7 +18,8 @@ namespace HREngine.Bots
         public override PlayReq[] GetPlayReqs()
         {
             return new PlayReq[] {
-                new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY),
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY), // 需要一个目标
+				new PlayReq(CardDB.ErrorType2.REQ_ENEMY_TARGET), // 只能是敌方
             };
         }
 	}

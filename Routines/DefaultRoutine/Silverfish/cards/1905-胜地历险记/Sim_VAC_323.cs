@@ -15,7 +15,9 @@ namespace HREngine.Bots
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
             int dmg = (ownplay) ? p.getSpellDamageDamage(1) : p.getEnemySpellDamageDamage(1);
-            p.allCharsOfASideGetDamage(!ownplay, dmg); // 对所有敌人造成1点伤害
+            //更新
+            // p.allCharsOfASideGetDamage(!ownplay, dmg); // 对所有敌人造成1点伤害
+            p.allMinionOfASideGetDamage(!ownplay, dmg); // 对所有敌方随从造成1点伤害
 
             // 抽一张“还剩2杯”的卡牌
             p.drawACard(CardDB.cardIDEnum.VAC_323t, ownplay, true);

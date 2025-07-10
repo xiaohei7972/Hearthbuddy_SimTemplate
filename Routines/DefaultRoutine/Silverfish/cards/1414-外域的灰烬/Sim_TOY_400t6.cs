@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//将你的英雄技能替换为“造成5点伤害。”使用两次后，换回原技能。
 	class Sim_TOY_400t6 : SimTemplate
 	{
-		
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
+			p.setNewHeroPower(CardDB.cardIDEnum.BT_429p, ownplay);
+        }
 		
 	}
 }

@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//<b>休眠</b>2回合。唤醒时，造成10点伤害，随机分配到所有敌人身上。
 	class Sim_TOY_400t4 : SimTemplate
 	{
-		
+        public override void onDormantEndsTrigger(Playfield p, Minion m)
+        {
+            p.allCharsOfASideGetRandomDamage(!m.own, 10);
+        }
 		
 	}
 }

@@ -11,7 +11,20 @@ namespace HREngine.Bots
 	//<b>嘲讽</b>。<b>战吼：</b>召唤一个本随从的复制。<i>如果你手中有索利托斯的两部分，将其拼合！</i>
 	class Sim_TLC_817t3 : SimTemplate
 	{
-		
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			List<Minion> minions = own.own ? p.ownMinions : p.enemyMinions;
+			int minionsCount = own.own ? p.ownMinions.Count : p.enemyMinions.Count;
+			if (minionsCount < 7)
+			{
+				p.callKid(own.handcard.card, own.zonepos, own.own);
+				minions[own.zonepos].setMinionToMinion(own);
+			}
+			else
+			{
+				p.callKid(own.handcard.card, own.zonepos, own.own);
+			}
+		}
+
 	}
 }

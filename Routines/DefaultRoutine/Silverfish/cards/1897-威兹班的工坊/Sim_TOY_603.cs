@@ -4,13 +4,13 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 战士 费用：3
-	//Wreck'em and Deck'em
-	//炮灰出动
-	//[x]Choose a friendly Mech.Summon a copy of itthat attacks a randomenemy, then dies.
-	//选择一个友方机械，召唤一个它的复制并使其攻击随机敌人然后死亡。
-	class Sim_TOY_603 : SimTemplate
-	{
+    //法术 战士 费用：3
+    //Wreck'em and Deck'em
+    //炮灰出动
+    //[x]Choose a friendly Mech.Summon a copy of itthat attacks a randomenemy, then dies.
+    //选择一个友方机械，召唤一个它的复制并使其攻击随机敌人然后死亡。
+    class Sim_TOY_603 : SimTemplate
+    {
         private static Random rng = new Random(); // 创建一个静态的随机数生成器
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
@@ -39,6 +39,17 @@ namespace HREngine.Bots
                     p.minionGetDestroyed(copy);
                 }
             }
+        }
+
+        public override PlayReq[] GetPlayReqs()
+        {
+            return new PlayReq[]{
+                new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY), // 需要一个目标
+                new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET), // 目标只能是随从
+				new PlayReq(CardDB.ErrorType2.REQ_FRIENDLY_TARGET), // 目标只能是友方
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_WITH_RACE, 17), // 目标只能是机械
+
+            };
         }
     }
 }

@@ -4,32 +4,36 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 战士 费用：4
-	//Char
-	//炭火
-	//Deal $7 damage to a minion. Give a minion in your hand stats equal to the excess damage.
-	//对一个随从造成$7点伤害。使你手牌中的一张随从牌获得等同于超过目标生命值伤害的属性值。
-	class Sim_VAC_526 : SimTemplate
-	{
+    //法术 战士 费用：4
+    //Char
+    //炭火
+    //Deal $7 damage to a minion. Give a minion in your hand stats equal to the excess damage.
+    //对一个随从造成$7点伤害。使你手牌中的一张随从牌获得等同于超过目标生命值伤害的属性值。
+    class Sim_VAC_526 : SimTemplate
+    {
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
-            int dmg = ownplay ? p.getSpellDamageDamage(7) : p.getEnemySpellDamageDamage(7);
-            int excessDamage = dmg - target.Hp > 0 ? dmg - target.Hp : 0;
-
-            // 对目标随从造成伤害
-            p.minionGetDamageOrHeal(target, dmg);
-
-            // 如果有超量伤害，增加手牌中一张随从的属性值
-            if (excessDamage > 0)
+            if (target != null)
             {
-                Handmanager.Handcard hc = p.searchRandomMinionInHand(p.owncards, searchmode.searchLowestCost, GAME_TAGs.None);
-                if (hc != null)
+                int dmg = ownplay ? p.getSpellDamageDamage(7) : p.getEnemySpellDamageDamage(7);
+                int excessDamage = dmg - target.Hp > 0 ? dmg - target.Hp : 0;
+
+                // 对目标随从造成伤害
+                p.minionGetDamageOrHeal(target, dmg);
+
+                // 如果有超量伤害，增加手牌中一张随从的属性值
+                if (excessDamage > 0)
                 {
-                    hc.addattack += excessDamage;
-                    hc.addHp += excessDamage;
+                    Handmanager.Handcard hc = p.searchRandomMinionInHand(p.owncards, searchmode.searchLowestCost, GAME_TAGs.None);
+                    if (hc != null)
+                    {
+                        hc.addattack += excessDamage;
+                        hc.addHp += excessDamage;
+                    }
                 }
             }
+
         }
 
         public override PlayReq[] GetPlayReqs()

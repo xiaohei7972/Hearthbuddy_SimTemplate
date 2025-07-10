@@ -11,7 +11,20 @@ namespace HREngine.Bots
 	//<b>战吼，流放，亡语：</b>随机获取一张初版恶魔猎手卡牌<i>（品相完美）</i>。
 	class Sim_TOY_913 : SimTemplate
 	{
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			p.drawACard(CardDB.cardIDEnum.TOY_400t8, own.own, true);
+		}
+
+		public override void onCardPlay(Playfield p, Minion own, bool ownplay, Minion target, int choice, bool outcast)
+		{
+			p.drawACard(CardDB.cardIDEnum.TOY_400t8, own.own, true);
+		}
+
+        public override void onDeathrattle(Playfield p, Minion m)
+        {
+			p.drawACard(CardDB.cardIDEnum.TOY_400t8, m.own, true);
+        }
 		
 	}
 }

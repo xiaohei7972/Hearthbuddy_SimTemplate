@@ -11,7 +11,22 @@ namespace HREngine.Bots
 	//<b>复生</b>。<b>亡语：</b>随机对一个敌人造成5点伤害。<i>如果你手中有索利托斯的两部分，将其拼合！</i>
 	class Sim_TLC_817t4 : SimTemplate
 	{
-		
-		
+		public override void onDeathrattle(Playfield p, Minion m)
+		{
+			Minion target = null;
+
+			if (m.own)
+			{
+				target = p.getEnemyCharTargetForRandomSingleDamage(5);
+			}
+			else
+			{
+				target = p.searchRandomMinion(p.ownMinions, searchmode.searchHighestAttack);
+				if (target == null) target = p.ownHero;
+			}
+			
+			p.minionGetDamageOrHeal(target, 5);
+		}
+
 	}
 }

@@ -12,13 +12,15 @@ namespace HREngine.Bots
 		{
 			int dmg = (ownplay) ? p.getHeroPowerDamage(4) : p.getEnemyHeroPowerDamage(4);
 			p.minionGetDamageOrHeal(target, dmg);
+			p.setNewHeroPower(CardDB.cardIDEnum.BT_429p2, ownplay);
 		}
 
 
         public override PlayReq[] GetPlayReqs()
         {
             return new PlayReq[] {
-                new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY),
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY), // 需要一个目标
+				new PlayReq(CardDB.ErrorType2.REQ_ENEMY_TARGET), // 只能是敌方
             };
         }
 	}
