@@ -16,7 +16,6 @@ namespace HREngine.Bots
         {
             int dmg = ownplay ? p.getSpellDamageDamage(2) : p.getEnemySpellDamageDamage(2);
             p.allCharsOfASideGetRandomDamage(!ownplay, dmg); // 随机分配2点伤害到所有敌人身上
-            p.allCharsOfASideGetDamage
 
             // 触发“还剩3杯”的效果，抽一张指定卡牌
             p.drawACard(CardDB.cardIDEnum.VAC_520t, ownplay, true); // 抽一张 "VAC_520t" 卡牌
