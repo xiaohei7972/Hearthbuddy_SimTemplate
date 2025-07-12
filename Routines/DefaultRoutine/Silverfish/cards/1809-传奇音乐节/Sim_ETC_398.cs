@@ -11,7 +11,29 @@ namespace HREngine.Bots
 	//你的英雄拥有<b>吸血</b>。
 	class Sim_ETC_398 : SimTemplate
 	{
-		
-		
+		public override void onAuraStarts(Playfield p, Minion m)
+		{
+			if (m.own)
+			{
+				p.ownHero.lifesteal = true;
+			}
+			else
+			{
+				p.enemyHero.lifesteal = true;
+			}
+
+		}
+
+		public override void onAuraEnds(Playfield p, Minion m)
+		{
+			if (m.own)
+			{
+				p.ownHero.lifesteal = false;
+			}
+			else
+			{
+				p.enemyHero.lifesteal = false;
+			}
+		}
 	}
 }

@@ -12,7 +12,7 @@ namespace HREngine.Bots
         {
             int dmg = p.getSpellDamageDamage(3);
             p.minionGetDamageOrHeal(target, dmg);
-            p.minionGetDamageOrHeal(p.ownHero, -dmg);
+            p.applySpellLifesteal(dmg, ownplay);
         }
 
 

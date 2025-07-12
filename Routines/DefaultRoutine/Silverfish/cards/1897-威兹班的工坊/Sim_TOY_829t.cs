@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//<b>抽到时施放</b>让你的敌人陷入<i>惶恐！</i>亡灵之魂会注入你的<i>英雄技能中！</i>
 	class Sim_TOY_829t : SimTemplate
 	{
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
+			p.setNewHeroPower(CardDB.cardIDEnum.TOY_829hp, ownplay);
+        }
 		
 	}
 }

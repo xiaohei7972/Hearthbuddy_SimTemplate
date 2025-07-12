@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
+
 
 namespace HREngine.Bots
 {
@@ -23,13 +25,14 @@ namespace HREngine.Bots
 			// 检查己方英雄是否装备了“亵渎之矛”
 			if (own.own && p.ownWeapon.card.cardIDenum == CardDB.cardIDEnum.EDR_842)
 			{
+
 				if (target != null)
 				{
 					int damage = p.ownHero.Angr;
-					List<Minion> possibleTargets = !own.own ? p.enemyMinions : p.ownMinions;
+					List<Minion> possibleTargets = own.own ? p.enemyMinions : p.ownMinions;
 
 					// 将英雄加入到可能的目标中
-					if (!own.own)
+					if (own.own)
 					{
 						possibleTargets.Add(p.enemyHero);
 					}
@@ -38,14 +41,8 @@ namespace HREngine.Bots
 						possibleTargets.Add(p.ownHero);
 					}
 					// 删除原来攻击的目标
-					foreach (Minion minion in possibleTargets)
-					{
-						if (minion == target)
-						{
-							possibleTargets.Remove(minion);
-							break;
-						}
-					}
+					// possibleTargets.Remove(target);
+					possibleTargets = possibleTargets.ToList().Where((m) => m != target).ToList();
 
 					// 从可能的目标中随机选择一个
 					Minion target2 = possibleTargets[p.getRandomNumber(0, possibleTargets.Count - 1)];
@@ -56,7 +53,10 @@ namespace HREngine.Bots
 						p.minionGetDamageOrHeal(target2, damage);
 					}
 				}
+
+
 			}
+
 		}
 
 

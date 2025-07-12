@@ -11,7 +11,15 @@ namespace HREngine.Bots
 	//<b>战吼：</b>选择一个友方随从，<b>发现</b>一张相同类型的随从牌。
 	class Sim_BG_TSC_069 : SimTemplate
 	{
-		
+		public override PlayReq[] GetPlayReqs()
+        {
+			return new PlayReq[]{
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY), // 需要一个目标
+				new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET), // 只能是随从
+				new PlayReq(CardDB.ErrorType2.REQ_FRIENDLY_TARGET), // 只能是友方
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_WITH_RACE, 26), // 只能是有种族的目标
+			};
+        }
 		
 	}
 }

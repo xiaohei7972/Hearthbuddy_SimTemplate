@@ -20,8 +20,7 @@ namespace HREngine.Bots
 
                 // 对一个随从造成3点伤害并触发吸血效果
                 p.minionGetDamageOrHeal(target, damage);
-                p.minionGetDamageOrHeal(ownplay ? p.ownHero : p.enemyHero, -damage);
-
+                p.applySpellLifesteal(damage, ownplay);
                 // 抽一张表示“还剩2杯”的卡牌 (假设下一张饮品的卡牌ID为 VAC_951t)
                 p.drawACard(CardDB.cardIDEnum.VAC_951t, ownplay, true);
             }

@@ -19,20 +19,20 @@ namespace HREngine.Bots
 
 				// 对一个随从造成3点伤害并触发吸血效果
 				p.minionGetDamageOrHeal(target, damage);
-				p.minionGetDamageOrHeal(ownplay ? p.ownHero : p.enemyHero, -damage);
+				p.applySpellLifesteal(damage, ownplay);
 			}
-			
-        }
 
-        public override PlayReq[] GetPlayReqs()
-        {
-            return new PlayReq[]{
-                new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY), // 需要一个目标
+		}
+
+		public override PlayReq[] GetPlayReqs()
+		{
+			return new PlayReq[]{
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY), // 需要一个目标
 				new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET), // 只能是随从
 				new PlayReq(CardDB.ErrorType2.REQ_ENEMY_TARGET), // 只能是敌方
 			};
-        }
+		}
 
-		
+
 	}
 }

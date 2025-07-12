@@ -18,5 +18,10 @@ namespace HREngine.Bots
 
 		}
 
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
+			p.setNewHeroPower(CardDB.cardIDEnum.AV_205p, ownplay);
+        }
+
 	}
 }

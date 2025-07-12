@@ -22,9 +22,6 @@ namespace HREngine.Bots
 					if ((TAG_RACE)card.race == TAG_RACE.DRAGON)
 					{
 						p.drawACard(card.cardIDenum, ownplay);
-						p.owncards[p.owncards.Count - 1].addattack++;
-						p.owncards[p.owncards.Count - 1].addHp++;
-						p.anzOwnExtraAngrHp += 2;
 						continue;
 					}
 				}

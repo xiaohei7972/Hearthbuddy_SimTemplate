@@ -20,21 +20,24 @@ namespace HREngine.Bots
 
 		public override void onHeroattack(Playfield p, Minion own, Minion target)//英雄攻击
 		{
-			if (p.owncards.Count < 3)
+
+			// 检查己方英雄是否装备了“放大战刃”
+			if (own.own && p.ownWeapon.card.cardIDenum == CardDB.cardIDEnum.REV_509)
 			{
-				for (int i = p.owncards.Count; i < 3; i++)
+
 				{
-					p.drawACard(CardDB.cardNameEN.unknown, own.own);
+
+					if (p.owncards.Count < 3)
+					{
+						for (int i = p.owncards.Count; i < 3; i++)
+						{
+							p.drawACard(CardDB.cardNameEN.unknown, own.own);
+						}
+					}
 				}
+
 			}
-			
-			
-			//如果手牌小于3 优先进攻
-			if (p.owncards.Count < 3)
-			{
-				p.evaluatePenality--;
-			}
+
 		}
-		
 	}
 }

@@ -20,21 +20,20 @@ namespace HREngine.Bots
 
                 // 对一个随从造成3点伤害并触发吸血效果
                 p.minionGetDamageOrHeal(target, damage);
-                p.minionGetDamageOrHeal(ownplay ? p.ownHero : p.enemyHero, -damage);
-
+                p.applySpellLifesteal(damage, ownplay);
                 // 抽一张表示“还剩1杯”的卡牌 (假设下一张饮品的卡牌ID为 VAC_951t2)
                 p.drawACard(CardDB.cardIDEnum.VAC_951t2, ownplay, true);
             }
         }
-        
+
         public override PlayReq[] GetPlayReqs()
-		{
-			return new PlayReq[]{
-				new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY), // 需要一个目标
+        {
+            return new PlayReq[]{
+                new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY), // 需要一个目标
 				new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET), // 只能是随从
 				new PlayReq(CardDB.ErrorType2.REQ_ENEMY_TARGET), // 只能是敌方
 			};
-		}
+        }
 
     }
 }

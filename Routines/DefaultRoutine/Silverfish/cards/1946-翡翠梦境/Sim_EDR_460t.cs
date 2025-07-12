@@ -17,6 +17,7 @@ namespace HREngine.Bots
 			{
 				int damage = ownplay ? p.getSpellDamageDamage(6) : p.getEnemySpellDamageDamage(6);
 				p.minionGetDamageOrHeal(target, damage);
+				p.applySpellLifesteal(damage, ownplay);
 			}
 
 		}

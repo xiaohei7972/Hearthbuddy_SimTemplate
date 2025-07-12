@@ -24,12 +24,14 @@ namespace HREngine.Bots
 			// 检查己方英雄是否装备了“牧人之杖”
 			if (own.own && p.ownWeapon.card.cardIDenum == CardDB.cardIDEnum.EDR_416)
 			{
+				// 获取位置
 				int pos = own.own ? p.ownMinions.Count : p.enemyMinions.Count;
+				// 召唤 懒洋羊
 				p.callKid(kid, pos, own.own);
 			}
+
 		}
 
 	}
-
 
 }

@@ -11,7 +11,25 @@ namespace HREngine.Bots
 	//在你的英雄攻击并消灭一个随从后，获得2份<b>残骸</b>。
 	class Sim_RLK_012 : SimTemplate
 	{
-		
-		
+		CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.RLK_012);
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			p.equipWeapon(weapon, ownplay);
+		}
+
+		public override void onHeroattack(Playfield p, Minion own, Minion target)
+		{
+			// 检查己方英雄是否装备了“断魂”
+			if (own.own && p.ownWeapon.card.cardIDenum == CardDB.cardIDEnum.RLK_012)
+			{
+				if (!target.isHero && target.Hp <= 0)
+				{
+					p.addCorpses(2);
+				}
+
+			}
+
+		}
+
 	}
 }

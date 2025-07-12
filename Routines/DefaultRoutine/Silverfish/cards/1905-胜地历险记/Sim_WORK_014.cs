@@ -20,6 +20,7 @@ namespace HREngine.Bots
 				int damage = ownplay ? p.getSpellDamageDamage(4) : p.getEnemySpellDamageDamage(4);
 				// 对一个随从造成4点伤害
 				p.minionGetDamageOrHeal(target, damage);
+				p.applySpellLifesteal(damage, ownplay);
 				p.AddToDeck(card);
 			}
 

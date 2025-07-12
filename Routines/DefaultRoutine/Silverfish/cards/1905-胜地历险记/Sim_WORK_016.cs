@@ -20,11 +20,12 @@ namespace HREngine.Bots
 
 		public override void onHeroattack(Playfield p, Minion own, Minion target)
 		{
-			// 检查己方英雄是否装备了“亵渎之矛”
+			// 检查己方英雄是否装备了“狱火订书器”
 			if (own.own && p.ownWeapon.card.cardIDenum == CardDB.cardIDEnum.WORK_016)
 			{
 				p.minionGetDamageOrHeal(p.ownHero, 3);
 			}
+
 		}
 
 
