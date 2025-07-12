@@ -12,7 +12,7 @@ namespace HREngine.Bots
 	class Sim_BT_430 : SimTemplate
 	{
 		CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.BT_430);
-		
+
 		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
 			p.equipWeapon(weapon, ownplay);
@@ -24,16 +24,11 @@ namespace HREngine.Bots
 			// 检查己方英雄是否装备了“埃辛诺斯战刃”
 			if (own.own && p.ownWeapon.card.cardIDenum == CardDB.cardIDEnum.BT_430)
 			{
-				ExecuteHeroAttackWithAction(p, own, target, () =>
-			   {
-				   // 如果目标是随从
-				   if (!target.isHero)
-				   {
-					   own.cantAttack = true;
-				   }
-
-			   });
-
+				// 如果目标是随从
+				if (!target.isHero)
+				{
+					own.cantAttack = true;
+				}
 			}
 
 		}

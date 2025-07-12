@@ -15,8 +15,17 @@ namespace HREngine.Bots
         // 战吼效果
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {
-            List<Minion> minions = own.own ? p.ownMinions : p.enemyMinions;
+            List<Minion> minions = own.own ? p.enemyMinions : p.ownMinions;
+            if (own.own)
+            {
+                minions.Add(p.enemyHero);
+            }
+            else
+            {
+                minions.Add(p.ownHero);
+            }
             Minion targetMinion = p.searchRandomMinion(minions, searchmode.searchLowestHP);
+
             if (targetMinion != null)
             {
                 p.minionGetDamageOrHeal(targetMinion, 3);
@@ -28,8 +37,17 @@ namespace HREngine.Bots
         // 亡语效果
         public override void onDeathrattle(Playfield p, Minion m)
         {
-            List<Minion> minions = m.own ? p.ownMinions : p.enemyMinions;
+            List<Minion> minions = m.own ? p.enemyMinions : p.ownMinions;
+            if (m.own)
+            {
+                minions.Add(p.enemyHero);
+            }
+            else
+            {
+                minions.Add(p.ownHero);
+            }
             Minion targetMinion = p.searchRandomMinion(minions, searchmode.searchLowestHP);
+            
             if (targetMinion != null)
             {
                 p.minionGetDamageOrHeal(targetMinion, 3);

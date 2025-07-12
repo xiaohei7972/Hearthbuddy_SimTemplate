@@ -11,7 +11,11 @@ namespace HREngine.Bots
 	//获取两张法力值消耗为（1）的格里什毒刺虫。毒刺虫可以造成$2点伤害并召唤一只2/1具有<b>突袭</b>的异种虫幼体。
 	class Sim_TLC_902 : SimTemplate
 	{
-		
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
+			p.drawACard(CardDB.cardIDEnum.TLC_630t, ownplay, true);
+			p.drawACard(CardDB.cardIDEnum.TLC_630t, ownplay, true);
+        }
 		
 	}
 }

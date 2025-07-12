@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//<b>战吼：</b>如果你的套牌里没有相同的牌，将所有敌方随从移出对战。
 	class Sim_WW_0700 : SimTemplate
 	{
-		
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			if (own.own && p.prozis.noDuplicates)
+			{
+				p.enemyMinions.ForEach(p.RemoveMinionWithoutDeathrattle);
+			}
+		}
+
 	}
 }

@@ -11,7 +11,25 @@ namespace HREngine.Bots
 	//<b>战吼：</b>使一个友方野兽获得+3/+3。
 	class Sim_WON_300 : SimTemplate
 	{
-		
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+
+			// 如果目标是友方野兽
+			if (target != null && target.own && (CardDB.Race)target.handcard.card.race == CardDB.Race.BEAST)
+			{
+				// 增加2点攻击力和2点生命值
+				p.minionGetBuffed(target, 2, 2);
+			}
+		}
+		public override PlayReq[] GetPlayReqs()
+		{
+			return new PlayReq[]{
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY), // 需要一个目标
+                new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET), // 目标只能是随从
+                new PlayReq(CardDB.ErrorType2.REQ_FRIENDLY_TARGET), // 目标只能是友方
+                new PlayReq(CardDB.ErrorType2.REQ_TARGET_WITH_RACE, 20), // 目标只能是野兽
+                new PlayReq(CardDB.ErrorType2.REQ_TARGET_IF_AVAILABLE), // 无目标时也可以使用
+            };
+		}
 	}
 }

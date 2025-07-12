@@ -15,16 +15,18 @@ namespace HREngine.Bots
                 // 给目标亡灵随从+2攻击力
                 p.minionGetBuffed(target, 2, 0);
             }
-			
-        }
-		public override PlayReq[] GetPlayReqs()
-        {
-            return new PlayReq[] {
-                new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY),
-                new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET),
-                new PlayReq(CardDB.ErrorType2.REQ_FRIENDLY_TARGET),
 
+        }
+        public override PlayReq[] GetPlayReqs()
+        {
+            return new PlayReq[]{
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY), // 需要一个目标
+                new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET), // 目标只能是随从
+                new PlayReq(CardDB.ErrorType2.REQ_FRIENDLY_TARGET), // 目标只能是友方
+                new PlayReq(CardDB.ErrorType2.REQ_TARGET_WITH_RACE, 11), // 目标只能是亡灵
+                new PlayReq(CardDB.ErrorType2.REQ_TARGET_IF_AVAILABLE), // 没有目标时也可以使用
             };
         }
+
     }
 }

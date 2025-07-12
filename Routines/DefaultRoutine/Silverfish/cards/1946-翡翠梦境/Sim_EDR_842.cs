@@ -44,8 +44,8 @@ namespace HREngine.Bots
 					// possibleTargets.Remove(target);
 					possibleTargets = possibleTargets.ToList().Where((m) => m != target).ToList();
 
-					// 从可能的目标中随机选择一个
-					Minion target2 = possibleTargets[p.getRandomNumber(0, possibleTargets.Count - 1)];
+					// 从可能的目标中随机选择一个2
+					Minion target2 = possibleTargets[p.getRandomNumber(0, possibleTargets.Count - 2)];
 
 					// 对选定的目标造成伤害
 					if (target2 != null)
