@@ -14,6 +14,7 @@ namespace HREngine.Bots
 		public override void onDeathrattle(Playfield p, Minion m)
 		{
 			p.minionGetDamageOrHeal(m.own ? p.ownHero : p.enemyHero, 4);
+			Helpfunctions.Instance.logg("对你的英雄造成4点伤害");
 		}
 		
 	}

@@ -11,7 +11,23 @@ namespace HREngine.Bots
 	//<b>牧师游客</b>你的英雄在你的回合中受到的伤害会转移给一个随机敌人。
 	class Sim_VAC_501 : SimTemplate
 	{
-		
-		
+		public override void onAuraStarts(Playfield p, Minion m)
+		{
+			if (m.own && p.isOwnTurn)
+			{
+				Minion hero = m.own ? p.ownHero : p.enemyHero;
+				if (hero.anzGotDmg > 0)
+				{
+					hero.anzGotDmg = 0;
+					int transferDamage = hero.GotDmgValue;
+					hero.GotDmgValue = 0;
+					p.DealDamageToRandomCharacter(m.own, transferDamage);
+
+				}
+			}
+
+		}
+
+
 	}
 }

@@ -14,7 +14,7 @@ namespace HREngine.Bots
 		public override void useLocation(Playfield p, Minion triggerMinion, Minion target)
 		{
 			// 检查目标是否为有效的敌方非休眠随从
-			if (target != null && !target.own && target.dormant ==0 )
+			if (target != null)
 			{
 				target.dormant = 3;
 			}
@@ -24,8 +24,8 @@ namespace HREngine.Bots
 		{
 			return new PlayReq[]{
 				new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY), // 需要一个目标
-                new PlayReq(CardDB.ErrorType2.REQ_ENEMY_TARGET), // 目标必须敌方随从
 				new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET), // 只能是随从
+				// new PlayReq(CardDB.ErrorType2.REQ_ENEMY_TARGET), // 目标必须敌方随从
 			};
 		}
 

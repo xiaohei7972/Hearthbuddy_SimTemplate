@@ -11,15 +11,16 @@ namespace HREngine.Bots
 	//使一个友方随从获得+4/+4和“<b>亡语：</b>随机召唤一个法力值消耗为（4）的随从。”
 	class Sim_TLC_477 : SimTemplate
 	{
+		CardDB.Card deathrattleCard = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CS2_182);
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-        {
+		{
 			if (target != null)
 			{
 				p.minionGetBuffed(target, 4, 4);
 				//TODO:不知道额外亡语这么写
-				// target.deathrattle2 
+				target.deathrattle2 = deathrattleCard;
 			}
-        }
+		}
 		
 		public override PlayReq[] GetPlayReqs()
 		{

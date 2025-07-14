@@ -11,7 +11,22 @@ namespace HREngine.Bots
 	//<b>战吼：</b>使你手牌中的所有随从牌获得+3/+3，这些牌会在3回合后摧毁。
 	class Sim_FIR_928 : SimTemplate
 	{
-		
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			if (own.own)
+			{
+				foreach (Handmanager.Handcard hc in p.owncards)
+				{
+					if (hc.card.type == CardDB.cardtype.MOB)
+					{
+						hc.addattack += 3;
+						hc.addHp += 3;
+						p.anzOwnExtraAngrHp += 6;
+					}
+				}
+			}
+			
+		}
+
 	}
 }

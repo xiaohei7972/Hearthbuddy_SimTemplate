@@ -14,13 +14,14 @@ namespace HREngine.Bots
 		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EDR_454t);
 		public override void useLocation(Playfield p, Minion triggerMinion, Minion target)
 		{
-			if (target != null)
+			if (target != null && target.own && (CardDB.Race)target.handcard.card.race == CardDB.Race.DRAGON)
 			{
 				int pos = triggerMinion.own ? p.ownMinions.Count : p.enemyMinions.Count;
 				p.callKid(kid, pos, triggerMinion.own);
 				// Minion egg = new Minion { handcard = new Handmanager.Handcard { card = kid }, own = triggerMinion.own };
 				// kid.sim_card.onDeathrattle(p, egg);
-				p.ownMinions[pos - 1].deathrattle2 = kid;
+				if (pos < 7)
+					p.ownMinions[pos - 1].deathrattle2 = target.handcard.card;
 			}
 		}
 
@@ -31,7 +32,7 @@ namespace HREngine.Bots
 				new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY), // 需要一个目标才能使用
                 new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET), // 目标必须是一个随从
 				new PlayReq(CardDB.ErrorType2.REQ_FRIENDLY_TARGET), //只能是友方
-				new PlayReq(CardDB.ErrorType2.REQ_TARGET_WITH_RACE,24), // 只能是龙
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_WITH_RACE, 24), // 只能是龙
 				new PlayReq(CardDB.ErrorType2.REQ_NUM_MINION_SLOTS,1),// 要求一个位置
             };
 		}

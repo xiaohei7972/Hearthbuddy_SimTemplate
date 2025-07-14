@@ -15,22 +15,24 @@ namespace HREngine.Bots
 		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
 			p.equipWeapon(weapon, ownplay);
-			Minion hero = ownplay ? p.ownHero : p.enemyHero;
+
+		}
+		public override void onHeroattack(Playfield p, Minion own, Minion target)
+		{
 			// 检查己方英雄是否装备了“埃辛诺斯战刃”
-			if (hero.own && p.ownWeapon.card.cardIDenum == CardDB.cardIDEnum.TOY_400t7)
+			if (own.own && p.ownWeapon.card.cardIDenum == CardDB.cardIDEnum.TOY_400t7)
 			{
-				// 如果目标是随从
-				if (!target.isHero)
+				if (target != null)
 				{
-					hero.cantAttack = true;
+					// 如果目标是随从
+					if (!target.isHero)
+					{
+						own.cantAttack = true;
+					}
 				}
+
 			}
 		}
-		public override void onHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
-		{
-			base.onHeroattack(p, triggerMinion, target, hero);
-		}
-
 
 	}
 }

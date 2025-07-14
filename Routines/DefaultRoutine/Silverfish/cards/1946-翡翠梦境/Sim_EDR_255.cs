@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace HREngine.Bots
 {
@@ -13,10 +14,10 @@ namespace HREngine.Bots
 	{
 		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
+			int damage = ownplay ? p.getSpellDamageDamage(5) : p.getEnemySpellDamageDamage(5);
 			for (int i = 0; i < 2; i++)
 			{
-				int damage = ownplay ? p.getSpellDamageDamage(5) : p.getEnemySpellDamageDamage(5);
-				List<Minion> minions = ownplay ? p.enemyMinions : p.ownMinions;
+				List<Minion> minions = ownplay ? p.enemyMinions.ToList() : p.ownMinions.ToList();
 				if (ownplay)
 				{
 					minions.Add(p.enemyHero);
@@ -25,12 +26,11 @@ namespace HREngine.Bots
 				{
 					minions.Add(p.ownHero);
 				}
-				Minion target1 = p.searchRandomMinion(minions, searchmode.searchLowestHP);
-				p.minionGetDamageOrHeal(target1, damage);
+				p.minionGetDamageOrHeal(p.searchRandomMinion(minions, searchmode.searchLowestHP), damage);
 				p.applySpellLifesteal(damage, ownplay);
 			}
 
 		}
-		
+
 	}
 }

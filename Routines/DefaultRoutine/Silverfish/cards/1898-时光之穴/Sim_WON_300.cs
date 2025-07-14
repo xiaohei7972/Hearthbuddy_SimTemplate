@@ -17,8 +17,8 @@ namespace HREngine.Bots
 			// 如果目标是友方野兽
 			if (target != null && target.own && (CardDB.Race)target.handcard.card.race == CardDB.Race.BEAST)
 			{
-				// 增加2点攻击力和2点生命值
-				p.minionGetBuffed(target, 2, 2);
+				// 增加3点攻击力和3点生命值
+				p.minionGetBuffed(target, 3, 3);
 			}
 		}
 		public override PlayReq[] GetPlayReqs()

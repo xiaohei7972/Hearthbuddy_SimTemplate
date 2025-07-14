@@ -11,7 +11,19 @@ namespace HREngine.Bots
 	//抽取你套牌中和套牌之外的法术牌各一张。
 	class Sim_EDR_251 : SimTemplate
 	{
-		
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			p.drawACard(CardDB.cardIDEnum.None, ownplay);
+			/*
+			//TODO:还没有检测套牌之外的属性
+			if (p.prozis)
+			{
+				p.drawACard(CardDB.cardIDEnum.None, ownplay);
+
+			}
+			*/
+
+		}
+
 	}
 }

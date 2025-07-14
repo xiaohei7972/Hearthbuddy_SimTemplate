@@ -11,7 +11,14 @@ namespace HREngine.Bots
 	//对所有敌方角色造成$4点伤害。为所有友方角色恢复#4点生命值。
 	class Sim_EDR_476 : SimTemplate
 	{
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			int damage = ownplay ? p.getSpellDamageDamage(4) : p.getEnemySpellDamageDamage(4);
+			int heal = ownplay ? p.getSpellHeal(-4) : p.getEnemySpellHeal(-4);
+			p.allCharsOfASideGetDamage(!ownplay, damage);
+			p.allCharsOfASideGetDamage(ownplay, heal);
+
+        }
 		
 	}
 }

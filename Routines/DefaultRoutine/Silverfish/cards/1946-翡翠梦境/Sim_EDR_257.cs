@@ -11,7 +11,21 @@ namespace HREngine.Bots
 	//<b><b>嘲讽</b>。</b><b>抉择：</b>获得+3攻击力和<b>圣盾</b>；或者获得+3生命值和<b>吸血</b>。
 	class Sim_EDR_257 : SimTemplate
 	{
-		
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice, Handmanager.Handcard hc)
+        {
+			if (choice == 1 || (p.ownFandralStaghelm > 0 && ownplay))
+			{
+				hc.addattack += 3;
+				hc.card.Shield = true;
+            }
+			if (choice == 2 || (p.ownFandralStaghelm > 0 && ownplay))
+			{
+				hc.addHp += 3;
+				hc.card.lifesteal = true;
+            }
+
+        
+        }
 		
 	}
 }

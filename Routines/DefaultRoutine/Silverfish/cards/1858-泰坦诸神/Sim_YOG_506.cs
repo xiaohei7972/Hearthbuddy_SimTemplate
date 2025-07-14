@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//<b>突袭</b>。<b>亡语：</b>召唤一只属性值等同于本随从攻击力的奇美拉。
 	class Sim_YOG_506 : SimTemplate
 	{
-		
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.YOG_506t);
+		public override void onDeathrattle(Playfield p, Minion m)
+		{
+			kid.Attack = m.Angr;
+			kid.Health = m.Angr;
+			p.callKid(kid, m.zonepos - 1, m.own);
+		}
+
 	}
 }

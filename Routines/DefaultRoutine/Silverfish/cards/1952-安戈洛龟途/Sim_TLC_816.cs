@@ -11,7 +11,11 @@ namespace HREngine.Bots
 	//抽两张牌。<b>延系：</b>本牌法力值消耗减少（2）点。
 	class Sim_TLC_816 : SimTemplate
 	{
-		
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice, Handmanager.Handcard hc)
+		{
+			p.drawACard(CardDB.cardIDEnum.None, ownplay);
+			p.drawACard(CardDB.cardIDEnum.None, ownplay);
+		}
+
 	}
 }

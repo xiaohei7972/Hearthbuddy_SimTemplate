@@ -15,8 +15,19 @@ namespace HREngine.Bots
 		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
 			int pos = ownplay ? p.ownMinions.Count : p.enemyMinions.Count;
-			p.callKid(kid, pos, ownplay, false);
-			p.callKid(kid, pos, ownplay);
+			for (int i = 0; i < 3; i++)
+			{
+				p.callKid(kid, pos, ownplay);
+				if (ownplay)
+				{
+					p.anzOwnTaunt++;
+				}
+				else
+				{
+					p.anzEnemyTaunt++;
+				}
+			}
+
 			//TODO:星舰发射的法力值消耗减少需要更新其他代码
 		}
 
@@ -24,10 +35,8 @@ namespace HREngine.Bots
 		{
 			return new PlayReq[]{
 				new PlayReq(CardDB.ErrorType2.REQ_NUM_MINION_SLOTS, 1), // 最少需要一个位置
-
 			};
-
 		}
-		
+
 	}
 }

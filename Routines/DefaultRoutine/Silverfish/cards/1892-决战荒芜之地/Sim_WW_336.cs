@@ -11,7 +11,11 @@ namespace HREngine.Bots
 	//对所有敌人造成$3点伤害。每有一个敌方随从，本牌的法力值消耗便减少（1）点。
 	class Sim_WW_336 : SimTemplate
 	{
-		
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
+			int damage = ownplay ? p.getSpellDamageDamage(3) : p.getEnemySpellDamageDamage(3);
+			p.allCharsOfASideGetDamage(!ownplay, damage);
+        }
 		
 	}
 }

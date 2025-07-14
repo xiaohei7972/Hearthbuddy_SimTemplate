@@ -11,7 +11,22 @@ namespace HREngine.Bots
 	//<b>亡语：</b>使你手牌中的所有随从牌获得+3/+3。
 	class Sim_ULD_183 : SimTemplate
 	{
-		
+		public override void onDeathrattle(Playfield p, Minion m)
+		{
+			if (m.own)
+			{
+				foreach (Handmanager.Handcard hc in p.owncards)
+				{
+					if (hc.card.type == CardDB.cardtype.MOB)
+					{
+						hc.addattack += 3;
+						hc.addHp += 3;
+						p.anzOwnExtraAngrHp += 6;
+					}
+				}
+			}
+			
+        }
 		
 	}
 }

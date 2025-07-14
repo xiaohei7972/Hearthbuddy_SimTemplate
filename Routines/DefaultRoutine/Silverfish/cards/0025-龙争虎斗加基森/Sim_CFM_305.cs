@@ -4,12 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CFM_305 : SimTemplate //* 风驰电掣 Smuggler's Run
-//Give all minions in your hand +1/+1.
-//使你手牌中的所有随从牌获得+1/+1。 
-	{
-		
-
+    //* 风驰电掣 Smuggler's Run
+    //Give all minions in your hand +1/+1.
+    //使你手牌中的所有随从牌获得+1/+1。 
+    class Sim_CFM_305 : SimTemplate
+    {
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
             if (ownplay)
@@ -24,6 +23,8 @@ namespace HREngine.Bots
                     }
                 }
             }
+            
         }
-	}
+
+    }
 }

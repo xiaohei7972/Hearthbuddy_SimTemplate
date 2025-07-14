@@ -15,7 +15,8 @@ namespace HREngine.Bots
                 foreach (Handmanager.Handcard hc in p.owncards)
                 {
                     hc.addattack += 2;
-                    hc.addHp += 1;
+                    hc.addHp += 2;
+                    p.anzOwnExtraAngrHp += 4;
                 }
             }
         }
