@@ -15,7 +15,7 @@ namespace HREngine.Bots
 		{
 
 			// 如果目标是友方野兽
-			if (target != null && target.own && (CardDB.Race)target.handcard.card.race == CardDB.Race.BEAST)
+			if (target != null && target.own && (CardDB.Race)target.handcard.card.race == CardDB.Race.PET)
 			{
 				// 增加3点攻击力和3点生命值
 				p.minionGetBuffed(target, 3, 3);

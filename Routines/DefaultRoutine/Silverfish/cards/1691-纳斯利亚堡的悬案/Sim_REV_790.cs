@@ -21,7 +21,7 @@ namespace HREngine.Bots
 				p.minionGetBuffed(target, 2, 0);
 
 				// 如果目标是野兽，则赋予其突袭
-				if (target.handcard.card.race == CardDB.Race.BEAST)
+				if (target.handcard.card.race == CardDB.Race.PET)
 				{
 					target.rush = 1;
 				}

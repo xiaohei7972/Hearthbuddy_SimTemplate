@@ -12,7 +12,7 @@ namespace HREngine.Bots
         {
             foreach(Handmanager.Handcard hc in p.owncards)
             {
-                if(hc.card.race == CardDB.Race.BEAST || hc.card.race == CardDB.Race.ALL)
+                if(hc.card.race == CardDB.Race.PET || hc.card.race == CardDB.Race.ALL)
                 {
                     hc.manacost -= 2;
                     break;

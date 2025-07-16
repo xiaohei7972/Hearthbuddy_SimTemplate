@@ -14,7 +14,7 @@ namespace HREngine.Bots
 		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
 			// 如果目标是友方野兽
-			if (target != null && (CardDB.Race)target.handcard.card.race == CardDB.Race.BEAST)
+			if (target != null && target.own)
 			{
 				// 增加2点攻击力和2点生命值
 				p.minionGetBuffed(target, 2, 2);

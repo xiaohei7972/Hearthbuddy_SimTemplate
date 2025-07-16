@@ -13,7 +13,7 @@ namespace HREngine.Bots
             int damage = p.getSpellDamageDamage(2);
             foreach(Minion m in p.ownMinions)
             {
-                if (m.handcard.card.race == CardDB.Race.BEAST || m.handcard.card.race == CardDB.Race.ALL) damage++;
+                if (m.handcard.card.race == CardDB.Race.PET || m.handcard.card.race == CardDB.Race.ALL) damage++;
             }
             p.minionGetDamageOrHeal(target, 2);
         }

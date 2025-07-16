@@ -18,7 +18,7 @@ namespace HREngine.Bots
 				CardDB.cardIDEnum deckCard = kvp.Key;
 				CardDB.Card deckMinion = CardDB.Instance.getCardDataFromID(deckCard);
 				// 招募野兽
-				if (deckMinion.type == CardDB.cardtype.MOB && deckMinion.race == CardDB.Race.BEAST)
+				if (deckMinion.type == CardDB.cardtype.MOB && deckMinion.race == CardDB.Race.PET)
 				{
 					int pos = m.own ? p.ownMinions.Count : p.enemyMinions.Count;
 					p.callKid(deckMinion, pos, m.own);
@@ -35,7 +35,7 @@ namespace HREngine.Bots
 				CardDB.cardIDEnum deckCard = kvp.Key;
 				CardDB.Card deckMinion = CardDB.Instance.getCardDataFromID(deckCard);
 				// 招募野兽
-				if (deckMinion.type == CardDB.cardtype.MOB && deckMinion.race == CardDB.Race.BEAST)
+				if (deckMinion.type == CardDB.cardtype.MOB && deckMinion.race == CardDB.Race.PET)
 				{
 					int pos = m.own ? p.ownMinions.Count : p.enemyMinions.Count;
 					p.callKid(deckMinion, pos, m.own);

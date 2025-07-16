@@ -16,7 +16,7 @@ namespace HREngine.Bots
                 CardDB.cardIDEnum deckCard = kvp.Key;
                 CardDB.Card deckMinion = CardDB.Instance.getCardDataFromID(deckCard);
                 // 看看还有没有随从?
-                if (deckMinion.type == CardDB.cardtype.MOB && deckMinion.race == CardDB.Race.BEAST)
+                if (deckMinion.type == CardDB.cardtype.MOB && deckMinion.race == CardDB.Race.PET)
                 {
                     deckMinion.Rush = true;
                     int pos = p.ownMinions.Count;

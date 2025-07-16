@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 
-
 namespace HREngine.Bots
 {
 	//武器 恶魔猎手 费用：4 攻击力：2 耐久度：0
@@ -45,7 +44,7 @@ namespace HREngine.Bots
 					possibleTargets = possibleTargets.ToList().Where((m) => m != target).ToList();
 
 					// 从可能的目标中随机选择一个2
-					Minion target2 = possibleTargets[p.getRandomNumber(0, possibleTargets.Count - 2)];
+					Minion target2 = possibleTargets[p.getRandomNumber(0, possibleTargets.Count)];
 
 					// 对选定的目标造成伤害
 					if (target2 != null)

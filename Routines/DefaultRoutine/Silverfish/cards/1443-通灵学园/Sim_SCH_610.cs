@@ -18,7 +18,7 @@ namespace HREngine.Bots
 				CardDB.cardIDEnum deckCard = kvp.Key;
 				CardDB.Card deckMinion = CardDB.Instance.getCardDataFromID(deckCard);
 				// 5费以下野兽
-				if(deckMinion.race == CardDB.Race.BEAST && deckMinion.cost <= 5){
+				if(deckMinion.race == CardDB.Race.PET && deckMinion.cost <= 5){
 					int pos = p.ownMinions.Count ;
 					p.callKid(deckMinion, pos, ownplay);
 					p.minionGetBuffed(p.ownMinions[pos], p.deckAngrBuff, p.deckHpBuff);

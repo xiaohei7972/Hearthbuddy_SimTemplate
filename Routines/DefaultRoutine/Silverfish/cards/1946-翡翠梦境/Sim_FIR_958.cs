@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//<b>亡语：</b>对所有敌人造成1点伤害。如果此时是你对手的回合，改为造成4点。
 	class Sim_FIR_958 : SimTemplate
 	{
-		
-		
+		public override void onDeathrattle(Playfield p, Minion m)
+		{
+			//判断此随从是否为我方随从
+			int damage = (m.own) ? (p.isOwnTurn ? 1 : 4) : (p.isOwnTurn ? 4 : 1);
+			p.allCharsOfASideGetDamage(!m.own, damage);
+
+		}
+
 	}
 }
