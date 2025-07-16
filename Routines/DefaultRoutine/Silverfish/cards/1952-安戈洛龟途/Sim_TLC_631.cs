@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//<b>任务：</b>在你的回合对敌人造成刚好2点伤害，总计15次。<b>奖励：</b>格里什巨虫。
 	class Sim_TLC_631 : SimTemplate
 	{
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			p.ownQuest = new Questmanager.QuestItem() { Id = CardDB.cardIDEnum.TLC_631, questProgress = 0, maxProgress = 15 };
+		}
 		
 	}
 }

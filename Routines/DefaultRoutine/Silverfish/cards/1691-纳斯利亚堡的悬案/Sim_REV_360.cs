@@ -11,7 +11,12 @@ namespace HREngine.Bots
 	//<b>战吼：</b>随机召唤一个<b>休眠</b>的灵种。
 	class Sim_REV_360 : SimTemplate
 	{
-		
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.REV_360t);
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			p.callKid(kid, own.zonepos, own.own);
+
+		}
+
 	}
 }

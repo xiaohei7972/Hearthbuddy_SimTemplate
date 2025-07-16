@@ -13,7 +13,7 @@ namespace HREngine.Bots
 	{
 		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
-			if (target != null)
+			if (target != null && target.own)
 			{
 				target.handcard.card.sim_card.onDeathrattle(p, target);
 			}

@@ -11,7 +11,12 @@ namespace HREngine.Bots
 	//<b>亡语：</b>召唤两匹2/1的小马。
 	class Sim_WORK_018 : SimTemplate
 	{
-		
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.WORK_018t);
+		public override void onDeathrattle(Playfield p, Minion m)
+		{
+			p.callKid(kid, m.zonepos - 1, m.own);
+			p.callKid(kid, m.zonepos - 1, m.own);
+		}
+
 	}
 }

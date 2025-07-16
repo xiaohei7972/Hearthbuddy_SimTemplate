@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//从你的牌库中<b>发现</b>一张牌。
 	class Sim_GDB_846hp : SimTemplate
 	{
-		
-		
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
+			p.drawACard(CardDB.cardIDEnum.None, ownplay);
+        }
+
 	}
 }

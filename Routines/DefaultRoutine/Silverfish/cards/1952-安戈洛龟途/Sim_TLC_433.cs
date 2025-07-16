@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//<b>任务：</b>消耗18份<b>残骸</b>。<b>奖励：</b>泰拉克斯，魔骸暴龙。
 	class Sim_TLC_433 : SimTemplate
 	{
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			p.ownQuest = new Questmanager.QuestItem() { Id = CardDB.cardIDEnum.TLC_433, questProgress = 0, maxProgress = 18 };
+		}
 		
 	}
 }

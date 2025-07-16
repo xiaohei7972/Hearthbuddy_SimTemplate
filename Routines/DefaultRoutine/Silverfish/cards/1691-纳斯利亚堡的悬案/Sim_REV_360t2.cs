@@ -11,7 +11,11 @@ namespace HREngine.Bots
 	//<b>休眠</b>3回合。唤醒时，装备一把4/2的巨弓。
 	class Sim_REV_360t2 : SimTemplate
 	{
-		
-		
+		CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.REV_360t4);
+		public override void onDormantEndsTrigger(Playfield p, Minion m)
+		{
+			p.equipWeapon(weapon, m.own);
+		}
+
 	}
 }

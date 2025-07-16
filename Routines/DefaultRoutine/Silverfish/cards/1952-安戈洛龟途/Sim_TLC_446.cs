@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//<b>任务：</b>使用6张<b>临时</b>牌。<b>奖励：</b>邪能地窟裂隙。
 	class Sim_TLC_446 : SimTemplate
 	{
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			p.ownQuest = new Questmanager.QuestItem() { Id = CardDB.cardIDEnum.TLC_446, questProgress = 0, maxProgress = 6 };
+		}
 		
 	}
 }

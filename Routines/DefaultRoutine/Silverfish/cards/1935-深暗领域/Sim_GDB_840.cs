@@ -11,7 +11,11 @@ namespace HREngine.Bots
 	//<b>亡语：</b>召唤一只3/5的野兽并使其攻击生命值最低的敌人。
 	class Sim_GDB_840 : SimTemplate
 	{
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.GDB_840t);
+		public override void onDeathrattle(Playfield p, Minion m)
+		{
+			p.callKid(kid, m.zonepos - 1, m.own);
+		}
 		
 	}
 }

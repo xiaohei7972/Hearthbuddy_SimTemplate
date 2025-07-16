@@ -11,7 +11,18 @@ namespace HREngine.Bots
 	//每当本随从受到伤害，抽一张牌。
 	class Sim_WON_357 : SimTemplate
 	{
-		
+		public override void onMinionGotDmgTrigger(Playfield p, Minion triggerEffectMinion, int anzOwnMinionsGotDmg, int anzEnemyMinionsGotDmg, int anzOwnHeroGotDmg, int anzEnemyHeroGotDmg)
+		{
+			if (triggerEffectMinion.anzGotDmg > 0)
+			{
+				int tmp = triggerEffectMinion.anzGotDmg;
+				triggerEffectMinion.anzGotDmg = 0;
+				for (int i = 0; i < tmp; i++)
+				{
+					p.drawACard(CardDB.cardIDEnum.None, triggerEffectMinion.own);
+				}
+			}
+		}
 		
 	}
 }

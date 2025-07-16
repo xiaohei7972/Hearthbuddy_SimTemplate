@@ -12,7 +12,7 @@ namespace HREngine.Bots
 	class Sim_EDR_820 : SimTemplate
 	{
 		CardDB.Card kid1 = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EDR_840t1);
-		CardDB.Card kid2 = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EDR_840t2);
+		CardDB.Card kid2 = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EDR_840t);
 
 		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{

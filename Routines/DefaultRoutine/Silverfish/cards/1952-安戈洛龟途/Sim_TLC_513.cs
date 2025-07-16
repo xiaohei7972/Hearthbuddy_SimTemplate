@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//<b>任务：</b>将卡牌洗入你的牌库，总计5次。<b>奖励：</b>暮影大师。
 	class Sim_TLC_513 : SimTemplate
 	{
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			p.ownQuest = new Questmanager.QuestItem() { Id = CardDB.cardIDEnum.TLC_513, questProgress = 0, maxProgress = 5 };
+		}
 		
 	}
 }

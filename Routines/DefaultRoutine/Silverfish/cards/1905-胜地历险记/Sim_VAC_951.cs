@@ -11,7 +11,6 @@ namespace HREngine.Bots
     //<b>吸血</b>对一个随从造成$3点伤害。<i>（还剩3杯！）</i>
     class Sim_VAC_951 : SimTemplate
     {
-
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
             if (target != null)

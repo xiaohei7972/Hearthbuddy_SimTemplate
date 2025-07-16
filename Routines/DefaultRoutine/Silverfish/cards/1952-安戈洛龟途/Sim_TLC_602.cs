@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//<b>任务：</b>存活10个回合。<b>奖励：</b>拉特维厄斯，城市之眼。
 	class Sim_TLC_602 : SimTemplate
 	{
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			p.ownQuest = new Questmanager.QuestItem() { Id = CardDB.cardIDEnum.TLC_602, questProgress = 0, maxProgress = 10 };
+		}
 		
 	}
 }

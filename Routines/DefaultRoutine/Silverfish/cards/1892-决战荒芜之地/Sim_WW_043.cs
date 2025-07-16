@@ -11,7 +11,20 @@ namespace HREngine.Bots
 	//<b>突袭</b>。每当本随从受到伤害时，获取一张淤泥桶并将一张淤泥桶置于你的牌库底。
 	class Sim_WW_043 : SimTemplate
 	{
-		
-		
+		CardDB.Card card = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.WW_044t);
+		public override void onMinionGotDmgTrigger(Playfield p, Minion triggerEffectMinion, int anzOwnMinionsGotDmg, int anzEnemyMinionsGotDmg, int anzOwnHeroGotDmg, int anzEnemyHeroGotDmg)
+		{
+			if (triggerEffectMinion.anzGotDmg > 0)
+			{
+				int tmp = triggerEffectMinion.anzGotDmg;
+				triggerEffectMinion.anzGotDmg = 0;
+				for (int i = 0; i < tmp; i++)
+				{
+					p.drawACard(CardDB.cardIDEnum.WW_044t, triggerEffectMinion.own, true);
+					p.AddToDeck(card);
+				}
+			}
+		}
+
 	}
 }

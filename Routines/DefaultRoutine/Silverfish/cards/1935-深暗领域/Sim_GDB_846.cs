@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//<b>战吼：</b>将你的英雄技能替换为追踪术<i>（从你的牌库中<b>发现</b>一张牌）</i>。
 	class Sim_GDB_846 : SimTemplate
 	{
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			p.setNewHeroPower(CardDB.cardIDEnum.GDB_846hp, own.own);
+		}
 		
 	}
 }
