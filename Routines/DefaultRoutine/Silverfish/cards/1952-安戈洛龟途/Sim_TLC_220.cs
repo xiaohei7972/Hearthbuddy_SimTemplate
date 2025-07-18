@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//在你召唤一个元素后，随机对一个敌人造成3点伤害。
 	class Sim_TLC_220 : SimTemplate
 	{
-		
-		
+		public override void onMinionWasSummoned(Playfield p, Minion triggerEffectMinion, Minion summonedMinion)
+		{
+			if ((CardDB.Race)summonedMinion.handcard.card.race == CardDB.Race.ELEMENTAL)
+			{
+				p.DealDamageToRandomCharacter(triggerEffectMinion.own, 3);
+			}
+		}
+
 	}
 }

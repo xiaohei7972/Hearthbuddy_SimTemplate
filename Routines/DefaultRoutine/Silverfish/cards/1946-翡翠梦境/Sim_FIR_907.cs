@@ -12,7 +12,10 @@ namespace HREngine.Bots
 	class Sim_FIR_907 : SimTemplate
 	{
 		public override void useLocation(Playfield p, Minion triggerMinion, Minion target)
-		{   //根据地标耐久判断提升数
+		{
+			if (p.mana < p.ownMaxMana)
+				p.evaluatePenality -= 30;
+			//根据地标耐久判断提升数
 			int enhance = triggerMinion.maxHp - triggerMinion.Hp;
 			// 根据数随机获取一张随从
 			CardDB.Card kid = p.getRandomCardForManaMinion(1 + enhance);
@@ -28,12 +31,12 @@ namespace HREngine.Bots
 			p.mana = Math.Min(p.ownMaxMana, p.mana + 1 + enhance);
 		}
 
-        // public override PlayReq[] GetUseAbilityReqs()
-        // {
+		// public override PlayReq[] GetUseAbilityReqs()
+		// {
 		// 	return new PlayReq[]{
 		// 		new PlayReq(CardDB.ErrorType2.REQ_NUM_MINION_SLOTS,1) // 需要一个位置
 		// 	};
-        // }
-		
+		// }
+
 	}
 }

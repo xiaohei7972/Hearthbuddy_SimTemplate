@@ -11,7 +11,12 @@ namespace HREngine.Bots
 	//<b>战吼：</b>随机获取一张神圣法术牌。<b>锻造：</b>还会为你的英雄恢复6点生命值。
 	class Sim_TTN_039 : SimTemplate
 	{
-		
-		
+		public override PlayReq[] GetPlayReqs()
+		{
+			return new PlayReq[]{
+				new PlayReq(CardDB.ErrorType2.REQ_FORGE), // 锻造
+			};
+		}
+
 	}
 }

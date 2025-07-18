@@ -13,7 +13,7 @@ namespace HREngine.Bots
 	{
 		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
-			p.ownHero.Angr += 3;
+			p.ownHero.tempAttack += 3;
 			//TODO：还没想好怎么写狂战斧效果
         }
 		

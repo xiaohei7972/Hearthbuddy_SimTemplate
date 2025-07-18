@@ -11,6 +11,7 @@ namespace HREngine.Bots
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
             p.ownQuest = new Questmanager.QuestItem() { Id = CardDB.cardIDEnum.SW_428, questProgress = 0, maxProgress = 4 };
+			Questmanager.Instance.ownQuest = new Questmanager.QuestItem() { Id = CardDB.cardIDEnum.SW_428t, questProgress = 0, maxProgress = 4 };
         }
 
     }

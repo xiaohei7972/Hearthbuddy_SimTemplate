@@ -11,7 +11,14 @@ namespace HREngine.Bots
 	//将三张3/3并具有<b>潜行</b>和<b>抽到时召唤</b>的忍者洗入你的牌库。
 	class Sim_TLC_518 : SimTemplate
 	{
-		
-		
+		CardDB.Card card = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.TLC_513t2);
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			p.AddToDeck(card);
+			p.AddToDeck(card);
+			p.AddToDeck(card);
+
+		}
+
 	}
 }

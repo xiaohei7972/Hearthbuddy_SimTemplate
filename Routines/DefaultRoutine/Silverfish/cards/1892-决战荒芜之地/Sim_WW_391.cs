@@ -11,7 +11,12 @@ namespace HREngine.Bots
 	//在你的回合结束时，抽一张牌。
 	class Sim_WW_391 : SimTemplate
 	{
-		
-		
+		public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
+		{
+			if (triggerEffectMinion.own == turnEndOfOwner)
+				p.drawACard(CardDB.cardIDEnum.None, triggerEffectMinion.own);
+
+		}
+
 	}
 }

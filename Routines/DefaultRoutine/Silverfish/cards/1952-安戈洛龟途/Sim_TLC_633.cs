@@ -13,7 +13,7 @@ namespace HREngine.Bots
 	{
 		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
 		{
-			if (target != null)
+			if (target != null && !target.own && target.handcard.card.race != CardDB.Race.BLANK)
 			{
 				p.minionGetDamageOrHeal(target, 6);
 			}

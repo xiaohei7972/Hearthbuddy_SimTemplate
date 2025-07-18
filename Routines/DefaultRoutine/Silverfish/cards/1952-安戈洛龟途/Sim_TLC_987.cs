@@ -13,21 +13,22 @@ namespace HREngine.Bots
 	{
 		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
 		{
-			if (target != null)
+			if (target != null && (CardDB.cardtype)target.handcard.card.type == CardDB.cardtype.MOB)
 			{
-				p.minionGetDamageOrHeal(target, 2);
+				p.minionGetDamageOrHeal(target, 3);
 			}
 		}
 
 
-        public override PlayReq[] GetPlayReqs()
-        {
-            return new PlayReq[]{
+		public override PlayReq[] GetPlayReqs()
+		{
+			return new PlayReq[]{
 				new PlayReq(CardDB.ErrorType2.REQ_DRAG_TO_PLAY), // 需要一个目标
+				new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET), // 只能是随从
 				new PlayReq(CardDB.ErrorType2.REQ_ENEMY_TARGET), // 只能是敌方
-				new PlayReq(CardDB.ErrorType2.REQ_TARGET_IF_AVAILABLE), // 没目标也能不用
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_IF_AVAILABLE), // 没目标也能使用
 			};
-        }
-		
+		}
+
 	}
 }

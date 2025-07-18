@@ -11,7 +11,12 @@ namespace HREngine.Bots
 	//<b>突袭</b>。<b>战吼：</b>获取攻击力为8，6，4的随机野兽牌各一张，将其法力值消耗变为（2）点。
 	class Sim_TLC_830t : SimTemplate
 	{
-		
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			p.drawACard(CardDB.cardIDEnum.None, own.own, true);
+			p.drawACard(CardDB.cardIDEnum.None, own.own, true);
+			p.drawACard(CardDB.cardIDEnum.None, own.own, true);
+		}
+
 	}
 }
