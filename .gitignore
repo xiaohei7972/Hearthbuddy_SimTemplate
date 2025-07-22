@@ -1,0 +1,123 @@
+!Routines
+!Routines/DefaultRoutine
+!Routines/DefaultRoutine/Silverfish
+!Routines/DefaultRoutine/Silverfish/data/
+!Routines/DefaultRoutine/Silverfish/cards/
+!Routines/DefaultRoutine/Silverfish/ai/CardDB_cardIDEnum.cs
+!Routines/DefaultRoutine/Silverfish/ai/CardDB_cardNameCN.cs
+!Routines/DefaultRoutine/Silverfish/ai/CardDB_cardNameEN.cs
+
+
+Routines/DefaultRoutine/Silverfish/Test/Data/
+Routines/DefaultRoutine/Silverfish/behavior/
+
+
+
+
+
+# /用户配置教程
+# /Bots 
+# /CompiledAssemblies 
+# /JitProfiles 
+# /HsMod 
+# /Logs 
+# /MercStraLogs 
+# /Plugins
+# /Routines/DefaultRoutine
+
+GreyMagic_Win7.dll
+GreyMagic_Win10.dll
+GreyMagic.dll
+Hearthbuddy.exe
+IronPython.dll
+IronPython.Modules.dll
+Microsoft.Dynamic.dll
+Microsoft.Scripting.dll
+Microsoft.Scripting.Metadata.dll
+Mono.Cecil.dll
+Newtonsoft.Json.dll
+RoutineHelper.exe
+log4net.dll
+myLog.txt
+opcpitmhbx.exe
+Udis86Net.dll
+VC_redist.x86.exe
+XamlAnimatedGif.dll
+yqdiqeuhya.exe
+JitProfiles/JitProfile.jpf
+
+PatchTrack_v2_1101110
+
+
+CompiledAssemblies/
+
+# hsmod
+HsMod/
+
+# logs
+Logs/
+Plugins/
+Bots/
+.vs/
+.vscode/
+.obj/
+
+Routines/DefaultRoutine/DefaultRoutine.cs
+Routines/DefaultRoutine/DefaultRoutineSettings.cs
+Routines/DefaultRoutine/SettingsGui.xaml
+Routines/DefaultRoutine/silverfish_HB.cs
+Routines/DefaultRoutine/Silverfish/打开对局记录文件夹.bat
+Routines/DefaultRoutine/Silverfish/说明.txt
+Routines/DefaultRoutine/Silverfish/delLog.bat
+Routines/DefaultRoutine/Silverfish/update.bat
+Routines/DefaultRoutine/Silverfish/ai/打印工具.cs
+Routines/DefaultRoutine/Silverfish/ai/action.cs
+Routines/DefaultRoutine/Silverfish/ai/ActionNormalizer.cs
+Routines/DefaultRoutine/Silverfish/ai/Ai.cs
+Routines/DefaultRoutine/Silverfish/ai/Behavior.cs
+Routines/DefaultRoutine/Silverfish/ai/BehaviorControl.cs
+Routines/DefaultRoutine/Silverfish/ai/BehaviorRush.cs
+Routines/DefaultRoutine/Silverfish/ai/BehaviourMana.cs
+Routines/DefaultRoutine/Silverfish/ai/BoardTester.cs
+Routines/DefaultRoutine/Silverfish/ai/CardDB_ErrorType2.cs
+Routines/DefaultRoutine/Silverfish/ai/CardDB.cs
+Routines/DefaultRoutine/Silverfish/ai/ComboBreaker.cs
+Routines/DefaultRoutine/Silverfish/ai/Debug.cs
+Routines/DefaultRoutine/Silverfish/ai/deckGuess.cs
+Routines/DefaultRoutine/Silverfish/ai/Deckmanager.cs
+Routines/DefaultRoutine/Silverfish/ai/EnemyTurnSimulator.cs
+Routines/DefaultRoutine/Silverfish/ai/Handmanager.cs
+Routines/DefaultRoutine/Silverfish/ai/Helpfunctions.cs
+Routines/DefaultRoutine/Silverfish/ai/Hrtprozis.cs
+Routines/DefaultRoutine/Silverfish/ai/Minion.cs
+Routines/DefaultRoutine/Silverfish/ai/MiniSimulator.cs
+Routines/DefaultRoutine/Silverfish/ai/MiniSimulatorNextTurn.cs
+Routines/DefaultRoutine/Silverfish/ai/Movegenerator.cs
+Routines/DefaultRoutine/Silverfish/ai/Mulligan.cs
+Routines/DefaultRoutine/Silverfish/ai/PenalityManager.cs
+Routines/DefaultRoutine/Silverfish/ai/PenTemplate.cs
+Routines/DefaultRoutine/Silverfish/ai/Playfield.cs
+Routines/DefaultRoutine/Silverfish/ai/Probabilitymaker.cs
+Routines/DefaultRoutine/Silverfish/ai/Questmanager.cs
+Routines/DefaultRoutine/Silverfish/ai/RulesEngine.cs
+Routines/DefaultRoutine/Silverfish/ai/Settings.cs
+Routines/DefaultRoutine/Silverfish/ai/SimTemplate.cs
+Routines/DefaultRoutine/Silverfish/ai/TAGGS.cs
+Routines/DefaultRoutine/Silverfish/ai/Utils.cs
+Routines/DefaultRoutine/Silverfish/ai/Weapon.cs
+Routines/DefaultRoutine/Silverfish/UltimateLogs/
+Routines/DefaultRoutine/Silverfish/Helpers/
+Routines/DefaultRoutine/Silverfish/Hsreplay/
+Routines/DefaultRoutine/Silverfish/Test/
+开发配置教程/
+
+新建 文本文档.txt
+我同意.txt
+说明.txt
+炉石中控.exe
+Settings/
+用户配置教程/
+
+SerializedCard.txt
+Logg.txt
+fatal-rename.txt

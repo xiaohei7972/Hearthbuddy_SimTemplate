@@ -1,0 +1,17 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace HREngine.Bots
+{
+	//LETTUCE_ABILITY 无效的 费用：7
+	//Holy Blast 4
+	//神圣冲击4
+	//Deal ${0} damage.Restore #{1} Healthto your characters.
+	//造成${0}点伤害。为你的角色恢复#{1}点生命值。
+	class Sim_LETL_242_04 : SimTemplate
+	{
+		
+		
+	}
+}

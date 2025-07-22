@@ -1,0 +1,17 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace HREngine.Bots
+{
+	//LETTUCE_ABILITY 无效的 费用：9
+	//Blazing Horns 4
+	//烈焰双角4
+	//<b>Attack</b> an enemy.Also deal @ damage to adjacent enemies.
+	//<b>攻击</b>一个敌人，同时对相邻的敌人造成@点伤害。
+	class Sim_LETL_1136_04 : SimTemplate
+	{
+		
+		
+	}
+}

@@ -1,0 +1,17 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace HREngine.Bots
+{
+	//随从 德鲁伊 费用：0 攻击力：9 生命值：5
+	//Captain Flat Tusk
+	//獠牙队长
+	//[x]Whenever you spend3 Gold, get a <b>Blood Gem</b>.<i>(@ Gold left!)</i>
+	//每当你花掉3枚铸币，获取一张<b>鲜血宝石</b>。<i>（还剩@枚！）</i>
+	class Sim_BG20_206 : SimTemplate
+	{
+		
+		
+	}
+}
