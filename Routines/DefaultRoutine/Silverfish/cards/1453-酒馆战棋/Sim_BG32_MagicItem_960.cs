@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：1
+	//BATTLEGROUND_TRINKET 中立 费用：0
 	//Crocheted Sungill
 	//针织阳鳃鱼人
 	//[x]After your last minion dieseach combat, summonthe highest-Health minionfrom your hand.

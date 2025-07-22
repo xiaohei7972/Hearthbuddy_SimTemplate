@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：3
+	//BATTLEGROUND_TRINKET 中立 费用：5
 	//Sellemental Portrait
 	//商贩元素肖像
 	//[x]Get a Sellemental.At the start of each turn,get another.

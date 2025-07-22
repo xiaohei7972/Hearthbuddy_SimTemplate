@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：2
+	//BATTLEGROUND_TRINKET 中立 费用：0
 	//Turbocharged Drill
 	//涡轮充能钻
 	//Get 5 different <b>Magnetic</b> Mechs of ANY Tier.

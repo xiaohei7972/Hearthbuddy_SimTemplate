@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 德鲁伊 费用：7 攻击力：5 生命值：5
+	//随从 德鲁伊 费用：9 攻击力：5 生命值：5
 	//Loh, the Living Legend
 	//洛，在世传奇
 	//<b>Battlecry:</b> Your minions cost (5) this game.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：2
+	//BATTLEGROUND_TRINKET 中立 费用：1
 	//Glowing Gauntlet
 	//辐光护手
 	//Minions in the Tavern have +4/+4.

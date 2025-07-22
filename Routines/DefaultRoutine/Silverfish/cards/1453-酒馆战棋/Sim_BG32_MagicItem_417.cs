@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：2
+	//BATTLEGROUND_TRINKET 中立 费用：1
 	//Tarecgosa Sticker
 	//泰蕾苟萨标签
 	//[x]Your left- and right-mostDragons permanentlykeep enchantmentsfrom combat.

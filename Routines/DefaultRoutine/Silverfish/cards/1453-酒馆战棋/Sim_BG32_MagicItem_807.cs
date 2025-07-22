@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：2
+	//BATTLEGROUND_TRINKET 中立 费用：1
 	//Curator Sticker
 	//馆长标签
 	//Get a 20/20 Mishmash and a 20/20 Amalgam with <b>Venomous</b>.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：5 生命值：2
+	//随从 战士 费用：0 攻击力：6 生命值：2
 	//Selfless Sightseer
 	//无私的观光客
 	//[x]<b>Battlecry:</b> Increaseyour team's maximumGold by (1).

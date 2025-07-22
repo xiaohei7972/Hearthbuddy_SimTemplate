@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：0 攻击力：20 生命值：20
+	//随从 圣骑士 费用：0 攻击力：30 生命值：30
 	//The Boommobile
 	//砰砰飞车
 	//[x]<b>Magnetic</b> <b>Reborn</b>, <b>Divine Shield</b>,<b>Taunt</b>, <b>Windfury</b>

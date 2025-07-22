@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：0 攻击力：8 生命值：4
+	//随从 术士 费用：0 攻击力：10 生命值：4
 	//Shadowdancer
 	//影舞者
 	//[x]<b>Deathrattle:</b> Get 2 Staffsof Enrichment.

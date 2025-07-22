@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：5 攻击力：0 生命值：1
+	//随从 术士 费用：3 攻击力：0 生命值：1
 	//Underfel Rift
 	//邪能地窟裂隙
 	//[x]Select the Rift to activate.Throw a card in to summon2 random Fel Beasts.<i>(Once per turn.)</i>

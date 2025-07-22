@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：2
+	//BATTLEGROUND_TRINKET 中立 费用：0
 	//Nomi Sticker
 	//诺米标签
 	//[x]After you play anElemental, Elementals inthe Tavern have +4/+4this game.

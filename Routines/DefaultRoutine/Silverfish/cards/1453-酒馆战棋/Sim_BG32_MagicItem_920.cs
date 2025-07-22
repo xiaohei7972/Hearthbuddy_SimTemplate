@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：4
+	//BATTLEGROUND_TRINKET 中立 费用：2
 	//Thaumaturgist Portrait
 	//奇术师肖像
 	//[x]Get a Thaumaturgist.Your Thaumaturgists'<b>Spellcrafts</b> are permanent.

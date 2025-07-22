@@ -8,7 +8,7 @@ namespace HREngine.Bots
 	//Wave of Tar
 	//焦油狂潮
 	//Deal $2 damage to all enemy minions. Enemy minions cost(2) more next turn.
-	//对所有敌方随从造成$2伤害。下个回合，敌方随从牌的法力值消耗增加（2）点。
+	//对所有敌方随从造成$2点伤害。下个回合，敌方随从牌的法力值消耗增加（2）点。
 	class Sim_TLC_439 : SimTemplate
 	{
 		

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：0
+	//BATTLEGROUND_TRINKET 中立 费用：1
 	//Goblin Wallet
 	//地精钱包
 	//At the end of each turn, increase your maximum Gold by 1.

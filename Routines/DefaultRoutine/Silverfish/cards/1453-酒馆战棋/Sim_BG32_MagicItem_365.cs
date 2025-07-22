@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：6
+	//BATTLEGROUND_TRINKET 中立 费用：7
 	//Valdrakken Wind Chimes
 	//瓦德拉肯风铃
 	//Your <b>Start of Combat</b> effects trigger twice.

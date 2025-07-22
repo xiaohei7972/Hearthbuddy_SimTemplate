@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：1
+	//BATTLEGROUND_TRINKET 中立 费用：0
 	//Gilded Anchor
 	//镀金船锚
 	//At the end of each turn, give your Golden minions +10/+10.

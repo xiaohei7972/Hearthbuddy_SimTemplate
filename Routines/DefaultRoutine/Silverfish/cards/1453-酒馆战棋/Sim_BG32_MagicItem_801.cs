@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：2
+	//BATTLEGROUND_TRINKET 中立 费用：0
 	//Heart of the Forest
 	//森林之心
 	//Your Tavern spells that give stats grant an extra +2/+1.

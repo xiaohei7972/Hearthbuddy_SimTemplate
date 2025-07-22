@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 法师 费用：7 攻击力：7 生命值：7
+	//随从 法师 费用：6 攻击力：6 生命值：6
 	//Titanographer Osk
 	//泰坦考据学家欧斯克
 	//Gains a random <b>Titan</b> ability in your hand that changes each turn.

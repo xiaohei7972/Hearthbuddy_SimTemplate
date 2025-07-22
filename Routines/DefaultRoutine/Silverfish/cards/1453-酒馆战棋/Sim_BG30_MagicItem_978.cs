@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：6
+	//BATTLEGROUND_TRINKET 中立 费用：3
 	//Blingtron's Sunglasses
 	//布林顿的太阳镜
 	//[x]After you summon a Mechin combat, give a friendlyMech <b>Divine Shield</b>.

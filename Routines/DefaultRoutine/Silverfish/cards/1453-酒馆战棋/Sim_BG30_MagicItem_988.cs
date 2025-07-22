@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：1
+	//BATTLEGROUND_TRINKET 中立 费用：0
 	//Great Boar Sticker
 	//野猪之神标签
 	//[x]Your <b>Blood Gems</b> givean extra +3 Attack.

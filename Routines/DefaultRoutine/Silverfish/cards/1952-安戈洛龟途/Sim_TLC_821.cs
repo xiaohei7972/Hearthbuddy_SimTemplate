@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 潜行者 费用：7 攻击力：7 生命值：7
+	//随从 潜行者 费用：7 攻击力：6 生命值：7
 	//Wilted Shadow
 	//枯萎之影
 	//[x]<b>Lifesteal</b>Whenever you heal anenemy, this attacks it.

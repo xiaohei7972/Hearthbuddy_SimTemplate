@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：3
+	//BATTLEGROUND_TRINKET 中立 费用：2
 	//Bazaar Sticker
 	//集市标签
 	//[x]1 Tavern spell each turncosts Health instead ofGold to buy. <i>(@ left!)</i>

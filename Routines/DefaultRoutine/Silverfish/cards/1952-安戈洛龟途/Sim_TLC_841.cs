@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 恶魔猎手 费用：9 攻击力：7 生命值：7
+	//随从 恶魔猎手 费用：8 攻击力：7 生命值：7
 	//Entomologist Toru
 	//昆虫学家托鲁
 	//[x]<b>Battlecry:</b> Put each minion in your hand into 0/1 Jars_that cost (1). Break them__to release the minions!

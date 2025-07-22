@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：4
+	//BATTLEGROUND_TRINKET 中立 费用：5
 	//Weary Portrait
 	//困倦的肖像
 	//[x]Get a Weary Mage. YourWeary Mages' <b>Spellcrafts</b>are permanent.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：2
+	//BATTLEGROUND_TRINKET 中立 费用：4
 	//Lorewalker Scroll
 	//游学者卷轴
 	//[x]Whenever you cast aspell on a minion,give it +7/+7.

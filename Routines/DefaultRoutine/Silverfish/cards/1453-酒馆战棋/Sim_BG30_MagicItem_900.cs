@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：4
+	//BATTLEGROUND_TRINKET 中立 费用：2
 	//Dragonwing Glider
 	//滑翔龙翼
 	//Whenever you play a card, give a friendly Dragon +3/+1.

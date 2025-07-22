@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：3
+	//BATTLEGROUND_TRINKET 中立 费用：5
 	//Blood Golem Sticker
 	//鲜血魔像标签
 	//[x]Whenever a friendly Quilboardies, summon a Golem withstats equal to its <b>Blood Gems</b>.<i>(3 times per combat.)</i>@[x]Whenever a friendly Quilboardies, summon a Golem withstats equal to its <b>Blood Gems</b>.<i>({0} left!)</i>

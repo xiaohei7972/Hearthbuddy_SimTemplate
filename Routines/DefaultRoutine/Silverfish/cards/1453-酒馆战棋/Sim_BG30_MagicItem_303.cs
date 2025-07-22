@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：6
+	//BATTLEGROUND_TRINKET 中立 费用：7
 	//Automaton Portrait
 	//自动机肖像
 	//[x]Get an AncestralAutomaton. <b>Start ofCombat:</b> Summon anAncestral Automaton.

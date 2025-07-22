@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：6
+	//BATTLEGROUND_TRINKET 中立 费用：3
 	//The Eye of Dalaran
 	//达拉然之眼
 	//[x]Whenever a friendlyminion with no type dies,get a random Tavern spell.

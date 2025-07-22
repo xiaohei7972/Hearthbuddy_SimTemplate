@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：1
+	//BATTLEGROUND_TRINKET 中立 费用：0
 	//Felemental Portrait
 	//邪能元素肖像
 	//[x]Get a Felemental.Your Felementals alsotrigger on <b>Deathrattle</b>.

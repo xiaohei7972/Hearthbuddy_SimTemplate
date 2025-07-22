@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：1
+	//BATTLEGROUND_TRINKET 中立 费用：0
 	//Shadowy Elixir
 	//幽影药剂
 	//[x]Gain 5 Armor. Afteryou play a Demon, deal1 damage to your hero.

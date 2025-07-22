@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：5
+	//BATTLEGROUND_TRINKET 中立 费用：4
 	//Spell-powered Wrench
 	//法术扳手
 	//After you play a <b>Magnetic</b> minion, get a random Tavern spell.

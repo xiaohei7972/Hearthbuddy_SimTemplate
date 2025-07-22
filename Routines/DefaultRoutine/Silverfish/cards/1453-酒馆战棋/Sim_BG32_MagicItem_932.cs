@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：3
+	//BATTLEGROUND_TRINKET 中立 费用：1
 	//Vash'jir Anemone
 	//瓦丝琪尔海葵
 	//[x]<b>Start of Combat:</b> Giveyour Naga +{1} Health.<i>(Improved by every 4 spellsyou've cast this game!)</i>@[x]<b>Start of Combat:</b> Giveyour Naga +{1} Health.<i>(Cast {0}/4 spellsto improve!)</i>
