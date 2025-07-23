@@ -4,13 +4,16 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_VAN_CS2_105 : SimTemplate //* 英勇打击 Heroic Strike
-	{
-		//Give your hero +4_Attack this turn.
-		//在本回合中，使你的英雄获得+4攻击力。
+    //* 英勇打击 Heroic Strike/
+    // /Give your hero +4_Attack this turn.
+    //在本回合中，使你的英雄获得+4攻击力。
+    class Sim_VAN_CS2_105 : SimTemplate
+    {
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
-            p.minionGetTempBuff(ownplay ? p.ownHero : p.enemyHero, 4, 0);
+            Minion hero = ownplay ? p.ownHero : p.enemyHero;
+            p.minionGetTempBuff(hero, 4, 0);
+            hero.updateReadyness();
 
         }
 

@@ -11,7 +11,15 @@ namespace HREngine.Bots
 	//对所有敌人造成$1点伤害。<b>法力渴求（6）：</b><b>吸血</b>。
 	class Sim_RLK_209 : SimTemplate
 	{
-		
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice, Handmanager.Handcard hc)
+		{
+			if (p.ownMaxMana >= hc.card.Manathirst)
+			{
+				hc.card.lifesteal = true;
+			}
+			int dmg = (ownplay) ? p.getSpellDamageDamage(1) : p.getEnemySpellDamageDamage(1);
+			p.allCharsOfASideGetDamage(!ownplay, dmg);
+		}
+
 	}
 }

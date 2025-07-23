@@ -11,7 +11,11 @@ namespace HREngine.Bots
 	//在你的回合开始时，<b>发现</b>一张龙牌，其法力值消耗减少（4）点。
 	class Sim_WW_824t : SimTemplate
 	{
-		
-		
+		public override void onTurnStartTrigger(Playfield p, Minion triggerEffectMinion, bool turnStartOfOwner)
+		{
+			if (triggerEffectMinion.own == turnStartOfOwner)
+				p.drawACard(CardDB.cardIDEnum.None, triggerEffectMinion.own, true);
+		}
+
 	}
 }

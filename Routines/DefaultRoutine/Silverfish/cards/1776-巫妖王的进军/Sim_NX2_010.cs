@@ -11,7 +11,15 @@ namespace HREngine.Bots
 	//<b>嘲讽</b>。<b>法力渴求（@）：</b>获得+4/+4和<b>冲锋</b>。
 	class Sim_NX2_010 : SimTemplate
 	{
-		
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice, Handmanager.Handcard hc)
+		{
+			if (p.ownMaxMana >= hc.card.Manathirst)
+			{
+				hc.addattack += 4;
+				hc.addHp += 4;
+				hc.card.Charge = true;
+			}
+		}
+
 	}
 }

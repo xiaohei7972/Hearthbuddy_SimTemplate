@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//在本回合中，使你的英雄获得+4攻击力。在本回合中你每抽一张牌，本牌的法力值消耗便减少（1）点。
 	class Sim_TTN_841 : SimTemplate
 	{
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			p.minionGetTempBuff(ownplay ? p.ownHero : p.enemyHero, 4, 0);
+		}
 		
 	}
 }

@@ -11,11 +11,11 @@ namespace HREngine.Bots
 	//<b>嘲讽</b>。<b>亡语：</b>造成8点伤害，随机分配到所有敌人身上。
 	class Sim_TOY_606 : SimTemplate
 	{
+		public override void onDeathrattle(Playfield p, Minion m)
+		{
+			// 使用现有的 allCharsOfASideGetRandomDamage 方法对敌方角色造成 8 点随机伤害
+			p.allCharsOfASideGetRandomDamage(!m.own, 8);
+		}
 
-        public override void onDeathrattle(Playfield p, Minion m)
-        {
-            // 使用现有的 allCharsOfASideGetRandomDamage 方法对敌方角色造成 8 点随机伤害
-            p.allCharsOfASideGetRandomDamage(false, 8);
-        }
-    }
+	}
 }

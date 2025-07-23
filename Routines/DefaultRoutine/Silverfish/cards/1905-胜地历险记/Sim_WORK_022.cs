@@ -13,9 +13,9 @@ namespace HREngine.Bots
 	{
 		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
-			p.ownHero.tempAttack += 3;
+			p.minionGetTempBuff(ownplay ? p.ownHero : p.enemyHero, 3, 0);
 			//TODO：还没想好怎么写狂战斧效果
-        }
-		
+		}
+
 	}
 }

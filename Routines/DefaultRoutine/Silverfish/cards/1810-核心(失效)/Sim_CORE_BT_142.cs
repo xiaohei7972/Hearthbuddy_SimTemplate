@@ -11,7 +11,12 @@ namespace HREngine.Bots
 	//<b>战吼：</b>在本回合中，使你的英雄获得+1攻击力。
 	class Sim_CORE_BT_142 : SimTemplate
 	{
-		
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			Minion hero = own.own ? p.ownHero : p.enemyHero;
+			p.minionGetTempBuff(hero, 5, 0);
+			hero.updateReadyness();
+		}
+
 	}
 }

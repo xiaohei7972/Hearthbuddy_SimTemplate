@@ -11,7 +11,14 @@ namespace HREngine.Bots
 	//<b>战吼：</b>为所有友方角色恢复3点生命值。<b>法力渴求（6）：</b>改为恢复6点。
 	class Sim_RLK_219 : SimTemplate
 	{
-		
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			int heal = own.own ? p.getMinionHeal(3) : p.getEnemyMinionHeal(3);
+			if (p.ownMaxMana >= own.handcard.card.Manathirst)
+				heal = own.own ? p.getMinionHeal(6) : p.getEnemyMinionHeal(6);
+
+			p.allCharsOfASideGetDamage(own.own, -heal);
+		}
+
 	}
 }

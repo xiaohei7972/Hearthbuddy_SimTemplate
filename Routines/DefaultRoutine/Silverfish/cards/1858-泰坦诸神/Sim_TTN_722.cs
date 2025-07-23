@@ -20,7 +20,7 @@ namespace HREngine.Bots
 
 			int pos = (ownplay) ? p.ownMinions.Count : p.enemyMinions.Count;
             p.callKid(kid, pos, ownplay);
-
+			p.ueberladung += 1;
         }
 		
 	}

@@ -13,9 +13,11 @@ namespace HREngine.Bots
 	{
 		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
-			p.minionGetTempBuff(ownplay ? p.ownHero : p.enemyHero, 1, 0);
+			var hero = ownplay ? p.ownHero : p.enemyHero;
+			p.minionGetTempBuff(hero, 1, 0);
+			hero.updateReadyness();
 			p.drawACard(CardDB.cardIDEnum.TOY_400t3t, ownplay, true);
-        }
-		
+		}
+
 	}
 }

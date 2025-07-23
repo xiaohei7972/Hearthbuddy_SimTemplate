@@ -11,7 +11,14 @@ namespace HREngine.Bots
 	//<b>战吼：</b>如果你的套牌里没有相同的牌，装备九蛙魔杖。
 	class Sim_WW_010 : SimTemplate
 	{
-		
+		CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.WW_010t);
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			if (p.prozis.noDuplicates)
+			{
+				p.equipWeapon(weapon, own.own);
+			}
+		}
 		
 	}
 }

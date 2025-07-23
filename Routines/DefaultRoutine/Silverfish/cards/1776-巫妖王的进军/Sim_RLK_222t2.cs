@@ -11,7 +11,21 @@ namespace HREngine.Bots
 	//<b>战吼：</b>造成7点伤害，随机分配到所有敌人身上。<b>法力渴求（10）：</b>改为造成14点。
 	class Sim_RLK_222t2 : SimTemplate
 	{
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			int damage = 7;
+			if (p.ownMaxMana >= own.handcard.card.Manathirst)
+				damage = 14;
+			p.allCharsOfASideGetRandomDamage(!own.own, damage);
+        }
+
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice, Handmanager.Handcard hc)
+        {
+            {
+                if (target != null)
+                    p.minionGetDamageOrHeal(target, 2);
+            }
+        }
 		
 	}
 }

@@ -12,7 +12,9 @@ namespace HREngine.Bots
 		{
 			var hero = ownplay ? p.ownHero : p.enemyHero;
 			p.minionGetTempBuff(hero, 2, 0);
-			p.drawACard(CardDB.cardIDEnum.BT_175t, ownplay);
+			hero.updateReadyness();
+			p.drawACard(CardDB.cardIDEnum.BT_175t, ownplay, true);
+			
 		}
 	}
 }

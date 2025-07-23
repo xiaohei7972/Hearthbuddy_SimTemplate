@@ -4,12 +4,18 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_AV_244 : SimTemplate //* 觅血者 bloodseeker
+	//* 觅血者 bloodseeker
+	// //<b>荣誉消灭：</b>获得+1/+1。
+	class Sim_AV_244 : SimTemplate
 	{
-		//<b>荣誉消灭：</b>获得+1/+1。
+		CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.AV_244);
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			p.equipWeapon(weapon, ownplay);
+		}
 		public override void onHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
 		{
-			if (hero.own && hero.Angr == target.Hp) 
+			if (hero.own && hero.Angr == target.Hp)
 			{
 				p.ownWeapon.Angr++;
 				p.ownWeapon.Durability++;

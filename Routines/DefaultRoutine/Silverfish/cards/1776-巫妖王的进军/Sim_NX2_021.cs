@@ -13,11 +13,8 @@ namespace HREngine.Bots
 	{
 		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
 		{
-			
-			int maxMana = own.own ? p.ownMaxMana : p.enemyMaxMana;
-			// if (maxMana == 7)
 			// 我也不确定法力渴求是不是这么写
-			if (maxMana == own.handcard.card.Manathirst)
+			if (p.ownMaxMana >= own.handcard.card.Manathirst)
 			{
 				int haal = own.own ? p.getMinionHeal(5) : p.getEnemyMinionHeal(5);
 				p.minionGetDamageOrHeal(own.own ? p.ownHero : p.enemyHero, -haal);

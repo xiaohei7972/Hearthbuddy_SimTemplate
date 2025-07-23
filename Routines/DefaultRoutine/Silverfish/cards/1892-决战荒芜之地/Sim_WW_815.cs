@@ -11,7 +11,27 @@ namespace HREngine.Bots
 	//<b>战吼：</b>如果你的套牌里没有相同的牌，在本回合中获得<b>免疫</b>并攻击所有敌人。
 	class Sim_WW_815 : SimTemplate
 	{
-		
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
+			if (p.prozis.noDuplicates)
+			{
+				own.immune = true;
+				List<Minion> minions = own.own ? p.enemyMinions : p.ownMinions;
+				if (own.own)
+				{
+					minions.Add(p.enemyHero);
+				}
+				else
+				{
+					minions.Add(p.ownHero);
+				}
+
+				foreach (Minion minion in minions)
+				{
+					p.minionAttacksMinion(own, minion);
+				}
+			}
+        }
 		
 	}
 }

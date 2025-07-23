@@ -11,7 +11,17 @@ namespace HREngine.Bots
 	//<b>战吼：</b>将火焰使者阿斯塔洛置入你的手牌。<b>法力渴求（@）：</b>获得5点护甲值。
 	class Sim_RLK_222t1 : SimTemplate
 	{
-		
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			p.drawACard(CardDB.cardIDEnum.RLK_222t2, own.own, true);
+		}
+
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice, Handmanager.Handcard hc)
+		{
+			if (p.ownMaxMana >= hc.card.Manathirst)
+				p.ownHero.armor += 5;
+
+		}
+
 	}
 }

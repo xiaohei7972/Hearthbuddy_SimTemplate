@@ -11,7 +11,14 @@ namespace HREngine.Bots
 	//在本回合中，使你的英雄获得+2攻击力。获得4点护甲值。<i>（每回合切换。）</i>
 	class Sim_ETC_379 : SimTemplate
 	{
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			Minion hero = ownplay ? p.ownHero : p.enemyHero;
+			p.minionGetTempBuff(hero, 2, 0);
+			p.minionGetArmor(hero, 4);
+            hero.updateReadyness();
+
+		}
 		
 	}
 }

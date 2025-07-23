@@ -11,7 +11,15 @@ namespace HREngine.Bots
 	//在本回合中，使你的英雄获得+3攻击力。<b>法力渴求（4）：</b>以及<b>吸血</b>。
 	class Sim_RLK_923 : SimTemplate
 	{
-		
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice, Handmanager.Handcard hc)
+		{
+			Minion hero = ownplay ? p.ownHero : p.enemyHero;
+			p.minionGetTempBuff(hero, 3, 0);
+			if (p.ownMaxMana >= hc.card.Manathirst)
+				hero.lifesteal = true;
+			hero.updateReadyness();
+
+		}
+
 	}
 }

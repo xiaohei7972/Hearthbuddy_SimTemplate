@@ -11,7 +11,14 @@ namespace HREngine.Bots
 	//在本回合中，使你的英雄获得+2攻击力。将“二次斩击”置入你的手牌。
 	class Sim_RLK_Prologue_TwinSlice : SimTemplate
 	{
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			Minion hero = ownplay ? p.ownHero : p.enemyHero;
+			p.minionGetTempBuff(hero, 2, 0);
+			hero.updateReadyness();
+			p.drawACard(CardDB.cardIDEnum.BT_175t, ownplay, true);
+			
+		}
 		
 	}
 }

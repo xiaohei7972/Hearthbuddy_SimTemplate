@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//<b>突袭</b>。<b>法力渴求（@）：</b>获得<b>复生</b>。
 	class Sim_NX2_051 : SimTemplate
 	{
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice, Handmanager.Handcard hc)
+		{
+			if (p.ownMaxMana >= hc.card.Manathirst)
+			{
+				hc.card.reborn = true;
+			}
+		}
 		
 	}
 }
