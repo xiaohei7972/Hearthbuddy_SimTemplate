@@ -11,7 +11,12 @@ namespace HREngine.Bots
 	//获取三张4/1的冰虫，其法力值消耗为（1）点。
 	class Sim_TTN_081 : SimTemplate
 	{
-		
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
+			p.drawACard(CardDB.cardIDEnum.TTN_081t, ownplay, true);
+			p.drawACard(CardDB.cardIDEnum.TTN_081t, ownplay, true);
+			p.drawACard(CardDB.cardIDEnum.TTN_081t, ownplay, true);
+        }
 		
 	}
 }
