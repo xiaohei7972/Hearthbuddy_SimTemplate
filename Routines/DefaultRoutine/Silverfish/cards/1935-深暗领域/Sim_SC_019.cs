@@ -22,6 +22,13 @@ namespace HREngine.Bots
 			int pos = m.own ? p.ownMinions.Count : p.enemyMinions.Count;
 			p.callKid(kid, pos, m.own);
 		}
+
+        public override PlayReq[] GetPlayReqs()
+        {
+			return new PlayReq[]{
+				new PlayReq(CardDB.ErrorType2.REQ_MINION_CAP,1), // 需要一个空位
+			};
+        }
 		
 	}
 }

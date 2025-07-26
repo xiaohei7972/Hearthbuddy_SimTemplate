@@ -11,7 +11,17 @@ namespace HREngine.Bots
 	//受伤时拥有<b>法术伤害+2</b>。
 	class Sim_TRL_312 : SimTemplate
 	{
-		
-		
+		public override void onEnrageStart(Playfield p, Minion m)
+		{
+			m.spellpower += 2;
+			m.updateReadyness();
+		}
+
+		public override void onEnrageStop(Playfield p, Minion m)
+		{
+			m.spellpower -= 2;
+			m.updateReadyness();
+		}
+
 	}
 }

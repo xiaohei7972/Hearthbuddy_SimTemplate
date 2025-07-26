@@ -12,6 +12,13 @@ namespace HREngine.Bots
 	class Sim_TLC_101 : SimTemplate
 	{
 		
-		
+		public override void onEnrageStart(Playfield p, Minion m)
+        {
+            p.minionGetBuffed(m, 3, 0);
+        }
+        public override void onEnrageStop(Playfield p, Minion m)
+        {
+            p.minionGetBuffed(m, -3, 0);
+        }
 	}
 }

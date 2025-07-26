@@ -11,7 +11,14 @@ namespace HREngine.Bots
 	//<b>冲锋</b>受伤时拥有+6攻击力。
 	class Sim_TUTR_EX1_414 : SimTemplate
 	{
-		
+		public override void onEnrageStart(Playfield p, Minion m)
+        {
+            p.minionGetBuffed(m, 6, 0);
+        }
+        public override void onEnrageStop(Playfield p, Minion m)
+        {
+            p.minionGetBuffed(m, -6, 0);
+        }
 		
 	}
 }

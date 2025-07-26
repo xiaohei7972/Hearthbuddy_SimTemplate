@@ -11,7 +11,15 @@ namespace HREngine.Bots
 	//<b>冲锋</b>受伤时拥有+5攻击力。
 	class Sim_Story_06_GarroshMinion : SimTemplate
 	{
-		
+		public override void onEnrageStart(Playfield p, Minion m)
+        {
+            p.minionGetBuffed(m, 5, 0);
+        }
+
+        public override void onEnrageStop(Playfield p, Minion m)
+        {
+            p.minionGetBuffed(m, -5, 0);
+        }
 		
 	}
 }

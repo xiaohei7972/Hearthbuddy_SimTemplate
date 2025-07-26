@@ -16,13 +16,10 @@ namespace HREngine.Bots
 		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
 			List<Minion> Minions = ownplay ? p.ownMinions : p.enemyMinions;
-			Minions = Minions.Where(m => (CardDB.Race)m.handcard.card.race == CardDB.Race.PET).ToList<Minion>();
 			if (Minions.Count > 0)
 			{
-				// 增强战场上的野兽随从
 				foreach (Minion minion in Minions)
 				{
-					if((CardDB.Race)minion.handcard.card.race == CardDB.Race.PET)
 					p.minionGetBuffed(minion, 1, 0);
 				}
 			}
@@ -32,7 +29,7 @@ namespace HREngine.Bots
 				// 增强手牌中的所有随从
 				foreach (Handmanager.Handcard hc in p.owncards)
 				{
-					if (hc.card.type == CardDB.cardtype.MOB && (CardDB.Race)hc.card.race == CardDB.Race.PET) // 检查是否为野兽
+					if (hc.card.type == CardDB.cardtype.MOB)
 					{
 						hc.addattack += 1;
 					}
@@ -41,7 +38,7 @@ namespace HREngine.Bots
 				// 增强牌库中的所有随从
 				foreach (CardDB.Card card in p.ownDeck)
 				{
-					if (card.type == CardDB.cardtype.MOB && (CardDB.Race)card.race == CardDB.Race.PET) // 检查是否为野兽
+					if (card.type == CardDB.cardtype.MOB)
 					{
 						card.Attack += 1; // 增加攻击力
 					}

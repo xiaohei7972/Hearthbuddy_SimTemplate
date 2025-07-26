@@ -11,7 +11,14 @@ namespace HREngine.Bots
 	//<b>嘲讽</b>受伤时拥有+3攻击力。
 	class Sim_TUTR_EX1_390 : SimTemplate
 	{
-		
+		public override void onEnrageStart(Playfield p, Minion m)
+        {
+            p.minionGetBuffed(m, 3, 0);
+        }
+        public override void onEnrageStop(Playfield p, Minion m)
+        {
+            p.minionGetBuffed(m, -3, 0);
+        }
 		
 	}
 }

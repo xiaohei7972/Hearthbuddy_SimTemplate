@@ -11,7 +11,12 @@ namespace HREngine.Bots
 	//<b>突袭</b>。<b>亡语：</b>获取来自更早时间线的三张不同圣契牌！
 	class Sim_GDB_141 : SimTemplate
 	{
-		
+        public override void onDeathrattle(Playfield p, Minion m)
+        {
+			p.drawACard(CardDB.cardIDEnum.BT_011, m.own, true);
+			p.drawACard(CardDB.cardIDEnum.BT_024, m.own, true);
+			p.drawACard(CardDB.cardIDEnum.BT_025, m.own, true);
+        }
 		
 	}
 }

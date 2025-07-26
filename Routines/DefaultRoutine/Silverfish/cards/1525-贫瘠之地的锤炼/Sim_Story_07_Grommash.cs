@@ -11,7 +11,15 @@ namespace HREngine.Bots
 	//<b>冲锋</b>受伤时拥有+6攻击力。<b>亡语：</b><b>休眠</b>4回合。
 	class Sim_Story_07_Grommash : SimTemplate
 	{
-		
+		public override void onEnrageStart(Playfield p, Minion m)
+        {
+            p.minionGetBuffed(m, 6, 0);
+        }
+
+        public override void onEnrageStop(Playfield p, Minion m)
+        {
+            p.minionGetBuffed(m, -6, 0);
+        }
 		
 	}
 }

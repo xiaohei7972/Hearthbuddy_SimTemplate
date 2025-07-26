@@ -11,7 +11,15 @@ namespace HREngine.Bots
 	//<b>复生</b>受伤时拥有+2攻击力。
 	class Sim_ULD_185 : SimTemplate
 	{
-		
+        public override void onEnrageStart(Playfield p, Minion m)
+        {
+            p.minionGetBuffed(m, 2, 0);
+        }
+
+        public override void onEnrageStop(Playfield p, Minion m)
+        {
+            p.minionGetBuffed(m, -2, 0);
+        }
 		
 	}
 }

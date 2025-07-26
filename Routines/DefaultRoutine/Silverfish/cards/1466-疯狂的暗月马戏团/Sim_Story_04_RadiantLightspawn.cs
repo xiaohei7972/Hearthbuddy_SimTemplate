@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//<b>嘲讽，战吼：</b>在本局对战中，你的圣契的法力值消耗减少（2）点。
 	class Sim_Story_04_RadiantLightspawn : SimTemplate
 	{
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			p.libram += 2;
+		}
 		
 	}
 }

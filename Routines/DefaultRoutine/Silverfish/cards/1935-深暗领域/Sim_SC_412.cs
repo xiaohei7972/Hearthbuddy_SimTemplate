@@ -11,7 +11,42 @@ namespace HREngine.Bots
 	//你的其他随从拥有+1攻击力。<i>（如果你在本局对战中发射过<b>星舰</b>，则会变形。）</i>
 	class Sim_SC_412 : SimTemplate
 	{
-		
-		
+		public override void onAuraStarts(Playfield p, Minion own)
+		{
+			if (own.own)
+			{
+				foreach (Minion m in p.ownMinions)
+				{
+					p.minionGetBuffed(m, 1, 0);
+				}
+			}
+			else
+			{
+				foreach (Minion m in p.enemyMinions)
+				{
+					p.minionGetBuffed(m, 1, 0);
+				}
+			}
+
+		}
+
+		public override void onAuraEnds(Playfield p, Minion own)
+		{
+			if (own.own)
+			{
+				foreach (Minion m in p.ownMinions)
+				{
+					p.minionGetBuffed(m, -1, 0);
+				}
+			}
+			else
+			{
+				foreach (Minion m in p.enemyMinions)
+				{
+					p.minionGetBuffed(m, -1, 0);
+				}
+			}
+		}
+
 	}
 }

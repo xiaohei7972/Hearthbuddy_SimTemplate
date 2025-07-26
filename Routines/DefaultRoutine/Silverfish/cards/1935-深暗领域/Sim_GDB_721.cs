@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//<b>圣盾</b>。<b>战吼：</b>在本局对战中，你的圣契的法力值消耗减少（1）点。
 	class Sim_GDB_721 : SimTemplate
 	{
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			p.libram += 1;
+		}
 		
 	}
 }

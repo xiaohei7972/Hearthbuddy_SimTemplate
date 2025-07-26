@@ -4,22 +4,20 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_TRL_406 : SimTemplate //* 嗜睡的神枪手 Dozing Marksman
-//Has +4 Attack while damaged.
-//受伤时具有+4攻击力。 
-	{
-
-
-
+    //* 嗜睡的神枪手 Dozing Marksman
+    //Has +4 Attack while damaged.
+    //受伤时具有+4攻击力。 
+    class Sim_TRL_406 : SimTemplate
+    {
         public override void onEnrageStart(Playfield p, Minion m)
         {
-            m.Angr += 4;
+            p.minionGetBuffed(m, 4, 0);
         }
 
         public override void onEnrageStop(Playfield p, Minion m)
         {
-            m.Angr -= 4;
+            p.minionGetBuffed(m, -4, 0);
         }
 
-	}
+    }
 }

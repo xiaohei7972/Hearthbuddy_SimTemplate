@@ -11,7 +11,17 @@ namespace HREngine.Bots
 	//受伤时无法攻击。
 	class Sim_GIL_156 : SimTemplate
 	{
-		
+		public override void onEnrageStart(Playfield p, Minion m)
+		{
+			m.cantAttack = true;
+			m.updateReadyness();
+        }
+
+		public override void onEnrageStop(Playfield p, Minion m)
+		{
+			m.cantAttack = false;
+			m.updateReadyness();
+		}
 		
 	}
 }

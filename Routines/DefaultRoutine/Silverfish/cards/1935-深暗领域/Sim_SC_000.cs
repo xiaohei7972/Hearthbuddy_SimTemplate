@@ -11,7 +11,17 @@ namespace HREngine.Bots
 	//获取一张1/1的跳虫。<b>亡语：</b>在本回合中，你的异虫随从拥有<b>突袭</b>。
 	class Sim_SC_000 : SimTemplate
 	{
-		
+		public override void useLocation(Playfield p, Minion triggerMinion, Minion target)
+		{
+			p.drawACard(CardDB.cardIDEnum.SC_010, triggerMinion.own, true);
+		}
+
+        public override PlayReq[] GetPlayReqs()
+        {
+			return new PlayReq[]{
+				new PlayReq(CardDB.ErrorType2.REQ_MINION_CAP,1), // 需要一个空位
+			};
+        }
 		
 	}
 }

@@ -4,12 +4,13 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_VAN_CS2_122 : SimTemplate //* 团队领袖 Raid Leader
-	{
-		//Your other minions have +1 Attack.
-		//你的其他随从获得+1攻击力。
+    //* 团队领袖 Raid Leader
+    //Your other minions have +1 Attack.
+    //你的其他随从获得+1攻击力。
+    class Sim_VAN_CS2_122 : SimTemplate
+    {
         public override void onAuraStarts(Playfield p, Minion own)
-		{
+        {
             if (own.own)
             {
                 p.anzOwnRaidleader++;
@@ -26,8 +27,8 @@ namespace HREngine.Bots
                     if (own.entitiyID != m.entitiyID) p.minionGetBuffed(m, 1, 0);
                 }
             }
-            
-		}
+
+        }
 
         public override void onAuraEnds(Playfield p, Minion own)
         {
@@ -49,5 +50,5 @@ namespace HREngine.Bots
             }
         }
 
-	}
+    }
 }
