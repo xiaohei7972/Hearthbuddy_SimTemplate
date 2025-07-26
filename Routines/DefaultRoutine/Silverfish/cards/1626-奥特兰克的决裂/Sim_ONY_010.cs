@@ -19,7 +19,14 @@ namespace HREngine.Bots
 				int damage = ownplay ? p.getSpellDamageDamage(2) : p.getEnemySpellDamageDamage(2);
 				p.minionGetDamageOrHeal(target, damage);
 				if (ownplay && damage == target.Hp)
+				{
+					p.evaluatePenality -= 30;
 					p.drawACard(CardDB.cardIDEnum.ONY_010, ownplay, true);
+				}
+				else
+				{
+					p.evaluatePenality += 10;
+				}
 
 			}
 		}
@@ -28,7 +35,7 @@ namespace HREngine.Bots
 		{
 			return new PlayReq[]{
 				new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY), // 需要一个目标
-				// new PlayReq(CardDB.ErrorType2.REQ_ENEMY_TARGET), // 只能是敌方
+				new PlayReq(CardDB.ErrorType2.REQ_ENEMY_TARGET), // 只能是敌方
 			};
         }
 

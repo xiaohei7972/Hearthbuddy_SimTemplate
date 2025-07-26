@@ -13,7 +13,7 @@ namespace HREngine.Bots
 	{
 		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
-			if (p.playactions.Count < 2) p.evaluatePenality -= 30;
+			if (p.playactions.Count < 3) p.evaluatePenality -= 30;
 			p.ownQuest = new Questmanager.QuestItem() { Id = CardDB.cardIDEnum.TLC_229, questProgress = 0, maxProgress = 6 };
 			Questmanager.Instance.ownQuest = new Questmanager.QuestItem() { Id = CardDB.cardIDEnum.TLC_229, questProgress = 0, maxProgress = 6 };
 		}

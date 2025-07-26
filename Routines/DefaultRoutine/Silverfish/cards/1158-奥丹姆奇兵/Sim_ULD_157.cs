@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//<b>战吼：</b>如果你控制一个<b>任务</b>，抽一张牌。
 	class Sim_ULD_157 : SimTemplate
 	{
-		
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
+			if (p.ownQuest != null && own.own)
+			{
+				p.drawACard(CardDB.cardIDEnum.None, own.own);
+			}
+        }
 		
 	}
 }

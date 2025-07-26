@@ -11,7 +11,12 @@ namespace HREngine.Bots
 	//<b>任务线：</b>使用法力值消耗为（2），（3），（4）的牌各一张。<b>奖励：</b>从你的牌库中<b>发现</b>一张牌。
 	class Sim_SW_433 : SimTemplate
 	{
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
+            if (p.playactions.Count < 3) p.evaluatePenality -= 30;
+            Questmanager.Instance.ownQuest = new Questmanager.QuestItem() { Id = CardDB.cardIDEnum.SW_433, questProgress = 0, maxProgress = 3 };
+            p.ownQuest = new Questmanager.QuestItem() { Id = CardDB.cardIDEnum.SW_433, questProgress = 0, maxProgress = 3 };
+        }
 		
 	}
 }
