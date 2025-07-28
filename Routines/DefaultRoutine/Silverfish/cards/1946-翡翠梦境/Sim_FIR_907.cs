@@ -15,20 +15,23 @@ namespace HREngine.Bots
 		{
 			if (p.mana < p.ownMaxMana)
 				p.evaluatePenality -= 30;
-			//根据地标耐久判断提升数
-			int enhance = triggerMinion.maxHp - triggerMinion.Hp;
-			// 根据数随机获取一张随从
-			CardDB.Card kid = p.getRandomCardForManaMinion(1 + enhance);
-			//召唤一个随从
-			p.callKid(kid, p.ownMinions.Count, true);
-			//获取护甲
-			p.minionGetArmor(p.ownHero, 1 + enhance);
-			//抽牌
-			for (int i = 0; i < 1 + enhance; i++)
+			if (triggerMinion.handcard.card.CooldownTurn == 0)
 			{
-				p.drawACard(CardDB.cardNameEN.unknown, true);
+				//根据地标耐久判断提升数
+				int enhance = triggerMinion.maxHp - triggerMinion.Hp;
+				// 根据数随机获取一张随从
+				CardDB.Card kid = p.getRandomCardForManaMinion(1 + enhance);
+				//召唤一个随从
+				p.callKid(kid, p.ownMinions.Count, true);
+				//获取护甲
+				p.minionGetArmor(p.ownHero, 1 + enhance);
+				//抽牌
+				for (int i = 0; i < 1 + enhance; i++)
+				{
+					p.drawACard(CardDB.cardNameEN.unknown, true);
+				}
+				p.mana = Math.Min(p.ownMaxMana, p.mana + 1 + enhance);
 			}
-			p.mana = Math.Min(p.ownMaxMana, p.mana + 1 + enhance);
 		}
 
 		// public override PlayReq[] GetUseAbilityReqs()

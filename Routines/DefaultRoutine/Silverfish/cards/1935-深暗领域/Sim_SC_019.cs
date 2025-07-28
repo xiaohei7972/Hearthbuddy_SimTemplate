@@ -14,7 +14,8 @@ namespace HREngine.Bots
 		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.SC_019);
 		public override void useLocation(Playfield p, Minion triggerMinion, Minion target)
 		{
-			p.allCharsOfASideGetDamage(!triggerMinion.own, 1);
+			if (triggerMinion.handcard.card.CooldownTurn == 0)
+				p.allCharsOfASideGetDamage(!triggerMinion.own, 1);
 		}
 
 		public override void onDeathrattle(Playfield p, Minion m)
@@ -23,12 +24,12 @@ namespace HREngine.Bots
 			p.callKid(kid, pos, m.own);
 		}
 
-        public override PlayReq[] GetPlayReqs()
-        {
+		public override PlayReq[] GetPlayReqs()
+		{
 			return new PlayReq[]{
 				new PlayReq(CardDB.ErrorType2.REQ_MINION_CAP,1), // 需要一个空位
 			};
-        }
-		
+		}
+
 	}
 }

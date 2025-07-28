@@ -13,25 +13,28 @@ namespace HREngine.Bots
 	{
         public override void useLocation(Playfield p, Minion triggerMinion, Minion target)
         {
-            // 检查目标是否为有效的敌方随从
-            if (target != null && !target.own)
+            if (triggerMinion.handcard.card.CooldownTurn == 0)
             {
-                // 复制目标随从的卡牌信息
-                CardDB.Card copyCard = target.handcard.card;
-
-                // 创建该随从的1/1复制
-                Handmanager.Handcard newHandCard = new Handmanager.Handcard
+                // 检查目标是否为有效的敌方随从
+                if (target != null && !target.own)
                 {
-                    card = copyCard,
-                    manacost = 1 // 设置复制随从的法力值消耗为1
-                };
+                    // 复制目标随从的卡牌信息
+                    CardDB.Card copyCard = target.handcard.card;
 
-                // 创建并设置复制随从的属性
-                newHandCard.card.Attack = 1;
-                newHandCard.card.Health = 1;
+                    // 创建该随从的1/1复制
+                    Handmanager.Handcard newHandCard = new Handmanager.Handcard
+                    {
+                        card = copyCard,
+                        manacost = 1 // 设置复制随从的法力值消耗为1
+                    };
 
-                // 将这张复制卡牌加入到己方手牌
-                p.drawACard(newHandCard.card.cardIDenum, true, true);
+                    // 创建并设置复制随从的属性
+                    newHandCard.card.Attack = 1;
+                    newHandCard.card.Health = 1;
+
+                    // 将这张复制卡牌加入到己方手牌
+                    p.drawACard(newHandCard.card.cardIDenum, true, true);
+                }
             }
         }
 

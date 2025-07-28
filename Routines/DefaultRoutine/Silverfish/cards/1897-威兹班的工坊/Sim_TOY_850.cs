@@ -13,9 +13,12 @@ namespace HREngine.Bots
 	{
         public override void useLocation(Playfield p, Minion triggerMinion, Minion target)
         {
-            // 在本回合中增加法术伤害
-            p.spellpower += 1;
-            p.tempSpellPower += 1;
+            if (triggerMinion.handcard.card.CooldownTurn == 0)
+            {
+                // 在本回合中增加法术伤害
+                p.spellpower += 1;
+                p.tempSpellPower += 1;
+            }
         }
 
         public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)

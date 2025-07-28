@@ -11,13 +11,15 @@ namespace HREngine.Bots
 	//使一个友方随从获得+@攻击力和<b>突袭</b>。变回随从。
 	class Sim_VAC_923t : SimTemplate
 	{
-
 		public override void useLocation(Playfield p, Minion triggerMinion, Minion target)
 		{
-			if (target != null)
+			if (triggerMinion.handcard.card.CooldownTurn == 0)
 			{
-				p.minionGetBuffed(target, 3, 0);
-				target.rush = 1;
+				if (target != null)
+				{
+					p.minionGetBuffed(target, 3, 0);
+					p.minionGetRush(target);
+				}
 			}
 
 		}
@@ -31,5 +33,6 @@ namespace HREngine.Bots
 				new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET), // 目标必须是一个随从
 			};
 		}
+		
 	}
 }

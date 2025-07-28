@@ -14,15 +14,16 @@ namespace HREngine.Bots
 		
 		public override void useLocation(Playfield p, Minion triggerMinion, Minion target)
         {
-            // 检查目标是否为有效随从
-            if (target != null)
+            if (triggerMinion.handcard.card.CooldownTurn == 0)
             {
-                // 将目标随从的攻击力设置为3
-                target.Angr = 3;
-                
-                // 将目标随从的生命值设置为3，并且最大生命值也设置为3
-                target.Hp = 3;
-                target.maxHp = 3;
+                // 检查目标是否为有效随从
+                if (target != null)
+                {
+                    // 将目标随从的攻击力设置为3
+                    p.minionSetAngrToX(target, 3);
+                    // 将目标随从的生命值设置为3，并且最大生命值也设置为3
+                    p.minionSetLifetoX(target, 3);
+                }
             }
         }
 

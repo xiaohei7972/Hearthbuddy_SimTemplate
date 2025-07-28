@@ -13,21 +13,24 @@ namespace HREngine.Bots
 	{
         public override void useLocation(Playfield p, Minion triggerMinion, Minion target)
         {
-            // 计算在本回合内已经使用的其他卡牌数量
-            int cardsPlayedThisTurn = triggerMinion.playedThisTurn ? p.cardsPlayedThisTurn - 1 : p.cardsPlayedThisTurn;
+            if (triggerMinion.handcard.card.CooldownTurn == 0)
+            {
+                // 计算在本回合内已经使用的其他卡牌数量
+                int cardsPlayedThisTurn = triggerMinion.playedThisTurn ? p.cardsPlayedThisTurn - 1 : p.cardsPlayedThisTurn;
 
-            // 幽灵的基础属性
-            int attack = 1 + cardsPlayedThisTurn; // 基础攻击力加上每使用一张卡牌+1攻击
-            int health = 1 + cardsPlayedThisTurn; // 基础生命值加上每使用一张卡牌+1生命值
+                // 幽灵的基础属性
+                int attack = 1 + cardsPlayedThisTurn; // 基础攻击力加上每使用一张卡牌+1攻击
+                int health = 1 + cardsPlayedThisTurn; // 基础生命值加上每使用一张卡牌+1生命值
 
-            // 创建并召唤幽灵随从
-            p.callKid(CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.REV_750t2), p.ownMinions.Count, true, false); // 使用一个虚拟的卡牌ID（如GVG_093）来代表幽灵，确保更改成实际的ID。
-            Minion ghost = p.ownMinions[p.ownMinions.Count - 1]; // 获取最后一个召唤的随从（即幽灵）
+                // 创建并召唤幽灵随从
+                p.callKid(CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.REV_750t2), p.ownMinions.Count, true, false); // 使用一个虚拟的卡牌ID（如GVG_093）来代表幽灵，确保更改成实际的ID。
+                Minion ghost = p.ownMinions[p.ownMinions.Count - 1]; // 获取最后一个召唤的随从（即幽灵）
 
-            // 设置幽灵的属性
-            ghost.Angr = attack;
-            ghost.Hp = health;
-            ghost.maxHp = health;
+                // 设置幽灵的属性
+                ghost.Angr = attack;
+                ghost.Hp = health;
+                ghost.maxHp = health;
+            }
         }
     }
 }

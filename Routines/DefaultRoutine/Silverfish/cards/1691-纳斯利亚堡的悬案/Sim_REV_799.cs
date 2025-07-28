@@ -13,53 +13,57 @@ namespace HREngine.Bots
 	{
 		public override void useLocation(Playfield p, Minion triggerMinion, Minion target)
         {
-            // 检查目标是否为有效随从
-            if (target != null)
+            if (triggerMinion.handcard.card.CooldownTurn == 0)
             {
-                // 基础增加 +1/+1
-                int buffAmount = 1;
-
-                // 计算场上己方小鬼的数量
-                int impCount = 0;
-                foreach (Minion m in p.ownMinions)
+                // 检查目标是否为有效随从
+                if (target != null)
                 {
-                    if (m.name == CardDB.cardNameEN.imp ||
-                        m.name == CardDB.cardNameEN.bloodimp ||
-                        m.name == CardDB.cardNameEN.worthlessimp ||
-                        m.name == CardDB.cardNameEN.flameimp ||
-                        m.name == CardDB.cardNameEN.impgangboss ||
-                        m.name == CardDB.cardNameEN.malchezaarsimp ||
-                        m.name == CardDB.cardNameEN.ickyimp ||
-                        m.name == CardDB.cardNameEN.netherimp ||
-                        m.name == CardDB.cardNameEN.doublingimp ||
-                        m.name == CardDB.cardNameEN.jumboimp ||
-                        m.name == CardDB.cardNameEN.deviousimp ||
-                        m.name == CardDB.cardNameEN.draconicimp ||
-                        m.name == CardDB.cardNameEN.impcaster ||
-                        m.name == CardDB.cardNameEN.imprisonedscrapimp ||
-                        m.name == CardDB.cardNameEN.deskimp ||
-                        m.name == CardDB.cardNameEN.fieryimp ||
-                        m.name == CardDB.cardNameEN.impfamiliar ||
-                        m.name == CardDB.cardNameEN.sulkingimp ||
-                        m.name == CardDB.cardNameEN.bloodboundimp ||
-                        m.name == CardDB.cardNameEN.backpiggyimp ||
-                        m.name == CardDB.cardNameEN.dreadimp ||
-                        m.name == CardDB.cardNameEN.piggybackimp ||
-                        m.name == CardDB.cardNameEN.mischievousimp ||
-                        m.name == CardDB.cardNameEN.baritoneimp ||
-                        m.name == CardDB.cardNameEN.orchestralimp ||
-                        m.name == CardDB.cardNameEN.fiddlefireimp ||
-                        m.name == CardDB.cardNameEN.felblazeimp ||
-                        m.name == CardDB.cardNameEN.sacrificialimp ||
-                        m.name == CardDB.cardNameEN.monstrousimp
-                        ) // 检查小鬼的卡牌名称
-                    {
-                        impCount++;
-                    }
-                }
+                    // 基础增加 +1/+1
+                    int buffAmount = 1;
 
-                // 为目标随从增加 (1 + impCount) 点攻击力和生命值
-                p.minionGetBuffed(target, buffAmount + impCount, buffAmount + impCount);
+                    // 计算场上己方小鬼的数量
+                    int impCount = 0;
+                    foreach (Minion m in p.ownMinions)
+                    {
+                        if (m.name == CardDB.cardNameEN.imp ||
+                            m.name == CardDB.cardNameEN.bloodimp ||
+                            m.name == CardDB.cardNameEN.worthlessimp ||
+                            m.name == CardDB.cardNameEN.flameimp ||
+                            m.name == CardDB.cardNameEN.impgangboss ||
+                            m.name == CardDB.cardNameEN.malchezaarsimp ||
+                            m.name == CardDB.cardNameEN.ickyimp ||
+                            m.name == CardDB.cardNameEN.netherimp ||
+                            m.name == CardDB.cardNameEN.doublingimp ||
+                            m.name == CardDB.cardNameEN.jumboimp ||
+                            m.name == CardDB.cardNameEN.deviousimp ||
+                            m.name == CardDB.cardNameEN.draconicimp ||
+                            m.name == CardDB.cardNameEN.impcaster ||
+                            m.name == CardDB.cardNameEN.imprisonedscrapimp ||
+                            m.name == CardDB.cardNameEN.deskimp ||
+                            m.name == CardDB.cardNameEN.fieryimp ||
+                            m.name == CardDB.cardNameEN.impfamiliar ||
+                            m.name == CardDB.cardNameEN.sulkingimp ||
+                            m.name == CardDB.cardNameEN.bloodboundimp ||
+                            m.name == CardDB.cardNameEN.backpiggyimp ||
+                            m.name == CardDB.cardNameEN.dreadimp ||
+                            m.name == CardDB.cardNameEN.piggybackimp ||
+                            m.name == CardDB.cardNameEN.mischievousimp ||
+                            m.name == CardDB.cardNameEN.baritoneimp ||
+                            m.name == CardDB.cardNameEN.orchestralimp ||
+                            m.name == CardDB.cardNameEN.fiddlefireimp ||
+                            m.name == CardDB.cardNameEN.felblazeimp ||
+                            m.name == CardDB.cardNameEN.sacrificialimp ||
+                            m.name == CardDB.cardNameEN.monstrousimp
+                            ) // 检查小鬼的卡牌名称
+                        {
+                            impCount++;
+                        }
+                    }
+
+
+                    // 为目标随从增加 (1 + impCount) 点攻击力和生命值
+                    p.minionGetBuffed(target, buffAmount + impCount, buffAmount + impCount);
+                }
             }
         }
 

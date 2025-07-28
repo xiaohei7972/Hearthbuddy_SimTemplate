@@ -12,6 +12,18 @@ namespace HREngine.Bots
 	class Sim_TLC_433t2 : SimTemplate
 	{
 		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.TLC_433t);
+          public override void useLocation(Playfield p, Minion triggerMinion, Minion target)
+        {
+            if (triggerMinion.handcard.card.CooldownTurn == 0)
+            {
+                if (target != null)
+                {
+                    // 对目标随从造成1点伤害
+                    p.minionGetDamageOrHeal(target, 4);
+                }
+            }
+        }
+
 		public override void onDeathrattle(Playfield p, Minion m)
 		{
 			p.callKid(kid, m.zonepos - 1, m.own);

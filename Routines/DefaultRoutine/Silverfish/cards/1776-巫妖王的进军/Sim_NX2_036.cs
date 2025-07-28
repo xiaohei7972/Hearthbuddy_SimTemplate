@@ -14,15 +14,18 @@ namespace HREngine.Bots
 
         public override void useLocation(Playfield p, Minion triggerMinion, Minion target)
         {
-            // 检查目标是否为有效随从
-            if (target != null && target.own)
+            if (triggerMinion.handcard.card.CooldownTurn == 0)
             {
-                // 消灭目标友方随从
-                p.minionGetDestroyed(target);
+                // 检查目标是否为有效随从
+                if (target != null && target.own)
+                {
+                    // 消灭目标友方随从
+                    p.minionGetDestroyed(target);
 
-                // 召唤一个 4/5 的亡灵随从并赋予突袭
-                int position = p.ownMinions.Count; // 召唤的位置在己方随从的最后
-                p.callKid(CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.NX2_036t), position, triggerMinion.own); // 使用一个假设的卡牌ID，需要替换为实际亡灵随从的ID
+                    // 召唤一个 4/5 的亡灵随从并赋予突袭
+                    int position = p.ownMinions.Count; // 召唤的位置在己方随从的最后
+                    p.callKid(CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.NX2_036t), position, triggerMinion.own); // 使用一个假设的卡牌ID，需要替换为实际亡灵随从的ID
+                }
             }
         }
 

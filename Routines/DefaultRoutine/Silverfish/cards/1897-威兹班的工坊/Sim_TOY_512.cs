@@ -12,10 +12,11 @@ namespace HREngine.Bots
 	class Sim_TOY_512 : SimTemplate
 	{
 
-        public override void useLocation(Playfield p, Minion triggerMinion, Minion target)
-        {
-            // 激活效果，标记本回合中下一个召唤的随从将成为5/5
-            p.nextMinionBecomesFiveFive = true;
-        }
-    }
+		public override void useLocation(Playfield p, Minion triggerMinion, Minion target)
+		{
+			if (triggerMinion.handcard.card.CooldownTurn == 0)
+				// 激活效果，标记本回合中下一个召唤的随从将成为5/5
+				p.nextMinionBecomesFiveFive = true;
+		}
+	}
 }

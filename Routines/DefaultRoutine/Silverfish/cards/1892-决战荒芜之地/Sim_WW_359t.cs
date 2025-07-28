@@ -17,10 +17,14 @@ namespace HREngine.Bots
 				p.evaluatePenality -= 200;
 			// 检查目标是否为有效的敌方非休眠随从
 			// if (target != null && !target.own && target.dormant == 0 && (CardDB.cardtype)target.handcard.card.type == CardDB.cardtype.MOB)
-			if (target != null)
+			if (triggerMinion.handcard.card.CooldownTurn == 0)
 			{
-				target.dormant += 3;
+				if (target != null)
+				{
+					target.dormant += 3;
+				}
 			}
+			
 		}
 
 		public override PlayReq[] GetUseAbilityReqs()

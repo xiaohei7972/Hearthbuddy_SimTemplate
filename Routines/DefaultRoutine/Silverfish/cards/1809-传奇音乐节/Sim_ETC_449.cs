@@ -11,19 +11,21 @@ namespace HREngine.Bots
 	//为所有友方角色恢复#3点生命值。
 	class Sim_ETC_449 : SimTemplate
 	{
-
         public override void useLocation(Playfield p, Minion triggerMinion, Minion target)
         {
-            int healAmount = 3; // 恢复的生命值数量
-
-            // 为所有己方随从恢复生命值
-            foreach (Minion m in p.ownMinions)
+            if (triggerMinion.handcard.card.CooldownTurn == 0)
             {
-                p.minionGetDamageOrHeal(m, -healAmount); // 恢复生命值用负数表示
-            }
+                int healAmount = 3; // 恢复的生命值数量
 
-            // 为己方英雄恢复生命值
-            p.minionGetDamageOrHeal(p.ownHero, -healAmount);
+                // 为所有己方随从恢复生命值
+                foreach (Minion m in p.ownMinions)
+                {
+                    p.minionGetDamageOrHeal(m, -healAmount); // 恢复生命值用负数表示
+                }
+
+                // 为己方英雄恢复生命值
+                p.minionGetDamageOrHeal(p.ownHero, -healAmount);
+            }
         }
     }
 }

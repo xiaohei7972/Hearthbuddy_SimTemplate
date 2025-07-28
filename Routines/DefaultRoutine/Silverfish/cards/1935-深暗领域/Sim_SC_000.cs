@@ -13,15 +13,16 @@ namespace HREngine.Bots
 	{
 		public override void useLocation(Playfield p, Minion triggerMinion, Minion target)
 		{
-			p.drawACard(CardDB.cardIDEnum.SC_010, triggerMinion.own, true);
+			if (triggerMinion.handcard.card.CooldownTurn == 0)
+				p.drawACard(CardDB.cardIDEnum.SC_010, triggerMinion.own, true);
 		}
 
-        public override PlayReq[] GetPlayReqs()
-        {
+		public override PlayReq[] GetPlayReqs()
+		{
 			return new PlayReq[]{
 				new PlayReq(CardDB.ErrorType2.REQ_MINION_CAP,1), // 需要一个空位
 			};
-        }
-		
+		}
+
 	}
 }

@@ -4,26 +4,29 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//地标 猎人 费用：2
-	//Castle Kennels
-	//城堡狗舍
-	//[x]Give a friendly minion +2 Attack. If it's a Beast, give it <b>Rush</b>.
-	//使一个友方随从获得+2攻击力。如果是野兽，还会使其获得<b>突袭</b>。
-	class Sim_REV_362 : SimTemplate
-	{
+    //地标 猎人 费用：2
+    //Castle Kennels
+    //城堡狗舍
+    //[x]Give a friendly minion +2 Attack. If it's a Beast, give it <b>Rush</b>.
+    //使一个友方随从获得+2攻击力。如果是野兽，还会使其获得<b>突袭</b>。
+    class Sim_REV_362 : SimTemplate
+    {
 
         public override void useLocation(Playfield p, Minion triggerMinion, Minion target)
         {
-            // 检查目标是否为有效随从
-            if (target != null)
+            if (triggerMinion.handcard.card.CooldownTurn == 0)
             {
-                // 给目标随从增加 +2 攻击力
-                p.minionGetBuffed(target, 2, 0);
-
-                // 如果目标是野兽，则赋予其突袭
-                if (target.handcard.card.race == CardDB.Race.PET)
+                // 检查目标是否为有效随从
+                if (target != null)
                 {
-                    target.rush = 1;
+                    // 给目标随从增加 +2 攻击力
+                    p.minionGetBuffed(target, 2, 0);
+
+                    // 如果目标是野兽，则赋予其突袭
+                    if (target.handcard.card.race == CardDB.Race.PET)
+                    {
+                        target.rush = 1;
+                    }
                 }
             }
         }
