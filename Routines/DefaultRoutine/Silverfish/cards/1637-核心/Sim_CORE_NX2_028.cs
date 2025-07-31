@@ -11,7 +11,14 @@ namespace HREngine.Bots
 	//在你的英雄攻击后，获得4点护甲值并抽一张牌。
 	class Sim_CORE_NX2_028 : SimTemplate
 	{
-		
-		
+		public override void onHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
+		{
+			if (triggerMinion.own == hero.own)
+			{
+				p.minionGetArmor(hero, 4);
+				p.drawACard(CardDB.cardIDEnum.None, triggerMinion.own);
+			}
+		}
+
 	}
 }

@@ -4,16 +4,32 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_TSC_085 : SimTemplate //* 携刃信使 Cutlass Courier
-//在你的英雄攻击后，抽一张海盗牌。
-//After your hero attacks, draw a Pirate.
+    //* 携刃信使 Cutlass Courier
+    //在你的英雄攻击后，抽一张海盗牌。
+    //After your hero attacks, draw a Pirate.
+    class Sim_TSC_085 : SimTemplate
     {
-
-        public override void onHeroattack(Playfield p, Minion own, Minion target)
+        public override void onHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
         {
-            p.drawACard(CardDB.cardIDEnum.CFM_637, own.own);
-            p.evaluatePenality -= p.mana * 2;
-        }
+            if (triggerMinion.own == hero.own)
+            {
+                if (triggerMinion.own)
+                {
+                    p.evaluatePenality -= p.mana * 2;
+                    foreach (var item in p.prozis.turnDeck)
+                    {
+                        CardDB.Card card = CardDB.Instance.getCardDataFromID(item.Key);
+                        if (card.type == CardDB.cardtype.MOB && card.race == CardDB.Race.PIRATE)
+                        {
+                            p.drawACard(item.Key, triggerMinion.own);
+                            break;
+                        }
 
+                    }
+
+                }
+            }
+
+        }
     }
 }

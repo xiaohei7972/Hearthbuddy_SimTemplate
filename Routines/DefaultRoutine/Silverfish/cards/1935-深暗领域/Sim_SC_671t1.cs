@@ -11,7 +11,14 @@ namespace HREngine.Bots
 	//在你的回合结束时，对敌方英雄造成8点伤害，并对敌方随从造成2点伤害。
 	class Sim_SC_671t1 : SimTemplate
 	{
-		
+        public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
+        {
+			if (triggerEffectMinion.own == turnEndOfOwner)
+			{
+				p.minionGetDamageOrHeal(triggerEffectMinion.own ? p.enemyHero : p.ownHero, 8);
+				p.allMinionOfASideGetDamage(!triggerEffectMinion.own, 2);
+			}
+        }
 		
 	}
 }

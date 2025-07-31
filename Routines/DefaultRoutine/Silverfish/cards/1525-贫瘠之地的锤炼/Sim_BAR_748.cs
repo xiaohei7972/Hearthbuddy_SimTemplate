@@ -11,7 +11,18 @@ namespace HREngine.Bots
 	//<b>战吼：</b><b>冻结</b>所有敌方随从。如果敌方随从已被<b>冻结</b>，则改为对其造成4点伤害。
 	class Sim_BAR_748 : SimTemplate
 	{
-		
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			List<Minion> minions = (own.own) ? p.enemyMinions : p.ownMinions;
+			foreach (Minion minion in minions)
+			{
+				if (minion.frozen)
+				{
+					p.minionGetDamageOrHeal(minion, 4);
+				}
+				p.minionGetFrozen(minion);
+			}
+		}
+
 	}
 }

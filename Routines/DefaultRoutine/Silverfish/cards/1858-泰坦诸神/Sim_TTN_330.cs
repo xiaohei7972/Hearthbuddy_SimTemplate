@@ -13,8 +13,7 @@ namespace HREngine.Bots
 	{
 		public override void onMinionAttack(Playfield p, Minion attacker, Minion target)
 		{
-			base.onMinionAttack(p, attacker, target);
-			if (target != null)
+			if (attacker.own && target != null)
 			{
 				if (target.handcard.card.type == CardDB.cardtype.MOB)
 				{
@@ -22,6 +21,7 @@ namespace HREngine.Bots
 				}
 			}
 		}
+
 		public override void onDeathrattle(Playfield p, Minion m)
 		{
 			base.onDeathrattle(p, m);

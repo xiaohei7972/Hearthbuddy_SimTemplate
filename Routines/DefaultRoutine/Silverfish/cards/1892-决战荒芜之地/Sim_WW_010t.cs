@@ -22,7 +22,7 @@ namespace HREngine.Bots
 		public override void onHeroattack(Playfield p, Minion own, Minion target)
 		{
 			// 检查己方英雄是否装备了“九蛙魔杖”
-			if (own.own && p.ownWeapon.card.cardIDenum == CardDB.cardIDEnum.TLC_478)
+			if (own.own && p.ownWeapon.card.cardIDenum == CardDB.cardIDEnum.WW_010t)
 			{
 				int pos = own.own ? p.ownMinions.Count : p.enemyMinions.Count;
 				p.callKid(kid, pos, own.own);

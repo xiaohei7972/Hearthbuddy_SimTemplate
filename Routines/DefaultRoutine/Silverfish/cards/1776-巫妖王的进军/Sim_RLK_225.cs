@@ -11,7 +11,15 @@ namespace HREngine.Bots
 	//<b>战吼：</b>感染所有敌方随从。当感染的随从死亡时，为你召唤一个2/2并具有<b>嘲讽</b>的僵尸。
 	class Sim_RLK_225 : SimTemplate
 	{
-		
-		
+		// CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.RLK_118t3);
+		// public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		// {
+		// 	List<Minion> minions = (own.own) ? p.enemyMinions : p.ownMinions;
+		// 	foreach (Minion minion in minions)
+		// 	{
+		// 		minion.deathrattle2 = kid;
+		// 	}
+		// }
+
 	}
 }

@@ -13,8 +13,37 @@ namespace HREngine.Bots
 	{
 		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
 		{
-            p.minionGetBuffed(own, 1, 1);
+			if (own.own)
+			{
+				// 增强战场上的所有己方随从
+				foreach (Minion minion in p.ownMinions)
+				{
+					if (minion.handcard.card.type == CardDB.cardtype.MOB && minion.handcard.card.battlecry && minion.entitiyID != own.entitiyID)
+						p.minionGetBuffed(minion, 1, 1);
+				}
+
+				// 增强手牌中的所有随从
+				foreach (Handmanager.Handcard hc in p.owncards)
+				{
+					if (hc.card.type == CardDB.cardtype.MOB && hc.card.battlecry) // 检查是否为随从卡牌
+					{
+						hc.addattack += 1;
+						hc.addHp += 1;
+						p.anzOwnExtraAngrHp += 2;
+					}
+				}
+
+				// 增强牌库中的所有随从
+				foreach (CardDB.Card card in p.ownDeck)
+				{
+					if (card.type == CardDB.cardtype.MOB && card.battlecry) // 检查是否为随从卡牌
+					{
+						card.Attack += 1; // 增加攻击力
+						card.Health += 1; // 增加生命值
+					}
+				}
+			}
 		}
-		
+
 	}
 }

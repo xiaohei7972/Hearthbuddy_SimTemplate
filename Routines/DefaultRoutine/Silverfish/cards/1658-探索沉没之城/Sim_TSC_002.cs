@@ -4,14 +4,16 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_TSC_002 : SimTemplate //* 刺豚拳手 Pufferfist
-                                    //在你的英雄攻击后，对所有敌人造成1点伤害。
-                                    //After your hero attacks, deal 1 damage to all enemies.
+    //* 刺豚拳手 Pufferfist
+    //在你的英雄攻击后，对所有敌人造成1点伤害。
+    //After your hero attacks, deal 1 damage to all enemies.
+    class Sim_TSC_002 : SimTemplate
     {
-
-        public override void onHeroattack(Playfield p, Minion own, Minion target)
+        public override void onHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
         {
-            p.allCharsOfASideGetDamage(!own.own, 1);
+            if (triggerMinion.own == hero.own)
+                p.allCharsOfASideGetDamage(!triggerMinion.own, 1);
+
         }
 
     }

@@ -17,7 +17,10 @@ namespace HREngine.Bots
 			{
 				p.minionGetBuffed(target, 2, 2);
 				if (!target.divineshild)
+				{
 					target.divineshild = true;
+					target.updateReadyness();
+				}
 			}
 		}
 

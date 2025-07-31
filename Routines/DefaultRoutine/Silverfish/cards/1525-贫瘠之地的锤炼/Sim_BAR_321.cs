@@ -11,7 +11,33 @@ namespace HREngine.Bots
 	//使你的武器获得+1攻击力和“你的英雄在攻击时<b>免疫</b>。”
 	class Sim_BAR_321 : SimTemplate
 	{
-		
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			if (ownplay)
+			{
+				if (p.ownWeapon.Durability >= 1)
+				{
+					p.ownWeapon.Angr++;
+					p.minionGetBuffed(p.ownHero, 1, 0);
+				}
+			}
+			else
+			{
+				if (p.enemyWeapon.Durability >= 1)
+				{
+					p.enemyWeapon.Angr++;
+					p.minionGetBuffed(p.enemyHero, 1, 0);
+				}
+			}
+		}
+
+
+		public override PlayReq[] GetPlayReqs()
+		{
+			return new PlayReq[] {
+				new PlayReq(CardDB.ErrorType2.REQ_WEAPON_EQUIPPED),
+			};
+		}
+
 	}
 }

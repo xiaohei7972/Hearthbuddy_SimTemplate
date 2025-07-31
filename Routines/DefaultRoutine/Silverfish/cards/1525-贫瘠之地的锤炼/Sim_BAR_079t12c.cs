@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//<b>战吼：</b><b>冻结</b>所有敌方随从。
 	class Sim_BAR_079t12c : SimTemplate
 	{
-		
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			List<Minion> minions = (own.own) ? p.enemyMinions : p.ownMinions;
+			foreach (Minion minion in minions)
+			{
+				p.minionGetFrozen(minion);
+			}
+		}
 	}
 }

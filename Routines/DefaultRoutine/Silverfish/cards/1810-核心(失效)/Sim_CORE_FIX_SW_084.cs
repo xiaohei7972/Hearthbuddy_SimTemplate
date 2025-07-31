@@ -13,7 +13,8 @@ namespace HREngine.Bots
 	{
 		public override void onMinionAttack(Playfield p, Minion attacker, Minion target)
 		{
-			p.minionGetDamageOrHeal(attacker.own ? p.ownHero : p.enemyHero, 2);
+			if (attacker.own)
+				p.minionGetDamageOrHeal(attacker.own ? p.ownHero : p.enemyHero, 2);
 		}
 
 	}

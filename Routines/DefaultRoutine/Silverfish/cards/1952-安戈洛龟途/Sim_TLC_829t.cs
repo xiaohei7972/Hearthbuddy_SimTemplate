@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Triton.Game.Mapping;
+using Triton.Game;
 
 namespace HREngine.Bots
 {
@@ -22,7 +24,7 @@ namespace HREngine.Bots
 
 			}
 		}
-		
+
 		public override PlayReq[] GetPlayReqs()
 		{
 			return new PlayReq[]{

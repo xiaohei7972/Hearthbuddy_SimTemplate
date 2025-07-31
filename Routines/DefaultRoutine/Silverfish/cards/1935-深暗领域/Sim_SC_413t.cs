@@ -11,7 +11,20 @@ namespace HREngine.Bots
 	//<b>战吼：</b>随机对一个敌方随从造成10点伤害。超过目标生命值的伤害会命中敌方英雄。
 	class Sim_SC_413t : SimTemplate
 	{
-		
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+
+			//默认找最高费的随从干掉
+			Minion minion = p.searchRandomMinion(own.own ? p.enemyMinions : p.ownMinions, searchmode.searchHighesCost);
+			if (minion != null)
+			{
+				p.minionGetDamageOrHeal(minion, 10);
+				if (minion.Hp < 0)
+				{
+					p.minionGetDamageOrHeal(own.own ? p.enemyHero : p.ownHero, minion.Hp);
+				}
+			}
+		}
+
 	}
 }

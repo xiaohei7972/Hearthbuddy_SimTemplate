@@ -11,7 +11,20 @@ namespace HREngine.Bots
 	//<b>战吼：</b>对所有敌人造成2点伤害。<i>再使用一张圣堂武士即可融合为执政官！</i>
 	class Sim_SC_765 : SimTemplate
 	{
-		
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.SC_756t);
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			p.allCharsOfASideGetDamage(!own.own, 2);
+		}
+		//需要改进下onCardIsGoingToBePlayed方法,不然不好对打出的卡牌继续处理
+		public override void onCardIsGoingToBePlayed(Playfield p, Handmanager.Handcard hc, bool wasOwnCard, Minion triggerEffectMinion)
+		{
+			if (triggerEffectMinion.own == wasOwnCard && (hc.card.cardIDenum == CardDB.cardIDEnum.SC_752 || hc.card.cardIDenum == CardDB.cardIDEnum.SC_765))
+			{
+				p.minionGetDestroyed(triggerEffectMinion);
+				p.callKid(kid, triggerEffectMinion.zonepos - 1, triggerEffectMinion.own);
+			}
+		}
+
 	}
 }

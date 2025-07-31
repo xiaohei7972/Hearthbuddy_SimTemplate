@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//<b>战吼：</b>抽一张牌，在本回合中其法力值消耗减少（1）点。<i>（我认得那张牌！）</i>@<b>战吼：</b>抽一张牌，在本回合中其法力值消耗减少（1）点。<i>（会抽到{5}！）</i>
 	class Sim_EDR_950 : SimTemplate
 	{
-		
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
+			p.drawACard(CardDB.cardIDEnum.None, own.own);
+        }
 		
 	}
 }

@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//<b>亡语：</b>对所有敌方随从造成等同于本随从攻击力的伤害。
 	class Sim_SC_019t : SimTemplate
 	{
-		
+        public override void onDeathrattle(Playfield p, Minion m)
+        {
+			p.allMinionOfASideGetDamage(!m.own, m.Angr);
+        }
 		
 	}
 }

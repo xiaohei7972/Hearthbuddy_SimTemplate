@@ -12,7 +12,6 @@ namespace HREngine.Bots
 	class Sim_RLK_828 : SimTemplate
 	{
 		CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EDR_416);
-		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EDR_416t);
 
 		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
@@ -33,6 +32,7 @@ namespace HREngine.Bots
 					{
 						hc.addattack += 1;
 						hc.addHp += 1;
+						p.anzOwnExtraAngrHp += 2;
 					}
 				}
 

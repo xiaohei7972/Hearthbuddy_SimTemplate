@@ -4,13 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_GVG_022 : SimTemplate //* 修补匠的磨刀油 Tinker's Sharpsword Oil
-//Give your weapon +3 Attack. <b>Combo:</b> Give a random friendly minion +3 Attack.
-//使你的武器获得+3攻击力。<b>连击：</b>随机使一个友方随从获得+3攻击力。 
+    //* 修补匠的磨刀油 Tinker's Sharpsword Oil
+    //Give your weapon +3 Attack. <b>Combo:</b> Give a random friendly minion +3 Attack.
+    //使你的武器获得+3攻击力。<b>连击：</b>随机使一个友方随从获得+3攻击力。 
+    class Sim_GVG_022 : SimTemplate
     {
-
-        
-
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
             if (ownplay)
@@ -22,7 +20,7 @@ namespace HREngine.Bots
                 }
                 if (p.cardsPlayedThisTurn >= 1 && p.ownMinions.Count >= 1)
                 {
-                    
+
                     var found = p.searchRandomMinion(p.ownMinions, searchmode.searchLowestAttack);
                     if (found != null)
                     {
@@ -39,7 +37,7 @@ namespace HREngine.Bots
                 }
                 if (p.cardsPlayedThisTurn >= 1 && p.enemyMinions.Count >= 1)
                 {
-                    
+
                     var found = p.searchRandomMinion(p.enemyMinions, searchmode.searchLowestAttack);
                     if (found != null)
                     {
@@ -48,8 +46,6 @@ namespace HREngine.Bots
                 }
             }
         }
-
-
 
         public override PlayReq[] GetPlayReqs()
         {

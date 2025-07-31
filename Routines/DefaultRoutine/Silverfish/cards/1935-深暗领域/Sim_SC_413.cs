@@ -11,7 +11,15 @@ namespace HREngine.Bots
 	//<b>战吼：</b>随机对一个敌方随从造成10点伤害。<i>（如果你在本局对战中发射过<b>星舰</b>，则会变形。）</i>
 	class Sim_SC_413 : SimTemplate
 	{
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			//默认找最高费的随从干掉
+			Minion minion = p.searchRandomMinion(own.own ? p.enemyMinions : p.ownMinions, searchmode.searchHighesCost);
+			if (minion != null)
+			{
+				p.minionGetDamageOrHeal(minion, 10);
+			}
+        }
 		
 	}
 }

@@ -11,7 +11,25 @@ namespace HREngine.Bots
 	//<b>亡语：</b>抽一张火焰法术牌。
 	class Sim_FIR_929 : SimTemplate
 	{
-		
-		
+		public override void onDeathrattle(Playfield p, Minion m)
+		{
+			if (m.own)
+			{
+				foreach (var item in p.prozis.turnDeck)
+				{
+					CardDB.Card card = CardDB.Instance.getCardDataFromID(item.Key);
+					if (card.SpellSchool == CardDB.SpellSchool.FIRE)
+					{
+						p.drawACard(item.Key, m.own);
+					}
+				}
+			}
+			else
+			{
+				p.drawACard(CardDB.cardIDEnum.None, m.own);
+			}
+
+		}
+
 	}
 }

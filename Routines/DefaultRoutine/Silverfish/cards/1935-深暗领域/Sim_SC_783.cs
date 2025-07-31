@@ -11,7 +11,11 @@ namespace HREngine.Bots
 	//<b>突袭</b>。<b>圣盾</b><b>战吼：</b>如果本牌的法力值消耗为（0）点，获得+2/+2。
 	class Sim_SC_783 : SimTemplate
 	{
-		
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			if (own.handcard.card.cost == 0)
+				p.minionGetBuffed(own, 2, 2);
+		}
+
 	}
 }
