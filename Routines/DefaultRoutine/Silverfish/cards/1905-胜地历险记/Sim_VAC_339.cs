@@ -18,23 +18,38 @@ namespace HREngine.Bots
             if (turnEndOfOwner == m.own)
             {
                 // int pos = (m.own) ? p.ownMinions.Count : p.enemyMinions.Count;
-                if (m.own ? p.ownMinions.Count < 7 : p.enemyMinions.Count < 7)
+                if (m.own)
                 {
-                    int Angr = m.Angr; // 获取当前随从的攻击力
-                    int Hp = m.Hp; // 获取当前随从的生命值
-                    p.callKid(kid, m.zonepos, m.own);
+                    if (p.ownMinions.Count < 7)
+                    {
+                        p.callKid(kid, m.zonepos, m.own);
 
-                    // 获取刚召唤的随从，并设置其攻击力和生命值
-                    Minion elemental = p.ownMinions[m.zonepos];
-                    elemental.maxHp = Hp;
-                    elemental.Hp = Hp;
-                    elemental.Angr = Angr;
-                    elemental.handcard.card.cost = Math.Min(10, (Hp + Angr) / 2);
-                    // 不打算使用这个方法,这个方法似乎是直接复制信息
-                    // elemental.setMinionToMinion(m); // 使用这个方法可以复制攻击力和生命值
+                        // 获取刚召唤的随从，并设置其攻击力和生命值
+                        Minion elemental = p.ownMinions[m.zonepos];
+                        elemental.handcard.card.cost = Math.Min(10, (m.Hp + m.Angr) / 2);
+                        p.minionSetAngrToX(elemental, m.Angr);
+                        p.minionSetLifetoX(elemental, m.Hp);
+                        // 不打算使用这个方法,这个方法似乎是直接复制信息
+                        // elemental.setMinionToMinion(m); // 使用这个方法可以复制攻击力和生命值
+
+                    }
+                    else
+                    {
+                        if (p.enemyMinions.Count < 7)
+                        {
+                            p.callKid(kid, m.zonepos, m.own);
+
+                            // 获取刚召唤的随从，并设置其攻击力和生命值
+                            Minion elemental = p.ownMinions[m.zonepos];
+                            elemental.handcard.card.cost = Math.Min(10, (m.Hp + m.Angr) / 2);
+                            p.minionSetAngrToX(elemental, m.Angr);
+                            p.minionSetLifetoX(elemental, m.Hp);
+                        }
+                    }
+
                 }
-
             }
         }
+
     }
 }
