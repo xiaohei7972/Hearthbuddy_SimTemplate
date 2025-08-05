@@ -11,7 +11,21 @@ namespace HREngine.Bots
 	//<b>法术伤害+1</b>，<b>战吼：</b>抽一张牌。
 	class Sim_CORE_EX1_284 : SimTemplate
 	{
-		
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
+            p.drawACard(CardDB.cardIDEnum.None,own.own);
+        }
+		public override void onAuraStarts(Playfield p, Minion m)
+		{
+			if (m.own) p.spellpower += m.spellpower;
+			else p.enemyspellpower += m.spellpower;
+		}
+
+        public override void onAuraEnds(Playfield p, Minion m)
+        {
+            if (m.own) p.spellpower -= m.spellpower;
+            else p.enemyspellpower -= m.spellpower;
+        }
 		
 	}
 }

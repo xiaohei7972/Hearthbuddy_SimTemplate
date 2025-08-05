@@ -11,7 +11,15 @@ namespace HREngine.Bots
 	//在你的回合结束时，对所有敌人造成$1点伤害<i>（受<b>法术伤害</b>加成影响）</i>。
 	class Sim_SCH_273 : SimTemplate
 	{
-		
-		
+		public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
+		{
+			if (triggerEffectMinion.own == turnEndOfOwner)
+			{
+				int damage = triggerEffectMinion.own ? 1 + p.spellpower : 1 + p.enemyspellpower;
+				p.allCharsOfASideGetDamage(!triggerEffectMinion.own, damage);
+				
+			}
+		}
+
 	}
 }

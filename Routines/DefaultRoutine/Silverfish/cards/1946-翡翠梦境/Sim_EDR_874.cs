@@ -11,7 +11,11 @@ namespace HREngine.Bots
 	//获取一张月火术和一张星火术，使其获得<b>法术伤害+1</b>。
 	class Sim_EDR_874 : SimTemplate
 	{
-		
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
+			p.drawACard(CardDB.cardIDEnum.CS2_008, ownplay, true);
+			p.drawACard(CardDB.cardIDEnum.EX1_173, ownplay, true);
+        }
 		
 	}
 }

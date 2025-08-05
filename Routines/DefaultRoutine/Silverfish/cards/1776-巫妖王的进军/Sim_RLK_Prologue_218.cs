@@ -11,7 +11,17 @@ namespace HREngine.Bots
 	//<b>法术伤害+2</b>
 	class Sim_RLK_Prologue_218 : SimTemplate
 	{
-		
+		public override void onAuraStarts(Playfield p, Minion m)
+		{
+			if (m.own) p.spellpower += m.spellpower;
+			else p.enemyspellpower += m.spellpower;
+		}
+
+        public override void onAuraEnds(Playfield p, Minion m)
+        {
+            if (m.own) p.spellpower -= m.spellpower;
+            else p.enemyspellpower -= m.spellpower;
+        }
 		
 	}
 }

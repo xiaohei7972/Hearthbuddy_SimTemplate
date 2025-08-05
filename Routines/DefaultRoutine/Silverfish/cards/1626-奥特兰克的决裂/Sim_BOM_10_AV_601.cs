@@ -11,7 +11,19 @@ namespace HREngine.Bots
 	//<b>潜行</b>。在你使用一张<b>亡语</b>随从牌后，变形成为它的2/2并具有<b>突袭</b>的复制。
 	class Sim_BOM_10_AV_601 : SimTemplate
 	{
-		
+		public override void onCardIsAfterToBePlayed(Playfield p, Minion playedMinion, bool wasOwnCard, Minion triggerEffectMinion)
+        {
+            if (triggerEffectMinion.own == wasOwnCard)
+            {
+                if (playedMinion.handcard.card.deathrattle)
+                {
+                    p.minionTransform(triggerEffectMinion, playedMinion.handcard.card);
+                    p.minionSetAngrToX(triggerEffectMinion, 2);
+                    p.minionSetLifetoX(triggerEffectMinion, 2);
+                    p.minionGetRush(triggerEffectMinion);
+                }
+            }
+        }
 		
 	}
 }

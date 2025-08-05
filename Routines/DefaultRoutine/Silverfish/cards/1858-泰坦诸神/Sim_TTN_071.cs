@@ -11,7 +11,18 @@ namespace HREngine.Bots
 	//<b>法术伤害+@</b><i>（在本局对战中，你每施放过一个派系的法术都会提升！）</i>
 	class Sim_TTN_071 : SimTemplate
 	{
-		
+		public override void onAuraStarts(Playfield p, Minion m)
+        {
+            if (m.own) p.spellpower += m.spellpower;
+            else p.enemyspellpower += m.spellpower;
+
+        }
+
+        public override void onAuraEnds(Playfield p, Minion m)
+        {
+            if (m.own) p.spellpower -= m.spellpower;
+            else p.enemyspellpower -= m.spellpower;
+        }
 		
 	}
 }

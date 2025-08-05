@@ -11,7 +11,44 @@ namespace HREngine.Bots
 	//<b>战吼：</b>如果你没有控制其他随从，召唤两个1/2并具有<b>法术伤害+1</b>的扩音器。
 	class Sim_ETC_029 : SimTemplate
 	{
-		
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.ETC_029t);
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			if (own.own)
+			{
+				bool flag = true;
+				foreach (Minion minion in p.ownMinions)
+				{
+					if (minion.handcard.card.type == CardDB.cardtype.MOB)
+					{
+						flag = false;
+						break;
+					}
+				}
+				if (flag)
+				{
+					p.callKid(kid, own.zonepos - 1, own.own);
+					p.callKid(kid, own.zonepos, own.own);
+				}
+
+			}
+			else{
+				bool flag = true;
+				foreach (Minion minion in p.enemyMinions)
+				{
+					if (minion.handcard.card.type == CardDB.cardtype.MOB)
+					{
+						flag = false;
+						break;
+					}
+				}
+				if (flag)
+				{
+					p.callKid(kid, own.zonepos - 1, own.own);
+					p.callKid(kid, own.zonepos, own.own);
+				}
+			}
+		}
+
 	}
 }

@@ -6,6 +6,11 @@
 !Routines/DefaultRoutine/Silverfish/ai/CardDB_cardIDEnum.cs
 !Routines/DefaultRoutine/Silverfish/ai/CardDB_cardNameCN.cs
 !Routines/DefaultRoutine/Silverfish/ai/CardDB_cardNameEN.cs
+!Routines/DefaultRoutine/Silverfish/ai/ActionNormalizer.cs
+!Routines/DefaultRoutine/Silverfish/ai/Movegenerator.cs
+!Routines/DefaultRoutine/Silverfish/ai/Questmanager.cs
+!Routines/DefaultRoutine/Silverfish/ai/CardDB.cs
+!Routines/DefaultRoutine/Silverfish/ai/SimTemplate.cs
 
 
 Routines/DefaultRoutine/Silverfish/Test/Data/
@@ -72,7 +77,7 @@ Routines/DefaultRoutine/Silverfish/delLog.bat
 Routines/DefaultRoutine/Silverfish/update.bat
 Routines/DefaultRoutine/Silverfish/ai/打印工具.cs
 Routines/DefaultRoutine/Silverfish/ai/action.cs
-Routines/DefaultRoutine/Silverfish/ai/ActionNormalizer.cs
+# Routines/DefaultRoutine/Silverfish/ai/ActionNormalizer.cs
 Routines/DefaultRoutine/Silverfish/ai/Ai.cs
 Routines/DefaultRoutine/Silverfish/ai/Behavior.cs
 Routines/DefaultRoutine/Silverfish/ai/BehaviorControl.cs
@@ -80,7 +85,7 @@ Routines/DefaultRoutine/Silverfish/ai/BehaviorRush.cs
 Routines/DefaultRoutine/Silverfish/ai/BehaviourMana.cs
 Routines/DefaultRoutine/Silverfish/ai/BoardTester.cs
 Routines/DefaultRoutine/Silverfish/ai/CardDB_ErrorType2.cs
-Routines/DefaultRoutine/Silverfish/ai/CardDB.cs
+# Routines/DefaultRoutine/Silverfish/ai/CardDB.cs
 Routines/DefaultRoutine/Silverfish/ai/ComboBreaker.cs
 Routines/DefaultRoutine/Silverfish/ai/Debug.cs
 Routines/DefaultRoutine/Silverfish/ai/deckGuess.cs
@@ -92,16 +97,16 @@ Routines/DefaultRoutine/Silverfish/ai/Hrtprozis.cs
 Routines/DefaultRoutine/Silverfish/ai/Minion.cs
 Routines/DefaultRoutine/Silverfish/ai/MiniSimulator.cs
 Routines/DefaultRoutine/Silverfish/ai/MiniSimulatorNextTurn.cs
-Routines/DefaultRoutine/Silverfish/ai/Movegenerator.cs
+# Routines/DefaultRoutine/Silverfish/ai/Movegenerator.cs
 Routines/DefaultRoutine/Silverfish/ai/Mulligan.cs
 Routines/DefaultRoutine/Silverfish/ai/PenalityManager.cs
 Routines/DefaultRoutine/Silverfish/ai/PenTemplate.cs
 Routines/DefaultRoutine/Silverfish/ai/Playfield.cs
 Routines/DefaultRoutine/Silverfish/ai/Probabilitymaker.cs
-Routines/DefaultRoutine/Silverfish/ai/Questmanager.cs
+# Routines/DefaultRoutine/Silverfish/ai/Questmanager.cs
 Routines/DefaultRoutine/Silverfish/ai/RulesEngine.cs
 Routines/DefaultRoutine/Silverfish/ai/Settings.cs
-Routines/DefaultRoutine/Silverfish/ai/SimTemplate.cs
+# Routines/DefaultRoutine/Silverfish/ai/SimTemplate.cs
 Routines/DefaultRoutine/Silverfish/ai/TAGGS.cs
 Routines/DefaultRoutine/Silverfish/ai/Utils.cs
 Routines/DefaultRoutine/Silverfish/ai/Weapon.cs
@@ -121,3 +126,37 @@ Settings/
 SerializedCard.txt
 Logg.txt
 fatal-rename.txt
+
+# diy方法先不上传
+Routines/DefaultRoutine/Silverfish/cards/1130-暗影崛起/Sim_DAL_049.cs
+Routines/DefaultRoutine/Silverfish/cards/1130-暗影崛起/Sim_DAL_773.cs
+Routines/DefaultRoutine/Silverfish/cards/0003-经典/Sim_EX1_614.cs
+Routines/DefaultRoutine/Silverfish/cards/0020-探险者协会/Sim_LOE_016.cs
+Routines/DefaultRoutine/Silverfish/cards/1001-冰封王座的骑士/Sim_ICC_238.cs
+Routines/DefaultRoutine/Silverfish/cards/1004-狗头人与地下世界/Sim_LOOT_329.cs
+Routines/DefaultRoutine/Silverfish/cards/1125-女巫森林/Sim_GIL_504h.cs
+Routines/DefaultRoutine/Silverfish/cards/1129-拉斯塔哈的大乱斗/Sim_TRL_360.cs
+Routines/DefaultRoutine/Silverfish/cards/1130-暗影崛起/Sim_DAL_049.cs
+Routines/DefaultRoutine/Silverfish/cards/1130-暗影崛起/Sim_DAL_773.cs
+Routines/DefaultRoutine/Silverfish/cards/1403-迦拉克隆的觉醒/Sim_YOD_022.cs
+Routines/DefaultRoutine/Silverfish/cards/1403-迦拉克隆的觉醒/Sim_YOD_035.cs
+Routines/DefaultRoutine/Silverfish/cards/1443-通灵学园/Sim_SCH_126.cs
+Routines/DefaultRoutine/Silverfish/cards/1443-通灵学园/Sim_SCH_317.cs
+Routines/DefaultRoutine/Silverfish/cards/1466-疯狂的暗月马戏团/Sim_YOP_028.cs
+Routines/DefaultRoutine/Silverfish/cards/1525-贫瘠之地的锤炼/Sim_BAR_860.cs
+Routines/DefaultRoutine/Silverfish/cards/1525-贫瘠之地的锤炼/Sim_WC_042.cs
+Routines/DefaultRoutine/Silverfish/cards/1578-暴风城下的集结/Sim_SW_419.cs
+Routines/DefaultRoutine/Silverfish/cards/1626-奥特兰克的决裂/Sim_AV_601.cs
+Routines/DefaultRoutine/Silverfish/cards/1626-奥特兰克的决裂/Sim_BOM_10_AV_601.cs
+Routines/DefaultRoutine/Silverfish/cards/1637-核心/Sim_CORE_WC_042.cs
+Routines/DefaultRoutine/Silverfish/cards/1646-经典/Sim_VAN_EX1_614.cs
+Routines/DefaultRoutine/Silverfish/cards/1810-核心(失效)/Sim_CORE_ICC_238.cs
+Routines/DefaultRoutine/Silverfish/cards/1892-决战荒芜之地/Sim_WW_402.cs
+Routines/DefaultRoutine/Silverfish/cards/1897-威兹班的工坊/Sim_MIS_025.cs
+Routines/DefaultRoutine/Silverfish/cards/1897-威兹班的工坊/Sim_MIS_025t.cs
+Routines/DefaultRoutine/Silverfish/cards/1897-威兹班的工坊/Sim_MIS_025t1.cs
+Routines/DefaultRoutine/Silverfish/cards/1897-威兹班的工坊/Sim_TOY_515.cs
+Routines/DefaultRoutine/Silverfish/cards/1897-威兹班的工坊/Sim_YOD_022_COPY.cs
+Routines/DefaultRoutine/Silverfish/cards/1905-胜地历险记/Sim_VAC_436.cs
+Routines/DefaultRoutine/Silverfish/cards/1905-胜地历险记/Sim_VAC_503.cs
+Routines/DefaultRoutine/Silverfish/cards/1946-翡翠梦境/Sim_EDR_849.cs

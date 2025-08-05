@@ -4,13 +4,16 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_SCH_609 : SimTemplate //* 优胜劣汰 Survival of the Fittest
+	//* 优胜劣汰 Survival of the Fittest
+	//Give +4/+4 to all minions in your hand, deck, and battlefield.
+	//使你手牌，牌库以及战场中的所有随从获得+4/+4。
+	class Sim_SCH_609 : SimTemplate
 	{
-		//Give +4/+4 to all minions in your hand, deck, and battlefield.
-		//使你手牌，牌库以及战场中的所有随从获得+4/+4。
 		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
-			if(ownplay){
+			p.evaluatePenality -= 5;
+			if (ownplay)
+			{
 				// 场地
 				foreach (Minion m in p.ownMinions)
 				{
@@ -24,9 +27,14 @@ namespace HREngine.Bots
 					p.anzOwnExtraAngrHp += 8;
 				}
 				// 卡组
-				p.deckAngrBuff += 4;
-				p.deckHpBuff += 4;
-				p.evaluatePenality -= 5;
+				foreach (CardDB.Card card in p.ownDeck)
+				{
+					if (card.type == CardDB.cardtype.MOB) // 检查是否为随从卡牌
+					{
+						card.Attack += 4; // 增加攻击力
+						card.Health += 4; // 增加生命值
+					}
+				}
 			}
 		}
 	}

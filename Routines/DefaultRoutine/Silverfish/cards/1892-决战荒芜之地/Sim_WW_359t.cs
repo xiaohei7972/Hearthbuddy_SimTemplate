@@ -13,15 +13,16 @@ namespace HREngine.Bots
 	{
 		public override void useLocation(Playfield p, Minion triggerMinion, Minion target)
 		{
-			if (p.enemyMinions.Count > 0)
-				p.evaluatePenality -= 200;
+			// if (p.enemyMinions.Count > 0)
+			// 	p.evaluatePenality -= 200;
 			// 检查目标是否为有效的敌方非休眠随从
 			// if (target != null && !target.own && target.dormant == 0 && (CardDB.cardtype)target.handcard.card.type == CardDB.cardtype.MOB)
 			if (triggerMinion.handcard.card.CooldownTurn == 0)
 			{
 				if (target != null)
 				{
-					target.dormant += 3;
+					target.dormant = 3;
+					target.updateReadyness();
 				}
 			}
 			

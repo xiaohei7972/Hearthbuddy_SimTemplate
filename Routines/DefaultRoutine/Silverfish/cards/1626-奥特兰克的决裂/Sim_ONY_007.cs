@@ -11,7 +11,16 @@ namespace HREngine.Bots
 	//在你施放一个法术后，造成4点伤害，随机分配到所有敌人身上。
 	class Sim_ONY_007 : SimTemplate
 	{
-		
+        public override void onCardIsGoingToBePlayed(Playfield p, Handmanager.Handcard hc, bool wasOwnCard, Minion triggerEffectMinion)
+        {
+			if (triggerEffectMinion.own == wasOwnCard)
+			{
+				if (hc.card.type == CardDB.cardtype.SPELL)
+				{
+					p.allCharsOfASideGetRandomDamage(!triggerEffectMinion.own, 4);
+				}
+			}
+        }
 		
 	}
 }

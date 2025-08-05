@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//在你使用一张随从牌后，对其造成1点伤害。
 	class Sim_CORE_ICC_238 : SimTemplate
 	{
-		
-		
+		public override void onCardIsAfterToBePlayed(Playfield p, Minion playedMinion, bool wasOwnCard, Minion triggerEffectMinion)
+		{
+			if (triggerEffectMinion.own == wasOwnCard)
+			{
+				p.minionGetDamageOrHeal(playedMinion, 1);
+			}
+		}
+
 	}
 }

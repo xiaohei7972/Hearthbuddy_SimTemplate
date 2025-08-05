@@ -4,28 +4,26 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_093: SimTemplate //* 海象人渔夫 Tuskarr Fisherman
-//<b>Battlecry:</b> Give a friendly minion <b>Spell Damage +1</b>.
-//<b>战吼：</b>使一个友方随从获得<b>法术伤害+1</b>。 
+    //* 海象人渔夫 Tuskarr Fisherman
+    //<b>Battlecry:</b> Give a friendly minion <b>Spell Damage +1</b>.
+    //<b>战吼：</b>使一个友方随从获得<b>法术伤害+1</b>。
+    class Sim_ICC_093 : SimTemplate
     {
-        
-
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {
             if (target != null)
             {
                 target.spellpower++;
-                if (target.own) p.spellpower++;
-                else p.enemyspellpower++;
             }
         }
 
         public override PlayReq[] GetPlayReqs()
         {
             return new PlayReq[] {
-                new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET),
-                new PlayReq(CardDB.ErrorType2.REQ_FRIENDLY_TARGET),
-                new PlayReq(CardDB.ErrorType2.REQ_TARGET_IF_AVAILABLE),
+                new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY), //需要一个目标
+                new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET), //目标只能是随从
+                new PlayReq(CardDB.ErrorType2.REQ_FRIENDLY_TARGET), //目标只能是友方
+                new PlayReq(CardDB.ErrorType2.REQ_TARGET_IF_AVAILABLE), //无目标时也能用
             };
         }
     }

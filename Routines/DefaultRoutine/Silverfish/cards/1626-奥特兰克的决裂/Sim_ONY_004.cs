@@ -11,7 +11,20 @@ namespace HREngine.Bots
 	//<b>突袭</b>。当你控制着雏龙时<b>免疫</b>。<b>战吼：</b>召唤六条2/1并具有<b>突袭</b>的雏龙。
 	class Sim_ONY_004 : SimTemplate
 	{
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.ONY_001t);
+
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			p.callKid(kid, own.zonepos - 1, own.own);
+			p.callKid(kid, own.zonepos, own.own);
+
+			p.callKid(kid, own.zonepos - 2, own.own);
+			p.callKid(kid, own.zonepos + 1, own.own);
+
+			p.callKid(kid, own.zonepos - 3, own.own);
+			p.callKid(kid, own.zonepos + 2, own.own);
+		}
 		
-		
+
 	}
 }

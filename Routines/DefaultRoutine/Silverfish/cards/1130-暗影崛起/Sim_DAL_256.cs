@@ -4,25 +4,24 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_DAL_256 : SimTemplate //* 森林的援助 The Forest's Aid
-//<b>Twinspell</b>Summon five 2/2 Treants.
-//<b>双生法术</b>召唤五个2/2的树人。 
-	{
-        
+    //* 森林的援助 The Forest's Aid
+    //<b>Twinspell</b>Summon five 2/2 Treants.
+    //<b>双生法术</b>召唤五个2/2的树人。 
+    class Sim_DAL_256 : SimTemplate
+    {
+        CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.DAL_256t2);
 
-        CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EX1_158t);
-
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
-            int pos =(ownplay) ? p.ownMinions.Count : p.enemyMinions.Count;
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
+            int pos = (ownplay) ? p.ownMinions.Count : p.enemyMinions.Count;
 
             p.callKid(kid, pos, ownplay, false);
             p.callKid(kid, pos, ownplay);
             p.callKid(kid, pos, ownplay);
-			p.callKid(kid, pos, ownplay);
-			p.callKid(kid, pos, ownplay);
-			p.drawACard(CardDB.cardNameEN.unknown, ownplay);
-		}
+            p.callKid(kid, pos, ownplay);
+            p.callKid(kid, pos, ownplay);
+            p.drawACard(CardDB.cardIDEnum.DAL_256ts, ownplay,true);
+        }
 
         public override PlayReq[] GetPlayReqs()
         {
@@ -30,5 +29,5 @@ namespace HREngine.Bots
                 new PlayReq(CardDB.ErrorType2.REQ_NUM_MINION_SLOTS, 1),
             };
         }
-	}
+    }
 }

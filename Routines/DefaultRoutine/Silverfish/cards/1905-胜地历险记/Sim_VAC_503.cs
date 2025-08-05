@@ -11,7 +11,38 @@ namespace HREngine.Bots
 	//<b>死亡骑士游客</b>你的<b>亡语</b>会触发两次。在你使用一张<b>亡语</b>随从牌后，将其消灭。
 	class Sim_VAC_503 : SimTemplate
 	{
-		
-		
+		public override void onAuraStarts(Playfield p, Minion m)
+		{
+			if (m.own)
+			{
+				p.ownBaronRivendare++;
+			}
+			else
+			{
+				p.enemyBaronRivendare++;
+			}
+		}
+		public override void onAuraEnds(Playfield p, Minion m)
+		{
+			if (m.own)
+			{
+				p.ownBaronRivendare--;
+			}
+			else
+			{
+				p.enemyBaronRivendare--;
+			}
+		}
+
+		public override void onCardIsAfterToBePlayed(Playfield p, Minion playedMinion, bool wasOwnCard, Minion triggerEffectMinion)
+		{
+			if (triggerEffectMinion.own == wasOwnCard)
+			{
+				if (playedMinion.handcard.card.deathrattle)
+				{
+					p.minionGetDestroyed(playedMinion);
+				}
+			}
+		}
 	}
 }

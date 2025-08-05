@@ -11,6 +11,18 @@ namespace HREngine.Bots
 	//<b>法术伤害+2</b>，<b>亡语：</b>你抽到的下一张随从牌会继承这些能力。
 	class Sim_CS3_001 : SimTemplate
 	{
+		public override void onAuraStarts(Playfield p, Minion m)
+		{
+			if (m.own) p.spellpower += m.spellpower;
+			else p.enemyspellpower += m.spellpower;
+
+		}
+
+		public override void onAuraEnds(Playfield p, Minion m)
+		{
+			if (m.own) p.spellpower -= m.spellpower;
+			else p.enemyspellpower -= m.spellpower;
+		}
 		
 		
 	}

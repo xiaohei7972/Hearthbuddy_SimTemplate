@@ -11,7 +11,14 @@ namespace HREngine.Bots
 	//在你使用一张随从牌后，随机使其获得一项<b>额外效果</b>。
 	class Sim_EDR_849 : SimTemplate
 	{
-		
+		public override void onCardIsAfterToBePlayed(Playfield p, Minion playedMinion, bool wasOwnCard, Minion triggerEffectMinion)
+        {
+            if (triggerEffectMinion.own == wasOwnCard)
+            {
+				//默认给风怒,让兄弟多打点随从
+				p.minionGetWindfurry(playedMinion);
+            }
+        }
 		
 	}
 }

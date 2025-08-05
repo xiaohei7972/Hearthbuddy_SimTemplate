@@ -11,7 +11,18 @@ namespace HREngine.Bots
 	//<b>法术伤害+1</b>你的法术拥有<b>吸血</b>。
 	class Sim_WON_336 : SimTemplate
 	{
-		
-		
+		public override void onAuraStarts(Playfield p, Minion m)
+		{
+			if (m.own) p.spellpower += m.spellpower;
+			else p.enemyspellpower += m.spellpower;
+
+		}
+
+		public override void onAuraEnds(Playfield p, Minion m)
+		{
+			if (m.own) p.spellpower -= m.spellpower;
+			else p.enemyspellpower -= m.spellpower;
+		}
+
 	}
 }

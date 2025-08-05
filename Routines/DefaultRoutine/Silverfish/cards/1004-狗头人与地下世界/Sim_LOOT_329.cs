@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//在你使用一张随从牌后，召唤一个它的复制。
 	class Sim_LOOT_329 : SimTemplate
 	{
-		
+		public override void onCardIsAfterToBePlayed(Playfield p, Minion playedMinion, bool wasOwnCard, Minion triggerEffectMinion)
+        {
+            if (triggerEffectMinion.own == wasOwnCard)
+            {
+				p.callKid(playedMinion.handcard.card, triggerEffectMinion.zonepos, triggerEffectMinion.own);
+            }
+        }
 		
 	}
 }

@@ -11,7 +11,18 @@ namespace HREngine.Bots
 	//<b>法术伤害+1</b>。你的法术受到的<b>法术伤害</b>增益效果翻倍。
 	class Sim_TOY_807 : SimTemplate
 	{
-		
+		public override void onAuraStarts(Playfield p, Minion m)
+        {
+            if (m.own) p.spellpower += m.spellpower;
+            else p.enemyspellpower += m.spellpower;
+
+        }
+
+        public override void onAuraEnds(Playfield p, Minion m)
+        {
+            if (m.own) p.spellpower -= m.spellpower;
+            else p.enemyspellpower -= m.spellpower;
+        }
 		
 	}
 }
