@@ -11,7 +11,21 @@ namespace HREngine.Bots
 	//在你的回合结束时，随机使一个受伤的友方随从获得+2/+2。
 	class Sim_TLC_623 : SimTemplate
 	{
-		
-		
+		public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
+		{
+			if (triggerEffectMinion.own == turnEndOfOwner)
+			{
+				List<Minion> tmp = triggerEffectMinion.own ? p.ownMinions : p.enemyMinions;
+				foreach (Minion minion in tmp)
+				{
+					//未受伤就跳过这次循环
+					if (!minion.wounded) continue;
+					p.minionGetBuffed(minion, 0, 1);
+					break;
+				}
+			}
+
+		}
+
 	}
 }

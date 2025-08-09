@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//<b>潜行</b>。在本随从攻击后，对敌方英雄造成2点伤害。
 	class Sim_TLC_840 : SimTemplate
 	{
-		
+		public override void afterMinionAttack(Playfield p, Minion attacker, Minion target)
+		{
+			p.minionGetDamageOrHeal(attacker.own ? p.enemyHero : p.ownHero, 2);
+		}
 		
 	}
 }

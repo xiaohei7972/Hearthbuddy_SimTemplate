@@ -11,7 +11,12 @@ namespace HREngine.Bots
 	//起始<b>休眠</b>状态。在你使用你的英雄技能后唤醒。
 	class Sim_EDR_469 : SimTemplate
 	{
-		
-		
+		public override void onInspire(Playfield p, Minion m, bool ownerOfInspire)
+		{
+			if (m.own == ownerOfInspire)
+				m.dormant = 0;
+
+		}
+
 	}
 }

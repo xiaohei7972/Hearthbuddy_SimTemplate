@@ -12,7 +12,7 @@ namespace HREngine.Bots
         {
             if (triggerEffectMinion.own == turnEndOfOwner)
             {
-                List<Minion> tmp = turnEndOfOwner ? p.ownMinions : p.enemyMinions;
+                List<Minion> tmp = triggerEffectMinion.own ? p.ownMinions : p.enemyMinions;
                 int count = tmp.Count;
                 if (count > 1)
                 {

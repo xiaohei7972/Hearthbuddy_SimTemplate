@@ -11,7 +11,20 @@ namespace HREngine.Bots
 	//<b>突袭</b>。<b>圣盾</b>每当本随从攻击时，使你手牌中神圣法术牌的法力值消耗减少（1）点。
 	class Sim_BAR_902 : SimTemplate
 	{
-		
-		
+		public override void onMinionAttack(Playfield p, Minion attacker, Minion target)
+		{
+			if (attacker.own)
+			{
+				foreach (Handmanager.Handcard hc in p.owncards)
+				{
+					if (hc.card.SpellSchool == CardDB.SpellSchool.HOLY)
+					{
+						hc.manacost--;
+						//this.evaluatePenality -= 5; // TODO: 这里可能需要调整评分
+					}
+				}
+			}
+		}
+
 	}
 }

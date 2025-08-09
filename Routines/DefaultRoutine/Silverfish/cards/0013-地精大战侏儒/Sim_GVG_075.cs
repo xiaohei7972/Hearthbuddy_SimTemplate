@@ -4,16 +4,14 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_GVG_075 : SimTemplate //* 船载火炮 Ship's Cannon
-//[x]After you summon aPirate, deal 2 damageto a random enemy.
-//在你召唤一个海盗后，随机对一个敌人造成2点伤害。 
+    //* 船载火炮 Ship's Cannon
+    //[x]After you summon aPirate, deal 2 damageto a random enemy.
+    //在你召唤一个海盗后，随机对一个敌人造成2点伤害。 
+    class Sim_GVG_075 : SimTemplate
     {
-
-        
-
         public override void onMinionIsSummoned(Playfield p, Minion triggerEffectMinion, Minion summonedMinion)
         {
-            if ((TAG_RACE)summonedMinion.handcard.card.race == TAG_RACE.PIRATE && triggerEffectMinion.own == summonedMinion.own)
+            if (triggerEffectMinion.entitiyID != summonedMinion.entitiyID && triggerEffectMinion.own == summonedMinion.own && RaceUtils.IsRaceOrAll(summonedMinion.handcard.card.race, CardDB.Race.PIRATE))
             {
                 Minion target = null;
 
@@ -24,11 +22,12 @@ namespace HREngine.Bots
                 }
                 else
                 {
-                    target = p.searchRandomMinion(p.ownMinions, searchmode.searchHighestAttack); 
+                    target = p.searchRandomMinion(p.ownMinions, searchmode.searchHighestAttack);
                     if (target == null) target = p.ownHero;
                 }
                 p.minionGetDamageOrHeal(target, 2, true);
             }
         }
+
     }
 }

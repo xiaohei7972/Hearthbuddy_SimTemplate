@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//每当本随从攻击时，对敌方英雄造成2点伤害。
 	class Sim_ICC_468 : SimTemplate
 	{
-		
+		public override void onMinionAttack(Playfield p, Minion attacker, Minion target)
+		{
+			p.minionGetDamageOrHeal(attacker.own ? p.enemyHero : p.ownHero, 2);
+		}
 		
 	}
 }

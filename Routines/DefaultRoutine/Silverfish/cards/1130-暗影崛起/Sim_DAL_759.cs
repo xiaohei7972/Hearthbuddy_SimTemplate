@@ -11,7 +11,17 @@ namespace HREngine.Bots
 	//每当本随从造成伤害时，获得等量的护甲值。
 	class Sim_DAL_759 : SimTemplate
 	{
-		
+		public override void onDamageDealtByMinion(Playfield p, Minion attacker, int damageDone, bool ownplay)
+        {
+            if (ownplay)
+            {
+                p.minionGetArmor(p.ownHero, damageDone);
+            }
+            else
+            {
+                p.minionGetArmor(p.enemyHero, damageDone);
+            }
+        }
 		
 	}
 }

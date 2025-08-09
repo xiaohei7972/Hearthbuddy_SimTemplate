@@ -11,10 +11,10 @@ namespace HREngine.Bots
 	//<b>亡语：</b>再次召唤本随从。
 	class Sim_VAC_464t22 : SimTemplate
 	{
-
-        public override void onDeathrattle(Playfield p, Minion m)
-        {
-            p.callKid(m.handcard.card, m.zonepos, m.own); // 亡语效果：再次召唤本随从
-        }
-    }
+		public override void onDeathrattle(Playfield p, Minion m)
+		{
+			p.callKid(m.handcard.card, m.zonepos - 1, m.own); // 亡语效果：再次召唤本随从
+		}
+		
+	}
 }

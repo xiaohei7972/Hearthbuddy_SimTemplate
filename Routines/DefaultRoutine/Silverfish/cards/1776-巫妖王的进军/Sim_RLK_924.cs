@@ -13,14 +13,10 @@ namespace HREngine.Bots
 	{
 		public override void onMinionWasSummoned(Playfield p, Minion triggerEffectMinion, Minion summonedMinion)
 		{
-			if (triggerEffectMinion.own == summonedMinion.own)
+			if (triggerEffectMinion.entitiyID != summonedMinion.entitiyID && triggerEffectMinion.own == summonedMinion.own && summonedMinion.Angr < triggerEffectMinion.Angr)
 			{
-
-				if (summonedMinion.Angr < triggerEffectMinion.Angr)
-				{
-					summonedMinion.divineshild = true;
-					p.minionGetRush(summonedMinion);
-				}
+				summonedMinion.divineshild = true;
+				p.minionGetRush(summonedMinion);
 			}
 
 		}

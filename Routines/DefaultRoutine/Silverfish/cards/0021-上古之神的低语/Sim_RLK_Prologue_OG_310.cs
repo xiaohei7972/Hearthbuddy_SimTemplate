@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//每当你召唤一个生命值为1的随从，便使其获得<b>圣盾</b>。
 	class Sim_RLK_Prologue_OG_310 : SimTemplate
 	{
-		
+		public override void onMinionWasSummoned(Playfield p, Minion triggerEffectMinion, Minion summonedMinion)
+        {
+            if (summonedMinion.Hp == 1 && triggerEffectMinion.own == summonedMinion.own && triggerEffectMinion.entitiyID != summonedMinion.entitiyID)
+            {
+                summonedMinion.divineshild = true;
+            }
+        }
 		
 	}
 }

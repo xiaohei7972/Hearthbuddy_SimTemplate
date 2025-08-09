@@ -17,12 +17,11 @@ namespace HREngine.Bots
 			{
 				if (triggerMinion.own)
 				{
-					foreach (var item in p.prozis.turnDeck)
+					foreach (CardDB.Card card in p.ownDeck)
 					{
-						CardDB.Card card = CardDB.Instance.getCardDataFromID(item.Key);
 						if (card.type == CardDB.cardtype.SPELL && card.SpellSchool == CardDB.SpellSchool.FEL)
 						{
-							p.drawACard(item.Key, triggerMinion.own);
+							p.drawACard(card.cardIDenum, triggerMinion.own);
 							break;
 						}
 

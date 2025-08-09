@@ -12,13 +12,14 @@ namespace HREngine.Bots
         {
             if (triggerEffectMinion.own == turnEndOfOwner)
             {
-                List<Minion> minions = turnEndOfOwner ? p.ownMinions : p.enemyMinions;
+                List<Minion> minions = triggerEffectMinion.own ? p.ownMinions : p.enemyMinions;
                 foreach (Minion m in minions)
                 {
-                    if (m.entitiyID != triggerEffectMinion.entitiyID) // 确保不buff自己
-                    {
-                        p.minionGetBuffed(m, 1, 0); // +1攻击力
-                    }
+                    // 确保不buff自己
+                    if (m.entitiyID == triggerEffectMinion.entitiyID) continue;
+
+                    p.minionGetBuffed(m, 1, 0); // +1攻击力
+
                 }
             }
         }

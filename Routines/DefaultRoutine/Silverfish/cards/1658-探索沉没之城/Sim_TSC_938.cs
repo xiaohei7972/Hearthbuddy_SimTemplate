@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//<b>嘲讽</b>，<b>亡语：</b>抽一张牌。
 	class Sim_TSC_938 : SimTemplate
 	{
-		
+		public override void onDeathrattle(Playfield p, Minion m)
+        {
+			p.drawACard(CardDB.cardIDEnum.None, m.own);
+        }
 		
 	}
 }

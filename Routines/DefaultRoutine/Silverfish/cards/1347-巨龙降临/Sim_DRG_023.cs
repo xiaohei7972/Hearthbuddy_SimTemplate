@@ -1,9 +1,10 @@
 namespace HREngine.Bots
 {
-    class Sim_DRG_023 : SimTemplate //* 空中炮艇 Skybarge
+    //* 空中炮艇 Skybarge
+    //[x]After you summon aPirate, deal 2 damageto a random enemy.
+    //在你召唤一个海盗后，随机对一个敌人造成2点伤害。
+    class Sim_DRG_023 : SimTemplate
     {
-        //[x]After you summon aPirate, deal 2 damageto a random enemy.
-        //在你召唤一个海盗后，随机对一个敌人造成2点伤害。
         public override void onMinionIsSummoned(Playfield p, Minion triggerEffectMinion, Minion summonedMinion)
         {
             if ((TAG_RACE)summonedMinion.handcard.card.race == TAG_RACE.PIRATE && triggerEffectMinion.own == summonedMinion.own)

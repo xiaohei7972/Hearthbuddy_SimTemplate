@@ -11,7 +11,11 @@ namespace HREngine.Bots
 	//<b>潜行</b>。每当本随从攻击时，随机将一张<i>（你对手职业的）</i>牌置入你的手牌。
 	class Sim_CORE_CFM_781 : SimTemplate
 	{
-		
+		public override void onMinionAttack(Playfield p, Minion attacker, Minion target)
+		{
+			p.drawACard(CardDB.cardNameEN.unknown, attacker.own, true);
+
+		}
 		
 	}
 }

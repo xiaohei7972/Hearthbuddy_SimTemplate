@@ -11,7 +11,19 @@ namespace HREngine.Bots
 	//在你的回合结束时，使另一个友方随从获得+1攻击力。
 	class Sim_AT_132_SHAMANe : SimTemplate
 	{
-		
+		public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
+        {
+            if (triggerEffectMinion.own == turnEndOfOwner)
+            {
+                List<Minion> tmp = triggerEffectMinion.own ? p.ownMinions : p.enemyMinions;
+                foreach (Minion m in tmp)
+                {
+                    if (triggerEffectMinion.entitiyID == m.entitiyID) continue;
+                    p.minionGetBuffed(m, 1, 0);
+                    break;
+                }
+            }
+        }
 		
 	}
 }

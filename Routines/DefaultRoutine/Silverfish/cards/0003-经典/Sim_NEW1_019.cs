@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
+    //knifejuggler
+    //fügt einem zufälligen feind 1 schaden zu, nachdem ihr einen diener herbeigerufen habt.
 
-    class Sim_NEW1_019 : SimTemplate //knifejuggler
+    class Sim_NEW1_019 : SimTemplate
     {
-
-        //    fügt einem zufälligen feind 1 schaden zu, nachdem ihr einen diener herbeigerufen habt.
         public override void onMinionWasSummoned(Playfield p, Minion triggerEffectMinion, Minion summonedMinion)
         {
             if (triggerEffectMinion.entitiyID != summonedMinion.entitiyID && triggerEffectMinion.own == summonedMinion.own)
@@ -42,7 +42,7 @@ namespace HREngine.Bots
                     p.minionGetDamageOrHeal(triggerEffectMinion.own ? p.enemyHero : p.ownHero, 1);
                 }
 
-                triggerEffectMinion.stealth = false;
+                // triggerEffectMinion.stealth = false;
             }
         }
     }

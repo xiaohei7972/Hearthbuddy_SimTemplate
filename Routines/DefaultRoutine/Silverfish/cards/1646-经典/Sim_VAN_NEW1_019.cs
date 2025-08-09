@@ -41,7 +41,7 @@ namespace HREngine.Bots
                     p.minionGetDamageOrHeal(triggerEffectMinion.own ? p.enemyHero : p.ownHero, 1);
                 }
 
-                triggerEffectMinion.stealth = false;
+                // triggerEffectMinion.stealth = false;
             }
         }
 

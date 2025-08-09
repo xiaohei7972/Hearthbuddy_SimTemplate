@@ -11,7 +11,14 @@ namespace HREngine.Bots
 	//每当你使用一张火焰法术牌时，获得等同于其法力值消耗的属性值。
 	class Sim_TLC_224 : SimTemplate
 	{
-		
-		
+		public override void onCardIsGoingToBePlayed(Playfield p, Handmanager.Handcard hc, bool wasOwnCard, Minion triggerEffectMinion)
+		{
+			if (triggerEffectMinion.own == wasOwnCard && hc.card.type == CardDB.cardtype.SPELL && hc.card.SpellSchool == CardDB.SpellSchool.FIRE)
+			{
+				int buff = hc.getManaCost(p);
+				p.minionGetBuffed(triggerEffectMinion, buff, buff);
+			}
+		}
+
 	}
 }

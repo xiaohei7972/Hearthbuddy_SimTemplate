@@ -11,7 +11,12 @@ namespace HREngine.Bots
 	//<b>嘲讽</b>。在你使用你的英雄技能后，获得+2生命值。
 	class Sim_EDR_470 : SimTemplate
 	{
-		
-		
+		public override void onInspire(Playfield p, Minion m, bool ownerOfInspire)
+		{
+			if (m.own == ownerOfInspire)
+				p.minionGetBuffed(m, 0, 2);
+
+		}
+
 	}
 }

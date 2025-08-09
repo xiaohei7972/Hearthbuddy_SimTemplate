@@ -11,7 +11,19 @@ namespace HREngine.Bots
 	//在你的回合结束时，随机使另一个友方随从获得+1/+1。
 	class Sim_CORE_ICC_210 : SimTemplate
 	{
-		
-		
+		public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
+		{
+			if (triggerEffectMinion.own == turnEndOfOwner)
+			{
+				List<Minion> tmp = triggerEffectMinion.own ? p.ownMinions : p.enemyMinions;
+				foreach (Minion m in tmp)
+				{
+					if (triggerEffectMinion.entitiyID == m.entitiyID) continue;
+					p.minionGetBuffed(m, 1, 1);
+					break;
+				}
+			}
+		}
+
 	}
 }

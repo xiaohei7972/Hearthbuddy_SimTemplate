@@ -11,7 +11,14 @@ namespace HREngine.Bots
 	//在你的回合中，在你的对手召唤随从后，将其<b>沉默</b>并消灭。
 	class Sim_VAC_531 : SimTemplate
 	{
-		
-		
+		public override void onMinionWasSummoned(Playfield p, Minion triggerEffectMinion, Minion summonedMinion)
+		{
+			if (p.isOwnTurn && triggerEffectMinion.entitiyID != summonedMinion.entitiyID && triggerEffectMinion.own == !summonedMinion.own)
+			{
+				p.minionGetSilenced(summonedMinion);
+				p.minionGetDestroyed(summonedMinion);
+			}
+		}
+
 	}
 }

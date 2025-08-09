@@ -23,12 +23,12 @@ namespace HREngine.Bots
 				p.callKid(kid, triggerMinion.zonepos, triggerMinion.own);
 		}
 
-		public override PlayReq[] GetPlayReqs()
-		{
-			return new PlayReq[]{
-				new PlayReq(CardDB.ErrorType2.REQ_MINION_CAP,1), // 需要一个空位
-			};
-		}
+		// public override PlayReq[] GetPlayReqs()
+		// {
+		// 	return new PlayReq[]{
+		// 		new PlayReq(CardDB.ErrorType2.REQ_MINION_CAP,1), // 需要一个空位
+		// 	};
+		// }
 		//兄弟现在地标使用条件只有几个能用,写了也是白写
 		// public override PlayReq[] GetUseAbilityReqs()
 		// {

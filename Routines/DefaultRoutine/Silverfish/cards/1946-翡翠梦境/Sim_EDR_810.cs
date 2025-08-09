@@ -14,9 +14,27 @@ namespace HREngine.Bots
 		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EDR_810t);
 		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
 		{
-            p.callKid(kid, own.zonepos - 1, own.own);
+			p.callKid(kid, own.zonepos - 1, own.own);
 			p.callKid(kid, own.zonepos, own.own);
 		}
-		
+
+		public override void onAuraStarts(Playfield p, Minion m)
+		{
+			foreach (Minion minion in m.own ? p.ownMinions : p.enemyMinions)
+			{
+				if (minion.handcard.card.cardIDenum == CardDB.cardIDEnum.EDR_810t)
+					minion.handcard.card.TAG_SCRIPT_DATA_NUM_1++;
+			}
+		}
+
+		public override void onAuraEnds(Playfield p, Minion m)
+		{
+			foreach (Minion minion in m.own ? p.ownMinions : p.enemyMinions)
+			{
+				if (minion.handcard.card.cardIDenum == CardDB.cardIDEnum.EDR_810t)
+					minion.handcard.card.TAG_SCRIPT_DATA_NUM_1--;
+			}
+		}
+
 	}
 }

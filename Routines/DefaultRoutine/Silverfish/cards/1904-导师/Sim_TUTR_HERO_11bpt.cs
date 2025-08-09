@@ -11,7 +11,12 @@ namespace HREngine.Bots
 	//<b>冲锋</b>。在你的回合结束时死亡。
 	class Sim_TUTR_HERO_11bpt : SimTemplate
 	{
-		
+		public override PlayReq[] GetPlayReqs()
+        {
+            return new PlayReq[] {
+				new PlayReq(CardDB.ErrorType2.REQ_NUM_MINION_SLOTS, 1), //确保有位置召唤
+            };
+        }
 		
 	}
 }

@@ -20,10 +20,20 @@ namespace HREngine.Bots
 			}
 		}
 		//需要改进下onCardIsGoingToBePlayed方法,不然不好对打出的卡牌继续处理
-		public override void onCardIsGoingToBePlayed(Playfield p, Handmanager.Handcard hc, bool wasOwnCard, Minion triggerEffectMinion)
+		// public override void onCardIsGoingToBePlayed(Playfield p, Handmanager.Handcard hc, bool wasOwnCard, Minion triggerEffectMinion)
+		// {
+		// 	if (triggerEffectMinion.own == wasOwnCard && (hc.card.cardIDenum == CardDB.cardIDEnum.SC_752 || hc.card.cardIDenum == CardDB.cardIDEnum.SC_765))
+		// 	{
+		// 		p.minionGetDestroyed(triggerEffectMinion);
+		// 		p.callKid(kid, triggerEffectMinion.zonepos - 1, triggerEffectMinion.own);
+		// 	}
+		// }
+
+		public override void onCardIsAfterToBePlayed(Playfield p, Minion playedMinion, bool wasOwnCard, Minion triggerEffectMinion)
 		{
-			if (triggerEffectMinion.own == wasOwnCard && (hc.card.cardIDenum == CardDB.cardIDEnum.SC_752 || hc.card.cardIDenum == CardDB.cardIDEnum.SC_765))
+			if (triggerEffectMinion.own == wasOwnCard && (playedMinion.handcard.card.cardIDenum == CardDB.cardIDEnum.SC_752 || playedMinion.handcard.card.cardIDenum == CardDB.cardIDEnum.SC_765))
 			{
+				p.minionGetDestroyed(playedMinion);
 				p.minionGetDestroyed(triggerEffectMinion);
 				p.callKid(kid, triggerEffectMinion.zonepos - 1, triggerEffectMinion.own);
 			}

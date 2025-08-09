@@ -21,9 +21,9 @@ namespace HREngine.Bots
 				{
 					foreach (Handmanager.Handcard handcard in p.owncards)
 					{
-						if (handcard.extraParam3)
+						if (handcard.card.Combo)
 						{
-							handcard.card.cost -= 1;
+							handcard.card.cost = Math.Min(0, handcard.card.cost--);
 						}
 
 					}
@@ -32,7 +32,7 @@ namespace HREngine.Bots
 
 		}
 
-        public override PlayReq[] GetPlayReqs()
+		public override PlayReq[] GetPlayReqs()
 		{
 			return new PlayReq[]{
 				new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY), // 需要选择一个目标
@@ -41,6 +41,6 @@ namespace HREngine.Bots
 			};
 
 		}
-		
+
 	}
 }

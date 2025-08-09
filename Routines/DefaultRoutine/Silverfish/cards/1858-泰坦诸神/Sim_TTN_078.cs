@@ -13,16 +13,9 @@ namespace HREngine.Bots
 	{
 		public override void onMinionWasSummoned(Playfield p, Minion triggerEffectMinion, Minion summonedMinion)
 		{
-			if (triggerEffectMinion.own == summonedMinion.own)
+			if (triggerEffectMinion.entitiyID != summonedMinion.entitiyID && triggerEffectMinion.own == summonedMinion.own && summonedMinion.Angr > triggerEffectMinion.Angr)
 			{
-
-				if (summonedMinion.Angr > triggerEffectMinion.Angr)
-				{
-					foreach (Minion minion in p.ownMinions)
-					{
-						p.minionGetBuffed(minion, 1, 0);
-					}
-				}
+				p.allMinionOfASideGetBuffed(triggerEffectMinion.own, 1, 0);
 			}
 
 		}

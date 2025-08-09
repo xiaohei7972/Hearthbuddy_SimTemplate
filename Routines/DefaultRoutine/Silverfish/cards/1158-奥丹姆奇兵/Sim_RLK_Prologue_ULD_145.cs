@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//每当你召唤一个随从，获得+1攻击力。
 	class Sim_RLK_Prologue_ULD_145 : SimTemplate
 	{
-		
+		public override void onMinionWasSummoned(Playfield p, Minion triggerEffectMinion, Minion summonedMinion)
+        {
+            if (triggerEffectMinion.entitiyID != summonedMinion.entitiyID && triggerEffectMinion.own == summonedMinion.own)
+            {
+                p.minionGetBuffed(triggerEffectMinion, 1, 0);
+            }
+        }
 		
 	}
 }

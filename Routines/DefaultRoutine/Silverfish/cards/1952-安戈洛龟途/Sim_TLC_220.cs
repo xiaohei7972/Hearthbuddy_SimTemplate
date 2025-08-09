@@ -13,7 +13,7 @@ namespace HREngine.Bots
 	{
 		public override void onMinionWasSummoned(Playfield p, Minion triggerEffectMinion, Minion summonedMinion)
 		{
-			if (triggerEffectMinion.own == summonedMinion.own && (CardDB.Race)summonedMinion.handcard.card.race == CardDB.Race.ELEMENTAL)
+			if (triggerEffectMinion.entitiyID != summonedMinion.entitiyID && triggerEffectMinion.own == summonedMinion.own && (CardDB.Race)summonedMinion.handcard.card.race == CardDB.Race.ELEMENTAL)
 			{
 				p.DealDamageToRandomCharacter(triggerEffectMinion.own, 3);
 			}

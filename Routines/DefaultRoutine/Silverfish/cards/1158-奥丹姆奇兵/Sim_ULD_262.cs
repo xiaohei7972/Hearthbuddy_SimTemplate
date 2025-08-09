@@ -11,7 +11,14 @@ namespace HREngine.Bots
 	//每当你召唤一个随从，将其生命值变为与本随从相同。
 	class Sim_ULD_262 : SimTemplate
 	{
-		
-		
+		public override void onMinionIsSummoned(Playfield p, Minion triggerEffectMinion, Minion summonedMinion)
+		{
+			// 检查召唤的随从是否是机械
+			if (triggerEffectMinion.entitiyID != summonedMinion.entitiyID && triggerEffectMinion.own == summonedMinion.own)
+			{
+				p.minionSetLifetoX(summonedMinion, triggerEffectMinion.Hp);
+			}
+		}
+
 	}
 }

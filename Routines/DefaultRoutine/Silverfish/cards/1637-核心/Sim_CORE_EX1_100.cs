@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//每当一个玩家施放一个法术，复制该法术，将其置入另一个玩家的手牌。
 	class Sim_CORE_EX1_100 : SimTemplate
 	{
-		
+		public override void onCardIsGoingToBePlayed(Playfield p, Handmanager.Handcard hc, bool wasOwnCard, Minion triggerEffectMinion)
+        {
+            if (hc.card.type == CardDB.cardtype.SPELL)
+            {
+                p.drawACard(hc.card.nameEN, !wasOwnCard, true);
+            }
+        }
 		
 	}
 }

@@ -4,23 +4,24 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 术士 费用：2
-	//Eat! The! Imp!
-	//吃掉小鬼！
-	//Destroy a friendlyminion to draw 3 cards.
-	//消灭一个友方随从以抽三张牌。
-	class Sim_VAC_939 : SimTemplate
-	{
+    //法术 术士 费用：2
+    //Eat! The! Imp!
+    //吃掉小鬼！
+    //Destroy a friendlyminion to draw 3 cards.
+    //消灭一个友方随从以抽三张牌。
+    class Sim_VAC_939 : SimTemplate
+    {
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
             if (target != null && target.own)
             {
                 p.minionGetDestroyed(target); // 消灭目标友方随从
-                for (int i = 0; i < 3; i++)
-                {
-                    p.drawACard(CardDB.cardIDEnum.None, ownplay, true); // 抽三张牌
-                }
+                
+                p.drawACard(CardDB.cardIDEnum.None, ownplay); // 抽三张牌
+                p.drawACard(CardDB.cardIDEnum.None, ownplay);
+                p.drawACard(CardDB.cardIDEnum.None, ownplay);
+
             }
         }
 

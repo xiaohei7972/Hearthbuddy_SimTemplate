@@ -11,7 +11,14 @@ namespace HREngine.Bots
 	//<b>突袭</b>在本随从攻击后，变成地标。
 	class Sim_VAC_923 : SimTemplate
 	{
-		
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.VAC_923t);
+		public override void afterMinionAttack(Playfield p, Minion attacker, Minion target)
+		{
+			if (attacker.Hp > 0)
+			{
+				p.callKid(kid, attacker.zonepos, attacker.own);
+				p.RemoveMinionWithoutDeathrattle(attacker);
+			}
+		}
 	}
 }

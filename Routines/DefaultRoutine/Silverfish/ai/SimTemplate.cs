@@ -350,6 +350,17 @@ namespace HREngine.Bots
         {
             return;
         }
+        /// <summary>
+        /// 回合结束效果(重载)
+        /// 当卡牌在手牌时,回合结束触发此效果
+        /// </summary>
+        /// <param name="p">场面</param>
+        /// <param name="hc">有回合结束效果的手牌</param>
+        /// <param name="turnEndOfOwner">是否己方回合结束</param>
+        public virtual void onTurnEndsTrigger(Playfield p, Handmanager.Handcard hc, bool turnEndOfOwner)
+        {
+            return;
+        }
 
         /// <summary>
         /// 回合开始效果
@@ -386,6 +397,20 @@ namespace HREngine.Bots
             // 默认实现为空。子类可以根据需求重写此方法。
             return;
         }
+
+        /// <summary>
+        /// 当随从攻击时触发此方法。
+        /// 子类可以重写此方法来实现特定的攻击行为逻辑。
+        /// </summary>
+        /// <param name="p">游戏场地对象，包含游戏状态信息。</param>
+        /// <param name="attacker">进行攻击的随从。</param>
+        /// <param name="target">攻击目标随从。</param>
+        public virtual void afterMinionAttack(Playfield p, Minion attacker, Minion target)
+        {
+            // 默认实现为空。子类可以根据需求重写此方法。
+            return;
+        }
+
 
         /// <summary>
         /// 当随从造成伤害时触发的处理方法。
@@ -470,19 +495,6 @@ namespace HREngine.Bots
         }
 
         /// <summary>
-        /// 本牌在场上时,当随从打出后触发
-        /// </summary>
-        /// <param name="p">游戏场地对象，包含游戏状态信息。</param>
-        /// <param name="playedMinion">打出后的随从。</param>
-        /// <param name="wasOwnCard">是否是己方卡牌。</param>
-        /// <param name="triggerEffectMinion">触发此效果的随从。</param>
-        public virtual void onCardIsAfterToBePlayed(Playfield p, Minion playedMinion, bool wasOwnCard, Minion triggerEffectMinion)
-        {
-            // 默认实现为空。子类可以根据需求重写此方法。
-            return;
-        }
-
-        /// <summary>
         /// 本牌在场上时,当卡牌即将被打出时触发。
         /// 子类可以重写此方法，以在卡牌打出前执行特定逻辑。
         /// </summary>
@@ -511,8 +523,22 @@ namespace HREngine.Bots
         }
 
         /// <summary>
-        /// 本牌在场上时,当卡牌被打出后触发。
+        /// 本牌在场上时,当随从牌打出后触发
+        /// </summary>
+        /// <param name="p">游戏场地对象，包含游戏状态信息。</param>
+        /// <param name="playedMinion">打出后的随从。</param>
+        /// <param name="wasOwnCard">是否是己方卡牌。</param>
+        /// <param name="triggerEffectMinion">触发此效果的随从。</param>
+        public virtual void onCardIsAfterToBePlayed(Playfield p, Minion playedMinion, bool wasOwnCard, Minion triggerEffectMinion)
+        {
+            // 默认实现为空。子类可以根据需求重写此方法。
+            return;
+        }
+
+        /// <summary>
+        /// 本牌在场上时,当卡牌被打出后触发。目前写了也没用,playfiled没调用
         /// 子类可以重写此方法，以在卡牌打出后执行特定逻辑。
+        /// 目前写了也没用,playfiled没调用
         /// </summary>
         /// <param name="p">游戏场地对象，包含游戏状态信息。</param>
         /// <param name="c">被打出的卡牌。</param>
@@ -523,10 +549,10 @@ namespace HREngine.Bots
             // 默认实现为空。子类可以根据需求重写此方法。
             return;
         }
-        
         /// <summary>
-        /// 本牌在手牌或者为英雄技能时,当卡牌被打出后触发。（重载）。
+        /// 本牌在手牌或者为英雄技能时,当卡牌被打出后触发。（重载）。目前写了也没用,playfiled没调用
         /// 子类可以重写此方法，以在卡牌打出后执行特定逻辑。
+        /// 目前写了也没用,playfiled没调用
         /// </summary>
         /// <param name="p">游戏场地对象，包含游戏状态信息。</param>
         /// <param name="c">被打出的卡牌。</param>
@@ -661,6 +687,15 @@ namespace HREngine.Bots
         /// <param name="titanAbilityNO">泰坦的技能编号。</param>
         /// <param name="target">指向的的目标随从。</param>
         public virtual void useTitanAbility(Playfield p, Minion triggerMinion, int titanAbilityNO, Minion target)
+        {
+            return;
+        }
+        /// <summary>
+        /// 抽到时此牌时触发
+        /// </summary>
+        /// <param name="p">游戏场地对象，包含当前游戏状态的信息。</param>
+        /// <param name="handcard">被抽到卡牌。</param>
+        public virtual void castsWhenDrawn(Playfield p, Handmanager.Handcard handcard, bool wasOwnCard)
         {
             return;
         }

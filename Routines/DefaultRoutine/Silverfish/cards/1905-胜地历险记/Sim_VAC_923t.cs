@@ -17,7 +17,7 @@ namespace HREngine.Bots
 			{
 				if (target != null)
 				{
-					p.minionGetBuffed(target, 3, 0);
+					p.minionGetBuffed(target, triggerMinion.handcard.card.TAG_SCRIPT_DATA_NUM_1, 0);
 					p.minionGetRush(target);
 				}
 			}

@@ -12,13 +12,26 @@ namespace HREngine.Bots
 	class Sim_FIR_914 : SimTemplate
 	{
 
-        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice, Handmanager.Handcard hc)
-        {
-            if (target != null && target.own)
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice, Handmanager.Handcard hc)
+		{
+			if (target != null && target.own)
 			{
-				p.minionGetBuffed(target, 1, 1);
+				p.minionGetBuffed(target, hc.card.TAG_SCRIPT_DATA_NUM_1, hc.card.TAG_SCRIPT_DATA_NUM_2);
 			}
-        }
+		}
+
+		public override void onTurnEndsTrigger(Playfield p, Handmanager.Handcard hc, bool turnEndOfOwner)
+		{
+			if (turnEndOfOwner)
+			{
+				hc.card.TAG_SCRIPT_DATA_NUM_1++;
+				if (hc.card.TAG_SCRIPT_DATA_NUM_1 >= 3)
+				{
+					//弃牌之后再说
+				}
+			}
+		}
+
 
 		public override PlayReq[] GetPlayReqs()
 		{

@@ -11,7 +11,25 @@ namespace HREngine.Bots
 	//抽{0}张牌。<i>（每回合都会升级，但本牌会在{1}回合后弃掉！）</i>@抽{0}张牌。<i>（本牌会在本回合弃掉！）</i>
 	class Sim_FIR_911 : SimTemplate
 	{
-		
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice, Handmanager.Handcard hc)
+		{
+			for (int i = 0; i < hc.card.TAG_SCRIPT_DATA_NUM_1; i++)
+			{
+				p.drawACard(CardDB.cardIDEnum.None, ownplay);
+			}
+		}
+
+		public override void onTurnEndsTrigger(Playfield p, Handmanager.Handcard hc, bool turnEndOfOwner)
+		{
+			if (turnEndOfOwner)
+			{
+				hc.card.TAG_SCRIPT_DATA_NUM_1++;
+				if (hc.card.TAG_SCRIPT_DATA_NUM_1 > 2)
+				{
+					hc.temporary = true;
+				}
+			}
+		}
+
 	}
 }

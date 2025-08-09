@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//在你的回合结束时，对所有敌人造成2点伤害。
 	class Sim_DEEP_999t2 : SimTemplate
 	{
-		
-		
+		public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
+		{
+			if (triggerEffectMinion.own == turnEndOfOwner)
+			{
+				p.allCharsOfASideGetDamage(!triggerEffectMinion.own, 2);
+			}
+		}
+
 	}
 }

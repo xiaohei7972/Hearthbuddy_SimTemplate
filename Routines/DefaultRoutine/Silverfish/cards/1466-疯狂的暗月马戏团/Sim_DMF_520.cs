@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//在你召唤一个<b>突袭</b>随从后，使其获得+2攻击力。
 	class Sim_DMF_520 : SimTemplate
 	{
-		
+		public override void onMinionWasSummoned(Playfield p, Minion triggerEffectMinion, Minion summonedMinion)
+		{
+			if (triggerEffectMinion.own == summonedMinion.own && summonedMinion.rush == 1)
+			{
+				p.minionGetBuffed(summonedMinion, 2, 0);
+			}
+		}
 		
 	}
 }

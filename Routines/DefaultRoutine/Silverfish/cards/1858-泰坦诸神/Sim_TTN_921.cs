@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//<b>磁力</b>。每当本随从攻击时，获取一张幸运币。
 	class Sim_TTN_921 : SimTemplate
 	{
-		
-		
+		public override void onMinionAttack(Playfield p, Minion attacker, Minion target)
+		{
+			p.drawACard(CardDB.cardIDEnum.GAME_005, attacker.own, true);
+		}
+
 	}
 }

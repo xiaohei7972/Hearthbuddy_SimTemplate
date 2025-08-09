@@ -18,6 +18,8 @@ namespace HREngine.Bots
 				// 使一个随从获得+3/+3
 				p.minionGetBuffed(target, 3, 3);
 				//TODO:添加回合结束效果还在想
+				// 在cardDfes.xml搜索cardid,可以找到对应的附魔，
+				target.enchs += "VAC_944e";
 			}
 		}
 

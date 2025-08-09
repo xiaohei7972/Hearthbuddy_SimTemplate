@@ -4,29 +4,29 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_OG_102 : SimTemplate //* 黑暗低语者 Darkspeaker
-//<b>Battlecry:</b> Swap stats with a friendly minion.
-//<b>战吼：</b>与另一个友方随从交换属性值。 
+    //* 黑暗低语者 Darkspeaker
+    //<b>Battlecry:</b> Swap stats with a friendly minion.
+    //<b>战吼：</b>与另一个友方随从交换属性值。 
+    class Sim_OG_102 : SimTemplate
     {
-        
-
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {
-            if (target == null) return;
+            if (target != null)
+            {
 
-            int tmpHp = target.Hp;
-            int tmpMHp = target.maxHp;
-            int tmpAngr = target.Angr;
+                int tmpHp = target.Hp;
+                int tmpMHp = target.maxHp;
+                int tmpAngr = target.Angr;
 
-            target.Hp = own.Hp;
-            target.maxHp = own.maxHp;
-            target.Angr = own.Angr;
+                target.Hp = own.Hp;
+                target.maxHp = own.maxHp;
+                target.Angr = own.Angr;
 
-            own.Hp = tmpHp;
-            own.maxHp= tmpMHp;
-            own.Angr = tmpAngr;
+                own.Hp = tmpHp;
+                own.maxHp = tmpMHp;
+                own.Angr = tmpAngr;
+            }
         }
-
         public override PlayReq[] GetPlayReqs()
         {
             return new PlayReq[] {

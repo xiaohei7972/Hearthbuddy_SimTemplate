@@ -20,8 +20,11 @@ namespace HREngine.Bots
 				for (int i = 0; i < 4; i++)
 				{
 					int pos = ownplay ? p.ownMinions.Count : p.enemyMinions.Count;
-					p.callKid(kid, pos, ownplay);
-					minions.Add(p.ownMinions[pos - 1]);
+					if (pos < 7)
+					{
+						p.callKid(kid, pos, ownplay);
+						minions.Add(p.ownMinions[pos - 1]);
+					}
 				}
 				foreach (Minion minion in minions)
 				{
@@ -35,7 +38,7 @@ namespace HREngine.Bots
 				new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY),
 				new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET),
 				// new PlayReq(CardDB.ErrorType2.REQ_ENEMY_TARGET),
-				new PlayReq(CardDB.ErrorType2.REQ_MINION_CAP,1),
+				new PlayReq(CardDB.ErrorType2.REQ_NUM_MINION_SLOTS,1),
 			};
 		}
 

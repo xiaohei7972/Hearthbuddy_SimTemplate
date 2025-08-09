@@ -11,7 +11,15 @@ namespace HREngine.Bots
 	//在本随从攻击后，使你的其他随从获得+1攻击力。<b>星舰组件</b>
 	class Sim_GDB_110 : SimTemplate
 	{
-		
-		
+		public override void afterMinionAttack(Playfield p, Minion attacker, Minion target)
+		{
+			List<Minion> temp = attacker.own ? p.ownMinions : p.enemyMinions;
+			temp.Remove(attacker);
+			foreach (Minion m in temp)
+			{
+				p.minionGetBuffed(m, 1, 0);
+			}
+		}
+
 	}
 }

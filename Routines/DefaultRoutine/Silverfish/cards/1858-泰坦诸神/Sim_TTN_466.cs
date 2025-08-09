@@ -11,7 +11,17 @@ namespace HREngine.Bots
 	//<b>突袭</b>每当本随从造成伤害时，获得等量的护甲值。
 	class Sim_TTN_466 : SimTemplate
 	{
-		
+		public override void onDamageDealtByMinion(Playfield p, Minion attacker, int damageDone, bool ownplay)
+        {
+            if (ownplay)
+            {
+                p.minionGetArmor(p.ownHero, damageDone);
+            }
+            else
+            {
+                p.minionGetArmor(p.enemyHero, damageDone);
+            }
+        }
 		
 	}
 }

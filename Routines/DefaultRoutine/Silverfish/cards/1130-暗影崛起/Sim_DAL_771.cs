@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//每当本随从攻击时，使你的对手获得一张幸运币。
 	class Sim_DAL_771 : SimTemplate
 	{
-		
+		public override void onMinionAttack(Playfield p, Minion attacker, Minion target)
+		{
+			p.drawACard(CardDB.cardIDEnum.GAME_005, !attacker.own, true);
+		}
 		
 	}
 }

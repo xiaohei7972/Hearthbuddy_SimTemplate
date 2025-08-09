@@ -4,13 +4,13 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：5 攻击力：1 生命值：4
-	//Origami Frog
-	//折纸青蛙
-	//[x]<b>Rush</b><b>Battlecry:</b> Swap Attackwith another minion.
-	//<b>突袭</b>。<b>战吼：</b>与另一个随从交换攻击力。
-	class Sim_TOY_894 : SimTemplate
-	{
+    //随从 中立 费用：5 攻击力：1 生命值：4
+    //Origami Frog
+    //折纸青蛙
+    //[x]<b>Rush</b><b>Battlecry:</b> Swap Attackwith another minion.
+    //<b>突袭</b>。<b>战吼：</b>与另一个随从交换攻击力。
+    class Sim_TOY_894 : SimTemplate
+    {
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {
             // 确保目标随从有效
@@ -26,7 +26,14 @@ namespace HREngine.Bots
                 if (target.Angr < 0) target.Angr = 0;
             }
         }
-
+        public override PlayReq[] GetPlayReqs()
+        {
+            return new PlayReq[]{
+                new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY), //需要目标
+                new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET), //目标只能是随从
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_IF_AVAILABLE), //无目标时也可以用
+			};
+        }
 
     }
 }

@@ -11,11 +11,9 @@ namespace HREngine.Bots
 	//<b>战吼：</b>触发本局对战中死亡的5个友方随从的<b>亡语</b>。
 	class Sim_TLC_106 : SimTemplate
 	{
-
-		int i = 0;
-
 		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
 		{
+			int i = 0;
 
 			// 获取本局对战中的我方墓地
 			// 判断是否有亡语
@@ -29,7 +27,7 @@ namespace HREngine.Bots
 					if (i == 5)
 						break;
 					// 创建一个虚拟随从来触发其亡语效果
-						Minion minion = new Minion { handcard = new Handmanager.Handcard { card = tmpCard }, own = own.own };
+					Minion minion = new Minion { handcard = new Handmanager.Handcard { card = tmpCard }, own = own.own };
 					// 触发亡语效果
 					tmpCard.sim_card.onDeathrattle(p, minion);
 					i++;

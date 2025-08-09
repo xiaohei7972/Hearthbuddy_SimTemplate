@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//在本随从攻击后，获取一张法力值消耗为（1）点的2/3的瓦格里。
 	class Sim_TTN_812 : SimTemplate
 	{
-		
+		public override void afterMinionAttack(Playfield p, Minion attacker, Minion target)
+		{
+			p.drawACard(CardDB.cardIDEnum.TTN_812t, attacker.own, true);
+		}
 		
 	}
 }

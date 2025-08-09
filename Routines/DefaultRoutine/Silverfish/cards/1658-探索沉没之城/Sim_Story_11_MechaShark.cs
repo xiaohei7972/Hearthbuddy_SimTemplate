@@ -11,7 +11,14 @@ namespace HREngine.Bots
 	//在你召唤一个机械后，造成3点伤害，随机分配到所有敌人身上。
 	class Sim_Story_11_MechaShark : SimTemplate
 	{
-		
+		public override void onMinionIsSummoned(Playfield p, Minion triggerEffectMinion, Minion summonedMinion)
+        {
+			// 检查召唤的随从是否是机械
+			if (triggerEffectMinion.entitiyID != summonedMinion.entitiyID && triggerEffectMinion.own == summonedMinion.own && RaceUtils.IsRaceOrAll(summonedMinion.handcard.card.race, CardDB.Race.MECHANICAL))
+			{
+				p.allCharsOfASideGetRandomDamage(!triggerEffectMinion.own, 3);
+            }
+        }
 		
 	}
 }

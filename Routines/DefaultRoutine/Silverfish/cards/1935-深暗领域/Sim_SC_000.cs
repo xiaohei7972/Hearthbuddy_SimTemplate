@@ -17,12 +17,5 @@ namespace HREngine.Bots
 				p.drawACard(CardDB.cardIDEnum.SC_010, triggerMinion.own, true);
 		}
 
-		public override PlayReq[] GetPlayReqs()
-		{
-			return new PlayReq[]{
-				new PlayReq(CardDB.ErrorType2.REQ_MINION_CAP,1), // 需要一个空位
-			};
-		}
-
 	}
 }

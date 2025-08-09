@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//在你召唤一个法力值消耗为（1）的随从后，使其获得+2/+1。
 	class Sim_TSC_922 : SimTemplate
 	{
-		
-		
+		public override void onMinionWasSummoned(Playfield p, Minion triggerEffectMinion, Minion summonedMinion)
+		{
+			if (triggerEffectMinion.own == summonedMinion.own)
+				if (summonedMinion.handcard.card.getManaCost(p, summonedMinion.handcard.manacost) == 1)
+					p.minionGetBuffed(summonedMinion, 2, 1);
+
+		}
+
 	}
 }

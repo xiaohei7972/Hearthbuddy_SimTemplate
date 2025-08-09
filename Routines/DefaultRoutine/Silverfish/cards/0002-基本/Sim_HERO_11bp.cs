@@ -11,7 +11,18 @@ namespace HREngine.Bots
 	//<b>英雄技能</b>召唤一个1/1并具有<b>冲锋</b>的食尸鬼。它会在回合结束时死亡。
 	class Sim_HERO_11bp : SimTemplate
 	{
-		
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.HERO_11bpt);
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			int pos = (ownplay) ? p.ownMinions.Count : p.enemyMinions.Count;
+			p.callKid(kid, pos, ownplay, false);
+		}
+		public override PlayReq[] GetPlayReqs()
+		{
+			return new PlayReq[] {
+				new PlayReq(CardDB.ErrorType2.REQ_NUM_MINION_SLOTS, 1), //确保有位置召唤
+            };
+		}
+
 	}
 }

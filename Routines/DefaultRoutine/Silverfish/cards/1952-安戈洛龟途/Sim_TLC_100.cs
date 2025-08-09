@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//<b>战吼：</b>如果你的套牌中的牌有10种不同的法力值消耗，制造一个自定义的地标。
 	class Sim_TLC_100 : SimTemplate
 	{
-		
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
+			p.drawACard(CardDB.cardIDEnum.None, own.own, true);
+        }
 		
 	}
 }
