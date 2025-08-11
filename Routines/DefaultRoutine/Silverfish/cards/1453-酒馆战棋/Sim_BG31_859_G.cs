@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 无效的 费用：0 攻击力：8 生命值：10
+	//随从 无效的 费用：0 攻击力：10 生命值：12
 	//Technical Element
 	//科技元素体
 	//[x]<b>Magnetic</b>Can <b>Magnetize</b> to both__Mechs and Elementals.

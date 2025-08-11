@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：20 攻击力：8 生命值：8
+	//随从 中立 费用：25 攻击力：8 生命值：8
 	//Playhouse Giant
 	//游乐巨人
 	//Costs (1) less for each card you've drawn this game.

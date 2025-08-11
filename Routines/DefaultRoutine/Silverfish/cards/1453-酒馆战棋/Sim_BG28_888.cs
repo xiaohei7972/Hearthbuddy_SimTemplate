@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_SPELL 中立 费用：3
+	//BATTLEGROUND_SPELL 中立 费用：2
 	//Misplaced Tea Set
 	//乱放的茶具
 	//Give a friendly minion of each type +{0}/+{1}.

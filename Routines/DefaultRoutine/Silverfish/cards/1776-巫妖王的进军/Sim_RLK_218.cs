@@ -8,7 +8,7 @@ namespace HREngine.Bots
 	//Silvermoon Arcanist
 	//银月城奥术师
 	//[x]<b>Spell Damage +2</b><b>Battlecry:</b> Your spells can’ttarget heroes this turn.
-	//<b>+2</b>。<b>战吼：</b>在本回合中，你的法术不能以英雄为目标。
+	//<b>法术伤害+2</b>。<b>战吼：</b>在本回合中，你的法术不能以英雄为目标。
 	class Sim_RLK_218 : SimTemplate
 	{
 		

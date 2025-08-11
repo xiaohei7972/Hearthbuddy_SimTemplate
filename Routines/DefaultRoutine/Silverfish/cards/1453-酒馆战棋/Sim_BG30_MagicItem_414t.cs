@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：2
+	//BATTLEGROUND_TRINKET 中立 费用：4
 	//Kodo Leather Pouch
 	//科多兽皮袋
 	//[x]After you buy a card,give two randomfriendly minions +4/+4.

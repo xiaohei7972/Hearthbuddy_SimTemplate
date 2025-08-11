@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：1
+	//BATTLEGROUND_TRINKET 中立 费用：2
 	//Macaw Portrait
 	//金刚鹦鹉肖像
 	//Get a Monstrous Macaw. Your Monstrous Macaws also trigger your left-most <b>Battlecry</b>.

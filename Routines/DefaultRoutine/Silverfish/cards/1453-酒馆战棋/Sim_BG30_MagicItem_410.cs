@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：1
+	//BATTLEGROUND_TRINKET 中立 费用：2
 	//Quilligraphy Set
 	//鬃尖笔墨套装
 	//[x]<b>Avenge (4):</b> Your <b>BloodGems</b> give an extra+1 Health this game.

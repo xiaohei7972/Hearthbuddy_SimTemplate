@@ -7,8 +7,8 @@ namespace HREngine.Bots
 	//随从 战士 费用：0 攻击力：4 生命值：6
 	//Persistent Poet
 	//执念诗心龙
-	//[x]<b><b>Divine Shield</b>.</b> AdjacentDragons permanently keepand double your enchantmentsfrom combat.
-	//<b><b>圣盾</b>。</b>相邻的龙在战斗阶段受到的你的附加效果翻倍，并可永久保留。
+	//[x]<b>Divine Shield</b>. AdjacentDragons permanently keep<b><b>Bonus Keyword</b>s</b> and double____stats gained in combat.
+	//<b>圣盾</b>。相邻的龙可永久保留战斗阶段获得的<b><b>额外关键词</b></b>和双倍属性值。
 	class Sim_BG29_813_G : SimTemplate
 	{
 		

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：4
+	//BATTLEGROUND_TRINKET 中立 费用：5
 	//Guiding Candle
 	//引路蜡烛
 	//[x]Your first two <b>Refreshes</b>each turn contain onlyTier 6 cards. <i>(@ left!)</i>

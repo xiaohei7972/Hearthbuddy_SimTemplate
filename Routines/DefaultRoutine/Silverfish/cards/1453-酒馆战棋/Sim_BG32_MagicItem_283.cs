@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：7
+	//BATTLEGROUND_TRINKET 中立 费用：5
 	//Czarina Portrait
 	//女沙皇肖像
 	//Get a Charging Czarina. Your Charging Czarinas also give Health.

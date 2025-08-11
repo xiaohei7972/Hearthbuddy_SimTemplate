@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：0
+	//BATTLEGROUND_TRINKET 中立 费用：1
 	//Implicator Portrait
 	//鬼儡肖像
 	//Get 2 False Implicators. Your Demons always consume the highest-Health minion in the Tavern.

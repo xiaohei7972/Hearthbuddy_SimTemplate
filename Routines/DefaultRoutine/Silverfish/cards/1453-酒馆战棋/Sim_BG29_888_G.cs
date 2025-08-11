@@ -7,8 +7,8 @@ namespace HREngine.Bots
 	//随从 战士 费用：0 攻击力：2 生命值：8
 	//Glim Guardian
 	//微光护卫者
-	//Whenever this attacks, gain +4/+2.
-	//每当本随从攻击时，获得+4/+2。
+	//<b>Rally:</b> Gain +{0} Attack.
+	//<b>进击：</b>获得+{0}攻击力。
 	class Sim_BG29_888_G : SimTemplate
 	{
 		

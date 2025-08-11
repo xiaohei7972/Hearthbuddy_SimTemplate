@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：1
+	//BATTLEGROUND_TRINKET 中立 费用：2
 	//Bartend-o-Tron's Oilcan
 	//调酒机器人的油壶
 	//[x]Reduce the Cost ofupgrading the Tavern by(3). At the start of eachturn, repeat this.

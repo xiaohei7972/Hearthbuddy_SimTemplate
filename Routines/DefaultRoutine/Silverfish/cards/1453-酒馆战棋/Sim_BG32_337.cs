@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_SPELL 中立 费用：1
+	//BATTLEGROUND_SPELL 中立 费用：2
 	//Seafood Stew
 	//海鲜乱炖
 	//Give a minion +{0}/+{1}. Repeat for each different <b>Bonus Keyword</b> in your warband.

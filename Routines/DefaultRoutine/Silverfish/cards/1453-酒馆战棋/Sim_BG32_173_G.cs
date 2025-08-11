@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：0 攻击力：6 生命值：6
+	//随从 圣骑士 费用：0 攻击力：12 生命值：12
 	//Rickety Repairbot
 	//摇晃的修理机器人
 	//[x]At the end of your turn,<b>Magnetize</b> 2 random__<b>Magnetic</b> Mechs to this.

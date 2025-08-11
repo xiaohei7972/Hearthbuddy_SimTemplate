@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 牧师 费用：0 攻击力：1 生命值：3
+	//随从 牧师 费用：0 攻击力：1 生命值：2
 	//Surfing Sylvar
 	//冲浪的希尔梵
 	//[x]At the end of your turn, giveadjacent minions +1 Attack.Repeat for each friendlyGolden minion.

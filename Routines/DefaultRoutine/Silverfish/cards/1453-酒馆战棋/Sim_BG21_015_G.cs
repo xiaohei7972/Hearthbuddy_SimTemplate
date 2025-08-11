@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：10 生命值：10
+	//随从 战士 费用：0 攻击力：8 生命值：8
 	//Tarecgosa
 	//泰蕾苟萨
-	//This permanently doubles and keeps your enchantments from combat.
-	//本随从战斗阶段受到的你的附加效果翻倍，并可永久保留。
+	//This permanently keeps <b><b>Bonus Keyword</b>s</b> and double stats gained in combat.
+	//本随从可永久保留战斗阶段获得的<b><b>额外关键词</b></b>和双倍属性值。
 	class Sim_BG21_015_G : SimTemplate
 	{
 		

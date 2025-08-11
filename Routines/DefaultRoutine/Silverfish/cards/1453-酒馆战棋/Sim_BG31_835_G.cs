@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：0 攻击力：14 生命值：14
+	//随从 巫妖王 费用：0 攻击力：16 生命值：16
 	//Deathly Striker
 	//致命打击者
-	//[x]<b>Avenge (4):</b> Get 2 randomUndead. <b>Deathrattle:</b>Summon them from your_____hand for this combat only.__
-	//<b>复仇（4）：</b>随机获取2张亡灵牌。<b>亡语：</b>从你的手牌中召唤它们，其登场仅限本场战斗。
+	//[x]<b>Avenge ({0}):</b> Get 2 randomUndead. <b>Deathrattle:</b>Summon them from your_____hand for this combat only.__
+	//<b>复仇（{0}）：</b>随机获取2张亡灵牌。<b>亡语：</b>从你的手牌中召唤它们，其登场仅限本场战斗。
 	class Sim_BG31_835_G : SimTemplate
 	{
 		

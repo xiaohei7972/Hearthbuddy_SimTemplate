@@ -7,8 +7,8 @@ namespace HREngine.Bots
 	//随从 中立 费用：0 攻击力：2 生命值：8
 	//Yrel
 	//伊瑞尔
-	//After this attacks, give a friendly minion of each type +2/+4.
-	//在本随从攻击后，使每个类型的各一个友方随从获得+2/+4。
+	//<b>Rally:</b> Give a friendly minion of each type +{0}/+{1}.
+	//<b>进击：</b>使每个类型的各一个友方随从获得+{0}/+{1}。
 	class Sim_BG23_350_G : SimTemplate
 	{
 		

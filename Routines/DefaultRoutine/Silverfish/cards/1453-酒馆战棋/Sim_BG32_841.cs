@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 法师 费用：0 攻击力：4 生命值：3
+	//随从 法师 费用：0 攻击力：5 生命值：3
 	//Sand Swirler
 	//沙尘旋流
 	//[x]<b>Battlecry:</b> Your Elementalsthat give stats grant an extra+1 Health this game.

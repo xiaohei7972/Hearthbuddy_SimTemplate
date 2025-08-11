@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 萨满祭司 费用：0 攻击力：5 生命值：2
+	//随从 萨满祭司 费用：0 攻击力：6 生命值：2
 	//Bassgill
 	//低音提琴鱼人
 	//<b>Deathrattle:</b> Summon the highest-Health Murlocfrom your hand for this combat only.

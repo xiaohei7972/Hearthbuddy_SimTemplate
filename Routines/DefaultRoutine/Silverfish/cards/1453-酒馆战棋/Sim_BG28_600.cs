@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_SPELL 中立 费用：3
+	//BATTLEGROUND_SPELL 中立 费用：4
 	//Scavenge for Parts
 	//翻捡零件
 	//At the end of your turn, get a random <b>Magnetic</b> minion. Lasts 3 turns.

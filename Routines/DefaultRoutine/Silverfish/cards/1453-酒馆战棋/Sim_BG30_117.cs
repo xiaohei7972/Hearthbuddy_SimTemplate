@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 恶魔猎手 费用：0 攻击力：3 生命值：3
+	//随从 恶魔猎手 费用：0 攻击力：4 生命值：4
 	//Volcanic Visitor
 	//火山访客
-	//[x]<b>Spellcraft: Choose One -</b>Give your minions +2 Attackuntil next turn; or +2Health until next turn.
-	//<b>塑造法术：抉择：</b>直到下个回合，使你的随从获得+2攻击力；或者直到下个回合+2生命值。
+	//[x]<b>Spellcraft: Choose One -</b>Give your minions+3 Attack; or +3 Health.
+	//<b>塑造法术：抉择：</b>使你的随从获得+3攻击力；或者+3生命值。
 	class Sim_BG30_117 : SimTemplate
 	{
 		

@@ -5,7 +5,7 @@ using System.Text;
 namespace HREngine.Bots
 {
 	//英雄 猎人 费用：0
-	//Dino Hunter Lor'Themar
+	//Dino Hunter Lor'themar
 	//恐龙猎人洛瑟玛
 	//
 	//

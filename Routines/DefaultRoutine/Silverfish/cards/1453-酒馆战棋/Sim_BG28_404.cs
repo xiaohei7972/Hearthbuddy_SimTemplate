@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：0 生命值：8
+	//随从 中立 费用：0 攻击力：0 生命值：6
 	//Mad Matador
 	//癫疯斗牛士
 	//[x]<b><b>Taunt</b>.</b> When this would takedamage, deal it to a randomenemy minion instead.<i>(Once per combat.)</i>

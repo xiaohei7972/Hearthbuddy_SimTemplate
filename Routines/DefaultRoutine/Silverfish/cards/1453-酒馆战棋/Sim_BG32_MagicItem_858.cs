@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_TRINKET 中立 费用：2
+	//BATTLEGROUND_TRINKET 中立 费用：3
 	//Explorer's Binoculars
 	//探险者的望远镜
 	//Get three randomTier 4 minions.
