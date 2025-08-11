@@ -11,7 +11,24 @@ namespace HREngine.Bots
 	//<b>战吼：</b>使你手牌中法力值消耗最高的法术牌的法力值消耗减少（1）点。
 	class Sim_AV_114 : SimTemplate
 	{
-		
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			Handmanager.Handcard maxCostSpell = null;
+			int maxcost = 0;
+			if (own.own)
+			{
+				foreach (Handmanager.Handcard hc in p.owncards)
+				{
+					if (hc.card.type == CardDB.cardtype.SPELL && hc.card.cost > maxcost)
+					{
+						maxCostSpell = hc;
+						maxcost = hc.card.cost;
+					}
+
+				}
+			}
+			maxCostSpell.card.cost--;
+		}
+
 	}
 }

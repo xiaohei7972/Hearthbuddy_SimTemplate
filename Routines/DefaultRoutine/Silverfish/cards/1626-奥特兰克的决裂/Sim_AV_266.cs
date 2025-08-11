@@ -9,10 +9,10 @@ namespace HREngine.Bots
         //<b>冻结</b>一个随从。抽一张牌。
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
-            if (ownplay)
+            if (target != null)
             {
                 p.minionGetFrozen(target);
-                p.drawACard(CardDB.cardIDEnum.None, true);
+                p.drawACard(CardDB.cardIDEnum.None, ownplay);
             }
         }
 

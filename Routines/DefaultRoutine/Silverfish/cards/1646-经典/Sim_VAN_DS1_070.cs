@@ -11,14 +11,17 @@ namespace HREngine.Bots
 
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
 		{
-            p.minionGetBuffed(target, 2, 2);
             if (target != null)
             {
-                if (!target.taunt)
+                p.minionGetBuffed(target, 2, 2);
+                if (target != null)
                 {
-                    target.taunt = true;
-                    if (target.own) p.anzOwnTaunt++;
-                    else p.anzEnemyTaunt++;
+                    if (!target.taunt)
+                    {
+                        target.taunt = true;
+                        if (target.own) p.anzOwnTaunt++;
+                        else p.anzEnemyTaunt++;
+                    }
                 }
             }
 		}

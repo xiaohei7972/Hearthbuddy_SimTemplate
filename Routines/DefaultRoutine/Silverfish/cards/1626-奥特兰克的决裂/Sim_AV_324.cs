@@ -4,29 +4,32 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_AV_324 : SimTemplate //* 暗言术噬 shadowworddevour
-	{
-		//选择一个随从，使其从所有其他随从处各偷取1点生命值。
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
-            int i = 0;
-            foreach (Minion m in p.ownMinions)
+    class Sim_AV_324 : SimTemplate //* 暗言术噬 shadowworddevour
+    {
+        //选择一个随从，使其从所有其他随从处各偷取1点生命值。
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
+            if (target != null)
             {
-                if (m != target && !m.untouchable)
+                int i = 0;
+                foreach (Minion m in p.ownMinions)
                 {
-                    p.minionGetBuffed(m, 0, -1);
-                    i++;
+                    if (m.entitiyID != target.entitiyID && !m.untouchable)
+                    {
+                        p.minionGetBuffed(m, 0, -1);
+                        i++;
+                    }
                 }
-            }
-            foreach (Minion m in p.enemyMinions)
-            {
-                if (m != target && !m.untouchable)
+                foreach (Minion m in p.enemyMinions)
                 {
-                    p.minionGetBuffed(m, 0, -1);
-                    i++;
+                    if (m.entitiyID != target.entitiyID && !m.untouchable)
+                    {
+                        p.minionGetBuffed(m, 0, -1);
+                        i++;
+                    }
                 }
+                p.minionGetBuffed(target, 0, i);
             }
-            p.minionGetBuffed(target, 0, i);
         }
         public override PlayReq[] GetPlayReqs()
         {

@@ -197,6 +197,18 @@ namespace HREngine.Bots
         }
 
         /// <summary>
+        /// 打出卡牌时的效果（随从牌）
+        /// </summary>
+        /// <param name="p">场面</param>
+        /// <param name="own">打出的随从</param>
+        /// <param name="target">选定目标</param>
+        /// <param name="choice">选项（抉择、发现等）</param>
+        public virtual void onCardPlay(Playfield p, Minion own, Minion target, int choice)
+        {
+            return;
+        }
+
+        /// <summary>
         /// 弃牌时触发
         /// </summary>
         /// <param name="p">场面</param>

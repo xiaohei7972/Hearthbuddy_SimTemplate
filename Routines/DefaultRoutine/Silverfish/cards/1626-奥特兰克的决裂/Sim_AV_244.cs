@@ -13,15 +13,11 @@ namespace HREngine.Bots
 		{
 			p.equipWeapon(weapon, ownplay);
 		}
-		public override void onHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
-		{
-			if (hero.own && hero.Angr == target.Hp)
-			{
-				p.ownWeapon.Angr++;
-				p.ownWeapon.Durability++;
-				p.minionGetBuffed(p.ownHero, 1, 0);
 
-			}
+		public override void OnHonorableKill(Playfield p, Weapon w, Minion target)
+		{
+			w.Angr++;
+			w.Durability++;
 		}
 
 	}

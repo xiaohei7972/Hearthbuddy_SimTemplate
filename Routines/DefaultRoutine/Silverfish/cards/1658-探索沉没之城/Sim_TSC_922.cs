@@ -14,7 +14,7 @@ namespace HREngine.Bots
 		public override void onMinionWasSummoned(Playfield p, Minion triggerEffectMinion, Minion summonedMinion)
 		{
 			if (triggerEffectMinion.own == summonedMinion.own)
-				if (summonedMinion.handcard.card.getManaCost(p, summonedMinion.handcard.manacost) == 1)
+				if (summonedMinion.handcard.card.cost == 1)
 					p.minionGetBuffed(summonedMinion, 2, 1);
 
 		}

@@ -11,7 +11,20 @@ namespace HREngine.Bots
 	//<b>荣誉消灭：</b>对敌方英雄造成等同于你英雄的攻击力的伤害。
 	class Sim_AV_209 : SimTemplate
 	{
-		
-		
+		CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.AV_209);
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			p.equipWeapon(weapon, ownplay);
+		}
+
+		public override void OnHonorableKill(Playfield p, Weapon w, Minion target)
+		{
+			Minion hero = !target.own ? p.enemyHero : p.ownHero;
+			Minion hero1 = target.own ? p.enemyHero : p.ownHero;
+
+			p.minionGetDamageOrHeal(hero, hero1.Angr);
+
+		}
+
 	}
 }
