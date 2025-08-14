@@ -10,6 +10,8 @@ namespace HREngine.Bots
         {
             public Dictionary<CardDB.cardNameEN, int> mobsTurn = new Dictionary<CardDB.cardNameEN, int>();
             public Dictionary<int, bool> anrgPets = new Dictionary<int, bool>() { { 1, false }, { 3, false }, { 5, false }, { 7, false } };
+
+            public Dictionary<CardDB.Race, bool> playedRaces = new Dictionary<CardDB.Race, bool>();
             public CardDB.cardIDEnum Id = CardDB.cardIDEnum.None;
             public int questProgress = 0;
             public int maxProgress = 1000;
@@ -27,6 +29,11 @@ namespace HREngine.Bots
                 {
                     this.mobsTurn.Clear();
                     foreach (var n in q.mobsTurn) this.mobsTurn.Add(n.Key, n.Value);
+                }
+                if (Id == CardDB.cardIDEnum.TLC_830)
+                {
+                    this.anrgPets.Clear();
+                    this.anrgPets = new Dictionary<int, bool>(q.anrgPets);
                 }
             }
 
@@ -69,13 +76,14 @@ namespace HREngine.Bots
                         if (total > questProgress) questProgress++;
                         break;
                     case CardDB.cardIDEnum.TLC_830:
-                        if (m.handcard.card.race == CardDB.Race.PET)
+                        // 判断随从是否为野兽或全部
+                        if (m.handcard.card.race == CardDB.Race.PET || m.handcard.card.race == CardDB.Race.ALL)
                         {
                             foreach (KeyValuePair<int, bool> kvp in anrgPets)
                             {
                                 if (m.Angr == kvp.Key && kvp.Value)
                                 {
-                                    if (anrgPets.ContainsKey(kvp.Key))
+                                    if (mobsTurn.ContainsKey(m.name))
                                         anrgPets[kvp.Key] = true;
                                     questProgress++;
                                     break;
@@ -86,6 +94,7 @@ namespace HREngine.Bots
 
                 }
             }
+
             /// <summary>
             /// 随从召唤时扳机
             /// 根据当前任务CardIdEnum触发对应case语句,增加任务进度
@@ -98,8 +107,11 @@ namespace HREngine.Bots
                     case CardDB.cardIDEnum.UNG_116: if (m.Angr >= 5) questProgress++; break;
                     case CardDB.cardIDEnum.UNG_940: if (m.handcard.card.deathrattle) questProgress++; break;
                     case CardDB.cardIDEnum.UNG_942: if ((TAG_RACE)m.handcard.card.race == TAG_RACE.MURLOC) questProgress++; break;
+                    // 骑士鱼人任务
+                    case CardDB.cardIDEnum.TLC_426: if (m.handcard.card.race == CardDB.Race.MURLOC || m.handcard.card.race == CardDB.Race.ALL) questProgress++; break;
                 }
             }
+
             /// <summary>
             /// 法术使用时扳机
             /// </summary>
@@ -111,8 +123,13 @@ namespace HREngine.Bots
                 {
                     case CardDB.cardIDEnum.UNG_954: if (target != null && target.own && !target.isHero) questProgress++; break;
                     case CardDB.cardIDEnum.UNG_028: if (qId > 67) questProgress++; break;
+                    // 
+                    case CardDB.cardIDEnum.TLC_817t: if (qId > 67) questProgress++; break;
+                    case CardDB.cardIDEnum.TLC_817t2: if (qId > 67) questProgress++; break;
+
                 }
             }
+
             /// <summary>
             /// 弃牌时扳机
             /// </summary>
@@ -124,6 +141,17 @@ namespace HREngine.Bots
                     case CardDB.cardIDEnum.UNG_829: questProgress += num; break;
                 }
             }
+            /// <summary>
+            /// 回合开始时扳机
+            /// </summary>
+            public void trigger_startTurn()
+            {
+                switch (Id)
+                {
+                    case CardDB.cardIDEnum.TLC_602: questProgress++; break;
+                }
+            }
+
             /// <summary>
             /// 任务奖励
             /// </summary>
@@ -141,21 +169,18 @@ namespace HREngine.Bots
                     case CardDB.cardIDEnum.UNG_940: return CardDB.cardIDEnum.UNG_940t8; //-Quest: Summon 7 Deathrattle minions. Reward: Amara, Warden of Hope.
                     case CardDB.cardIDEnum.UNG_942: return CardDB.cardIDEnum.UNG_942t; //-Quest: Summon 10 Murlocs. Reward: Megafin.
                     case CardDB.cardIDEnum.UNG_954: return CardDB.cardIDEnum.UNG_954t1; //-Quest: Cast 6 spells on your minions. Reward: Galvadon.  
-
-
-                    
-                    case CardDB.cardIDEnum.TLC_433: return CardDB.cardIDEnum.TLC_433t; //<b>任务：</b>消耗18份<b>残骸</b>。<b>奖励：</b>泰拉克斯，魔骸暴龙。
+                    case CardDB.cardIDEnum.TLC_433: return CardDB.cardIDEnum.TLC_433t; //<b>任务：</b>消耗15份<b>残骸</b>。<b>奖励：</b>泰拉克斯，魔骸暴龙。
                     case CardDB.cardIDEnum.TLC_239: return CardDB.cardIDEnum.TLC_239t; //<b>任务：</b>填满你的面板，总计3回合。<b>奖励：</b>永茂之花。
                     case CardDB.cardIDEnum.TLC_830: return CardDB.cardIDEnum.TLC_830t; //<b>任务：</b>使用攻击力为1，3，5，7的野兽牌各一张。<b>奖励：</b>绍克。
                     case CardDB.cardIDEnum.TLC_460: return CardDB.cardIDEnum.TLC_460t; //<b>任务：</b><b>发现</b>8张牌。<b>奖励：</b>源生之石。
                     case CardDB.cardIDEnum.TLC_426: return CardDB.cardIDEnum.TLC_426t; //<b><b>可重复任务：</b>召唤5个鱼人。<b>奖励：</b>你召唤的鱼人获得+1/+1。
-                    case CardDB.cardIDEnum.TLC_817t: return CardDB.cardIDEnum.TLC_817t3; //<b>任务：</b>施放5个神圣法术。<b>奖励：</b>生命之息。
-                    case CardDB.cardIDEnum.TLC_817t2: return CardDB.cardIDEnum.TLC_817t4; //<b>任务：</b>施放5个暗影法术。<b>奖励：</b>死亡之触。
+                    case CardDB.cardIDEnum.TLC_817t: return CardDB.cardIDEnum.TLC_817t3; //<b>任务：</b>施放4个神圣法术。<b>奖励：</b>生命之息。
+                    case CardDB.cardIDEnum.TLC_817t2: return CardDB.cardIDEnum.TLC_817t4; //<b>任务：</b>施放4个暗影法术。<b>奖励：</b>死亡之触。
                     case CardDB.cardIDEnum.TLC_513: return CardDB.cardIDEnum.TLC_513t; //<b>任务：</b>将卡牌洗入你的牌库，总计5次。<b>奖励：</b>暮影大师。
-                    case CardDB.cardIDEnum.TLC_229: return CardDB.cardIDEnum.TLC_229t14; //<b>任务：</b>使用7个不同类型的随从牌。<b>奖励：</b>阿沙隆。
-                    case CardDB.cardIDEnum.TLC_446: return CardDB.cardIDEnum.TLC_446t; //<b>任务：</b>使用6张<b>临时</b>牌。<b>奖励：</b>邪能地窟裂隙。
+                    case CardDB.cardIDEnum.TLC_229: return CardDB.cardIDEnum.TLC_229t14; //<b>任务：</b>使用6个不同类型的随从牌。<b>奖励：</b>阿沙隆。
+                    case CardDB.cardIDEnum.TLC_446: return CardDB.cardIDEnum.TLC_446t; //<b>任务：</b>使用5张<b>临时</b>牌。<b>奖励：</b>邪能地窟裂隙。
                     case CardDB.cardIDEnum.TLC_602: return CardDB.cardIDEnum.TLC_602t; //<b>任务：</b>存活10个回合。<b>奖励：</b>拉特维厄斯，城市之眼。
-                    case CardDB.cardIDEnum.TLC_631: return CardDB.cardIDEnum.TLC_631t; //<b>任务：</b>在你的回合对敌人造成刚好2点伤害，总计15次。<b>奖励：</b>格里什巨虫。
+                    case CardDB.cardIDEnum.TLC_631: return CardDB.cardIDEnum.TLC_631t; //<b>任务：</b>在你的回合对敌人造成刚好2点伤害，总计12次。<b>奖励：</b>格里什巨虫。
                 }
                 return CardDB.cardIDEnum.None;
             }

@@ -11,7 +11,14 @@ namespace HREngine.Bots
 	//在你施放一个法术后，随机召唤一个动物伙伴。
 	class Sim_EDR_853 : SimTemplate
 	{
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.NEW1_032);
+        public override void onCardIsGoingToBePlayed(Playfield p, Handmanager.Handcard hc, bool wasOwnCard, Minion triggerEffectMinion)
+        {
+			if (triggerEffectMinion.own == wasOwnCard && hc.card.type == CardDB.cardtype.SPELL)
+			{
+				p.callKid(kid, triggerEffectMinion.zonepos, triggerEffectMinion.own);
+			}
+        }
 		
 	}
 }

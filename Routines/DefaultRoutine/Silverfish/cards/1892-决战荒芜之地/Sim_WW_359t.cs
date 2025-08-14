@@ -22,6 +22,7 @@ namespace HREngine.Bots
 				if (target != null)
 				{
 					target.dormant = 3;
+					target.untouchable = true;
 					target.updateReadyness();
 				}
 			}

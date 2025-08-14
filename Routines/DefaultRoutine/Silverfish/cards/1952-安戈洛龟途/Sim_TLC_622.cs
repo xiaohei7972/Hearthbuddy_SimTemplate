@@ -17,6 +17,13 @@ namespace HREngine.Bots
 			int pos = ownplay ? p.ownMinions.Count : p.enemyMinions.Count;
 			p.callKid(kid, pos, ownplay);
 			p.callKid(kid, pos, ownplay);
+		}
+
+        public override PlayReq[] GetPlayReqs()
+        {
+			return new PlayReq[]{
+				new PlayReq(CardDB.ErrorType2.REQ_NUM_MINION_SLOTS,1), //最少需要一个空位
+			};
         }
 		
 	}

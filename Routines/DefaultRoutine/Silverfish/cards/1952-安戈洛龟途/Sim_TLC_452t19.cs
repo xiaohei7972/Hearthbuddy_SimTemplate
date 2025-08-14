@@ -11,7 +11,21 @@ namespace HREngine.Bots
 	//<b>战吼：</b>选择一个非<b>泰坦</b>随从，召唤一个具有+2/+2的复制。
 	class Sim_TLC_452t19 : SimTemplate
 	{
-		
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			if (target != null)
+			{
+				p.callKid(target.handcard.card, own.zonepos, own.own);
+
+			}
+		}
+
+        public override PlayReq[] GetPlayReqs()
+        {
+			return new PlayReq[]{
+				new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET),
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_IS_NON_TITAN),
+			};
+        }
 	}
 }

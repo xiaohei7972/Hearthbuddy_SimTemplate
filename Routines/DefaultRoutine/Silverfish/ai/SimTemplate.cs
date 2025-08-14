@@ -251,6 +251,19 @@ namespace HREngine.Bots
         }
 
         /// <summary>
+        /// 战吼效果(重载)。
+        /// 武器的战吼效果
+        /// </summary>
+        /// <param name="p">场面</param>
+        /// <param name="own">随从</param>
+        /// <param name="target">选定目标</param>
+        /// <param name="choice">选项（抉择、发现等）</param>
+        public virtual void getBattlecryEffect(Playfield p, Weapon weapon, Minion target, int choice)
+        {
+            return;
+        }
+
+        /// <summary>
         /// 光环类效果进场时触发
         /// </summary>
         /// <param name="p">场面</param>
@@ -411,18 +424,18 @@ namespace HREngine.Bots
         }
 
         /// <summary>
-        /// 当随从攻击时触发此方法。
+        /// 当随从攻击后触发此方法。
         /// 子类可以重写此方法来实现特定的攻击行为逻辑。
         /// </summary>
         /// <param name="p">游戏场地对象，包含游戏状态信息。</param>
         /// <param name="attacker">进行攻击的随从。</param>
         /// <param name="target">攻击目标随从。</param>
-        public virtual void afterMinionAttack(Playfield p, Minion attacker, Minion target)
+        /// <param name="dontcount">是否不计入攻击次数，默认值为 false。</param>
+        public virtual void afterMinionAttack(Playfield p, Minion attacker, Minion target, bool dontcount)
         {
             // 默认实现为空。子类可以根据需求重写此方法。
             return;
         }
-
 
         /// <summary>
         /// 当随从造成伤害时触发的处理方法。

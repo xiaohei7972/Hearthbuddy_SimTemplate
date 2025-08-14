@@ -11,7 +11,12 @@ namespace HREngine.Bots
 	//<b>战吼：</b>召唤一个0/3的立体声图腾。<i>（每回合都会改变。）</i>@<b>战吼：</b>召唤一个0/3的立体声图腾。
 	class Sim_JAM_012t : SimTemplate
 	{
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.ETC_105);
+
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			p.callKid(kid, own.zonepos, own.own);
+		}
 		
 	}
 }

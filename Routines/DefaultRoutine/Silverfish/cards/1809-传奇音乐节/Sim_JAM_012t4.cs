@@ -11,7 +11,12 @@ namespace HREngine.Bots
 	//<b>战吼：</b>召唤一个0/4的点唱机图腾。<i>（每回合都会改变。）</i>@<b>战吼：</b>召唤一个0/4的点唱机图腾。
 	class Sim_JAM_012t4 : SimTemplate
 	{
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.JAM_010);
+
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			p.callKid(kid, own.zonepos, own.own);
+		}
 		
 	}
 }

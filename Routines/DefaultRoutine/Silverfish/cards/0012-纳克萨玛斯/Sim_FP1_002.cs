@@ -4,18 +4,18 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_FP1_002 : SimTemplate //* 鬼灵爬行者 Haunted Creeper
-//<b>Deathrattle:</b> Summon two 1/1 Spectral Spiders.
-//<b>亡语：</b>召唤两只1/1的鬼灵蜘蛛。 
-	{
-        
+    //* 鬼灵爬行者 Haunted Creeper
+    //<b>Deathrattle:</b> Summon two 1/1 Spectral Spiders.
+    //<b>亡语：</b>召唤两只1/1的鬼灵蜘蛛。 
+    class Sim_FP1_002 : SimTemplate
+    {
+        CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.FP1_002t);
 
-        CardDB.Card c = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.FP1_002t);
-		
         public override void onDeathrattle(Playfield p, Minion m)
         {
-            p.callKid(c, m.zonepos-1, m.own);
-            p.callKid(c, m.zonepos-1, m.own);
+            p.callKid(kid, m.zonepos - 1, m.own);
+            p.callKid(kid, m.zonepos - 1, m.own);
         }
-	}
+        
+    }
 }

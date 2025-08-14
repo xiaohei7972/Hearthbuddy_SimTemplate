@@ -11,7 +11,15 @@ namespace HREngine.Bots
 	//<b>战吼：</b>召唤四个2/2并具有<b>嘲讽</b>的元素。
 	class Sim_TLC_452t6 : SimTemplate
 	{
-		
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.TTN_862t4);
+
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			p.callKid(kid, own.zonepos - 2, own.own);
+			p.callKid(kid, own.zonepos - 1, own.own);
+			p.callKid(kid, own.zonepos, own.own);
+			p.callKid(kid, own.zonepos + 1, own.own);
+		}
+
 	}
 }

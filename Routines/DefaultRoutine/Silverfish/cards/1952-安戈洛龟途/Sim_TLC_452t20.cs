@@ -11,7 +11,12 @@ namespace HREngine.Bots
 	//<b>战吼：</b>随机召唤一个法力值消耗为（6）的随从。使其获得<b>嘲讽</b>和<b>吸血</b>。
 	class Sim_TLC_452t20 : SimTemplate
 	{
-		
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.CS2_200);//石拳食人魔
+
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			p.callKid(kid, own.zonepos, own.own);
+		}
+
 	}
 }

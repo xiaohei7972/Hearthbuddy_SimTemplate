@@ -4,15 +4,14 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_EX1_538 : SimTemplate //* 关门放狗 Unleash the Hounds
-	{
-		//For each enemy minion, summon a 1/1 Hound with <b>Charge</b>.
-		//战场上每有一个敌方随从，便召唤一个1/1并具有<b>冲锋</b>的猎犬。
-		
-        
+    //* 关门放狗 Unleash the Hounds
+    //For each enemy minion, summon a 1/1 Hound with <b>Charge</b>.
+    //战场上每有一个敌方随从，便召唤一个1/1并具有<b>冲锋</b>的猎犬。
+    class Sim_EX1_538 : SimTemplate
+    {
         CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EX1_538t); //hound
 
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
             int pos = (ownplay) ? p.ownMinions.Count : p.enemyMinions.Count;
             int anz = (ownplay) ? p.enemyMinions.Count : p.ownMinions.Count;
@@ -25,7 +24,7 @@ namespace HREngine.Bots
                     p.callKid(kid, pos, ownplay);
                 }
             }
-		}
+        }
 
         public override PlayReq[] GetPlayReqs()
         {
@@ -34,5 +33,5 @@ namespace HREngine.Bots
                 new PlayReq(CardDB.ErrorType2.REQ_MINIMUM_ENEMY_MINIONS, 1),
             };
         }
-	}
+    }
 }
