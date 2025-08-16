@@ -4,20 +4,27 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_289: SimTemplate //* 莫拉比 Moorabi
-//Whenever another minion is <b>Frozen</b>, add a copy of it to your hand.
-//每当有其他随从被<b>冻结</b>，将一张被<b>冻结</b>随从的复制置入你的手牌。 
+    //* 莫拉比 Moorabi
+    //Whenever another minion is <b>Frozen</b>, add a copy of it to your hand.
+    //每当有其他随从被<b>冻结</b>，将一张被<b>冻结</b>随从的复制置入你的手牌。 
+    class Sim_ICC_289 : SimTemplate
     {
-        
-
-        public override void onAuraStarts(Playfield p, Minion own)
+        public override void onMinionFrozen(Playfield p, Minion triggerMinion, Minion frozentarget)
         {
-            p.anzMoorabi++;
+            if (frozentarget != null)
+            {
+                p.drawACard(frozentarget.handcard.card.cardIDenum, triggerMinion.own, true);
+            }
         }
 
-        public override void onAuraEnds(Playfield p, Minion m)
-        {
-            p.anzMoorabi--;
-        }
+        // public override void onAuraStarts(Playfield p, Minion own)
+        // {
+        //     p.anzMoorabi++;
+        // }
+
+        // public override void onAuraEnds(Playfield p, Minion m)
+        // {
+        //     p.anzMoorabi--;
+        // }
     }
 }

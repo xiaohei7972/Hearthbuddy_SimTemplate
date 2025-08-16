@@ -11,7 +11,11 @@ namespace HREngine.Bots
 	//<b>潜行</b>。在本随从攻击并消灭一个随从后，获取一张被消灭随从的复制。
 	class Sim_TLC_247 : SimTemplate
 	{
-		
+		public override void afterMinionAttack(Playfield p, Minion attacker, Minion defender, bool dontcount)
+		{
+			if (!defender.isHero && defender.Hp < 1)
+				p.drawACard(defender.handcard.card.cardIDenum, attacker.own, true);
+		}
 		
 	}
 }

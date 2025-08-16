@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//<b>已注能</b><b>突袭</b>。同时对其攻击目标相邻的随从造成伤害。
 	class Sim_REV_352t : SimTemplate
 	{
-		
+		public override void afterMinionAttack(Playfield p, Minion attacker, Minion defender, bool dontcount)
+		{
+			if (!attacker.silenced && !dontcount)
+			{
+				p.AttackAdjacentMinions(attacker, defender);
+			}
+		}
 		
 	}
 }

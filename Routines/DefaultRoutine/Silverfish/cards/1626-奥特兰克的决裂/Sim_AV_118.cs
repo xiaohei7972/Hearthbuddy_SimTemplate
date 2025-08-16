@@ -9,7 +9,7 @@ namespace HREngine.Bots
 	class Sim_AV_118 : SimTemplate
 	{
 		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.BT_922t);
-		public override void onHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
+		public override void afterHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
 		{
 			if (triggerMinion.own == hero.own)
 			{

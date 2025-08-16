@@ -18,7 +18,7 @@ namespace HREngine.Bots
 			p.equipWeapon(weapon, ownplay);
 		}
 
-		public override void onHeroattack(Playfield p, Minion own, Minion target)//英雄攻击
+		public override void afterHeroattack(Playfield p, Minion own, Minion target)//英雄攻击
 		{
 			//如果手牌小于3 优先进攻
 			if (p.owncards.Count < 3)

@@ -13,7 +13,7 @@ namespace HREngine.Bots
             p.equipWeapon(card, ownplay);
         }
 
-        public override void onHeroattack(Playfield p, Minion own, Minion target)
+        public override void afterHeroattack(Playfield p, Minion own, Minion target)
         {
             p.drawACard(CardDB.cardIDEnum.CFM_637, own.own);
             p.evaluatePenality -= p.mana * 2;

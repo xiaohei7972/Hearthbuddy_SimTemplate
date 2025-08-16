@@ -411,7 +411,7 @@ namespace HREngine.Bots
         }
 
         /// <summary>
-        /// 当随从攻击时触发此方法。
+        /// 当本随从攻击时触发此方法。
         /// 子类可以重写此方法来实现特定的攻击行为逻辑。
         /// </summary>
         /// <param name="p">游戏场地对象，包含游戏状态信息。</param>
@@ -429,9 +429,37 @@ namespace HREngine.Bots
         /// </summary>
         /// <param name="p">游戏场地对象，包含游戏状态信息。</param>
         /// <param name="attacker">进行攻击的随从。</param>
-        /// <param name="target">攻击目标随从。</param>
+        /// <param name="defender">攻击目标随从。</param>
         /// <param name="dontcount">是否不计入攻击次数，默认值为 false。</param>
-        public virtual void afterMinionAttack(Playfield p, Minion attacker, Minion target, bool dontcount)
+        public virtual void afterMinionAttack(Playfield p, Minion attacker, Minion defender, bool dontcount)
+        {
+            // 默认实现为空。子类可以根据需求重写此方法。
+            return;
+        }
+
+        /// <summary>
+        /// 当有友方随从攻击时,本牌触发此效果(重载)
+        /// </summary>
+        /// <param name="p">游戏场地对象，包含游戏状态信息。</param>
+        /// <param name="triggerEffectMinion">触发此效果的随从。</param>
+        /// <param name="attacker">进行攻击的随从。</param>
+        /// <param name="defender">攻击目标随从。</param>
+        public virtual void onMinionAttack(Playfield p, Minion triggerEffectMinion, Minion attacker, Minion defender)
+        {
+            // 默认实现为空。子类可以根据需求重写此方法。
+            return;
+        }
+
+        /// <summary>
+        /// 当随从攻击后触发此方法。
+        /// 子类可以重写此方法来实现特定的攻击行为逻辑。
+        /// </summary>
+        /// <param name="p">游戏场地对象，包含游戏状态信息。</param>
+        /// <param name="triggerEffectMinion">触发此效果的随从。</param>
+        /// <param name="attacker">进行攻击的随从。</param>
+        /// <param name="defender">攻击目标随从。</param>
+        /// <param name="dontcount">是否不计入攻击次数，默认值为 false。</param>
+        public virtual void afterMinionAttack(Playfield p, Minion triggerEffectMinion, Minion attacker, Minion defender, bool dontcount)
         {
             // 默认实现为空。子类可以根据需求重写此方法。
             return;
@@ -629,6 +657,34 @@ namespace HREngine.Bots
         }
 
         /// <summary>
+        /// 当英雄进行攻击时触发的事件处理方法。
+        /// 子类可以重写此方法，以在特定的随从或条件下执行自定义的逻辑。
+        /// 该方法会在英雄攻击时被调用，并可用于触发基于攻击的效果。
+        /// </summary>
+        /// <param name="p">游戏场地对象，包含当前游戏状态的信息。</param>
+        /// <param name="triggerMinion">触发此效果的随从。</param>
+        /// <param name="target">英雄攻击的目标随从。</param>
+        /// <param name="hero">执行攻击的英雄。</param>
+        public virtual void onHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
+        {
+            // 默认实现为空。子类可以根据需求重写此方法。
+            return;
+        }
+
+        /// <summary>
+        /// 当英雄攻击后触发。
+        /// 子类可以重写此方法，以处理英雄攻击时的逻辑。
+        /// </summary>
+        /// <param name="p">游戏场地对象，包含游戏状态信息。</param>
+        /// <param name="own">己方英雄。</param>
+        /// <param name="target">攻击目标。</param>
+        public virtual void afterHeroattack(Playfield p, Minion own, Minion target)
+        {
+            // 默认实现为空。子类可以根据需求重写此方法。
+            return;
+        }
+
+        /// <summary>
         /// 执行英雄攻击的操作，并在攻击完成后执行额外的自定义操作。
         /// </summary>
         /// <param name="p">当前的游戏状态（Playfield）对象。</param>
@@ -641,7 +697,7 @@ namespace HREngine.Bots
         public void ExecuteHeroAttackWithAction(Playfield p, Minion own, Minion target, System.Action additionalAction)
         {
             // 首先调用当前类的 onHeroattack 方法，执行英雄攻击的默认行为
-            this.onHeroattack(p, own, target);
+            // this.afterHeroattack(p, own, target);
 
             // 然后检查是否有传入的额外操作
             // 如果有，则调用该额外操作
@@ -653,7 +709,7 @@ namespace HREngine.Bots
 
 
         /// <summary>
-        /// 当英雄进行攻击时触发的事件处理方法。
+        /// 当英雄进行攻击后触发的事件处理方法。
         /// 子类可以重写此方法，以在特定的随从或条件下执行自定义的逻辑。
         /// 该方法会在英雄攻击时被调用，并可用于触发基于攻击的效果。
         /// </summary>
@@ -661,7 +717,7 @@ namespace HREngine.Bots
         /// <param name="triggerMinion">触发此效果的随从。</param>
         /// <param name="target">英雄攻击的目标随从。</param>
         /// <param name="hero">执行攻击的英雄。</param>
-        public virtual void onHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
+        public virtual void afterHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
         {
             // 默认实现为空。子类可以根据需求重写此方法。
             return;
@@ -721,6 +777,17 @@ namespace HREngine.Bots
         /// <param name="p">游戏场地对象，包含当前游戏状态的信息。</param>
         /// <param name="handcard">被抽到卡牌。</param>
         public virtual void castsWhenDrawn(Playfield p, Handmanager.Handcard handcard, bool wasOwnCard)
+        {
+            return;
+        }
+
+        /// <summary>
+        /// 随从被冰冻时触发
+        /// </summary>
+        /// <param name="p">游戏场地对象，包含当前游戏状态的信息。</param>
+        /// <param name="triggerMinion">触发此效果的随从。</param>
+        /// <param name="frozentarget">被冰冻的随从。</param>
+        public virtual void onMinionFrozen(Playfield p, Minion triggerMinion, Minion frozentarget)
         {
             return;
         }

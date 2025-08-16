@@ -11,6 +11,7 @@
 !Routines/DefaultRoutine/Silverfish/ai/Questmanager.cs
 !Routines/DefaultRoutine/Silverfish/ai/CardDB.cs
 !Routines/DefaultRoutine/Silverfish/ai/SimTemplate.cs
+!Routines/DefaultRoutine/Silverfish/ai/Playfield.cs
 
 
 Routines/DefaultRoutine/Silverfish/Test/Data/
@@ -101,7 +102,7 @@ Routines/DefaultRoutine/Silverfish/ai/MiniSimulatorNextTurn.cs
 Routines/DefaultRoutine/Silverfish/ai/Mulligan.cs
 Routines/DefaultRoutine/Silverfish/ai/PenalityManager.cs
 Routines/DefaultRoutine/Silverfish/ai/PenTemplate.cs
-Routines/DefaultRoutine/Silverfish/ai/Playfield.cs
+# Routines/DefaultRoutine/Silverfish/ai/Playfield.cs
 Routines/DefaultRoutine/Silverfish/ai/Probabilitymaker.cs
 # Routines/DefaultRoutine/Silverfish/ai/Questmanager.cs
 Routines/DefaultRoutine/Silverfish/ai/RulesEngine.cs

@@ -12,10 +12,11 @@ namespace HREngine.Bots
 	class Sim_REV_316 : SimTemplate
 	{
 		CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.REV_316t);
-		public override void onMinionAttack(Playfield p, Minion attacker, Minion target)
+		public override void afterMinionAttack(Playfield p, Minion attacker, Minion defender, bool dontcount)
 		{
-			if (attacker.own)
+			if (attacker.own && attacker.Hp > 0)
 				p.equipWeapon(weapon, attacker.own);
+
 		}
 
 	}

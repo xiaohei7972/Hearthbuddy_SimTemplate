@@ -11,7 +11,25 @@ namespace HREngine.Bots
 	//在你的回合结束时，获得5份<b>残骸</b>。在你的回合开始时，消耗5份<b>残骸</b>，使你的英雄获得+5生命值。
 	class Sim_WW_357 : SimTemplate
 	{
-		
-		
+		public override void onTurnStartTrigger(Playfield p, Minion triggerEffectMinion, bool turnStartOfOwner)
+		{
+			if (triggerEffectMinion.own == turnStartOfOwner)
+			{
+				if (triggerEffectMinion.own)
+					p.addCorpses(5);
+			}
+		}
+		public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
+		{
+			if (triggerEffectMinion.own == turnEndOfOwner)
+			{
+				if (triggerEffectMinion.own)
+				{
+					p.corpseConsumption(5);
+					p.minionGetBuffed(p.ownHero, 0, 5);
+				}
+			}
+		}
+
 	}
 }

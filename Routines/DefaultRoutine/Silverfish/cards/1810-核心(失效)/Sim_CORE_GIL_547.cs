@@ -11,7 +11,11 @@ namespace HREngine.Bots
 	//<b>突袭</b>在克罗雷攻击并消灭一个随从后，获得+2/+2。
 	class Sim_CORE_GIL_547 : SimTemplate
 	{
-		
+		public override void afterMinionAttack(Playfield p, Minion attacker, Minion defender, bool dontcount)
+		{
+			if (!defender.isHero && defender.Hp < 1 && attacker.Hp > 0)
+				p.minionGetBuffed(attacker, 2, 2);
+		}
 		
 	}
 }

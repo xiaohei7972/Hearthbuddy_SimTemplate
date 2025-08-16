@@ -16,10 +16,5 @@ namespace HREngine.Bots
 			p.minionGetTempBuff(attacker, 3, 0);
 		}
 
-		public override void afterMinionAttack(Playfield p, Minion attacker, Minion target)
-		{
-			attacker.updateReadyness();
-		}
-
 	}
 }

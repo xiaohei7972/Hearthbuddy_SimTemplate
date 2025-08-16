@@ -11,7 +11,11 @@ namespace HREngine.Bots
 	//<b>突袭</b>。在本随从攻击并消灭一个随从后，为本随从恢复所有生命值。
 	class Sim_TTN_733 : SimTemplate
 	{
-		
-		
+		public override void afterMinionAttack(Playfield p, Minion attacker, Minion defender, bool dontcount)
+		{
+			if (!defender.isHero && defender.Hp < 1 && attacker.Hp > 0)
+				p.minionGetDamageOrHeal(attacker, attacker.Hp - attacker.maxHp);
+		}
+
 	}
 }

@@ -11,7 +11,22 @@ namespace HREngine.Bots
 	//<b>磁力</b>。在本随从攻击后，随机使你手牌中的一张随从牌获得+1/+1。
 	class Sim_TTN_852 : SimTemplate
 	{
-		
+        public override void afterMinionAttack(Playfield p, Minion attacker, Minion defender, bool dontcount)
+        {
+			if (attacker.own)
+			{
+				foreach (Handmanager.Handcard handcard in p.owncards)
+				{
+					if (handcard.card.type == CardDB.cardtype.MOB)
+					{
+						handcard.addattack++;
+						handcard.addHp++;
+						p.anzOwnExtraAngrHp += 2;
+						break;
+					}
+				}
+			}
+        }
 		
 	}
 }

@@ -11,7 +11,11 @@ namespace HREngine.Bots
 	//<b>潜行</b>。每当本随从攻击并消灭一个随从时，便获得<b>潜行</b>。
 	class Sim_CFM_634 : SimTemplate
 	{
-		
-		
+		public override void afterMinionAttack(Playfield p, Minion attacker, Minion defender, bool dontcount)
+		{
+			if (!defender.isHero && defender.Hp < 1 && attacker.Hp > 0)
+				attacker.stealth = true;
+		}
+
 	}
 }

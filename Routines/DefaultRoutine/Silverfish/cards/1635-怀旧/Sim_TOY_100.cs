@@ -11,18 +11,25 @@ namespace HREngine.Bots
 	//<b>突袭</b>。同时对其攻击目标相邻的随从造成伤害。<b>亡语：</b>对所有敌人造成2点伤害。
 	class Sim_TOY_100 : SimTemplate
 	{
-		public override void onMinionAttack(Playfield p, Minion attacker, Minion target)
+		// public override void onMinionAttack(Playfield p, Minion attacker, Minion target)
+		// {
+		// 	int dmg = attacker.Angr;
+		// 	p.minionGetDamageOrHeal(target, dmg);
+		// 	List<Minion> temp = (target.own) ? p.ownMinions : p.enemyMinions;
+		// 	foreach (Minion m in temp)
+		// 	{
+		// 		if (target.zonepos == m.zonepos + 1 || target.zonepos + 1 == m.zonepos)
+		// 		{
+		// 			p.minionGetDamageOrHeal(m, dmg);
+		// 			p.minionGetFrozen(m);
+		// 		}
+		// 	}
+		// }
+		public override void afterMinionAttack(Playfield p, Minion attacker, Minion defender, bool dontcount)
 		{
-			int dmg = attacker.Angr;
-			p.minionGetDamageOrHeal(target, dmg);
-			List<Minion> temp = (target.own) ? p.ownMinions : p.enemyMinions;
-			foreach (Minion m in temp)
+			if (!attacker.silenced && !dontcount)
 			{
-				if (target.zonepos == m.zonepos + 1 || target.zonepos + 1 == m.zonepos)
-				{
-					p.minionGetDamageOrHeal(m, dmg);
-					p.minionGetFrozen(m);
-				}
+				p.AttackAdjacentMinions(attacker, defender);
 			}
 		}
 		public override void onDeathrattle(Playfield p, Minion m)

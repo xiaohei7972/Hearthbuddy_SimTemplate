@@ -13,7 +13,7 @@ namespace HREngine.Bots
             p.equipWeapon(CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.SCH_279), true);
         }
 
-        public override void onHeroattack(Playfield p, Minion own, Minion target)
+        public override void afterHeroattack(Playfield p, Minion own, Minion target)
         {
             if (target.isHero) return;
             foreach(Minion m in p.ownMinions)

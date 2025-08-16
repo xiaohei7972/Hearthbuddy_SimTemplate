@@ -9,22 +9,22 @@ namespace HREngine.Bots
 	//你的英雄在攻击时具有<b>免疫</b>。 
 	class Sim_LOOT_222 : SimTemplate
 	{
-		CardDB.Card c = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.LOOT_222);
+		CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.LOOT_222);
 
 		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
-			p.equipWeapon(c, ownplay);
+			p.equipWeapon(weapon, ownplay);
 
 		}
 
-		public override void onHeroattack(Playfield p, Minion own, Minion target)
-		{
-			if (own.own && p.ownWeapon.card.cardIDenum == CardDB.cardIDEnum.CORE_LOOT_222)
-			{
-				own.immuneWhileAttacking = true;
-			}
+		// public override void afterHeroattack(Playfield p, Minion own, Minion target)
+		// {
+		// 	if (own.own && p.ownWeapon.card.cardIDenum == CardDB.cardIDEnum.CORE_LOOT_222)
+		// 	{
+		// 		own.immuneWhileAttacking = true;
+		// 	}
 
-		}
+		// }
 
 	}
 }

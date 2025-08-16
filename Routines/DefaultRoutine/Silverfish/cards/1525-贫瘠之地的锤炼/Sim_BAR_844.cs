@@ -16,7 +16,7 @@ namespace HREngine.Bots
             p.equipWeapon(wcard, ownplay);
         }
 
-        public override void onHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
+        public override void afterHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
         {
                 // 检查己方英雄是否装备了“前锋战斧”
                 if (triggerMinion.own && p.ownWeapon.card.cardIDenum == CardDB.cardIDEnum.BAR_844)

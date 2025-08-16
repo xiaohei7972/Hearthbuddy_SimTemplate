@@ -18,7 +18,7 @@ namespace HREngine.Bots
 			p.equipWeapon(weapon, ownplay);
 		}
 
-		public override void onHeroattack(Playfield p, Minion own, Minion target)
+		public override void afterHeroattack(Playfield p, Minion own, Minion target)
 		{
 			// 检查己方英雄是否装备了“奎尔萨拉斯的希望”
 			if (own.own && p.ownWeapon.card.cardIDenum == CardDB.cardIDEnum.RLK_828)

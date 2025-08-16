@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//在本随从攻击后消灭本随从。
 	class Sim_RLK_117 : SimTemplate
 	{
-		
+        public override void afterMinionAttack(Playfield p, Minion attacker, Minion defender, bool dontcount)
+        {
+			p.minionGetDestroyed(attacker);
+        }
 		
 	}
 }

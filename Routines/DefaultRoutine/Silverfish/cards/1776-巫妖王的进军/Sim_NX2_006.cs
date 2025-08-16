@@ -13,7 +13,7 @@ namespace HREngine.Bots
         // 定义要召唤的亡灵海盗随从
         CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.NX2_006t);
         // 当英雄攻击时触发
-        public override void onHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
+        public override void afterHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
         {
             if (triggerMinion.own == hero.own)
                 // 调用随从召唤方法，生成1/1的亡灵海盗

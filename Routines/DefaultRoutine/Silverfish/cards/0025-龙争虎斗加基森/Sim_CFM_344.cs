@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//<b>潜行</b>每当本随从攻击并消灭一个随从，便从你的牌库中召唤两个鱼人。
 	class Sim_CFM_344 : SimTemplate
 	{
-		
-		
+		public override void afterMinionAttack(Playfield p, Minion attacker, Minion defender, bool dontcount)
+		{
+			if (!defender.isHero && defender.Hp < 1)
+			{
+				p.SummonMurlocs(attacker);
+			}
+		}
+
 	}
 }

@@ -9,7 +9,7 @@ namespace HREngine.Bots
     //After your hero attacks, deal 1 damage to all enemies.
     class Sim_TSC_002 : SimTemplate
     {
-        public override void onHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
+        public override void afterHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
         {
             if (triggerMinion.own == hero.own)
                 p.allCharsOfASideGetDamage(!triggerMinion.own, 1);

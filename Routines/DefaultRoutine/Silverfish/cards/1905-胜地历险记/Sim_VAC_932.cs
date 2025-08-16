@@ -18,7 +18,7 @@ namespace HREngine.Bots
             p.equipWeapon(weapon, ownplay); // 装备登山钩爪
         }
 
-        public override void onHeroattack(Playfield p, Minion own, Minion target)
+        public override void afterHeroattack(Playfield p, Minion own, Minion target)
         {
             if (own.own)
             {

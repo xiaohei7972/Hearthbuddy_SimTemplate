@@ -9,7 +9,7 @@ namespace HREngine.Bots
     //After your hero attacks, draw a Pirate.
     class Sim_TSC_085 : SimTemplate
     {
-        public override void onHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
+        public override void afterHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
         {
             if (triggerMinion.own == hero.own)
             {

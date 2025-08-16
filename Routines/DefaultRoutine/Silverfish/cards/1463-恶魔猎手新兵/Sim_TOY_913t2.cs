@@ -11,7 +11,7 @@ namespace HREngine.Bots
 	//在你的英雄攻击后，获得+1攻击力。
 	class Sim_TOY_913t2 : SimTemplate
 	{
-		public override void onHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
+		public override void afterHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
 		{
 			if (triggerMinion.own == hero.own) p.minionGetBuffed(triggerMinion, 1, 0);
 		}

@@ -11,7 +11,12 @@ namespace HREngine.Bots
 	//<b>突袭</b>。<b>圣盾</b>。在本随从攻击后，抽一张牌。
 	class Sim_TSC_030t2 : SimTemplate
 	{
-		
-		
+		public override void afterMinionAttack(Playfield p, Minion attacker, Minion defender, bool dontcount)
+		{
+
+			p.drawACard(CardDB.cardIDEnum.None, attacker.own);
+
+		}
+
 	}
 }

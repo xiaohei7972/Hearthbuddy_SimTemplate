@@ -11,7 +11,7 @@ namespace HREngine.Bots
 	//在你的英雄攻击后，抽一张邪能法术牌。
 	class Sim_TID_704 : SimTemplate
 	{
-		public override void onHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
+		public override void afterHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
 		{
 			if (triggerMinion.own == hero.own)
 			{

@@ -11,7 +11,12 @@ namespace HREngine.Bots
 	//每当本随从攻击随从并存活下来时，抽一张牌。
 	class Sim_CFM_025 : SimTemplate
 	{
-		
-		
+		public override void afterMinionAttack(Playfield p, Minion attacker, Minion defender, bool dontcount)
+		{
+			if (!defender.isHero && attacker.Hp > 0)
+				p.drawACard(CardDB.cardNameEN.unknown, attacker.own);
+
+		}
+
 	}
 }

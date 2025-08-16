@@ -11,7 +11,11 @@ namespace HREngine.Bots
 	//每当你的英雄攻击时，便获得5点护甲值。
 	class Sim_ULD_709 : SimTemplate
 	{
-		
+		public override void onHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
+		{
+			p.minionGetArmor(triggerMinion.own ? p.ownHero : p.enemyHero, 5);
+			
+        }
 		
 	}
 }

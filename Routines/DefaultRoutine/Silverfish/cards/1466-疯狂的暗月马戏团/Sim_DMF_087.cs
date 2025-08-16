@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//<b>突袭</b>在本随从攻击并消灭一个随从后，超过目标生命值的伤害会命中敌方英雄。
 	class Sim_DMF_087 : SimTemplate
 	{
-		
+		public override void afterMinionAttack(Playfield p, Minion attacker, Minion defender, bool dontcount)
+		{
+			if (!defender.isHero && defender.Hp < 1)
+			{
+				p.minionGetDamageOrHeal(attacker.own ? p.enemyHero : p.ownHero,-attacker.Hp);
+			}
+		}
 		
 	}
 }

@@ -832,12 +832,12 @@ namespace HREngine.Bots
             public bool Quickdraw = false;//快枪
             public bool Excavate = false;//发掘
             public bool Elusive = false;//扰魔
-
             public bool Echo = false; // 回响
             public bool nonKeywordEcho = false; // 非关键词回响，设计师左右脑互搏的结果。就是个在本回合可以重复使用
             public bool Twinspell = false; // 双生法术
-
             public bool Temporary = false; // 临时
+            public int armor = 0;
+            public cardIDEnum heroPower = cardIDEnum.None;
             public int Objective = 0; // 光环 如救生光环
             public int ObjectiveAura = 0; // 会影响场面的光环 如征战平原
             public int Sigil = 0; // 咒符
@@ -2112,7 +2112,7 @@ namespace HREngine.Bots
                     case CardDB.cardNameEN.goldshiregnoll: //闪金镇豺狼人
                     case CardDB.cardNameEN.tableflip: //掀桌子
                     case CardDB.cardNameEN.livinghorizon: //活体天光
-                        retval = retval + offset - p.owncards.Count + p.ownCardsCountStarted;
+                        retval = retval + offset - (p.owncards.Count - 1) + p.ownCardsCountStarted;
                         break;
                     case CardDB.cardNameEN.clockworkgiant: //发条巨人
                         retval = retval + offset - p.enemyAnzCards + p.enemyCardsCountStarted;
@@ -2159,7 +2159,7 @@ namespace HREngine.Bots
                                     MinionsCount++;
                             }
 
-                            retval = retval + offset - MinionsCount;
+                            retval = retval + offset - MinionsCount + p.ownMinionStartCount + p.enemyMinionStartCount;
                         }
                         // retval = retval + offset - p.ownMinions.Count - p.enemyMinions.Count + p.ownMobsCountStarted + p.enemyMobsCountStarted;
                         break;
@@ -2179,7 +2179,7 @@ namespace HREngine.Bots
                                 if (m.handcard.card.type == cardtype.MOB && m.wounded)
                                     woundedMinionsCount++;
                             }
-                            retval = retval + offset - woundedMinionsCount;
+                            retval = retval + offset - woundedMinionsCount + p.ownMinionStartCount + p.enemyMinionStartCount;
                         }
                         break;
                     case CardDB.cardNameEN.demonbolt: //恶魔之箭
@@ -2194,7 +2194,7 @@ namespace HREngine.Bots
                                         ownMinionsCount++;
                                 }
                             }
-                            retval = retval + offset - ownMinionsCount;
+                            retval = retval + offset - ownMinionsCount + p.ownMinionStartCount;
                         }
                         break;
                     case CardDB.cardNameEN.rabblebouncer: //场馆保镖
@@ -2211,7 +2211,7 @@ namespace HREngine.Bots
                                         enemyMinionsCount++;
                                 }
                             }
-                            retval = retval + offset - enemyMinionsCount;
+                            retval = retval + offset - enemyMinionsCount + p.enemyMinionStartCount;
                         }
                         break;
                     case CardDB.cardNameEN.secondratebruiser: //二流打手
@@ -2241,6 +2241,28 @@ namespace HREngine.Bots
                             retval = retval + offset - costBonusMurloc + p.anzOwnMurlocStarted;
                         }
                         break;
+                    case CardDB.cardNameEN.solarflare: //阳炎耀斑
+                        {
+                            int costBonusElemental = 0;
+                            foreach (Minion m in p.ownMinions)
+                            {
+                                if (m.untouchable || m.dormant > 0) continue;
+                                if (m.handcard.card.race == Race.ELEMENTAL || m.handcard.card.race == Race.ALL) costBonusElemental++;
+                            }
+                            retval = retval + offset - costBonusElemental + p.anzOwnElementStarted;
+                        }
+                        break;
+                    case CardDB.cardNameEN.captainslog: //舰长日志
+                        {
+                            int costBonusDraenei = 0;
+                            foreach (Minion m in p.ownMinions)
+                            {
+                                if (m.untouchable || m.dormant > 0) continue;
+                                if (m.handcard.card.race == Race.DRAENEI || m.handcard.card.race == Race.ALL) costBonusDraenei++;
+                            }
+                            retval = retval + offset - costBonusDraenei + p.anzOwnDraeneiStarted;
+                        }
+                        break;
                     case CardDB.cardNameEN.aeroponics: //空气栽培
                         {
                             int costBonusTreant = 0;
@@ -2253,29 +2275,7 @@ namespace HREngine.Bots
                                         costBonusTreant++;
                                 }
                             }
-                            retval = retval + offset - costBonusTreant;
-                        }
-                        break;
-                    case CardDB.cardNameEN.solarflare: //阳炎耀斑
-                        {
-                            int costBonusElemental = 0;
-                            foreach (Minion m in p.ownMinions)
-                            {
-                                if (m.untouchable || m.dormant > 0) continue;
-                                if (m.handcard.card.race == Race.ELEMENTAL || m.handcard.card.race == Race.ALL) costBonusElemental++;
-                            }
-                            retval = retval + offset - costBonusElemental + p.anzOwnMurlocStarted;
-                        }
-                        break;
-                    case CardDB.cardNameEN.captainslog: //舰长日志
-                        {
-                            int costBonusDraenei = 0;
-                            foreach (Minion m in p.ownMinions)
-                            {
-                                if (m.untouchable || m.dormant > 0) continue;
-                                if (m.handcard.card.race == Race.DRAENEI || m.handcard.card.race == Race.ALL) costBonusDraenei++;
-                            }
-                            retval = retval + offset - costBonusDraenei + p.anzOwnMurlocStarted;
+                            retval = retval + offset - costBonusTreant + p.anzOwnTreantStarted;
                         }
                         break;
                     case CardDB.cardNameEN.fleshgiant: // 血肉巨人
@@ -3002,6 +3002,16 @@ namespace HREngine.Bots
                         case "373":
                             {
                                 card.immuneWhileAttacking = true; // 攻击时免疫
+                            }
+                            break;
+                        case "380":
+                            {
+                                card.heroPower = cardIdstringToEnum(tag.GetAttribute("cardID")); // 英雄牌技能
+                            }
+                            break;
+                        case "292":
+                            {
+                                card.armor = int.Parse(tag.GetAttribute("value")); // 英雄牌护甲
                             }
                             break;
 

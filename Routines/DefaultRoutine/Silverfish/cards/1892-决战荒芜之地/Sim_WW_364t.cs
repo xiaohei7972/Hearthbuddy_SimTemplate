@@ -11,7 +11,11 @@ namespace HREngine.Bots
 	//<b>冲锋</b>。在本随从攻击后，<b>发现</b>一张另一职业的卡牌，其法力值消耗减少（3）点。
 	class Sim_WW_364t : SimTemplate
 	{
-		
-		
+		public override void afterMinionAttack(Playfield p, Minion attacker, Minion defender, bool dontcount)
+		{
+			p.drawACard(CardDB.cardIDEnum.None, attacker.own, true);
+
+		}
+
 	}
 }

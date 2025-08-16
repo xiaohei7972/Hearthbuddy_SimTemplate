@@ -9,7 +9,7 @@ namespace HREngine.Bots
     //在你的英雄攻击后，该随从获得+1/+1。 
     class Sim_GIL_534 : SimTemplate
     {
-        public override void onHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
+        public override void afterHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
         {
             if (triggerMinion.own == hero.own) p.minionGetBuffed(triggerMinion, 1, 1);
         }

@@ -12,7 +12,7 @@ namespace HREngine.Bots
 	class Sim_VAC_923 : SimTemplate
 	{
 		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.VAC_923t);
-		public override void afterMinionAttack(Playfield p, Minion attacker, Minion target)
+		public override void afterMinionAttack(Playfield p, Minion attacker, Minion defender, bool dontcount)
 		{
 			if (attacker.Hp > 0)
 			{

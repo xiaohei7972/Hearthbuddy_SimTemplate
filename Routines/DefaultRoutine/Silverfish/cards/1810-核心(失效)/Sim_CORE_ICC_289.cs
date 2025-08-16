@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//每当有其他随从被<b>冻结</b>，将一张被<b>冻结</b>随从的复制置入你的手牌。
 	class Sim_CORE_ICC_289 : SimTemplate
 	{
-		
+		        public override void onMinionFrozen(Playfield p, Minion triggerMinion, Minion frozentarget)
+        {
+            if (frozentarget != null)
+            {
+                p.drawACard(frozentarget.handcard.card.cardIDenum, triggerMinion.own, true);
+            }
+        }
 		
 	}
 }

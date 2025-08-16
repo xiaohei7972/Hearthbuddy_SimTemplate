@@ -11,7 +11,17 @@ namespace HREngine.Bots
 	//每当你的英雄攻击随从时，将被攻击随从的生命值变为1。
 	class Sim_RLK_827 : SimTemplate
 	{
-		
+		public override void onHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
+		{
+			if (target != null)
+			{
+				if (!target.isHero)
+				{
+					p.minionSetLifetoX(target, 1);
+				}
+			}
+			
+        }
 		
 	}
 }

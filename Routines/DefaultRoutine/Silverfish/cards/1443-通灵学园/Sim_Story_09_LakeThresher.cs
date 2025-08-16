@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//同时对其攻击目标相邻的随从造成伤害。
 	class Sim_Story_09_LakeThresher : SimTemplate
 	{
-		
+		public override void afterMinionAttack(Playfield p, Minion attacker, Minion defender, bool dontcount)
+		{
+			if (!attacker.silenced && !dontcount)
+			{
+				p.AttackAdjacentMinions(attacker, defender);
+			}
+		}
 		
 	}
 }

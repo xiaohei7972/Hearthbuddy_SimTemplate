@@ -20,7 +20,7 @@ namespace HREngine.Bots
 
 		}
 
-		public override void onHeroattack(Playfield p, Minion own, Minion target)
+		public override void afterHeroattack(Playfield p, Minion own, Minion target)
 		{
 			// 检查攻击的是否为你的英雄,并且是否装备了"雷霆之锤"
 			if (own.own && p.ownWeapon.card.cardIDenum == CardDB.cardIDEnum.CORE_LOOT_222)

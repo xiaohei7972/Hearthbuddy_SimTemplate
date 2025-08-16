@@ -11,7 +11,7 @@ namespace HREngine.Bots
 	//在本随从攻击后，使你的野兽获得+1/+1。
 	class Sim_SW_459 : SimTemplate
 	{
-		public override void afterMinionAttack(Playfield p, Minion attacker, Minion target)
+		public override void afterMinionAttack(Playfield p, Minion attacker, Minion defender, bool dontcount)
 		{
 			foreach (Minion minion in attacker.own ? p.ownMinions : p.enemyMinions)
 			{

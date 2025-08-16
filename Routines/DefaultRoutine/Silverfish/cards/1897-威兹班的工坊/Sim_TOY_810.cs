@@ -17,7 +17,7 @@ namespace HREngine.Bots
             p.equipWeapon(CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.TOY_810), ownplay);
         }
 
-        public override void onHeroattack(Playfield p, Minion own, Minion target)
+        public override void afterHeroattack(Playfield p, Minion own, Minion target)
         {
             // 在英雄攻击后，给予手牌中的随从牌+1/+1
             foreach (Handmanager.Handcard hc in p.owncards)

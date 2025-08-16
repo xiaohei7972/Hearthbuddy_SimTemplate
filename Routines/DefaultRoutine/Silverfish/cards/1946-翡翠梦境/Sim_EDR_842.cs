@@ -19,7 +19,7 @@ namespace HREngine.Bots
 			p.equipWeapon(weapon, ownplay);
 		}
 
-		public override void onHeroattack(Playfield p, Minion own, Minion target)
+		public override void afterHeroattack(Playfield p, Minion own, Minion target)
 		{
 			// 检查己方英雄是否装备了“亵渎之矛”
 			if (own.own && p.ownWeapon.card.cardIDenum == CardDB.cardIDEnum.EDR_842)

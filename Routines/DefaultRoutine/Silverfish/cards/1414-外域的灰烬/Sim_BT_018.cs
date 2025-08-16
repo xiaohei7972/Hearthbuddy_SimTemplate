@@ -13,7 +13,7 @@ namespace HREngine.Bots
 		{
 			p.equipWeapon(card, ownplay);
 		}
-		public override void onHeroattack(Playfield p, Minion own, Minion target)//英雄攻击
+		public override void afterHeroattack(Playfield p, Minion own, Minion target)//英雄攻击
 		{
 			p.drawACard(CardDB.cardIDEnum.CS2_168, own.own, true);
 			//Helpfunctions.Instance.ErrorLog("鱼竿攻击，抽一条鱼");

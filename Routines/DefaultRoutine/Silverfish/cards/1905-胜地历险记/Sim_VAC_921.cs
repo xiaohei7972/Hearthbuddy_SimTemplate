@@ -18,7 +18,7 @@ namespace HREngine.Bots
             p.equipWeapon(weapon, ownplay); // 装备沙滩排槌
         }
         
-        public override void onHeroattack(Playfield p, Minion own, Minion target)
+        public override void afterHeroattack(Playfield p, Minion own, Minion target)
         {
             // 检查己方英雄是否装备了“沙滩排槌”
             if (own.own && p.ownWeapon.card.cardIDenum == CardDB.cardIDEnum.WW_010t)

@@ -8,7 +8,7 @@ namespace HREngine.Bots
 	{
 		//Can only attack if your hero attacked this turn.
 		//在本回合中，除非你的英雄进行过攻击，否则无法进行攻击。
-		public override void onHeroattack(Playfield p, Minion own, Minion target)
+		public override void afterHeroattack(Playfield p, Minion own, Minion target)
 		{
 			if (own.own)
 			{

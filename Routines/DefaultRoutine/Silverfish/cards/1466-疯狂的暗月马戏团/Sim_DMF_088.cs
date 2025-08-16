@@ -10,7 +10,7 @@ namespace HREngine.Bots
 		//在你的英雄攻击后，<b>发现</b>一张<b>奥秘</b>牌并将其施放。
 		CardDB.Card blaine = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EX1_506);
 		CardDB.Card card = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.DMF_088);
-		public override void onHeroattack(Playfield p, Minion own, Minion target)//英雄攻击
+		public override void afterHeroattack(Playfield p, Minion own, Minion target)//英雄攻击
 		{
 			if (p.ownSecretsIDList.Count >= 3)
 			{

@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//<b>突袭</b>在本随从攻击后，装备它。
 	class Sim_CORE_REV_316 : SimTemplate
 	{
-		
+		CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.REV_316t);
+		public override void afterMinionAttack(Playfield p, Minion attacker, Minion defender, bool dontcount)
+		{
+			if (attacker.own && attacker.Hp > 0)
+				p.equipWeapon(weapon, attacker.own);
+
+		}
 		
 	}
 }

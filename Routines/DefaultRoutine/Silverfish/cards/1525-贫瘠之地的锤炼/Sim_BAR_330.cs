@@ -28,7 +28,7 @@ namespace HREngine.Bots
 			}
 		}
 
-        // public override void onHeroattack(Playfield p, Minion own, Minion target)
+        // public override void afterHeroattack(Playfield p, Minion own, Minion target)
         // {
         //     p.evaluatePenality -= 3;
         // }

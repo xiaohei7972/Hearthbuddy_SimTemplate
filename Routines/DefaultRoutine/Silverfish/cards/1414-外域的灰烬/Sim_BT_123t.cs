@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//<b>突袭</b>每当本随从攻击并消灭一个随从时，获得10点护甲值。
 	class Sim_BT_123t : SimTemplate
 	{
-		
-		
+		public override void afterMinionAttack(Playfield p, Minion attacker, Minion defender, bool dontcount)
+		{
+			if (!defender.isHero && defender.Hp < 1)
+			{
+				p.minionGetArmor(attacker.own ? p.ownHero : p.enemyHero, 10);
+			}
+		}
+
 	}
 }

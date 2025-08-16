@@ -11,7 +11,11 @@ namespace HREngine.Bots
 	//<b>突袭</b>，<b>风怒</b>。在本随从攻击并消灭随从后，为你复活被消灭的随从。
 	class Sim_RLK_913 : SimTemplate
 	{
-		
+		public override void afterMinionAttack(Playfield p, Minion attacker, Minion defender, bool dontcount)
+		{
+			if (!defender.isHero && defender.Hp < 1)
+				p.callKid(defender.handcard.card, attacker.zonepos, attacker.own);
+		}
 		
 	}
 }

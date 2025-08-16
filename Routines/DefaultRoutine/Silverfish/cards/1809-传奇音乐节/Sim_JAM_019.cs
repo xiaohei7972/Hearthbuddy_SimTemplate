@@ -11,7 +11,7 @@ namespace HREngine.Bots
 	//<b>突袭</b>。在你的英雄攻击后，将本随从移回你的手牌并使其法力值消耗变为（1）点。
 	class Sim_JAM_019 : SimTemplate
 	{
-		public override void onHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
+		public override void afterHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
 		{
 			if (triggerMinion.own == hero.own)
 				p.minionReturnToHand(triggerMinion, triggerMinion.own, -(triggerMinion.handcard.card.cost - 1));

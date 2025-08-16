@@ -9,7 +9,7 @@ namespace HREngine.Bots
     //fter your hero attacks, deal 2 damage to a random enemy twice.
     class Sim_DED_519 : SimTemplate
     {
-        public override void onHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
+        public override void afterHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
         {
             if (triggerMinion.own == hero.own)
             {

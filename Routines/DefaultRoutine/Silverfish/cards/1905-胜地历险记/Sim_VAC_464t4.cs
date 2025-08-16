@@ -17,7 +17,7 @@ namespace HREngine.Bots
 			p.equipWeapon(weapon, ownplay);
 		}
 		
-		 public override void onHeroattack(Playfield p, Minion own, Minion target)
+		 public override void afterHeroattack(Playfield p, Minion own, Minion target)
         {
 			// 检查英雄是否为持有者，并且该武器是驱魔者
 			if (own.own && p.ownWeapon.card.cardIDenum == CardDB.cardIDEnum.VAC_464t4)
