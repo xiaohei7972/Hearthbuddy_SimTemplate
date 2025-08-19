@@ -11,11 +11,11 @@ namespace HREngine.Bots
 	//每当你的英雄攻击时，便获得4点护甲值。
 	class Sim_TTN_467 : SimTemplate
 	{
-		CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.TTN_467);
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
-			p.equipWeapon(weapon, ownplay);
-		}
+		// CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.TTN_467);
+		// public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		// {
+		// 	p.equipWeapon(weapon, ownplay);
+		// }
 		
 		public override void onHeroattack(Playfield p, Minion own, Minion target)
 		{

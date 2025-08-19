@@ -8,12 +8,12 @@ namespace HREngine.Bots
 	{
 		//Whenever your hero attacks, restore #2_Health to it.
 		//每当你的英雄进攻，便为其恢复#2点生命值。
-        CardDB.Card card = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.VAN_CS2_097);
+        // CardDB.Card card = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.VAN_CS2_097);
         
-        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-        {
-            p.equipWeapon(card, ownplay);
-        }
+        // public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        // {
+        //     p.equipWeapon(card, ownplay);
+        // }
 
 	}
 }

@@ -4,11 +4,12 @@ namespace HREngine.Bots
 	{
 		//Your hero is <b>Immune</b> while attacking.
 		//你的英雄在攻击时具有<b>免疫</b>。
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
-			CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.ULD_326t);
-			p.equipWeapon(weapon, ownplay);
-		}
+		// CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.ULD_326t);
+
+		// public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		// {
+		// 	p.equipWeapon(weapon, ownplay);
+		// }
 
 	}
 }

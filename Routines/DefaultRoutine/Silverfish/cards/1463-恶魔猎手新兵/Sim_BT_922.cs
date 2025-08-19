@@ -11,13 +11,13 @@ namespace HREngine.Bots
 	//<b>战吼：</b>召唤两只1/1的邪翼蝠。
 	class Sim_BT_922 : SimTemplate
 	{
-		CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.BT_922);
+		// CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.BT_922);
 		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.BT_922t);
 
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
-			p.equipWeapon(weapon, ownplay);
-		}
+		// public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		// {
+		// 	p.equipWeapon(weapon, ownplay);
+		// }
 
 		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
 		{

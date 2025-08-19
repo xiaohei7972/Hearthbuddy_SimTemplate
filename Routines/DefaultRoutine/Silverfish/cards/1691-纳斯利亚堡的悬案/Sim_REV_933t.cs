@@ -12,11 +12,11 @@ namespace HREngine.Bots
 	//<b>已注能</b>在你的英雄攻击后，使你受伤的随从获得+2/+2。
 	class Sim_REV_933t : SimTemplate
 	{
-		CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.REV_933t);
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
-			p.equipWeapon(weapon, ownplay);
-		}
+		// CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.REV_933t);
+		// public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		// {
+		// 	p.equipWeapon(weapon, ownplay);
+		// }
 
 		public override void afterHeroattack(Playfield p, Minion own, Minion target)
 		{

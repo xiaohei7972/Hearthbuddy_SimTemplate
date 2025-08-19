@@ -11,12 +11,12 @@ namespace HREngine.Bots
 	//在你攻击一个随从后，将其撞向敌方英雄！
 	class Sim_AV_202t2 : SimTemplate
 	{
-		CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.AV_202t2);
+		// CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.AV_202t2);
 
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
-			p.equipWeapon(weapon, ownplay);
-		}
+		// public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		// {
+		// 	p.equipWeapon(weapon, ownplay);
+		// }
 
 		public override void afterHeroattack(Playfield p, Minion own, Minion target)
 		{

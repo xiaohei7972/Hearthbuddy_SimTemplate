@@ -4,23 +4,27 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_VAN_NEW1_008 : SimTemplate //* 知识古树 Ancient of Lore
-	{
-		//<b>Choose One -</b> Draw a card; or Restore #5 Health.
-		//<b>抉择：</b>抽一张牌；或者恢复#5点生命值。
+    class Sim_VAN_NEW1_008 : SimTemplate //* 知识古树 Ancient of Lore
+    {
+        //<b>Choose One -</b> Draw a card; or Restore #5 Health.
+        //<b>抉择：</b>抽一张牌；或者恢复#5点生命值。
 
-        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        public override void onCardPlay(Playfield p, Minion own, Minion target, int choice)
         {
-            if (choice == 2 || (target != null && p.ownFandralStaghelm > 0 && own.own))
-            {
-                int heal = (own.own) ? p.getMinionHeal(5) : p.getEnemyMinionHeal(5);
-                p.minionGetDamageOrHeal(target, -heal);
-            }
-            
+
             if (choice == 1 || (p.ownFandralStaghelm > 0 && own.own))
             {
                 p.drawACard(CardDB.cardIDEnum.None, own.own);
                 p.drawACard(CardDB.cardIDEnum.None, own.own);
+            }
+
+            if (choice == 2 || (p.ownFandralStaghelm > 0 && own.own))
+            {
+                if (target != null)
+                {
+                    int heal = (own.own) ? p.getMinionHeal(5) : p.getEnemyMinionHeal(5);
+                    p.minionGetDamageOrHeal(target, -heal);
+                }
             }
         }
 

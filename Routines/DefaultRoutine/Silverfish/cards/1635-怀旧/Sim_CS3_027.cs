@@ -11,7 +11,22 @@ namespace HREngine.Bots
 	//<b>沉默</b>一个随从，然后使其获得+3生命值。
 	class Sim_CS3_027 : SimTemplate
 	{
-		
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			if (target != null)
+			{
+				p.minionGetSilenced(target);
+				p.minionGetBuffed(target, 0, 3);
+			}
+		}
+
+		public override PlayReq[] GetPlayReqs()
+		{
+			return new PlayReq[] {
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY),
+				new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET),
+			};
+		}
+
 	}
 }

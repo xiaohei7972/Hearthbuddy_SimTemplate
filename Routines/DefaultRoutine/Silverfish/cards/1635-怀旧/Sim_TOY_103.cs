@@ -17,6 +17,7 @@ namespace HREngine.Bots
 			{
 				attacker.numAttacksThisTurn = 0;
 				attacker.Ready = true;
+				attacker.updateReadyness();
 			}
 		}
 		

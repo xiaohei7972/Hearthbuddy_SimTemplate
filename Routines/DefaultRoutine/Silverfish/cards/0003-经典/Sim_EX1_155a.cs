@@ -6,13 +6,16 @@ namespace HREngine.Bots
 {
 	class Sim_EX1_155a : SimTemplate //* 猛虎之怒 Tiger's Fury
 	{
-		//+4 Attack.
-		//+4攻击力。
+        //+4 Attack.
+        //+4攻击力。
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
-            p.minionGetBuffed(target, 4, 0);
-		}
+        {
+            if (target != null)
+            {
+                p.minionGetBuffed(target, 4, 0);
+            }
+        }
 
 
         public override PlayReq[] GetPlayReqs()

@@ -15,9 +15,9 @@ namespace HREngine.Bots
         
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
-            p.setNewHeroPower(CardDB.cardIDEnum.ICC_832p, ownplay); 
-            if (ownplay) p.ownHero.armor += 5;
-            else p.enemyHero.armor += 5;
+            // p.setNewHeroPower(CardDB.cardIDEnum.ICC_832p, ownplay); 
+            // if (ownplay) p.ownHero.armor += 5;
+            // else p.enemyHero.armor += 5;
 
             if (choice == 1 || (p.ownFandralStaghelm > 0 && ownplay))
             {

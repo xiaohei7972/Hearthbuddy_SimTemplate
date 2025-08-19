@@ -11,12 +11,12 @@ namespace HREngine.Bots
 	//<b>亡语：</b>抽一张恶魔牌，并使其法力值消耗减少（2）点。
 	class Sim_TOY_641 : SimTemplate
 	{
-		CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.TOY_641);
+		// CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.TOY_641);
 
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
-			p.equipWeapon(weapon, ownplay);
-		}
+		// public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		// {
+		// 	p.equipWeapon(weapon, ownplay);
+		// }
 
 		public override void onDeathrattle(Playfield p, Minion m)
 		{

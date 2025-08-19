@@ -11,13 +11,13 @@ namespace HREngine.Bots
 	//在你的英雄攻击后，召唤一只{0}/{1}并具有<b>嘲讽</b>的青蛙。<i>（每只青蛙都会比上一只更大！）</i>
 	class Sim_WW_010t : SimTemplate
 	{
-		CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.WW_010t);
+		// CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.WW_010t);
 		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.WW_010hexfrog);
 
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
-			p.equipWeapon(weapon, ownplay);
-		}
+		// public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		// {
+		// 	p.equipWeapon(weapon, ownplay);
+		// }
 
 		public override void afterHeroattack(Playfield p, Minion own, Minion target)
 		{
@@ -26,6 +26,8 @@ namespace HREngine.Bots
 			{
 				int pos = own.own ? p.ownMinions.Count : p.enemyMinions.Count;
 				p.callKid(kid, pos, own.own);
+				p.ownWeapon.card.TAG_SCRIPT_DATA_NUM_1++;
+				p.ownWeapon.card.TAG_SCRIPT_DATA_NUM_2++;
 			}
 		}
 

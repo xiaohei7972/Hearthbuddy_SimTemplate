@@ -43,33 +43,126 @@ namespace HREngine.Bots
         /// </summary>
         public enum cardtrigers
         {
-            newtriger,///新触发
-            getBattlecryEffect,//战吼效果
-            onAHeroGotHealedTrigger,//一个英雄受到伤害触发
+            /// <summary>
+            /// 新触发
+            /// </summary>
+            newtriger,
+            /// <summary>
+            /// 战吼效果
+            /// </summary>
+            getBattlecryEffect,
+            /// <summary>
+            /// 一个英雄受到伤害触发
+            /// </summary>
+            onAHeroGotHealedTrigger,
+            /// <summary>
+            /// 随从受到伤害触发
+            /// </summary>
             onAMinionGotHealedTrigger,//随从受到伤害触发
-            onAuraEnds,//光环消失
-            onAuraStarts,//光环开始
-            onCardIsGoingToBePlayed,//卡片即将使用
-            onCardPlay,//卡片使用
-            onCardWasPlayed,//卡片使用后
-            onDeathrattle,//亡语
-            onEnrageStart,//激怒开始
-            onEnrageStop,//激怒结束
-            onMinionDiedTrigger,//随从死亡触发
-            onMinionGotDmgTrigger,//随从受到伤害触发
-            onMinionIsSummoned,//随从被召唤
-            onMinionWasSummoned,//随从召唤过
-            onSecretPlay,//奥秘使用
-            onTurnEndsTrigger,//回合结束触发
-            onTurnStartTrigger,//回合开始触发
-            triggerInspire,//触发激发
-            chaosha,//超杀
-            Strike,//撞击
-            xiaomie,//消灭
-            onTurnStart,//回合开始
-            onTurnEnd, //回合结束
-            useLocation, //使用地标
-            useTitanAbility, //使用泰坦技能
+            /// <summary>
+            /// 光环消失
+            /// </summary>
+            onAuraEnds,
+            /// <summary>
+            ///  光环开始
+            /// </summary>
+            onAuraStarts,
+            /// <summary>
+            /// 卡片即将使用
+            /// </summary>
+            onCardIsGoingToBePlayed,
+            /// <summary>
+            /// 卡片使用
+            /// </summary>
+            onCardPlay,
+            /// <summary>
+            /// 卡片使用后
+            /// </summary>
+            onCardWasPlayed,
+            /// <summary>
+            /// 亡语
+            /// </summary>
+            onDeathrattle,
+            /// <summary>
+            /// 激怒开始
+            /// </summary>
+            onEnrageStart,
+            /// <summary>
+            /// 激怒结束
+            /// </summary>
+            onEnrageStop,
+            /// <summary>
+            /// 随从死亡触发
+            /// </summary>
+            onMinionDiedTrigger,
+            /// <summary>
+            /// 随从受到伤害触发
+            /// </summary>
+            onMinionGotDmgTrigger,
+            /// <summary>
+            /// 随从被召唤
+            /// </summary>
+            onMinionIsSummoned,
+            /// <summary>
+            /// 随从召唤过
+            /// </summary>
+            onMinionWasSummoned,
+            /// <summary>
+            /// 奥秘使用
+            /// </summary>
+            onSecretPlay,
+            /// <summary>
+            /// 回合结束触发
+            /// </summary>
+            onTurnEndsTrigger,
+            /// <summary>
+            /// 回合开始触发
+            /// </summary>
+            onTurnStartTrigger,
+            /// <summary>
+            /// 触发激发
+            /// </summary>
+            triggerInspire,
+            /// <summary>
+            /// 超杀
+            /// </summary>
+            OnOverkill,
+            /// <summary>
+            /// 荣耀击杀
+            /// </summary>
+            OnHonorableKill,
+            /// <summary>
+            /// 消灭
+            /// </summary>
+            xiaomie,
+            /// <summary>
+            /// 回合开始
+            /// </summary>
+            onTurnStart,
+            /// <summary>
+            /// 回合结束
+            /// </summary>
+            onTurnEnd,
+            /// <summary>
+            /// 使用地标
+            /// </summary>
+            useLocation,
+            /// <summary>
+            /// 使用泰坦技能
+            /// </summary>
+            useTitanAbility,
+            /// <summary>
+            /// 当本随从攻击时
+            /// </summary>
+            onMinionAttack,
+            /// <summary>
+            /// 当本随从攻击后
+            /// </summary>
+            afterMinionAttack,
+            /// <summary>
+            /// 当随从牌打出后
+            /// </summary>
+            onCardIsAfterToBePlayed,
         }
 
         /// <summary>
@@ -1269,8 +1362,10 @@ namespace HREngine.Bots
                             // 不满足使用条件（或者是融合怪）
                             if (m.handcard.card.race != (Race)this.needRaceForPlaying && m.handcard.card.race != Race.ALL) m.extraParam = true;
                         }
-                        targetOwnHero = (p.ownHeroName == HeroEnum.lordjaraxxus && (TAG_RACE)this.needRaceForPlaying == TAG_RACE.DEMON);
-                        targetEnemyHero = (p.enemyHeroName == HeroEnum.lordjaraxxus && (TAG_RACE)this.needRaceForPlaying == TAG_RACE.DEMON);
+                        // targetOwnHero = (p.ownHeroName == HeroEnum.lordjaraxxus && (TAG_RACE)this.needRaceForPlaying == TAG_RACE.DEMON);
+                        // targetEnemyHero = (p.enemyHeroName == HeroEnum.lordjaraxxus && (TAG_RACE)this.needRaceForPlaying == TAG_RACE.DEMON);
+                        targetOwnHero = false;
+                        targetEnemyHero = false;
                     }
                     if (REQ_HERO_TARGET)
                     {
@@ -1526,6 +1621,28 @@ namespace HREngine.Bots
                         m.extraParam = false;
                     }
                 }
+                //非地标目标指向，移除地标
+                if (!targetOnlyLocation)
+                {
+                    retval.RemoveAll(minion => minion != null &&
+                          minion.handcard != null &&
+                          minion.handcard.card != null &&
+                          minion.handcard.card.type == CardDB.cardtype.LOCATION);
+
+                }
+
+                //如果是法术，移除扰魔、地标
+                if (this.type == CardDB.cardtype.SPELL)
+                {
+                    retval.RemoveAll(minion => minion != null &&
+                          minion.handcard != null &&
+                          minion.handcard.card != null &&
+                          minion.handcard.card.Elusive);
+                    retval.RemoveAll(minion => minion != null &&
+                          minion.handcard != null &&
+                          minion.handcard.card != null &&
+                          minion.handcard.card.type == CardDB.cardtype.LOCATION);
+                }
 
                 if (retval.Count == 0 && (!wereTargets || REQ_TARGET_IF_AVAILABLE)) retval.Add(null);
 
@@ -1633,7 +1750,7 @@ namespace HREngine.Bots
             public List<Minion> getTargetsForLocation(Playfield p, bool isLethalCheck, bool own)
             {
                 List<Minion> retval = new List<Minion>();
-                if (this.sim_card.GetPlayReqs().Length == 0) { retval.Add(null); return retval; }
+                if (this.sim_card.GetUseAbilityReqs().Length == 0) { retval.Add(null); return retval; }
 
                 List<Minion> targets = new List<Minion>();
                 bool targetAll = false;
@@ -1646,6 +1763,7 @@ namespace HREngine.Bots
                 bool wereTargets = false;
                 bool REQ_DAMAGED_TARGET = false;
                 bool REQ_TARGET_WITH_DEATHRATTLE = false;
+                bool REQ_TARGET_WITH_RACE = false;
 
                 foreach (PlayReq pr in this.sim_card.GetUseAbilityReqs())
                 {
@@ -1674,8 +1792,15 @@ namespace HREngine.Bots
                             targetOnlyMinion = true;
                             extraParam = true;
                             continue;
+                        case ErrorType2.REQ_TARGET_WITH_RACE:
+                            REQ_TARGET_WITH_RACE = true;
+                            targetOnlyMinion = true;
+                            extraParam = true;
+                            continue;
                     }
                 }
+
+                foreach (var pr in this.sim_card.GetUseAbilityReqs()) pr.UpdateCardAttr(this);
 
                 if (targetAll)
                 {
@@ -1735,6 +1860,17 @@ namespace HREngine.Bots
                         targetOwnHero = false;
                         targetEnemyHero = false;
                     }
+                    if (REQ_TARGET_WITH_RACE)
+                    {
+                        foreach (Minion m in targets)
+                        {
+                            // 不满足使用条件（或者是融合怪）
+                            if (m.handcard.card.race != (Race)this.needRaceForPlaying && m.handcard.card.race != Race.ALL) m.extraParam = true;
+                        }
+                        targetOwnHero = false;
+                        targetEnemyHero = false;
+
+                    }
                 }
 
                 if (targetEnemyHero && own && p.enemyHero.stealth) targetEnemyHero = false;
@@ -1772,6 +1908,17 @@ namespace HREngine.Bots
                         m.extraParam = false;
                     }
                 }
+                //移除不可接触的随从
+                retval.RemoveAll(minion => minion != null &&
+                                                        minion.handcard != null &&
+                                                        minion.handcard.card != null &&
+                                                        minion.handcard.card.untouchable);
+                //移除地标
+                retval.RemoveAll(minion => minion != null &&
+                                                        minion.handcard != null &&
+                                                        minion.handcard.card != null &&
+                                                        minion.handcard.card.type == CardDB.cardtype.LOCATION);
+
 
                 // 如果没有找到合适的目标且没有特定目标要求，则返回null
                 if (retval.Count == 0 && !wereTargets)
@@ -2199,7 +2346,7 @@ namespace HREngine.Bots
                         break;
                     case CardDB.cardNameEN.rabblebouncer: //场馆保镖
                     case CardDB.cardNameEN.prismaticbeam: //棱彩光束
-                    case CardDB.cardNameEN.eredarbrute: //棱彩光束
+                    case CardDB.cardNameEN.eredarbrute: //艾瑞达蛮兵
                         {
                             int enemyMinionsCount = 0;
                             if (p.enemyMinions.Count > 0)

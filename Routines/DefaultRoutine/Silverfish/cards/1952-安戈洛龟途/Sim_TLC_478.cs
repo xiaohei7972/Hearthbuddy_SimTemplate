@@ -11,11 +11,11 @@ namespace HREngine.Bots
 	//在你的英雄攻击后，对所有随从造成1点伤害。
 	class Sim_TLC_478 : SimTemplate
 	{
-		CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.TLC_478);
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
-			p.equipWeapon(weapon, ownplay);
-		}
+		// CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.TLC_478);
+		// public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		// {
+		// 	p.equipWeapon(weapon, ownplay);
+		// }
 
 		public override void afterHeroattack(Playfield p, Minion own, Minion target)
 		{

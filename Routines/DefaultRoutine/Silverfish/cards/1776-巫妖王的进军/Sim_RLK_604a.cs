@@ -11,7 +11,11 @@ namespace HREngine.Bots
 	//<b>突袭</b>。<b>亡语：</b>进入<b>休眠</b>状态。施放一个火焰法术以复活索利贝洛尔！<i>（还能复活一次。）</i>
 	class Sim_RLK_604a : SimTemplate
 	{
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.RLK_604t);
+        public override void onDeathrattle(Playfield p, Minion m)
+		{
+			p.callKid(kid, m.zonepos - 1, m.own);
+		}
 		
 	}
 }

@@ -87,35 +87,37 @@ namespace HREngine.Bots
                             }
                         }
 
-                        if (p.ownMinions.Count > 6 && (c.type == CardDB.cardtype.MOB || c.type == CardDB.cardtype.LOCATION)) continue;
+                        if (p.ownMinions.Count >= 7)
+                            if (hc.card.type == CardDB.cardtype.MOB || hc.card.type == CardDB.cardtype.LOCATION)
+                                continue;
 
                         trgts = c.getTargetsForCard(p, p.isLethalCheck, true);
                         if (trgts.Count == 0) continue;
 
-                        //非地标目标指向，移除地标
-                        if (c.type == CardDB.cardtype.MOB &&
-                            c.cardIDenum != CardDB.cardIDEnum.VAC_529 &&
-                            c.cardIDenum != CardDB.cardIDEnum.REV_023 && c.cardIDenum != CardDB.cardIDEnum.CORE_REV_023)
-                        {
-                            trgts.RemoveAll(minion => minion != null &&
-                                  minion.handcard != null &&
-                                  minion.handcard.card != null &&
-                                  minion.handcard.card.type == CardDB.cardtype.LOCATION);
+                        // //非地标目标指向，移除地标
+                        // if (c.type == CardDB.cardtype.MOB &&
+                        //     c.cardIDenum != CardDB.cardIDEnum.VAC_529 &&
+                        //     c.cardIDenum != CardDB.cardIDEnum.REV_023 && c.cardIDenum != CardDB.cardIDEnum.CORE_REV_023)
+                        // {
+                        //     trgts.RemoveAll(minion => minion != null &&
+                        //           minion.handcard != null &&
+                        //           minion.handcard.card != null &&
+                        //           minion.handcard.card.type == CardDB.cardtype.LOCATION);
 
-                        }
+                        // }
 
-                        //如果是法术，移除扰魔、地标
-                        if (c.type == CardDB.cardtype.SPELL)
-                        {
-                            trgts.RemoveAll(minion => minion != null &&
-                                  minion.handcard != null &&
-                                  minion.handcard.card != null &&
-                                  minion.handcard.card.Elusive);
-                            trgts.RemoveAll(minion => minion != null &&
-                                  minion.handcard != null &&
-                                  minion.handcard.card != null &&
-                                  minion.handcard.card.type == CardDB.cardtype.LOCATION);
-                        }
+                        // //如果是法术，移除扰魔、地标
+                        // if (c.type == CardDB.cardtype.SPELL)
+                        // {
+                        //     trgts.RemoveAll(minion => minion != null &&
+                        //           minion.handcard != null &&
+                        //           minion.handcard.card != null &&
+                        //           minion.handcard.card.Elusive);
+                        //     trgts.RemoveAll(minion => minion != null &&
+                        //           minion.handcard != null &&
+                        //           minion.handcard.card != null &&
+                        //           minion.handcard.card.type == CardDB.cardtype.LOCATION);
+                        // }
 
                         int bestplace = p.getBestPlace(c, p.isLethalCheck);
 
@@ -256,14 +258,13 @@ namespace HREngine.Bots
                         int useLocationPenalty = usePenalityManager ? pen.getUseLocationPenality(minion, trot, p) : 0;
                         if (useLocationPenalty <= 499)
                         {
-                            ret.Add(new Action(actionEnum.useLocation, null, minion, 0, trot, -1000, 0));
+                            ret.Add(new Action(actionEnum.useLocation, null, minion, 0, trot, useLocationPenalty, 0));
                         }
                     }
                 }
                 else if (minion.handcard.card.sim_card.GetUseAbilityReqs().Length == 0)
-                // else
                 {
-                    ret.Add(new Action(actionEnum.useLocation, null, minion, 0, null, -1000, 0));
+                    ret.Add(new Action(actionEnum.useLocation, null, minion, 0, null, 0, 0));
                 }
             }
 

@@ -9,13 +9,13 @@ namespace HREngine.Bots
 	//你的英雄在攻击时具有<b>免疫</b>。 
 	class Sim_LOOT_222 : SimTemplate
 	{
-		CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.LOOT_222);
+		// CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.LOOT_222);
 
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
-			p.equipWeapon(weapon, ownplay);
+		// public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		// {
+		// 	p.equipWeapon(weapon, ownplay);
 
-		}
+		// }
 
 		// public override void afterHeroattack(Playfield p, Minion own, Minion target)
 		// {

@@ -11,11 +11,11 @@ namespace HREngine.Bots
 	//
 	class Sim_VAC_464t29 : SimTemplate
 	{
-		CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.VAC_464t29);
-        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-        {
-            p.equipWeapon(weapon, ownplay);
-        }
+		// CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.VAC_464t29);
+        // public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        // {
+        //     p.equipWeapon(weapon, ownplay);
+        // }
 
 		
 	}

@@ -11,12 +11,12 @@ namespace HREngine.Bots
 	//在你的英雄攻击后，获取一张奥术射击。
 	class Sim_WW_813 : SimTemplate
 	{
-		CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.WW_813); // 假设明星手枪的卡牌ID为 WW_813
+		// CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.WW_813); // 假设明星手枪的卡牌ID为 WW_813
 
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
-			p.equipWeapon(weapon, ownplay); // 装备明星手枪
-		}
+		// public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		// {
+		// 	p.equipWeapon(weapon, ownplay); // 装备明星手枪
+		// }
 		
 		public override void afterHeroattack(Playfield p, Minion own, Minion target)
 		{

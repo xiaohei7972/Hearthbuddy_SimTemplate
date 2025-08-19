@@ -13,13 +13,24 @@ namespace HREngine.Bots
 	{
 		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
 		{
-			p.allMinionOfASideGetDamage(own.own,3);
+			int damages = 3;
+			foreach (Minion m in own.own ? p.ownMinions.ToArray() : p.enemyMinions.ToArray())
+			{
+				if (own.entitiyID == m.entitiyID) continue;
+				p.minionGetDamageOrHeal(m, damages, true); // 然后对随从造成伤害
+			}
+			p.updateBoards(); // 更新游戏板状态
 		}
 
-        public override void onDeathrattle(Playfield p, Minion m)
-        {
-			p.allMinionOfASideGetDamage(!m.own,3);
-        }
-		
+		public override void onDeathrattle(Playfield p, Minion m)
+		{
+			int damages = 3;
+			foreach (Minion minion in !m.own ? p.ownMinions.ToArray() : p.enemyMinions.ToArray())
+			{
+				p.minionGetDamageOrHeal(minion, damages, true); // 然后对随从造成伤害
+			}
+			p.updateBoards(); // 更新游戏板状态
+		}
+
 	}
 }

@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//弃两张牌。
 	class Sim_DEEP_027a : SimTemplate
 	{
-		
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			p.discardCards(2, ownplay);
+		}
+
 	}
 }

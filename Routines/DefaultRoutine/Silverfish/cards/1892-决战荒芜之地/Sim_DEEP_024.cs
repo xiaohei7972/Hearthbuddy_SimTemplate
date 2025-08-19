@@ -12,15 +12,26 @@ namespace HREngine.Bots
 	class Sim_DEEP_024 : SimTemplate
 	{
 
-        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice, Handmanager.Handcard hc)
-        {
-			if (hc.card.Quickdraw) 
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice, Handmanager.Handcard hc)
+		{
+			if (hc.card.Quickdraw)
 			{
-                p.minionGetDamageOrHeal(target, 5);
+				if (target != null)
+				{
+					p.minionGetDamageOrHeal(target, 5);
 
-                // 吸血效果，恢复等量生命值
-                p.minionGetDamageOrHeal(p.ownHero, -5);
-            }
-        }
-    }
+					// 吸血效果，恢复等量生命值
+					p.minionGetDamageOrHeal(p.ownHero, -5);
+				}
+			}
+		}
+
+		public override PlayReq[] GetPlayReqs()
+		{
+			return new PlayReq[] {
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_IF_AVAILABLE),
+			};
+		}
+
+	}
 }

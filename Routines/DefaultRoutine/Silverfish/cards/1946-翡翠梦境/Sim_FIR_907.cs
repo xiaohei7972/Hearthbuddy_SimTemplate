@@ -17,20 +17,19 @@ namespace HREngine.Bots
 				p.evaluatePenality -= 30;
 			if (triggerMinion.handcard.card.CooldownTurn == 0)
 			{
-				//根据地标耐久判断提升数
-				int enhance = triggerMinion.maxHp - triggerMinion.Hp;
-				// 根据数随机获取一张随从
-				CardDB.Card kid = p.getRandomCardForManaMinion(1 + enhance);
+				// 根据TAG_SCRIPT_DATA_NUM_1随机获取一张随从
+				CardDB.Card kid = p.getRandomCardForManaMinion(triggerMinion.handcard.card.TAG_SCRIPT_DATA_NUM_1);
 				//召唤一个随从
 				p.callKid(kid, p.ownMinions.Count, true);
 				//获取护甲
-				p.minionGetArmor(p.ownHero, 1 + enhance);
+				p.minionGetArmor(p.ownHero, triggerMinion.handcard.card.TAG_SCRIPT_DATA_NUM_1);
 				//抽牌
-				for (int i = 0; i < 1 + enhance; i++)
+				for (int i = 0; i < triggerMinion.handcard.card.TAG_SCRIPT_DATA_NUM_1; i++)
 				{
 					p.drawACard(CardDB.cardNameEN.unknown, true);
 				}
-				p.mana = Math.Min(p.ownMaxMana, p.mana + 1 + enhance);
+				p.mana = Math.Min(p.ownMaxMana, p.mana + triggerMinion.handcard.card.TAG_SCRIPT_DATA_NUM_1);
+				triggerMinion.handcard.card.TAG_SCRIPT_DATA_NUM_1++;
 			}
 		}
 

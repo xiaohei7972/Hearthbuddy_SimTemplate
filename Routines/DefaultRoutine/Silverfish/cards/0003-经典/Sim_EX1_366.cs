@@ -9,12 +9,12 @@ namespace HREngine.Bots
     //在你召唤一个随从后，使其获得+1/+1，这把武器失去1点耐久度。
     class Sim_EX1_366 : SimTemplate
     {
-        CardDB.Card card = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EX1_366);
+        // CardDB.Card card = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EX1_366);
 
-        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-        {
-            p.equipWeapon(card, ownplay);
-        }
+        // public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        // {
+        //     p.equipWeapon(card, ownplay);
+        // }
 
         public override void onMinionIsSummoned(Playfield p, Minion triggerEffectMinion, Minion summonedMinion)
         {

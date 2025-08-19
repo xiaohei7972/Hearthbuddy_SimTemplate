@@ -11,11 +11,11 @@ namespace HREngine.Bots
 	//<b>亡语：</b>消灭所有随从。
 	class Sim_TLC_EVENT_402 : SimTemplate
 	{
-		CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.TLC_EVENT_402);
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
-			p.equipWeapon(weapon, ownplay);
-		}
+		// CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.TLC_EVENT_402);
+		// public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		// {
+		// 	p.equipWeapon(weapon, ownplay);
+		// }
 
         public override void onDeathrattle(Playfield p, Minion m)
         {

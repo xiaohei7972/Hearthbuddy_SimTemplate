@@ -11,7 +11,17 @@ namespace HREngine.Bots
 	//将你的树人变形成为5/5并具有<b>嘲讽</b>的古树。
 	class Sim_TTN_926b : SimTemplate
 	{
-		
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.TTN_903t4);
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			foreach (Minion minion in p.ownMinions.ToArray())
+			{
+				if (minion.handcard.card.Treant)
+				{
+					p.minionTransform(minion, kid);
+				}
+			}
+		}
+
 	}
 }

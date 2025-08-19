@@ -8,10 +8,10 @@ namespace HREngine.Bots
 	{
 		//<b>Corrupted</b><b>Lifesteal</b>
 		//<b>已腐蚀</b><b>吸血</b>
-		CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.YOP_011t);
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
-			p.equipWeapon(weapon, ownplay);
-		}
+		// CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.YOP_011t);
+		// public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		// {
+		// 	p.equipWeapon(weapon, ownplay);
+		// }
 	}
 }

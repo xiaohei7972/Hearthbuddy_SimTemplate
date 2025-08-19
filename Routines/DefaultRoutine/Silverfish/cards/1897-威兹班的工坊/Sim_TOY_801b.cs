@@ -11,7 +11,12 @@ namespace HREngine.Bots
 	//获得<b>法术伤害+1</b>。
 	class Sim_TOY_801b : SimTemplate
 	{
-		
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			if (ownplay) p.spellpower++;
+			else p.enemyspellpower++;
+
+		}
+
 	}
 }

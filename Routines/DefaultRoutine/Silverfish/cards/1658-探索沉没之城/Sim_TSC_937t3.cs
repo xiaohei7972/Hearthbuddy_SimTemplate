@@ -11,7 +11,7 @@ namespace HREngine.Bots
 	//<b>突袭</b>，<b>亡语：</b>装备一把2/1的蟹钳。
 	class Sim_TSC_937t3 : SimTemplate
 	{
-		CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EDR_457t);
+		CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.TSC_937t2);
 
 		public override void onDeathrattle(Playfield p, Minion m)
 		{

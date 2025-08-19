@@ -11,7 +11,32 @@ namespace HREngine.Bots
 	//<b><b>法术迸发</b>：</b>吸收法术的能量！@施放{0}。
 	class Sim_GDB_136t : SimTemplate
 	{
-		
-		
+		PlayReq[] playReqs = new PlayReq[] { };
+		public override void useLocation(Playfield p, Minion triggerMinion, Minion target)
+		{
+			if (p.mana < p.ownMaxMana)
+				p.evaluatePenality -= 30;
+			if (triggerMinion.handcard.card.CooldownTurn == 0)
+			{
+				if (triggerMinion.handcard.enchs.Count > 0)
+				{
+					CardDB.Card card = CardDB.Instance.getCardDataFromID(triggerMinion.handcard.enchs[0]);
+					playReqs = card.sim_card.GetPlayReqs();
+					card.sim_card.onCardPlay(p, triggerMinion.own, target, 1);
+
+				}
+			}
+		}
+
+		public override void OnSpellburst(Playfield p, Minion m, Handmanager.Handcard hc)
+		{
+			m.handcard.enchs.Add(hc.card.cardIDenum);
+		}
+
+		public override PlayReq[] GetUseAbilityReqs()
+		{
+			return playReqs;
+		}
+
 	}
 }

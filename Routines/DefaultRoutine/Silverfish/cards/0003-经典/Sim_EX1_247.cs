@@ -8,11 +8,11 @@ namespace HREngine.Bots
 	{
 		//<b>Overload:</b> (1)
 		//<b>过载：</b>（1）
-        CardDB.Card card = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EX1_247);
+        // CardDB.Card card = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.EX1_247);
         //
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
-            p.equipWeapon(card,ownplay);
+            // p.equipWeapon(card,ownplay);
             if (ownplay) p.ueberladung ++;
         }
 

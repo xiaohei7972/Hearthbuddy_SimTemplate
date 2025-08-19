@@ -12,6 +12,14 @@ namespace HREngine.Bots
 	class Sim_SCH_607 : SimTemplate
 	{
 		
-		
+		public override PlayReq[] GetPlayReqs()
+        {
+            return new PlayReq[] {
+                new PlayReq(CardDB.ErrorType2.REQ_TARGET_WITH_RACE, 20),
+                new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET),
+                new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY),
+                new PlayReq(CardDB.ErrorType2.REQ_TARGET_IF_AVAILABLE),
+            };
+        }
 	}
 }

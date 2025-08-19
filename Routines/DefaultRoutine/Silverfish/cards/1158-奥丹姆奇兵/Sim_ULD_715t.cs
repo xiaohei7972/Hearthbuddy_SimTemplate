@@ -4,12 +4,12 @@ namespace HREngine.Bots
 	{
 		//<b>Poisonous</b>
 		//<b>剧毒</b>
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
-			CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.ULD_715t);
+		// public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		// {
+		// 	CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.ULD_715t);
 
-			p.equipWeapon(weapon, ownplay);
-		}
+		// 	p.equipWeapon(weapon, ownplay);
+		// }
 
 	}
 }

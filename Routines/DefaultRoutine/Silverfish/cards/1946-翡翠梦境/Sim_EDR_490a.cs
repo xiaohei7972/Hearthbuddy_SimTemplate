@@ -21,7 +21,7 @@ namespace HREngine.Bots
 		public override PlayReq[] GetPlayReqs()
 		{
 			return new PlayReq[] {
-				new PlayReq(CardDB.ErrorType2.REQ_NUM_MINION_SLOTS, 1), // 需求选择一个目标
+				new PlayReq(CardDB.ErrorType2.REQ_NUM_MINION_SLOTS, 1), // 需求选择一个空位
 
             };
 		}

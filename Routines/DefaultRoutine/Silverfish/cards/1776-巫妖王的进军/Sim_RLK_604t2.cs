@@ -11,7 +11,16 @@ namespace HREngine.Bots
 	//<b>休眠</b>施放一个火焰法术以复活索利贝洛尔！
 	class Sim_RLK_604t2 : SimTemplate
 	{
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.RLK_604b);
+
+		public override void onCardIsGoingToBePlayed(Playfield p, Handmanager.Handcard hc, bool wasOwnCard, Minion triggerEffectMinion)
+		{
+			if (triggerEffectMinion.own == wasOwnCard && hc.card.type == CardDB.cardtype.SPELL && hc.card.SpellSchool == CardDB.SpellSchool.FIRE)
+			{
+				p.callKid(kid, triggerEffectMinion.zonepos - 1, triggerEffectMinion.own);
+				p.RemoveMinionWithoutDeathrattle(triggerEffectMinion);
+			}
+		}
 		
 	}
 }

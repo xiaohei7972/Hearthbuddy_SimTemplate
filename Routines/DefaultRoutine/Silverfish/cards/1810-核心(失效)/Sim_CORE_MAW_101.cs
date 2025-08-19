@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//你每控制一个<b>奥秘</b>，本牌的法力值消耗便减少（3）点。
 	class Sim_CORE_MAW_101 : SimTemplate
 	{
-		
+		public override void onCardIsGoingToBePlayed(Playfield p, Handmanager.Handcard hc, bool ownplay, Handmanager.Handcard triggerhc)
+        {
+            if (ownplay && hc.card.Secret)
+            {
+                triggerhc.manacost = triggerhc.getManaCost(p);
+            }
+        }
 		
 	}
 }
