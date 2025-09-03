@@ -15,12 +15,15 @@ namespace HREngine.Bots
 		{
 			p.minionGetBuffed(triggerMinion, 2, 2);
 			List<Minion> minions = triggerMinion.own ? p.enemyMinions : p.ownMinions;
-			Minion target = minions[p.getRandomNumber(0, minions.Count - 1)];
-			if (target != null)
+			if (minions.Count > 0)
 			{
-				p.minionAttacksMinion(triggerMinion, target);
+				Minion target = minions[p.getRandomNumber(0, Math.Max(minions.Count - 1, 0))];
+				if (target != null)
+				{
+					p.minionAttacksMinion(triggerMinion, target, true);
+				}
 			}
-        }
-		
+		}
+
 	}
 }
