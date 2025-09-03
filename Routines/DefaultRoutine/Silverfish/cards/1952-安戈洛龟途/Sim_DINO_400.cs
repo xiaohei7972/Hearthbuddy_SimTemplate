@@ -11,7 +11,16 @@ namespace HREngine.Bots
 	//每当你获得护甲值，获得+2/+2并随机攻击一个敌方随从。
 	class Sim_DINO_400 : SimTemplate
 	{
-		
+		public override void onHeroGetArmor(Playfield p, Minion triggerMinion, bool ownHero, int armor)
+		{
+			p.minionGetBuffed(triggerMinion, 2, 2);
+			List<Minion> minions = triggerMinion.own ? p.enemyMinions : p.ownMinions;
+			Minion target = minions[p.getRandomNumber(0, minions.Count - 1)];
+			if (target != null)
+			{
+				p.minionAttacksMinion(triggerMinion, target);
+			}
+        }
 		
 	}
 }

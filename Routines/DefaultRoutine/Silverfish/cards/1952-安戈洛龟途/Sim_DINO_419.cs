@@ -11,22 +11,23 @@ namespace HREngine.Bots
 	//<b>战吼：</b>使一只友方野兽获得+2/+2和<b>突袭</b>。
 	class Sim_DINO_419 : SimTemplate
 	{
-        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
-        {
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
 			if (target != null)
 			{
 				p.minionGetBuffed(target, 2, 2);
 				p.minionGetRush(target);
 			}
-        }
-		
+		}
+
 		public override PlayReq[] GetPlayReqs()
 		{
 			return new PlayReq[]{
-				new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY),
 				new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET),
 				new PlayReq(CardDB.ErrorType2.REQ_FRIENDLY_TARGET),
 				new PlayReq(CardDB.ErrorType2.REQ_TARGET_WITH_RACE,20),
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_IF_AVAILABLE),
+
 			};
 		}
 	}

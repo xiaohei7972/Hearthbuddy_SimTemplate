@@ -4671,9 +4671,11 @@ namespace HREngine.Bots
         /// </summary>
         private void HandlePostAttackEffects(Minion attacker, Minion defender, bool dontcount)
         {
-            if (!attacker.silenced)
+            if (!attacker.silenced && !dontcount)
+            {
                 //调用随从攻击后的sim方法
                 attacker.handcard.card.sim_card.afterMinionAttack(this, attacker, defender, dontcount);
+            }
             // switch (attacker.name)
             // {
             //     case CardDB.cardNameEN.parkpanther:
@@ -6998,21 +7000,23 @@ namespace HREngine.Bots
         /// 当英雄获得护甲时触发的效果。
         /// </summary>
         /// <param name="ownHero">是否为己方英雄。</param>
-        public void triggerAHeroGotArmor(bool ownHero)
+        public void triggerAHeroGotArmor(bool ownHero, int armor)
         {
             // 获取当前操作的随从列表，根据是己方英雄还是敌方英雄选择相应的随从列表
             List<Minion> minions = ownHero ? this.ownMinions : this.enemyMinions;
 
             // 遍历随从列表，检查是否存在重型攻城战车，并触发相应效果
-            // foreach (Minion m in minions)
-            // {
-            //     // 如果随从是重型攻城战车并且未被沉默
-            //     if (m.name == CardDB.cardNameEN.siegeengine && !m.silenced)
-            //     {
-            //         // 重型攻城战车获得+1攻击力
-            //         this.minionGetBuffed(m, 1, 0);
-            //     }
-            // }
+            foreach (Minion m in minions)
+            {
+                if (!m.silenced)
+                    m.handcard.card.sim_card.onHeroGetArmor(this, m, ownHero, armor);
+                // 如果随从是重型攻城战车并且未被沉默
+                // if (m.name == CardDB.cardNameEN.siegeengine && !m.silenced)
+                // {
+                //     // 重型攻城战车获得+1攻击力
+                //     this.minionGetBuffed(m, 1, 0);
+                // }
+            }
         }
 
         /// <summary>
@@ -9114,7 +9118,7 @@ namespace HREngine.Bots
             m.armor += armor;  // 增加随从的护甲值
 
             // 遍历己方手牌，处理与护甲相关的卡牌效果
-            foreach (Handmanager.Handcard hc in this.owncards.ToArray())
+            /* foreach (Handmanager.Handcard hc in this.owncards.ToArray())
             {
                 // 检查是否持有 "小型法术玉石" 卡牌
                 if (hc.card.nameCN == CardDB.cardNameCN.小型法术玉石)
@@ -9149,10 +9153,10 @@ namespace HREngine.Bots
                         hc.card = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.LOOT_051t2);
                     }
                 }
-            }
+            } */
 
             // 触发英雄获得护甲的事件
-            // this.triggerAHeroGotArmor(m.own);
+            this.triggerAHeroGotArmor(m.own, armor);
 
             // 处理友方随从中处于冷却中的地标，ID为VAC_517（远足步道）
             // if (m.own && m.isHero)

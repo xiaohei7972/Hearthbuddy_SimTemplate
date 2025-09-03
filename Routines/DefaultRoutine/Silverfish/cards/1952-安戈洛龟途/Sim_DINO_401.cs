@@ -15,10 +15,11 @@ namespace HREngine.Bots
         {
 			if (!defender.isHero)
 			{
-				foreach (Minion minion in defender.own ? p.enemyMinions : p.ownMinions)
+				foreach (Minion minion in attacker.own ? p.enemyMinions : p.ownMinions)
 				{
 					if (minion.entitiyID == defender.entitiyID) continue;
-					p.minionAttacksMinion(attacker, minion, true);
+					p.minionGetDamageOrHeal(minion, attacker.Angr);
+					// p.minionAttacksMinion(attacker, minion, true);
 				}
 			}
         }

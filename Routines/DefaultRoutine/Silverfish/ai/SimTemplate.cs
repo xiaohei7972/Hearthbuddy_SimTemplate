@@ -788,5 +788,10 @@ namespace HREngine.Bots
         {
             return;
         }
+
+        public virtual void onHeroGetArmor(Playfield p, Minion triggerMinion, bool ownHero, int armor)
+        {
+            return;
+        }
     }
 }
