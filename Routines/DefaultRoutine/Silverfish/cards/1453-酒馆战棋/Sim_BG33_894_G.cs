@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 萨满祭司 费用：0 攻击力：8 生命值：2
+	//随从 萨满祭司 费用：0 攻击力：6 生命值：2
 	//Coldlight Diver
 	//寒光潜水鱼人
 	//<b>Battlecry and Deathrattle:</b> Get two random Tier 1 Tavern spells.

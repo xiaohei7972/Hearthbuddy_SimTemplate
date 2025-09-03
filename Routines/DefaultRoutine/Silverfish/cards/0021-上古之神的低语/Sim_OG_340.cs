@@ -4,11 +4,14 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    //* 深渊滑行者索苟斯 Soggoth the Slitherer
-    //<b>Taunt</b>Can't be targeted by spells or Hero Powers.
-    //<b>嘲讽</b>无法成为法术或英雄技能的目标。
-    class Sim_OG_340 : SimTemplate 
+	//随从 中立 费用：9 攻击力：5 生命值：9
+	//Soggoth the Slitherer
+	//深渊滑行者索苟斯
+	//<b>Taunt</b><b>Elusive</b>
+	//<b>嘲讽</b>。<b>扰魔</b>
+	class Sim_OG_340 : SimTemplate
 	{
-
-    }
+		
+		
+	}
 }

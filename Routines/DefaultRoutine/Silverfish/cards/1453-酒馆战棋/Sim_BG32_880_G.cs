@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：0 攻击力：14 生命值：6
+	//随从 巫妖王 费用：0 攻击力：12 生命值：6
 	//Friendly Geist
 	//友善的恶鬼
 	//<b>Deathrattle:</b> Your Tavern spells that give stats grant an extra +{0} Attack this game.

@@ -4,11 +4,14 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    //* 泰拉图斯 Tyrantus
-    //Can't be targeted by spells or Hero Powers.
-    //无法成为法术或英雄技能的目标。 
-    class Sim_UNG_852 : SimTemplate
-    {
-
-    }
+	//随从 德鲁伊 费用：10 攻击力：14 生命值：14
+	//Tyrantus
+	//泰拉图斯
+	//<b>Taunt</b><b>Elusive</b>
+	//<b>嘲讽</b>。<b>扰魔</b>
+	class Sim_UNG_852 : SimTemplate
+	{
+		
+		
+	}
 }

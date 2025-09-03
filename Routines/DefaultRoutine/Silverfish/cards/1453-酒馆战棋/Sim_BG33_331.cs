@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 法师 费用：0 攻击力：4 生命值：4
+	//随从 法师 费用：0 攻击力：5 生命值：5
 	//Lantern Lava
 	//灯中熔岩
 	//[x]Get a plain copy of the firstElemental you sell each turn<i>(except Lantern Lava).</i>

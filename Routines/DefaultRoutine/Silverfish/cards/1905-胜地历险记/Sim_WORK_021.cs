@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 战士 费用：3
+	//法术 战士 费用：4
 	//Reserved Spot
 	//预留泊位
 	//[x]Give a random minionin your hand +4/+4.If it's the only one there,reduce its Cost by (2).

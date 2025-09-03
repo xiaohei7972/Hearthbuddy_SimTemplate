@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 圣骑士 费用：0 攻击力：3 生命值：6
+	//随从 圣骑士 费用：0 攻击力：3 生命值：8
 	//Gleaming Trader
 	//闪亮的商贩
 	//[x]<b>Divine Shield</b>. After a friendlyminion loses <b>Divine Shield</b>,your minions have +{0} Attack______for the rest of this combat.___

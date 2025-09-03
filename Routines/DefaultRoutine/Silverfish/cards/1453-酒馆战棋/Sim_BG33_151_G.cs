@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 术士 费用：0 攻击力：2 生命值：12
+	//随从 术士 费用：0 攻击力：4 生命值：12
 	//Stray Satyr
 	//散逃的萨特
 	//[x]After a friendly Demondeals damage, gain+{0} Attack.

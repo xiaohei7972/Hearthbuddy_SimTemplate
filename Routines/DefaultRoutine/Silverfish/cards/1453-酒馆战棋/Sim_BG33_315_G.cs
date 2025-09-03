@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 恶魔猎手 费用：0 攻击力：6 生命值：12
+	//随从 恶魔猎手 费用：0 攻击力：4 生命值：8
 	//Greedy Snaketongue
 	//贪婪的蛇信纳迦
 	//<b>Rally:</b> Get 2 Gold Coins.

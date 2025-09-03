@@ -4,10 +4,14 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    //* Bearshark
-    // Can't be targeted by spells of Hero Powers.
-    class Sim_CORE_ICC_419 : SimTemplate
-    {
-        
-    }
+	//随从 猎人 费用：3 攻击力：4 生命值：3
+	//Bearshark
+	//熊鲨
+	//<b>Elusive</b>
+	//<b>扰魔</b>
+	class Sim_CORE_ICC_419 : SimTemplate
+	{
+		
+		
+	}
 }

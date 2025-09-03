@@ -4,11 +4,14 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    //* 铍金毁灭者 Beryllium Nullifier
-    //<b>Magnetic</b>Can't be targeted by spells or Hero Powers.
-    //<b>磁力</b>无法成为法术或英雄技能的目标。
-    class Sim_BOT_237 : SimTemplate
-    {
-
-    }
+	//随从 战士 费用：7 攻击力：4 生命值：8
+	//Beryllium Nullifier
+	//铍金毁灭者
+	//<b>Magnetic</b><b>Elusive</b>
+	//<b>磁力</b>。<b>扰魔</b>
+	class Sim_BOT_237 : SimTemplate
+	{
+		
+		
+	}
 }

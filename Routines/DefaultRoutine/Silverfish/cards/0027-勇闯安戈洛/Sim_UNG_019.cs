@@ -4,11 +4,14 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    //* 空气元素 Air Elemental
-    //Can't be targeted by spells or Hero Powers.
-    //无法成为法术或英雄技能的目标。 
-    class Sim_UNG_019 : SimTemplate
-    {
-
-    }
+	//随从 萨满祭司 费用：1 攻击力：3 生命值：1
+	//Air Elemental
+	//空气元素
+	//<b>Elusive</b>
+	//<b>扰魔</b>
+	class Sim_UNG_019 : SimTemplate
+	{
+		
+		
+	}
 }

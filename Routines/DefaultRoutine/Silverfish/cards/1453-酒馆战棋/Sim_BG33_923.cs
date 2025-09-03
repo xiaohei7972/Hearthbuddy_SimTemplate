@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 恶魔猎手 费用：0 攻击力：6 生命值：3
+	//随从 恶魔猎手 费用：0 攻击力：7 生命值：4
 	//Sundered Matriarch
 	//破碎主母
 	//Whenever you cast a spell,give your minions+{0} Health.

@@ -4,12 +4,14 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    //* 施法者克星X-21 Arcane Nullifier X-21
-    //<b>Taunt</b>Can't be targeted by spells or Hero Powers.
-    //<b>嘲讽，</b>无法成为法术或英雄技能的目标。
-    class Sim_GVG_091 : SimTemplate
-    {
-
-    }
-
+	//随从 中立 费用：4 攻击力：2 生命值：5
+	//Arcane Nullifier X-21
+	//施法者克星X-21
+	//<b>Taunt</b><b>Elusive</b>
+	//<b>嘲讽</b>。<b>扰魔</b>
+	class Sim_GVG_091 : SimTemplate
+	{
+		
+		
+	}
 }

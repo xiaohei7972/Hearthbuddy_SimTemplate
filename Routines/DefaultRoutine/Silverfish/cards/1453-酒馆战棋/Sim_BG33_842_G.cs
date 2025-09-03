@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：0 攻击力：4 生命值：14
+	//随从 猎人 费用：0 攻击力：4 生命值：16
 	//Raptor Elder
 	//迅猛龙长老
 	//Your Beasts have +{0}/+{1}. <i>(Improved by each Beast you've summoned this combat!)</i>

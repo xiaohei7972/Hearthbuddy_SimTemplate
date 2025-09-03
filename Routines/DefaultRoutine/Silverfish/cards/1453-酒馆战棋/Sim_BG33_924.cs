@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：2 生命值：6
+	//随从 战士 费用：0 攻击力：1 生命值：5
 	//Blue Whelp
 	//蓝色雏龙
 	//<b>Rally:</b> Your Tavern spells give an extra +{0} Health this game.

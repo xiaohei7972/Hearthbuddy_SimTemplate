@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：6 生命值：14
+	//随从 战士 费用：0 攻击力：6 生命值：16
 	//Twilight Watcher
 	//暮光守望巨龙
 	//Whenever a friendly Dragon attacks, give your Dragons +{0}/+{1}.

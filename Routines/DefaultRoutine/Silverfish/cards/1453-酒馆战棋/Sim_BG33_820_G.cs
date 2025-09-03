@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 牧师 费用：0 攻击力：10 生命值：10
+	//随从 牧师 费用：0 攻击力：4 生命值：4
 	//Lost City Looter
 	//失落之城掠夺者
 	//[x]<b>Taunt</b>_At the end of your turn,___get 2 random <b>Bounties</b>.

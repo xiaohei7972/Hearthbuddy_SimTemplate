@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 牧师 费用：0 攻击力：3 生命值：4
+	//随从 牧师 费用：0 攻击力：4 生命值：6
 	//Bigwig Bandit
 	//顶尖大盗
 	//[x]<b>Rally:</b> Get a random <b>Bounty</b>.

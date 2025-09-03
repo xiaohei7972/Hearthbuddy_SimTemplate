@@ -4,11 +4,14 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//* 精灵龙 Faerie Dragon
-	//Can't be targeted by spells or Hero Powers.
-	//无法成为法术或英雄技能的目标。
+	//随从 中立 费用：2 攻击力：3 生命值：2
+	//Faerie Dragon
+	//精灵龙
+	//<b>Elusive</b>
+	//<b>扰魔</b>
 	class Sim_VAN_NEW1_023 : SimTemplate
 	{
-
+		
+		
 	}
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：5 生命值：7
+	//随从 中立 费用：0 攻击力：5 生命值：8
 	//Nalaa the Redeemer
 	//救赎者娜拉
 	//[x]Whenever you cast a Tavernspell, give a friendly minionof each type +{0}/+{1}.
