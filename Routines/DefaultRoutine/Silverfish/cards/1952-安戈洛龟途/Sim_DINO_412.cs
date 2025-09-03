@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//在你的回合结束时，随机获取一张具有多类型的随从牌。
 	class Sim_DINO_412 : SimTemplate
 	{
-		
+        public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
+        {
+			if (triggerEffectMinion.own == turnEndOfOwner)
+			{
+				p.drawACard(CardDB.cardIDEnum.None, triggerEffectMinion.own, true);
+			}
+        }
 		
 	}
 }

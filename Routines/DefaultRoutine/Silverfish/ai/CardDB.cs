@@ -292,10 +292,6 @@ namespace HREngine.Bots
             /// <summary>
             /// <value> 野兽 </value>
             /// </summary>
-            BEAST = 20,
-            /// <summary>
-            /// <value> 野兽 </value>
-            /// </summary>
             PET = 20,
             /// <summary>
             /// <value> 图腾 </value>
@@ -3287,7 +3283,7 @@ namespace HREngine.Bots
                             break;
                         case "2542":
                             {
-                                card.races.Add(Race.BEAST); // 添加第二种族野兽
+                                card.races.Add(Race.PET); // 添加第二种族野兽
                             }
                             break;
                         case "2543":

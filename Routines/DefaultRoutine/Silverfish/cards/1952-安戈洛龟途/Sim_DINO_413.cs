@@ -11,7 +11,22 @@ namespace HREngine.Bots
 	//<b>战吼：</b>随机对两个敌方随从造成2点伤害。<b>延系：</b>并将其<b>冻结</b>。
 	class Sim_DINO_413 : SimTemplate
 	{
-		
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			if (own.own)
+			{
+				if (p.enemyMinions.Count > 0)
+				{
+					int i = 0;
+					foreach (Minion minion in p.enemyMinions)
+					{
+						if (i >= 2) continue;
+						p.minionGetDamageOrHeal(minion, 2);
+						i++;
+					}
+				}
+			}
+		}
+
 	}
 }

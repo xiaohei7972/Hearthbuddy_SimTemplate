@@ -11,7 +11,12 @@ namespace HREngine.Bots
 	//<b>亡语：</b>召唤一枚严重开裂的蛋。<i>（再破壳3次即可孵化为一只20/20的野兽！）</i>
 	class Sim_DINO_410t3 : SimTemplate
 	{
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.DINO_410t4);
+		public override void onDeathrattle(Playfield p, Minion m)
+		{
+			p.callKid(kid, m.zonepos - 1, m.own);
+			p.allMinionOfASideGetBuffed(m.own, 1, 1);
+        }
 		
 	}
 }

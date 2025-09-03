@@ -11,7 +11,19 @@ namespace HREngine.Bots
 	//<b>嘲讽</b>。在你的回合结束时，随机对一个敌方随从造成5点伤害。
 	class Sim_DINO_132 : SimTemplate
 	{
-		
+		public override void onTurnEndsTrigger(Playfield p, Minion m, bool turnEndOfOwner)
+		{
+			// 只在随从所有者的回合结束时触发
+			if (turnEndOfOwner == m.own && m.own ? p.enemyMinions.Count != 0 : p.ownMinions.Count != 0)
+			{
+				foreach (Minion minion in m.own ? p.enemyMinions : p.ownMinions)
+				{
+					p.minionGetDamageOrHeal(minion, 5);
+					break;
+				}
+
+			}
+		}
 		
 	}
 }

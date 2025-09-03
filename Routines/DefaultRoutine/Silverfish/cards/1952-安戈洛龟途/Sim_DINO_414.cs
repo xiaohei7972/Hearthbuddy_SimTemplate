@@ -12,6 +12,13 @@ namespace HREngine.Bots
 	class Sim_DINO_414 : SimTemplate
 	{
 		
-		
+		public override PlayReq[] GetPlayReqs()
+        {
+			return new PlayReq[]{
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY),
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY2),
+				new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET),
+			};
+        }
 	}
 }

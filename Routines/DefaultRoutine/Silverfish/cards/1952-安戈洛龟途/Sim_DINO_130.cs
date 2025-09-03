@@ -11,7 +11,12 @@ namespace HREngine.Bots
 	//<b>亡语：</b>召唤一只1/2的野兽。使你的随从获得+1/+1。
 	class Sim_DINO_130 : SimTemplate
 	{
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.DINO_130t);
+		public override void onDeathrattle(Playfield p, Minion m)
+		{
+			p.callKid(kid, m.zonepos - 1, m.own);
+			p.allMinionOfASideGetBuffed(m.own, 1, 1);
+        }
 		
 	}
 }

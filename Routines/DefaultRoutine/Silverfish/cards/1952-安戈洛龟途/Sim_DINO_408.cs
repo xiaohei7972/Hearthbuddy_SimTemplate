@@ -11,7 +11,19 @@ namespace HREngine.Bots
 	//<b>战吼：</b>将你最左边的手牌洗入你的牌库。<b>亡语：</b>抽两张牌。
 	class Sim_DINO_408 : SimTemplate
 	{
-		
-		
+		public override void getBattlecryEffect(Playfield p, Weapon weapon, Minion target, int choice)
+		{
+			base.getBattlecryEffect(p, weapon, target, choice);
+			if (p.owncards.Count > 0)
+			{
+				p.ownDeck.Add(p.owncards[0].card);
+				p.removeCard(p.owncards[0]);
+			}
+        }
+        public override void onDeathrattle(Playfield p, Minion m)
+        {
+			p.drawACard(CardDB.cardIDEnum.None, m.own);
+			p.drawACard(CardDB.cardIDEnum.None, m.own);
+        }
 	}
 }

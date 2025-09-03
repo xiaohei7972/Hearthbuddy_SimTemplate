@@ -14,9 +14,9 @@ namespace HREngine.Bots
 		public override void onTurnEndsTrigger(Playfield p, Minion m, bool turnEndOfOwner)
 		{
 			// 只在随从所有者的回合结束时触发
-			if (turnEndOfOwner == m.own && p.enemyMinions.Count != 0)
+			if (turnEndOfOwner == m.own && m.own ? p.enemyMinions.Count != 0 : p.ownMinions.Count != 0)
 			{
-				foreach (Minion minion in p.enemyMinions)
+				foreach (Minion minion in m.own ? p.enemyMinions : p.ownMinions)
 				{
 					p.minionGetDamageOrHeal(minion, 10);
 					break;
