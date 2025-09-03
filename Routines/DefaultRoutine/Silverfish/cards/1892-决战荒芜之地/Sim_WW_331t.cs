@@ -15,6 +15,7 @@ namespace HREngine.Bots
 		{
 			if (target != null)
 			{
+				p.evaluatePenality += 100;
 				int damage = ownplay ? p.getSpellDamageDamage(0) : p.getEnemySpellDamageDamage(0);
 				p.minionGetDamageOrHeal(target, damage);
 			}

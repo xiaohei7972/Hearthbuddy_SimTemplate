@@ -14,7 +14,7 @@ namespace HREngine.Bots
 		// fixMe 心灵之花无法选中己方目标
 		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
-			if (target != null && target.own == ownplay)
+			if (target != null)
 			{
 				int damage = ownplay ? p.getSpellDamageDamage(2) : p.getEnemySpellDamageDamage(2);
 				// 使一个友方随从获得+2/+2

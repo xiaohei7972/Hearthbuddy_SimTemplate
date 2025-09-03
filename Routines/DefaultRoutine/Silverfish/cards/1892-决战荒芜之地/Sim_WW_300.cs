@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//<b>潜行</b>。<b>剧毒</b>。在你的对手使用一张随从牌后，攻击该随从。
 	class Sim_WW_300 : SimTemplate
 	{
-		
+        public override void onCardIsAfterToBePlayed(Playfield p, Minion playedMinion, bool wasOwnCard, Minion triggerEffectMinion)
+        {
+			if (playedMinion.own != wasOwnCard)
+			{
+				p.minionAttacksMinion(triggerEffectMinion, playedMinion);
+			}
+        }
 		
 	}
 }

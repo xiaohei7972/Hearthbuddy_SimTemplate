@@ -24,10 +24,9 @@ namespace HREngine.Bots
 		{
 			// 扰魔是不吃法术和英雄技能的指定 但是随从技能没办法 参考萨隆偷带扰魔的奇利亚斯
 			return new PlayReq[] {
-                new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY),
-				new PlayReq(CardDB.ErrorType2.REQ_MINIMUM_ENEMY_MINIONS, 1),
 				new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET),
 				new PlayReq(CardDB.ErrorType2.REQ_ENEMY_TARGET),
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_IF_AVAILABLE),
 			};
 		}
 	}

@@ -11,7 +11,37 @@ namespace HREngine.Bots
 	//你的白银之手新兵拥有+2攻击力和<b>嘲讽</b>。
 	class Sim_RLK_Prologue_AT_075 : SimTemplate
 	{
-		
+		public override void onAuraStarts(Playfield p, Minion own)
+        {
+            if (own.own) p.anzOwnWarhorseTrainer++;
+            else p.anzEnemyWarhorseTrainer++;
+
+            List<Minion> temp = (own.own) ? p.ownMinions : p.enemyMinions;
+            foreach (Minion m in temp)
+            {
+                if (m.name == CardDB.cardNameEN.silverhandrecruit)
+                {
+                    p.minionGetBuffed(m, 2, 0);
+                    m.taunt = true;
+                }
+            }
+        }
+
+        public override void onAuraEnds(Playfield p, Minion own)
+        {
+            if (own.own) p.anzOwnWarhorseTrainer--;
+            else p.anzEnemyWarhorseTrainer--;
+
+            List<Minion> temp = (own.own) ? p.ownMinions : p.enemyMinions;
+            foreach (Minion m in temp)
+            {
+                if (m.name == CardDB.cardNameEN.silverhandrecruit)
+                {
+                    p.minionGetBuffed(m, -2, 0);
+                    m.taunt = false;
+                }
+            }
+        }
 		
 	}
 }

@@ -15,19 +15,17 @@ namespace HREngine.Bots
 		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
 			int pos =(ownplay) ? p.ownMinions.Count : p.enemyMinions.Count;
-			int dmg = 6;
-			p.allMinionsGetDamage(dmg);
+			int damage = ownplay ? p.getSpellDamageDamage(6) : p.getEnemySpellDamageDamage(6);
+			p.allMinionsGetDamage(damage);
 			p.callKid(kid, pos, ownplay);
 		}	
 
-
-
-		public override PlayReq[] GetPlayReqs()
-        {
-            return new PlayReq[] {
-                new PlayReq(CardDB.ErrorType2.REQ_NUM_MINION_SLOTS, 1),
-            };
-        }
+		// public override PlayReq[] GetPlayReqs()
+        // {
+        //     return new PlayReq[] {
+        //         new PlayReq(CardDB.ErrorType2.REQ_NUM_MINION_SLOTS, 1),
+        //     };
+        // }
 		
 	}
 }

@@ -18,10 +18,6 @@ namespace HREngine.Bots
             {
                 p.minionGetFrozen(target);
             }
-            else // 目标为英雄
-            {
-                p.enemyHero.frozen = true;
-            }
         }
     }
 }

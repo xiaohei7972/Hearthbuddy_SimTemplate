@@ -12,7 +12,10 @@ namespace HREngine.Bots
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
-            p.minionTransform(target, Shark);
+            if (target != null)
+            {
+                p.minionTransform(target, Shark);
+            }
         }
 
     }

@@ -856,7 +856,7 @@ namespace HREngine.Bots
             public bool Elite = false;//精华??
             public bool Combo = false;//连击
             public int overload = 0;//超载
-            public bool immuneWhileAttacking = false;//攻击时免疫 蜡烛弓?
+            public bool immuneWhileAttacking = false;//攻击时免疫
             public bool untouchable = false;//不可被攻击
             public bool Stealth = false;//潜行
             public bool Freeze = false;//冰冻
@@ -1502,7 +1502,8 @@ namespace HREngine.Bots
                         {
                             foreach (Minion m in targets)
                             {
-                                if (m.cantBeTargetedBySpellsOrHeroPowers && (this.type == cardtype.HEROPWR || this.type == cardtype.SPELL))
+                                // if (m.cantBeTargetedBySpellsOrHeroPowers && (this.type == cardtype.HEROPWR || this.type == cardtype.SPELL))
+                                if (m.Elusive && (this.type == cardtype.HEROPWR || this.type == cardtype.SPELL))
                                 {
                                     m.extraParam = true;
                                     if (m.stealth && !m.own) m.extraParam = true;
@@ -1540,7 +1541,7 @@ namespace HREngine.Bots
                                 if (targetOwnHero && own) retval.Add(p.ownHero);
                                 foreach (Minion m in targets)
                                 {
-                                    if (m.extraParam != true && !m.cantBeTargetedBySpellsOrHeroPowers)
+                                    if (m.extraParam != true && !m.Elusive)
                                     {
                                         if (m.own)
                                         {
@@ -1559,12 +1560,13 @@ namespace HREngine.Bots
                                         foreach (Minion m in targets)
                                         {
                                             m.extraParam = false;
-                                            if (m.cantBeTargetedBySpellsOrHeroPowers) continue;
+                                            if (m.Elusive) continue;
                                             if (m.own) retval.Add(m);
                                             else if (m.taunt) retval.Add(m);
                                         }
                                         break;
-                                    case cardNameEN.hex: goto case cardNameEN.polymorph;//妖术
+                                    // case cardNameEN.hex: goto case cardNameEN.polymorph;//妖术
+                                    case cardNameEN.hex://妖术
                                     case cardNameEN.polymorph://变形术
                                         foreach (Minion m in targets)
                                         {
@@ -1663,7 +1665,7 @@ namespace HREngine.Bots
                 var abType = 0; //0 none, 1 damage, 2 heal, 3 buff
                 switch (abName)
                 {
-                    case cardNameEN.heal: goto case cardNameEN.lesserheal;
+                    case cardNameEN.heal:
                     case cardNameEN.lesserheal:
                         if (p.anzOwnAuchenaiSoulpriest > 0 || p.embracetheshadow > 0) abType = 1;
                         else abType = 2;

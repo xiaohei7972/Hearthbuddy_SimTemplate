@@ -11,11 +11,11 @@ namespace HREngine.Bots
 	//<b>压轴：</b>你每有一个法力水晶，随机对一个敌人造成1点伤害。
 	class Sim_DEEP_029 : SimTemplate
 	{
-		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		public override void onCardPlay(Playfield p, Minion own, Minion target, int choice)
 		{
 			if (p.mana == 0)
-			    p.allCharsOfASideGetRandomDamage(!own.own,p.ownMaxMana);
+				p.allCharsOfASideGetRandomDamage(!own.own, p.ownMaxMana);
 		}
-		
+
 	}
 }

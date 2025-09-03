@@ -13,8 +13,12 @@ namespace HREngine.Bots
 	{
 		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
-			// 对目标造成3点伤害
-			p.minionGetDamageOrHeal(target, 3);
+			if (target != null)
+			{
+				int damage = ownplay ? p.getSpellDamageDamage(3) : p.getEnemySpellDamageDamage(3);
+				// 对目标造成3点伤害
+				p.minionGetDamageOrHeal(target, damage);
+			}
 		}
 
 		public override PlayReq[] GetPlayReqs()

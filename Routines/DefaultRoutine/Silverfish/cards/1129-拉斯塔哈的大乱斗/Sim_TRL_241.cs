@@ -11,7 +11,20 @@ namespace HREngine.Bots
 	//在你的英雄攻击并消灭一个随从后，便可再次攻击。
 	class Sim_TRL_241 : SimTemplate
 	{
-		
-		
+		public override void afterHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
+		{
+			if (triggerMinion.own == hero.own)
+			{
+				if (target != null)
+				{
+					if (target.Hp < 1)
+					{
+						hero.numAttacksThisTurn = 0;
+						hero.updateReadyness();
+					}
+				}
+			}
+		}
+
 	}
 }

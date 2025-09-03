@@ -29,6 +29,7 @@ namespace HREngine.Bots
 
                 // 将随从的复制直接召唤到战场
                 p.callKid(target.handcard.card, target.zonepos, ownplay);
+                p.drawACard(target.handcard.card.cardIDenum, ownplay, true);
             }
         }
 

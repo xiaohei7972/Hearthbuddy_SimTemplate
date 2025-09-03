@@ -15,11 +15,11 @@ namespace HREngine.Bots
 		{
 			if (!defender.isHero && defender.Hp < 1 && attacker.Hp > 0)
 			{
-				attacker.numAttacksThisTurn = 0;
-				attacker.Ready = true;
-				attacker.updateReadyness();
+				// attacker.numAttacksThisTurn = 0;
+				attacker.Ready = true; 
+				// attacker.updateReadyness();
 			}
 		}
-		
+
 	}
 }

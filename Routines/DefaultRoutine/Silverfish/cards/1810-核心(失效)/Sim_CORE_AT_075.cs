@@ -4,32 +4,40 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_CORE_AT_075 : SimTemplate //* Warhorse Trainer
-	{
-		//Your Silver Hand Recruits have +1 Attack.
-
+    //* Warhorse Trainer
+    //Your Silver Hand Recruits have +1 Attack.
+    class Sim_CORE_AT_075 : SimTemplate
+    {
         public override void onAuraStarts(Playfield p, Minion own)
-		{
+        {
             if (own.own) p.anzOwnWarhorseTrainer++;
             else p.anzEnemyWarhorseTrainer++;
-			
-			List<Minion> temp = (own.own) ? p.ownMinions : p.enemyMinions;
+
+            List<Minion> temp = (own.own) ? p.ownMinions : p.enemyMinions;
             foreach (Minion m in temp)
             {
-                if (m.name == CardDB.cardNameEN.silverhandrecruit) p.minionGetBuffed(m, 1, 0);
-            }            
-		}
+                if (m.name == CardDB.cardNameEN.silverhandrecruit)
+                {
+                    p.minionGetBuffed(m, 2, 0);
+                    m.taunt = true;
+                }
+            }
+        }
 
         public override void onAuraEnds(Playfield p, Minion own)
         {
             if (own.own) p.anzOwnWarhorseTrainer--;
             else p.anzEnemyWarhorseTrainer--;
-			
-			List<Minion> temp = (own.own) ? p.ownMinions : p.enemyMinions;
+
+            List<Minion> temp = (own.own) ? p.ownMinions : p.enemyMinions;
             foreach (Minion m in temp)
             {
-                if (m.name == CardDB.cardNameEN.silverhandrecruit) p.minionGetBuffed(m, -1, 0);
+                if (m.name == CardDB.cardNameEN.silverhandrecruit)
+                {
+                    p.minionGetBuffed(m, -2, 0);
+                    m.taunt = false;
+                }
             }
         }
-	}
+    }
 }

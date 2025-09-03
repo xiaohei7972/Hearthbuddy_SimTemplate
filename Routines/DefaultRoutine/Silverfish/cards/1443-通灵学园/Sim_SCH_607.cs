@@ -17,7 +17,6 @@ namespace HREngine.Bots
             return new PlayReq[] {
                 new PlayReq(CardDB.ErrorType2.REQ_TARGET_WITH_RACE, 20),
                 new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET),
-                new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY),
                 new PlayReq(CardDB.ErrorType2.REQ_TARGET_IF_AVAILABLE),
             };
         }

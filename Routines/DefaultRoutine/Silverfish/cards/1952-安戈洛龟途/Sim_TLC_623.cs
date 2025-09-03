@@ -20,7 +20,7 @@ namespace HREngine.Bots
 				{
 					//未受伤就跳过这次循环
 					if (!minion.wounded) continue;
-					p.minionGetBuffed(minion, 0, 1);
+					p.minionGetBuffed(minion, 2, 2);
 					break;
 				}
 			}

@@ -11,7 +11,12 @@ namespace HREngine.Bots
 	//<b>战吼：</b><b>发掘</b>一个宝藏，其法力值消耗为（0）点。
 	class Sim_WW_322 : SimTemplate
 	{
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			// 触发发掘效果
+			CardDB.Card treasure = p.handleExcavation();
+            p.drawACard(treasure.cardIDenum, own.own, true);
+		}
 		
 	}
 }

@@ -16,7 +16,7 @@ namespace HREngine.Bots
             if (triggerMinion.handcard.card.CooldownTurn == 0)
             {
                 // 检查目标是否为有效的受伤随从
-                if (p.ownMinions.Count < 7)
+                if (triggerMinion.own ? p.ownMinions.Count < 7 : p.enemyMinions.Count < 7)
                     if (target != null && target.wounded)
                     {
                         // 复制随从的卡牌信息

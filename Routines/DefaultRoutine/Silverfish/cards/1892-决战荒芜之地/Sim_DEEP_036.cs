@@ -13,8 +13,27 @@ namespace HREngine.Bots
 	{
 		public override void onDeathrattle(Playfield p, Minion m)
 		{
-			m.taunt = true;
-			p.minionGetBuffed(m, m.Angr, m.Hp);
-		}        
+			if (m.own)
+			{
+				foreach (Handmanager.Handcard hc in p.owncards)
+				{
+					if (hc.card.type == CardDB.cardtype.MOB && RaceUtils.MinionBelongsToRace(hc.card.races, CardDB.Race.ELEMENTAL))
+					{
+						hc.addattack += hc.card.Attack;
+						hc.addHp += hc.card.Health;
+						p.anzOwnExtraAngrHp += hc.card.Health + hc.card.Health;
+					}
+				}
+				
+				foreach (CardDB.Card card in p.ownDeck)
+				{
+					if (card.type == CardDB.cardtype.MOB && RaceUtils.MinionBelongsToRace(card.races, CardDB.Race.ELEMENTAL))
+					{
+						card.Attack += card.Attack;
+						card.Health += card.Health;
+					}
+				}
+			}
+		}
 	}
 }

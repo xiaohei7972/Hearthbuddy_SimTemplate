@@ -683,6 +683,21 @@ namespace HREngine.Bots
         }
 
         /// <summary>
+        /// 当英雄进行攻击后触发的事件处理方法。
+        /// 子类可以重写此方法，以在特定的随从或条件下执行自定义的逻辑。
+        /// 该方法会在英雄攻击时被调用，并可用于触发基于攻击的效果。
+        /// </summary>
+        /// <param name="p">游戏场地对象，包含当前游戏状态的信息。</param>
+        /// <param name="triggerMinion">触发此效果的随从。</param>
+        /// <param name="target">英雄攻击的目标随从。</param>
+        /// <param name="hero">执行攻击的英雄。</param>
+        public virtual void afterHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
+        {
+            // 默认实现为空。子类可以根据需求重写此方法。
+            return;
+        }
+
+        /// <summary>
         /// 执行英雄攻击的操作，并在攻击完成后执行额外的自定义操作。
         /// </summary>
         /// <param name="p">当前的游戏状态（Playfield）对象。</param>
@@ -703,22 +718,6 @@ namespace HREngine.Bots
             {
                 additionalAction.Invoke();
             }
-        }
-
-
-        /// <summary>
-        /// 当英雄进行攻击后触发的事件处理方法。
-        /// 子类可以重写此方法，以在特定的随从或条件下执行自定义的逻辑。
-        /// 该方法会在英雄攻击时被调用，并可用于触发基于攻击的效果。
-        /// </summary>
-        /// <param name="p">游戏场地对象，包含当前游戏状态的信息。</param>
-        /// <param name="triggerMinion">触发此效果的随从。</param>
-        /// <param name="target">英雄攻击的目标随从。</param>
-        /// <param name="hero">执行攻击的英雄。</param>
-        public virtual void afterHeroattack(Playfield p, Minion triggerMinion, Minion target, Minion hero)
-        {
-            // 默认实现为空。子类可以根据需求重写此方法。
-            return;
         }
 
         /// <summary>

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-
+using System.Linq;
 namespace HREngine.Bots
 {
 	//法术 潜行者 费用：3
@@ -13,10 +13,13 @@ namespace HREngine.Bots
 	{
 		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
-			p.drawACard(CardDB.cardNameEN.lepergnome, ownplay, true); // 发现一张随从牌
-			int heal = (ownplay) ? p.getMinionHeal(3) : p.getEnemyMinionHeal(3);
-			p.minionGetDamageOrHeal(ownplay ? p.ownHero : p.enemyHero, -heal); // 为英雄恢复等同于其法力值消耗的生命值
+			if (ownplay)
+			{
+				CardDB.Card selectedCard = CardDB.Instance.getCardDataFromID(Hrtprozis.Instance.enchs.LastOrDefault());
+				p.drawACard(selectedCard.cardIDenum, ownplay, true); // 发现一张随从牌
+				int heal = (ownplay) ? p.getMinionHeal(-selectedCard.cost) : p.getEnemyMinionHeal(-selectedCard.cost);
+				p.minionGetDamageOrHeal(ownplay ? p.ownHero : p.enemyHero, heal); // 为英雄恢复等同于其法力值消耗的生命值
+			}
 		}
-		
 	}
 }

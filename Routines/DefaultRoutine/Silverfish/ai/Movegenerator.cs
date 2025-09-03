@@ -264,7 +264,7 @@ namespace HREngine.Bots
                 }
                 else if (minion.handcard.card.sim_card.GetUseAbilityReqs().Length == 0)
                 {
-                    ret.Add(new Action(actionEnum.useLocation, null, minion, 0, null, 0, 0));
+                    ret.Add(new Action(actionEnum.useLocation, null, minion, 0, null, -100, 0));
                 }
             }
 

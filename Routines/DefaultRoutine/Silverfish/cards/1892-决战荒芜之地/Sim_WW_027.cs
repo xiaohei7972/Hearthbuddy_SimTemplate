@@ -12,8 +12,11 @@ namespace HREngine.Bots
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
-            p.minionGetBuffed(target, 2, 3);
-            p.drawACard(CardDB.cardIDEnum.None, ownplay);
+            if (target != null)
+            {
+                p.minionGetBuffed(target, 2, 3);
+                p.drawACard(CardDB.cardIDEnum.None, ownplay);
+            }
         }
 
         public override PlayReq[] GetPlayReqs()

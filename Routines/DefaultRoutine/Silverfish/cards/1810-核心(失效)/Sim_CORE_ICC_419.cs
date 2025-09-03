@@ -4,13 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_CORE_ICC_419: SimTemplate //* Bearshark
+    //* Bearshark
+    // Can't be targeted by spells of Hero Powers.
+    class Sim_CORE_ICC_419 : SimTemplate
     {
-        // Can't be targeted by spells of Hero Powers.
-
-        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
-        {
-            own.cantBeTargetedBySpellsOrHeroPowers = true;
-        }
+        
     }
 }

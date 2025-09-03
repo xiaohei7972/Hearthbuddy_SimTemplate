@@ -17,10 +17,10 @@ namespace HREngine.Bots
             if (turnEndOfOwner == triggerEffectMinion.own)
             {
                 // 获得2点护甲值
-                p.minionGetArmor(p.ownHero, 2);
+                p.minionGetArmor(triggerEffectMinion.own ? p.ownHero : p.enemyHero, 2);
 
                 // 抽一张牌
-                p.drawACard(CardDB.cardIDEnum.None, turnEndOfOwner);
+                p.drawACard(CardDB.cardIDEnum.None, triggerEffectMinion.own);
             }
         }
     }

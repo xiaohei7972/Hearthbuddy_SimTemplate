@@ -11,11 +11,6 @@ namespace HREngine.Bots
 	//<b>突袭</b>
 	class Sim_WW_024t : SimTemplate
 	{
-		//突袭	
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
-            p.minionGetRush(target);  //突袭
-		}	
 		
 	}
 }

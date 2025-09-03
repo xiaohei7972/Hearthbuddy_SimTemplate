@@ -11,16 +11,23 @@ namespace HREngine.Bots
 	//本牌在你手中时，你每施放一个法术，本牌的法力值消耗便减少（1）点。
 	class Sim_DEEP_004 : SimTemplate
 	{
-		public override void onCardIsGoingToBePlayed(Playfield p, Handmanager.Handcard hc, bool wasOwnCard, Minion triggerEffectMinion)
+        public override void onCardIsGoingToBePlayed(Playfield p, Handmanager.Handcard hc, bool wasOwnCard, Handmanager.Handcard triggerhc)
         {
-            // 检查是否是己方卡牌，并且卡牌ID是否为狂暴邪翼蝠
-            if (wasOwnCard && hc.card.cardIDenum == CardDB.cardIDEnum.DEEP_004)
+            if (wasOwnCard && hc.card.type == CardDB.cardtype.SPELL)
             {
-                int damageDealt = p.cardsPlayedThisTurn; // 获取本回合施放的法术数量
-                int newCost = hc.manacost - damageDealt; // 计算新的法力值消耗
-                hc.manacost = Math.Max(0, newCost); // 确保法力值消耗不低于0
+                triggerhc.card.cost = Math.Max(0, triggerhc.card.cost--);
             }
         }
+		// public override void onCardIsGoingToBePlayed(Playfield p, Handmanager.Handcard hc, bool wasOwnCard, Minion triggerEffectMinion)
+        // {
+        //     // 检查是否是己方卡牌，并且卡牌ID是否为狂暴邪翼蝠
+        //     if (wasOwnCard && hc.card.cardIDenum == CardDB.cardIDEnum.DEEP_004)
+        //         {
+        //             int damageDealt = p.cardsPlayedThisTurn; // 获取本回合施放的法术数量
+        //             int newCost = hc.manacost - damageDealt; // 计算新的法力值消耗
+        //             hc.manacost = Math.Max(0, newCost); // 确保法力值消耗不低于0
+        //         }
+        // }
 		
 	}
 }
