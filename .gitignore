@@ -84,7 +84,7 @@ Routines/DefaultRoutine/Silverfish/ai/Behavior.cs
 Routines/DefaultRoutine/Silverfish/ai/BehaviorControl.cs
 Routines/DefaultRoutine/Silverfish/ai/BehaviorRush.cs
 Routines/DefaultRoutine/Silverfish/ai/BehaviourMana.cs
-Routines/DefaultRoutine/Silverfish/ai/BoardTester.cs
+# Routines/DefaultRoutine/Silverfish/ai/BoardTester.cs
 Routines/DefaultRoutine/Silverfish/ai/CardDB_ErrorType2.cs
 # Routines/DefaultRoutine/Silverfish/ai/CardDB.cs
 Routines/DefaultRoutine/Silverfish/ai/ComboBreaker.cs
@@ -94,7 +94,7 @@ Routines/DefaultRoutine/Silverfish/ai/Deckmanager.cs
 Routines/DefaultRoutine/Silverfish/ai/EnemyTurnSimulator.cs
 Routines/DefaultRoutine/Silverfish/ai/Handmanager.cs
 Routines/DefaultRoutine/Silverfish/ai/Helpfunctions.cs
-Routines/DefaultRoutine/Silverfish/ai/Hrtprozis.cs
+# Routines/DefaultRoutine/Silverfish/ai/Hrtprozis.cs
 # Routines/DefaultRoutine/Silverfish/ai/Minion.cs
 Routines/DefaultRoutine/Silverfish/ai/MiniSimulator.cs
 Routines/DefaultRoutine/Silverfish/ai/MiniSimulatorNextTurn.cs
