@@ -71,7 +71,7 @@ Bots/
 Routines/DefaultRoutine/DefaultRoutine.cs
 Routines/DefaultRoutine/DefaultRoutineSettings.cs
 Routines/DefaultRoutine/SettingsGui.xaml
-Routines/DefaultRoutine/silverfish_HB.cs
+# Routines/DefaultRoutine/silverfish_HB.cs
 Routines/DefaultRoutine/Silverfish/打开对局记录文件夹.bat
 Routines/DefaultRoutine/Silverfish/说明.txt
 Routines/DefaultRoutine/Silverfish/delLog.bat
@@ -95,7 +95,7 @@ Routines/DefaultRoutine/Silverfish/ai/EnemyTurnSimulator.cs
 Routines/DefaultRoutine/Silverfish/ai/Handmanager.cs
 Routines/DefaultRoutine/Silverfish/ai/Helpfunctions.cs
 Routines/DefaultRoutine/Silverfish/ai/Hrtprozis.cs
-Routines/DefaultRoutine/Silverfish/ai/Minion.cs
+# Routines/DefaultRoutine/Silverfish/ai/Minion.cs
 Routines/DefaultRoutine/Silverfish/ai/MiniSimulator.cs
 Routines/DefaultRoutine/Silverfish/ai/MiniSimulatorNextTurn.cs
 # Routines/DefaultRoutine/Silverfish/ai/Movegenerator.cs
