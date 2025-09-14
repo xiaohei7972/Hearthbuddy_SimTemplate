@@ -14,8 +14,6 @@ namespace HREngine.Bots
 
 		public override void getBattlecryEffect(Playfield p, Minion m, Minion target, int choice)
 		{
-
-
 			if (m.own && p.prozis.noDuplicates)
 			{
 				p.drawACard(CardDB.cardIDEnum.None, m.own, true);

@@ -17,7 +17,7 @@ namespace HREngine.Bots
 			{
 				if (!triggerEffectMinion.reborn)
 				{
-					if (p.getCorpseCount() > 3)
+					if (p.getCorpseCount() >= 3)
 					{
 						p.corpseConsumption(3);
 						triggerEffectMinion.reborn = true;

@@ -24,7 +24,7 @@ namespace HREngine.Bots
 			if (own.own && p.ownWeapon.card.cardIDenum == CardDB.cardIDEnum.TSC_913t)
 			{
 				//对敌方随从造成aoe
-				p.allCharsOfASideGetDamage(!own.own, 2);
+				p.allMinionOfASideGetDamage(!own.own, 2);
             }
         }
 		

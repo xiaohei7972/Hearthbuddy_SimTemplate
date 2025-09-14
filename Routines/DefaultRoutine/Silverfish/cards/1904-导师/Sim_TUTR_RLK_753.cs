@@ -11,7 +11,15 @@ namespace HREngine.Bots
 	//
 	class Sim_TUTR_RLK_753 : SimTemplate
 	{
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
+			if (p.getCorpseCount() >= 1)
+			{
+				p.corpseConsumption(1);
+				p.minionGetBuffed(own,1,2);
+			}
+
+        }
 		
 	}
 }

@@ -11,7 +11,14 @@ namespace HREngine.Bots
 	//使你的所有随从获得+1/+1和<b>扰魔</b>。
 	class Sim_RLK_048 : SimTemplate
 	{
-		
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
+			foreach (Minion minion in ownplay ? p.ownMinions : p.enemyMinions)
+			{
+				p.minionGetBuffed(minion, 1, 1);
+				minion.Elusive = true;
+			}
+        }
 		
 	}
 }

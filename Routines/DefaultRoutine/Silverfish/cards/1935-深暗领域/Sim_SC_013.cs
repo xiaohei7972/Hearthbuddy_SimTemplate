@@ -11,7 +11,22 @@ namespace HREngine.Bots
 	//<b>战吼：</b>随机召唤四个鱼人，然后将其射向敌方随从。<i>（目标由你选定！）</i>
 	class Sim_SC_013 : SimTemplate
 	{
-		
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			if (target != null)
+			{
+				
+			}
+		}
+
+		public override PlayReq[] GetPlayReqs()
+		{
+			return new PlayReq[]{
+				new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET),
+				new PlayReq(CardDB.ErrorType2.REQ_ENEMY_TARGET),
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_IF_AVAILABLE),
+			};
+		}
+
 	}
 }

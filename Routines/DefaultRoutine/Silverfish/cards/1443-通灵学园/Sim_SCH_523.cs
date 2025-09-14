@@ -10,10 +10,8 @@ namespace HREngine.Bots
         //<b>法术迸发：</b>召唤一个属性值等同于法术法力值消耗的并具有<b>嘲讽</b>的学生。
         CardDB.Card weapon = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.SCH_523);
         CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.SCH_523t);
-        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-        {
-            p.equipWeapon(weapon, ownplay);
-        }
+
+
 		public override void onCardIsGoingToBePlayed(Playfield p, Handmanager.Handcard hc, bool ownplay, Minion m)
 		{
 			if (m.own == ownplay && m.Spellburst && hc.card.type == CardDB.cardtype.SPELL)

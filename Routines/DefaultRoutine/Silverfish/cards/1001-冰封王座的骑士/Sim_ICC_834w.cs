@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//同时对其攻击目标相邻的随从造成伤害。
 	class Sim_ICC_834w : SimTemplate
 	{
-		
-		
+		public override void afterHeroattack(Playfield p, Minion own, Minion target)
+		{
+			p.AttackAdjacentMinions(own, target);
+		}
+
 	}
 }

@@ -11,7 +11,15 @@ namespace HREngine.Bots
 	//<b>战吼：</b>消耗一份<b>残骸</b>，获得+1/+2。
 	class Sim_RLK_753 : SimTemplate
 	{
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
+			if (p.getCorpseCount() >= 1)
+			{
+				p.corpseConsumption(1);
+				p.minionGetBuffed(own,1,2);
+			}
+
+        }
 		
 	}
 }

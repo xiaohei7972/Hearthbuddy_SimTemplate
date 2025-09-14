@@ -13,10 +13,9 @@ namespace HREngine.Bots
 	{
 		public override void onMinionIsSummoned(Playfield p, Minion triggerEffectMinion, Minion summonedMinion)
 		{
-			if (triggerEffectMinion.entitiyID != summonedMinion.entitiyID && triggerEffectMinion.own == summonedMinion.own && RaceUtils.IsRaceOrAll(summonedMinion.handcard.card.race, CardDB.Race.UNDEAD))
+			if (triggerEffectMinion.entitiyID != summonedMinion.entitiyID && triggerEffectMinion.own == summonedMinion.own && RaceUtils.MinionBelongsToRace(summonedMinion.handcard.card.GetRaces(), CardDB.Race.UNDEAD))
 			{
 				summonedMinion.poisonous = true;
-				summonedMinion.updateReadyness();
 			}
 		}
 

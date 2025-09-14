@@ -11,7 +11,15 @@ namespace HREngine.Bots
 	//<b>嘲讽</b>。<b>亡语：</b>消耗3份<b>残骸</b>，召唤一个3/3并具有<b>嘲讽</b>的复活的伊米亚人。
 	class Sim_RLK_226 : SimTemplate
 	{
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.RLK_226t);
+        public override void onDeathrattle(Playfield p, Minion m)
+        {
+			if (p.getCorpseCount() >= 3)
+			{
+				p.corpseConsumption(3);
+				p.callKid(kid, m.zonepos - 1, m.own);
+			}
+        }
 		
 	}
 }

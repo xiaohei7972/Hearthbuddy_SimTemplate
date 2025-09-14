@@ -15,8 +15,10 @@ namespace HREngine.Bots
 		{
 			if (target != null)
 			{
+				int dmg = (ownplay) ? p.getSpellDamageDamage(3) : p.getEnemySpellDamageDamage(3);
+
 				p.minionGetDestroyed(target);
-				p.minionGetDamageOrHeal(ownplay ? p.ownHero : p.enemyHero, 3);
+				p.minionGetDamageOrHeal(ownplay ? p.ownHero : p.enemyHero, dmg);
 			}
 		}
 		

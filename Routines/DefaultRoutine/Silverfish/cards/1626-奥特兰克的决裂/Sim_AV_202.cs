@@ -13,10 +13,6 @@ namespace HREngine.Bots
 		{
 			p.equipWeapon(weapon, m.own);
 		}
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
-			p.setNewHeroPower(CardDB.cardIDEnum.AV_202p, ownplay);
-		}
 
 	}
 }

@@ -11,7 +11,21 @@ namespace HREngine.Bots
 	//造成$4点伤害。在本回合中，你的下一个法术法力值消耗减少（2）点。
 	class Sim_RLK_Prologue_RLK_512 : SimTemplate
 	{
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			if (target != null)
+			{
+				int dmg = (ownplay) ? p.getSpellDamageDamage(4) : p.getEnemySpellDamageDamage(4);
+				p.minionGetDamageOrHeal(target, dmg);				
+
+			}
+		}
+		public override PlayReq[] GetPlayReqs()
+		{
+			return new PlayReq[] {
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY), //需要一个目标
+            };
+		}
 		
 	}
 }

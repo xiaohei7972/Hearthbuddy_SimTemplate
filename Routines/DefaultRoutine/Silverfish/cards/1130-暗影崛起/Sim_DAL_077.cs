@@ -4,24 +4,27 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_DAL_077 : SimTemplate //* 毒鳍鱼人
+    //随从 中立 费用：1 攻击力：1 生命值：2
+    //Toxfin
+    //毒鳍鱼人
+    //<b>Battlecry:</b> Give a friendly Murloc <b>Poisonous</b>.
+    //<b>战吼：</b>使一个友方鱼人获得<b>剧毒</b>。
+    class Sim_DAL_077 : SimTemplate
     {
-        // 战吼：使一个友方鱼人获得剧毒。
-
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {
-            
-            if ( target != null && own.own)
+
+            if (target != null && own.own)
             {
                 target.poisonous = true;
-                if (own.own && target.name == CardDB.cardNameEN.firemancerflurgl)
-                {
-                    foreach (Minion m in p.enemyMinions)
-                    {
-                        p.evaluatePenality -= m.Hp * 2;
-                        p.minionGetDestroyed(m);
-                    }
-                }
+                // if (own.own && target.name == CardDB.cardNameEN.firemancerflurgl)
+                // {
+                //     foreach (Minion m in p.enemyMinions)
+                //     {
+                //         p.evaluatePenality -= m.Hp * 2;
+                //         p.minionGetDestroyed(m);
+                //     }
+                // }
             }
         }
 

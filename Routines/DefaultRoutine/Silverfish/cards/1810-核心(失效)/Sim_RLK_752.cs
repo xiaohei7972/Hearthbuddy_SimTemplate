@@ -11,7 +11,12 @@ namespace HREngine.Bots
 	//<b>战吼：</b>召唤两个2/1且具有“<b>亡语：</b>随机对一个敌人造成2点伤害。”的白霜元素。
 	class Sim_RLK_752 : SimTemplate
 	{
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.RLK_907t);
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			p.callKid(kid, own.zonepos - 1, own.own);
+			p.callKid(kid, own.zonepos, own.own);
+		}
 		
 	}
 }

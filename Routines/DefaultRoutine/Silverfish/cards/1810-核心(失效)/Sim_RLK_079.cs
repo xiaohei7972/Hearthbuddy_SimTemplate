@@ -11,7 +11,21 @@ namespace HREngine.Bots
 	//<b>战吼：</b>对一个敌人和你的英雄造成2点伤害。
 	class Sim_RLK_079 : SimTemplate
 	{
-		
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
+            if(target!=null){
+				p.minionGetDamageOrHeal(target,2);
+				p.minionGetDamageOrHeal(own.own ? p.ownHero : p.enemyHero,2);
+			}
+        }
+
+        public override PlayReq[] GetPlayReqs()
+        {
+			return new PlayReq[]{
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY),
+				new PlayReq(CardDB.ErrorType2.REQ_ENEMY_TARGET),
+			};
+        }
 		
 	}
 }

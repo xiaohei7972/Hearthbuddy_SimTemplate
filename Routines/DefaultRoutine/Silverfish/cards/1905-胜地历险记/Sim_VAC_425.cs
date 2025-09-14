@@ -13,16 +13,19 @@ namespace HREngine.Bots
 	{
 		public override void useLocation(Playfield p, Minion triggerMinion, Minion target)
 		{
-			if (triggerMinion.handcard.card.CooldownTurn == 0) p.allCharsOfASideGetRandomDamage(false, 3);
+			if (triggerMinion.handcard.card.CooldownTurn == 0) p.allCharsOfASideGetRandomDamage(!triggerMinion.own, 3);
 		}
 		
 		public override void onMinionDiedTrigger(Playfield p, Minion triggerEffectMinion, Minion diedMinion)
 		{
-			if (triggerEffectMinion.CooldownTurn > 0)
+			if (diedMinion.own)
 			{
-				triggerEffectMinion.CooldownTurn = 0;
-				triggerEffectMinion.handcard.card.CooldownTurn = 0;
-				triggerEffectMinion.Ready = true;
+				if (triggerEffectMinion.CooldownTurn > 0)
+				{
+					triggerEffectMinion.CooldownTurn = 0;
+					triggerEffectMinion.handcard.card.CooldownTurn = 0;
+					triggerEffectMinion.Ready = true;
+				}
 			}
 		}
 	}

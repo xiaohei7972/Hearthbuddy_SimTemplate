@@ -11,7 +11,11 @@ namespace HREngine.Bots
 	//<b>嘲讽</b>。<b>战吼：</b>召唤本随从的两个复制。
 	class Sim_CORE_RLK_062 : SimTemplate
 	{
-		
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			p.callKid(own.handcard.card, own.zonepos - 1, own.own);
+			p.callKid(own.handcard.card, own.zonepos, own.own);
+		}
+
 	}
 }

@@ -11,6 +11,17 @@ namespace HREngine.Bots
 	//对一个随从造成$3点伤害。如果消灭该随从，<b>发现</b>一张冰霜符文牌。
 	class Sim_RLK_025 : SimTemplate
 	{
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			if (target != null)
+			{
+				int dmg = (ownplay) ? p.getSpellDamageDamage(3) : p.getEnemySpellDamageDamage(3);
+				p.minionGetDamageOrHeal(target, dmg);
+				if (target.Hp <= dmg)
+					p.drawACard(CardDB.cardIDEnum.None,ownplay,true);
+			}
+		}
+
 		public override PlayReq[] GetPlayReqs()
         {
             return new PlayReq[]{

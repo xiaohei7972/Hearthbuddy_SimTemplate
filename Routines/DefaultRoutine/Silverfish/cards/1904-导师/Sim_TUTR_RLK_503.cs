@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//
 	class Sim_TUTR_RLK_503 : SimTemplate
 	{
-		
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
+			p.addCorpses(1);
+        }
 		
 	}
 }

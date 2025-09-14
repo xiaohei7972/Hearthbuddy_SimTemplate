@@ -11,7 +11,26 @@ namespace HREngine.Bots
 	//<b>战吼：</b>使一个友方亡灵获得+2攻击力。
 	class Sim_BG_RLK_958 : SimTemplate
 	{
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
+            // 判断目标是否为友方亡灵
+            if (target != null)
+            {
+                // 给目标亡灵随从+2攻击力
+                p.minionGetBuffed(target, 2, 0);
+            }
+
+        }
 		
+        public override PlayReq[] GetPlayReqs()
+		{
+			return new PlayReq[]{
+				new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET), // 目标只能是随从
+                new PlayReq(CardDB.ErrorType2.REQ_FRIENDLY_TARGET), // 目标只能是友方
+                new PlayReq(CardDB.ErrorType2.REQ_TARGET_WITH_RACE, 11), // 目标只能是亡灵
+                new PlayReq(CardDB.ErrorType2.REQ_TARGET_IF_AVAILABLE), // 没有目标时也可以使用
+            };
+		}
 		
 	}
 }

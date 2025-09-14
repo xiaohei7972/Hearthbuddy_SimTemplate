@@ -4,12 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_058: SimTemplate //* 冷冻鱼人 Brrrloc
-//<b>Battlecry:</b> <b>Freeze</b> an_enemy.
-//<b>战吼：</b><b>冻结</b>一个敌人。 
+    //* 冷冻鱼人 Brrrloc
+    //<b>Battlecry:</b> <b>Freeze</b> an_enemy.
+    //<b>战吼：</b><b>冻结</b>一个敌人。 
+    class Sim_ICC_058 : SimTemplate
     {
-        
-
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {
             if (target != null) p.minionGetFrozen(target);
@@ -19,7 +18,7 @@ namespace HREngine.Bots
         {
             return new PlayReq[] {
                 new PlayReq(CardDB.ErrorType2.REQ_ENEMY_TARGET),
-                new PlayReq(CardDB.ErrorType2.REQ_TARGET_IF_AVAILABLE),
+                new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY),
             };
         }
     }

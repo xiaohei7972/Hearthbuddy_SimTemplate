@@ -11,7 +11,15 @@ namespace HREngine.Bots
 	//在你的回合结束时，将一份<b>残骸</b>复活为1/2并具有<b>嘲讽</b>的复活的步兵。
 	class Sim_RLK_Prologue_RLK_061 : SimTemplate
 	{
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.RLK_Prologue_RLK_061t);
+        public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
+        {
+            if (p.getCorpseCount() >= 1)
+			{
+				p.corpseConsumption(1);
+				p.callKid(kid, triggerEffectMinion.zonepos, triggerEffectMinion.own);
+			};
+        }
 		
 	}
 }
