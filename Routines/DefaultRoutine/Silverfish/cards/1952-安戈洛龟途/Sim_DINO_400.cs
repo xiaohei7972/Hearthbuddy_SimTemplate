@@ -17,7 +17,8 @@ namespace HREngine.Bots
 			List<Minion> minions = triggerMinion.own ? p.enemyMinions : p.ownMinions;
 			if (minions.Count > 0)
 			{
-				Minion target = minions[p.getRandomNumber(0, Math.Max(minions.Count - 1, 0))];
+				int index = p.getRandomNumber(0, minions.Count - 1);
+				Minion target = minions[index];
 				if (target != null)
 				{
 					p.minionAttacksMinion(triggerMinion, target, true);

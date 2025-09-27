@@ -8,14 +8,17 @@ namespace HREngine.Bots
 //Deal $4 damage to a minion. <b>Overload:</b> (1)
 //对一个随从造成$4点伤害，<b>过载：</b>（1） 
 	{
-		
-		
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
-            int dmg = (ownplay) ? p.getSpellDamageDamage(4) : p.getEnemySpellDamageDamage(4);
-            p.minionGetDamageOrHeal(target, dmg);
-            if (ownplay) p.ueberladung++;
-		}
+
+
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
+            if (target != null)
+            {
+                int dmg = (ownplay) ? p.getSpellDamageDamage(4) : p.getEnemySpellDamageDamage(4);
+                p.minionGetDamageOrHeal(target, dmg);
+                if (ownplay) p.ueberladung++;
+            }
+        }
 
         public override PlayReq[] GetPlayReqs()
         {

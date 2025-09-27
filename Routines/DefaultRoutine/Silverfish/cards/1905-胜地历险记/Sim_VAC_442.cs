@@ -21,7 +21,7 @@ namespace HREngine.Bots
         public override PlayReq[] GetPlayReqs()
         {
             return new PlayReq[] {
-                new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY),        // 需要选择目标
+                new PlayReq(CardDB.ErrorType2.REQ_TARGET_IF_AVAILABE_AND_ELEMENTAL_PLAYED_LAST_TURN),    //上回合使用过元素则有目标
                 new PlayReq(CardDB.ErrorType2.REQ_ENEMY_TARGET)    // 目标必须是敌方
             };
         }

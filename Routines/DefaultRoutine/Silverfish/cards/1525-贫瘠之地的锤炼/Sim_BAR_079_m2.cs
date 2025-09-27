@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_BAR_079_m2 : SimTemplate //* 大型魔像 Greater Golem
-	{
+    class Sim_BAR_079_m2 : SimTemplate //* 大型魔像 Greater Golem
+    {
         //{0}{1}
         //{0}{1}
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
@@ -17,7 +17,7 @@ namespace HREngine.Bots
             }
             if (hc.enchs.Contains(CardDB.cardIDEnum.BAR_079t14b))
             {
-                own.spellpower+=2;
+                own.spellpower += 2;
             }
             if (hc.enchs.Contains(CardDB.cardIDEnum.BAR_079t14c))
             {
@@ -68,7 +68,8 @@ namespace HREngine.Bots
             if (hc.enchs.Contains(CardDB.cardIDEnum.BAR_079t10)) { p.allMinionOfASideGetBuffed(true, 1, 1); }
             if (hc.enchs.Contains(CardDB.cardIDEnum.BAR_079t10b)) { p.allMinionOfASideGetBuffed(true, 2, 2); }
             if (hc.enchs.Contains(CardDB.cardIDEnum.bar_079t10c)) { p.allMinionOfASideGetBuffed(true, 4, 4); }
-            if (hc.enchs.Contains(CardDB.cardIDEnum.BAR_079t11)) {
+            if (hc.enchs.Contains(CardDB.cardIDEnum.BAR_079t11))
+            {
                 p.callKid(CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.BAR_079_m2), own.zonepos, true);
                 if (p.ownMinions.Count < 7)
                 {
@@ -76,11 +77,12 @@ namespace HREngine.Bots
                     p.ownMinions[own.zonepos].setMinionToMinion(own);
                 }
             }
-            if (hc.enchs.Contains(CardDB.cardIDEnum.BAR_079t12)) {
+            if (hc.enchs.Contains(CardDB.cardIDEnum.BAR_079t12))
+            {
                 int cnt = 1;
-                foreach(Minion m in p.enemyMinions)
+                foreach (Minion m in p.enemyMinions)
                 {
-                    if(!m.frozen)
+                    if (!m.frozen)
                     {
                         p.minionGetFrozen(m);
                         cnt--;
@@ -103,11 +105,15 @@ namespace HREngine.Bots
             }
             if (hc.enchs.Contains(CardDB.cardIDEnum.BAR_079t12c))
             {
-                p.allMinionOfASideGetDamage(false, 0, true);
+                List<Minion> temp = (own.own) ? p.enemyMinions : p.ownMinions;
+                foreach (Minion t in temp)
+                {
+                    p.minionGetFrozen(t);
+                }
             }
             if (hc.enchs.Contains(CardDB.cardIDEnum.BAR_079t13))
             {
-                if(p.enemyMinions.Count > 0)
+                if (p.enemyMinions.Count > 0)
                 {
                     p.minionGetDamageOrHeal(p.getEnemyCharTargetForRandomSingleDamage(3, true), 3);
                 }

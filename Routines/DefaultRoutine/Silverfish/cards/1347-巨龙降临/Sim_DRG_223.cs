@@ -12,7 +12,7 @@ namespace HREngine.Bots
 		{
 			if (own.own)
 			{
-				if (p.ueberladung > 0)
+				if (p.ueberladung > 0 && target !=null)
 				{
 					p.minionGetDamageOrHeal(target, 5);
 				}

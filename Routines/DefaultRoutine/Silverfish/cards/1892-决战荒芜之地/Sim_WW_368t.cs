@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//<b>突袭</b>。在你的回合结束时死亡。
 	class Sim_WW_368t : SimTemplate
 	{
-		
+        public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
+        {
+			if (triggerEffectMinion.own == turnEndOfOwner)
+			{
+				p.minionGetDestroyed(triggerEffectMinion);
+			}
+        }
 		
 	}
 }

@@ -11,7 +11,17 @@ namespace HREngine.Bots
 	//你的随从的<b>亡语</b>将触发两次。
 	class Sim_BG_FP1_031 : SimTemplate
 	{
-		
+		public override void onAuraStarts(Playfield p, Minion own)
+        {
+            if (own.own) p.ownBaronRivendare++;
+            else p.enemyBaronRivendare++;
+        }
+
+        public override void onAuraEnds(Playfield p, Minion m)
+        {
+            if (m.own) p.ownBaronRivendare--;
+            else p.enemyBaronRivendare--;
+        }
 		
 	}
 }

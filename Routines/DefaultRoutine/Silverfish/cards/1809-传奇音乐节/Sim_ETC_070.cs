@@ -11,7 +11,29 @@ namespace HREngine.Bots
 	//<b>战吼：</b>受到疲劳伤害。召唤相同数量的3/3的小鬼。@<b>战吼：</b>受到{0}点疲劳伤害。召唤相同数量的3/3的小鬼。
 	class Sim_ETC_070 : SimTemplate
 	{
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.ETC_070t);
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			if (own.own)
+			{
+				p.ownHeroFatigue++;
+				p.ownHero.getDamageOrHeal(p.ownHeroFatigue, p, false, true);
+				for (int i = 0; i < p.ownHeroFatigue; i++)
+				{
+					p.callKid(kid, own.zonepos, own.own);
+				}
+			}
+			else
+			{
+				p.enemyHeroFatigue++;
+				p.enemyHero.getDamageOrHeal(p.enemyHeroFatigue, p, false, true);
+				for (int i = 0; i < p.enemyHeroFatigue; i++)
+				{
+					p.callKid(kid, own.zonepos, own.own);
+				}
+			}
+
+		}
 		
 	}
 }

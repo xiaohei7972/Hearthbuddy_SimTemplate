@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//在你的回合结束时，获取一张1/1的混乱触须。
 	class Sim_YOG_517 : SimTemplate
 	{
-		
+        public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
+        {
+			if (triggerEffectMinion.own == turnEndOfOwner)
+			{
+				p.drawACard(CardDB.cardIDEnum.YOG_514, triggerEffectMinion.own, true);
+			}
+        }
 		
 	}
 }

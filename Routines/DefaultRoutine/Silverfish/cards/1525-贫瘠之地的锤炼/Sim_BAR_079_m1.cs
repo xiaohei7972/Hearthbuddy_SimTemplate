@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_BAR_079_m1 : SimTemplate //* 小型魔像 Lesser Golem
-	{
+    class Sim_BAR_079_m1 : SimTemplate //* 小型魔像 Lesser Golem
+    {
         //{0}{1}
         //{0}{1}
 
@@ -106,7 +106,11 @@ namespace HREngine.Bots
             }
             if (hc.enchs.Contains(CardDB.cardIDEnum.BAR_079t12c))
             {
-                p.allMinionOfASideGetDamage(false, 0, true);
+                List<Minion> temp = (own.own) ? p.enemyMinions : p.ownMinions;
+                foreach (Minion t in temp)
+                {
+                    p.minionGetFrozen(t);
+                }
             }
             if (hc.enchs.Contains(CardDB.cardIDEnum.BAR_079t13))
             {

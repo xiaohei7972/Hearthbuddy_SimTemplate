@@ -4,13 +4,13 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//法术 萨满祭司 费用：5
-	//Frosty Décor
-	//冰霜摆件
-	//Summon two 2/4 Elementals with <b>Taunt</b> and "<b>Deathrattle</b>: Gain4 Armor".
-	//召唤两个2/4并具有<b>嘲讽</b>和“<b>亡语：</b>获得4点护甲值”的元素。
-	class Sim_VAC_305 : SimTemplate
-	{
+    //法术 萨满祭司 费用：5
+    //Frosty Décor
+    //冰霜摆件
+    //Summon two 2/4 Elementals with <b>Taunt</b> and "<b>Deathrattle</b>: Gain4 Armor".
+    //召唤两个2/4并具有<b>嘲讽</b>和“<b>亡语：</b>获得4点护甲值”的元素。
+    class Sim_VAC_305 : SimTemplate
+    {
         CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.VAC_305t);
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
@@ -19,6 +19,14 @@ namespace HREngine.Bots
 
             p.callKid(kid, pos, ownplay, false);
             p.callKid(kid, pos, ownplay);
+        }
+        
+        public override PlayReq[] GetPlayReqs()
+        {
+            return new PlayReq[] {
+                new PlayReq(CardDB.ErrorType2.REQ_MINION_CAP,1),  //需要一个空位
+
+            };
         }
     }
 }

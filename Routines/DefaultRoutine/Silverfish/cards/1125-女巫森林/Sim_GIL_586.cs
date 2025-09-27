@@ -9,14 +9,13 @@ namespace HREngine.Bots
         //使一个随从获得+2/+2。如果该随从是元素，则随机将一张元素牌置入你的手牌。
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
-            p.minionGetBuffed(target, 2, 2);
-            if ((TAG_RACE)target.handcard.card.race == TAG_RACE.ELEMENTAL)
-                p.drawACard(CardDB.cardNameEN.unknown, ownplay, true);
+            if (target!= null)
+            {
+                p.minionGetBuffed(target, 2, 2);
+                if ((TAG_RACE)target.handcard.card.race == TAG_RACE.ELEMENTAL)
+                    p.drawACard(CardDB.cardNameEN.unknown, ownplay, true);
+            }
         }
-
-
-
-
 
         public override PlayReq[] GetPlayReqs()
         {

@@ -8,10 +8,11 @@ namespace HREngine.Bots
     {
         // <b>战吼：</b> 如果你在上个回合使用过元素牌，抽一张牌。
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
-		{
-            p.drawACard(CardDB.cardIDEnum.None, own.own);
-		}
+        {
+            if (p.anzOwnElementalsLastTurn > 0 && own.own)
+                p.drawACard(CardDB.cardIDEnum.None, own.own);
+        }
 
-       
+
     }
 }

@@ -11,7 +11,12 @@ namespace HREngine.Bots
 	//<b>嘲讽</b>。<b>亡语：</b>获取两张1/1的混乱触须。
 	class Sim_YOG_523 : SimTemplate
 	{
-		
-		
+		public override void onDeathrattle(Playfield p, Minion m)
+		{
+			p.drawACard(CardDB.cardIDEnum.YOG_514, m.own, true);
+			p.drawACard(CardDB.cardIDEnum.YOG_514, m.own, true);
+
+		}
+
 	}
 }

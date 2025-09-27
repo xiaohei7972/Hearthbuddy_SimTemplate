@@ -11,13 +11,16 @@ namespace HREngine.Bots
 	//召唤一个随从的复制。复制和本体都会在受到伤害后死亡。
 	class Sim_JAM_031 : SimTemplate
 	{
-		
-		
-        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+
+
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
-			int pos = ownplay ? p.ownMinions.Count : p.enemyMinions.Count; // 获取随从位置
-            CardDB.Card copyCard = CardDB.Instance.getCardDataFromID(target.handcard.card.cardIDenum); // 获取复制卡牌
-            p.callKid(copyCard, pos, ownplay, true); // 召唤复制	
+			if (target!=null)
+			{
+				int pos = ownplay ? p.ownMinions.Count : p.enemyMinions.Count; // 获取随从位置
+				CardDB.Card copyCard = CardDB.Instance.getCardDataFromID(target.handcard.card.cardIDenum); // 获取复制卡牌
+				p.callKid(copyCard, pos, ownplay, true); // 召唤复制	
+			}
 		}
 
 		public override PlayReq[] GetPlayReqs()

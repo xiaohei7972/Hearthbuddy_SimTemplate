@@ -11,7 +11,24 @@ namespace HREngine.Bots
 	//使一个随从获得+2/+2。随机召唤一个法力值消耗为（2）的随从。
 	class Sim_CORE_KAR_077 : SimTemplate
 	{
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
+            if (target != null)
+            {
+                int pos = (ownplay) ? p.ownMinions.Count : p.enemyMinions.Count;
+                p.minionGetBuffed(target, 2, 2);
+                p.callKid(p.getRandomCardForManaMinion(2), pos, ownplay);
+
+            }
+        }
+
+        public override PlayReq[] GetPlayReqs()
+        {
+            return new PlayReq[] {
+                new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY),
+                new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET),
+            };
+        }
 		
 	}
 }

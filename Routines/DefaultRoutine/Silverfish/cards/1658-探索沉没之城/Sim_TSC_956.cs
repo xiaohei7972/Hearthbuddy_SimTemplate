@@ -11,7 +11,23 @@ namespace HREngine.Bots
 	//对一个随从造成$4点伤害。使你的对手获得一张深渊诅咒。
 	class Sim_TSC_956 : SimTemplate
 	{
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			if (target != null)
+			{
+				int damage = ownplay ? p.getSpellDamageDamage(4) : p.getEnemySpellDamageDamage(4);
+				p.minionGetDamageOrHeal(target, damage);
+				p.drawACard(CardDB.cardIDEnum.TSC_955t, !ownplay, true);
+			}
+		}
+
+        public override PlayReq[] GetPlayReqs()
+        {
+			return new PlayReq[]{
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY),
+				new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET),
+			};
+        }
 		
 	}
 }

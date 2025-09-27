@@ -11,7 +11,23 @@ namespace HREngine.Bots
 	//你的邪能法术法力值消耗减少（2）点且拥有<b>吸血</b>。<b>战吼：</b>获取两张淤泥桶。
 	class Sim_WW_091 : SimTemplate
 	{
-		
-		
+
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			p.drawACard(CardDB.cardIDEnum.WW_044t, own.own, true);
+			p.drawACard(CardDB.cardIDEnum.WW_044t, own.own, true);
+		}
+		public override void onAuraStarts(Playfield p, Minion m)
+		{
+			if (m.own) p.anzOwnPopGarThePutrid++;
+			else p.anzEnemyPopGarThePutrid++;
+		}
+
+		public override void onAuraEnds(Playfield p, Minion m)
+		{
+			if (m.own) p.anzOwnPopGarThePutrid--;
+			else p.anzEnemyPopGarThePutrid--;
+		}
+
 	}
 }

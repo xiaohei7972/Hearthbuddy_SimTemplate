@@ -11,7 +11,17 @@ namespace HREngine.Bots
 	//<b>战吼，亡语：</b>将一张淤泥桶置于你的牌库底。
 	class Sim_WW_041 : SimTemplate
 	{
-		
-		
+		CardDB.Card card = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.WW_044t);
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			if (own.own) p.ownDeck.Add(card);
+			else p.enemyDeckSize++;
+		}
+		public override void onDeathrattle(Playfield p, Minion m)
+		{
+			if (m.own) p.ownDeck.Add(card);
+			else p.enemyDeckSize++;
+		}
+
 	}
 }

@@ -16,8 +16,8 @@ namespace HREngine.Bots
 			if (target != null)
 			{
 				int damage = ownplay ? p.getSpellDamageDamage(5) : p.getEnemySpellDamageDamage(5);
-				p.minionGetDamageOrHeal(ownplay ? p.enemyHero : p.ownHero, damage);
-				p.drawACard(CardDB.cardNameEN.unknown, target.own, false);
+				p.minionGetDamageOrHeal(target, damage);
+				p.drawACard(CardDB.cardNameEN.unknown, target.own);
 			}
 		}
 		

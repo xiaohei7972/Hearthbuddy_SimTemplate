@@ -8,12 +8,15 @@ namespace HREngine.Bots
 //Give a minion+3 Attack and <b>Divine Shield</b>.
 //使一个随从获得+3攻击力和<b>圣盾</b>。 
 	{
-		
+
 
         public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
         {
-            p.minionGetBuffed(target, 3, 0);
-			target.divineshild = true;
+            if (target != null)
+            {
+                p.minionGetBuffed(target, 3, 0);
+                target.divineshild = true;
+            }
         }
 
         public override PlayReq[] GetPlayReqs()

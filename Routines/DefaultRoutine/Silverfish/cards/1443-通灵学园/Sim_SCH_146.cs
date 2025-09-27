@@ -11,7 +11,25 @@ namespace HREngine.Bots
 	//你的随从拥有<b>扰魔</b>。
 	class Sim_SCH_146 : SimTemplate
 	{
-		
-		
+		public override void onAuraStarts(Playfield p, Minion m)
+		{
+			List<Minion> minions = m.own ? p.ownMinions : p.enemyMinions;
+			foreach (Minion minion in minions)
+			{
+				if (minion.entitiyID == m.entitiyID) continue;
+				minion.Elusive = true;
+			}
+		}
+
+		public override void onAuraEnds(Playfield p, Minion m)
+		{
+			List<Minion> minions = m.own ? p.ownMinions : p.enemyMinions;
+			foreach (Minion minion in minions)
+			{
+				if (minion.entitiyID == m.entitiyID) continue;
+				minion.Elusive = false;
+			}
+		}
+
 	}
 }

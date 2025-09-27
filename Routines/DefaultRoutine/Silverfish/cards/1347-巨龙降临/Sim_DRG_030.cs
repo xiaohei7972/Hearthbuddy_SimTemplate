@@ -9,13 +9,20 @@ namespace HREngine.Bots
 		//[x]Give a minion +1 Attack.<b>Invoke</b> Galakrond.
 		//使一个随从获得+1攻击力。<b>祈求</b>迦拉克隆。
 		
-		
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
+            if (target != null)
+            {
+                p.minionGetBuffed(target, 1, 0);
+
+            }
+        }
 
         public override PlayReq[] GetPlayReqs()
         {
             return new PlayReq[] {
-                new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET),
                 new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY),
+                new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET),
             };
         }
 	}

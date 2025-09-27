@@ -11,6 +11,15 @@ namespace HREngine.Bots
 		
 		
 
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
+            if (target != null)
+            {
+                p.minionGetBuffed(target, 2, 2);
+                target.divineshild = true;
+            }
+        }
+
         public override PlayReq[] GetPlayReqs()
         {
             return new PlayReq[] {

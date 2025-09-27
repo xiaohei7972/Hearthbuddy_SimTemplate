@@ -11,11 +11,15 @@ namespace HREngine.Bots
 	//造成$3点伤害。你的下一个法术拥有<b>法术伤害+2</b>。
 	class Sim_YOG_082 : SimTemplate
 	{
-		
+
 		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
-            int dmg = (ownplay) ? p.getSpellDamageDamage(3) : p.getEnemySpellDamageDamage(3);
-            p.minionGetDamageOrHeal(target, dmg);
+			if (target != null)
+			{
+				int dmg = (ownplay) ? p.getSpellDamageDamage(3) : p.getEnemySpellDamageDamage(3);
+				p.minionGetDamageOrHeal(target, dmg);
+
+			}
 		}
 
 

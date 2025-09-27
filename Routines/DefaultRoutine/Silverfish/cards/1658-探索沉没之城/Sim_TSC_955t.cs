@@ -11,7 +11,24 @@ namespace HREngine.Bots
 	//在你的回合开始时，受到{0}点伤害。每一次诅咒都会比上一次更严重。<i>（还剩{1}回合。）</i>
 	class Sim_TSC_955t : SimTemplate
 	{
-		
+		public override void onTurnStartTrigger(Playfield p, Handmanager.Handcard hc, bool turnStartOfOwner)
+		{
+			if (turnStartOfOwner)
+			{
+				p.minionGetDamageOrHeal(turnStartOfOwner ? p.ownHero : p.enemyHero, hc.card.TAG_SCRIPT_DATA_NUM_1, true);
+			}
+		}
+
+        public override void onTurnEndsTrigger(Playfield p, Handmanager.Handcard hc, bool turnEndOfOwner)
+        {
+			if (turnEndOfOwner)
+			{
+				if (hc.card.TAG_SCRIPT_DATA_NUM_2 == 0)
+				{
+					p.removeCard(hc);
+				}
+			}
+        }
 		
 	}
 }

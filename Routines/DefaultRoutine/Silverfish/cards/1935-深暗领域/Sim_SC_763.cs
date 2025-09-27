@@ -11,7 +11,17 @@ namespace HREngine.Bots
 	//<b>嘲讽</b>。<b>圣盾</b>。<b>战吼：</b>消耗4点法力值以使本随从的属性值翻倍。
 	class Sim_SC_763 : SimTemplate
 	{
-		
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			if (own.own)
+			{
+				if (p.mana > 4)
+				{
+					p.mana = Math.Max(p.mana -= 4, 0);
+					p.minionGetBuffed(own, own.Angr, own.Hp);
+				}
+			}
+		}
+
 	}
 }

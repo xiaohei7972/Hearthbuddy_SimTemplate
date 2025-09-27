@@ -8,18 +8,21 @@ namespace HREngine.Bots
 //Deal $3 damage. Shuffle a 'Roaring Torch' into your deck that deals 6 damage.
 //造成$3点伤害。将一张可造成6点伤害的“炽烈的火把”洗入你的牌库。 
 	{
-		
-		
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
-            int dmg = (ownplay) ? p.getSpellDamageDamage(3) : p.getEnemySpellDamageDamage(3);
-            p.minionGetDamageOrHeal(target, dmg);
-            if (ownplay)
-			{
-				p.ownDeckSize++;
-			}
-            else p.enemyDeckSize++;
-		}
+
+
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
+            if (target != null)
+            {
+                int dmg = (ownplay) ? p.getSpellDamageDamage(3) : p.getEnemySpellDamageDamage(3);
+                p.minionGetDamageOrHeal(target, dmg);
+                if (ownplay)
+                {
+                    p.ownDeckSize++;
+                }
+                else p.enemyDeckSize++;
+            }
+        }
 
         public override PlayReq[] GetPlayReqs()
         {

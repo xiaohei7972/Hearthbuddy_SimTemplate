@@ -11,11 +11,12 @@ namespace HREngine.Bots
 	//<b>冲锋</b>。在你的回合结束时死亡。
 	class Sim_TUTR_HERO_11bpt : SimTemplate
 	{
-		public override PlayReq[] GetPlayReqs()
+		public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
         {
-            return new PlayReq[] {
-				new PlayReq(CardDB.ErrorType2.REQ_NUM_MINION_SLOTS, 1), //确保有位置召唤
-            };
+			if (triggerEffectMinion.own == turnEndOfOwner)
+			{
+				p.minionGetDestroyed(triggerEffectMinion);
+			}
         }
 		
 	}

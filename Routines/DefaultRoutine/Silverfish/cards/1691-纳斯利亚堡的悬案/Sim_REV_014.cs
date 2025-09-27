@@ -11,7 +11,24 @@ namespace HREngine.Bots
 	//<b>嘲讽</b>。你的非红鲱鱼随从拥有<b>潜行</b>。
 	class Sim_REV_014 : SimTemplate
 	{
-		
+		public override void onAuraStarts(Playfield p, Minion m)
+		{
+			List<Minion> minions = m.own ? p.ownMinions : p.enemyMinions;
+			foreach (Minion minion in minions)
+			{
+				if (minion.handcard.card.cardIDenum == CardDB.cardIDEnum.REV_014) continue;
+				minion.stealth = true;
+			}
+		}
+
+		public override void onAuraEnds(Playfield p, Minion m)
+		{
+			List<Minion> minions = m.own ? p.ownMinions : p.enemyMinions;
+			foreach (Minion minion in minions)
+			{
+				minion.stealth = false;
+			}
+		}
 		
 	}
 }

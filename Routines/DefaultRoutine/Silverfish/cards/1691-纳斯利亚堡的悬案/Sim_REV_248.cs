@@ -11,7 +11,22 @@ namespace HREngine.Bots
 	//使一个随从获得+2生命值。召唤一个具有该随从属性值和<b>嘲讽</b>的格里恩。
 	class Sim_REV_248 : SimTemplate
 	{
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
+            if (target != null)
+            {
+                p.minionGetBuffed(target, 0, 2);
+                //
+            }
+        }
+
+        public override PlayReq[] GetPlayReqs()
+        {
+            return new PlayReq[] {
+                new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY),
+                new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET),
+            };
+        }
 		
 	}
 }

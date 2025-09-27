@@ -16,8 +16,14 @@ namespace HREngine.Bots
 		{
 			CardDB.Card selectedCard = CardDB.Instance.getCardDataFromID(Hrtprozis.Instance.enchs.LastOrDefault());
 			int pos = ownplay ? p.ownMinions.Count : p.enemyMinions.Count;
-			p.callKid(selectedCard, pos, ownplay);
+			if (pos < 7)
+			{
+				p.callKid(selectedCard, pos, ownplay);
+				Minion minion = ownplay ? p.ownMinions[Math.Max(0,pos - 1)] : p.enemyMinions[Math.Max(0,pos - 1)];
+				minion.handcard.card.sim_card.onDeathrattle(p, minion);
+			}
+
 		}
-		
+
 	}
 }

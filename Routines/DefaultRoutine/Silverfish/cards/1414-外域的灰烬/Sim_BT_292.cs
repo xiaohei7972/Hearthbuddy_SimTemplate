@@ -10,8 +10,11 @@ namespace HREngine.Bots
 		//使一个随从获得+2/+2。抽一张牌。
 		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
-			p.minionGetBuffed(target, 2, 1);
-			p.drawACard(CardDB.cardIDEnum.SW_024, ownplay);
+			if (target != null)
+			{
+				p.minionGetBuffed(target, 2, 1);
+				p.drawACard(CardDB.cardIDEnum.None, ownplay);
+			}
 		}
 
 

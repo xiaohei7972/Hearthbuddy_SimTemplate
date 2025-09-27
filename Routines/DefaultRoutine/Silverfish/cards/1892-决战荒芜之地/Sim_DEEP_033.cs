@@ -11,7 +11,12 @@ namespace HREngine.Bots
 	//<b>战吼：</b>随机获得两项<b>额外效果</b>。<b>发掘</b>一个宝藏。
 	class Sim_DEEP_033 : SimTemplate
 	{
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			own.divineshild = true;
+			own.lifesteal = true;
+			p.drawACard(p.handleExcavation().cardIDenum, own.own, true);
+        }
 		
 	}
 }

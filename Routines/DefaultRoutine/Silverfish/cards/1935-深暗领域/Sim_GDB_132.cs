@@ -1,4 +1,4 @@
-using System;
+ using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -20,7 +20,7 @@ namespace HREngine.Bots
         public override PlayReq[] GetPlayReqs()
         {
             return new PlayReq[] {
-                new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY),  // 需要选择一个目标
+                new PlayReq(CardDB.ErrorType2.REQ_TARGET_IF_AVAILABLE),  // 如果有目标
                 new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET),   // 目标必须是随从
                 new PlayReq(CardDB.ErrorType2.REQ_ENEMY_TARGET),    // 目标必须是敌方
             };

@@ -15,16 +15,19 @@ namespace HREngine.Bots
 		{
 			if (target != null)
 			{
-				target.Angr += 3;
-				target.Hp += 3;
-				//TODO:恶魔减费以后再说
-				// if (target.handcard.card.race == CardDB.Race.DEMON)
+				p.minionGetBuffed(target, 3, 3);
+				if (RaceUtils.MinionBelongsToRace(target.handcard.card.races, CardDB.Race.DEMON))
+				{
+					//TODO:恶魔减费以后再说
+					// if (target.handcard.card.race == CardDB.Race.DEMON)
 					// p.demon
+				}
+
 			}
 
 		}
 
-        public override PlayReq[] GetPlayReqs()
+		public override PlayReq[] GetPlayReqs()
 		{
 			return new PlayReq[]{
 				new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY), // 需要选择一个目标
@@ -34,6 +37,6 @@ namespace HREngine.Bots
 			};
 
 		}
-		
+
 	}
 }

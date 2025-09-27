@@ -2130,6 +2130,10 @@ namespace HREngine.Bots
                             offset += p.ownSpelsCostMore - p.ownSpelsCostMoreAtStart;
                         }
 
+                        if (p.anzOwnPopGarThePutrid > 0)
+                        {
+                            offset -= p.anzOwnPopGarThePutrid * 2;
+                        }
 
                         if (p.playedPreparation)
                         {

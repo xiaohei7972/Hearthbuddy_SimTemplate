@@ -11,7 +11,24 @@ namespace HREngine.Bots
 	//<b>战吼：</b>受到疲劳伤害。获得等量的攻击力和生命值。@<b>战吼：</b>受到{0}点疲劳伤害。获得等量的攻击力和生命值。
 	class Sim_ETC_068 : SimTemplate
 	{
-		
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			if (own.own)
+			{
+				p.ownHeroFatigue++;
+				p.ownHero.getDamageOrHeal(p.ownHeroFatigue, p, false, true);
+				p.minionGetBuffed(own, p.ownHeroFatigue, p.ownHeroFatigue);
+			}
+			else
+			{
+				p.enemyHeroFatigue++;
+				p.enemyHero.getDamageOrHeal(p.enemyHeroFatigue, p, false, true);
+				p.minionGetBuffed(own, p.enemyHeroFatigue, p.enemyHeroFatigue);
+
+			}
+
+
+		}
+
 	}
 }

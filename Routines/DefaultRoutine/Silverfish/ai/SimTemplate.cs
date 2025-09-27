@@ -25,7 +25,7 @@ namespace HREngine.Bots
         }
 
         /// <summary>
-        /// 荣耀击杀效果(随从)
+        /// 荣誉击杀效果(随从)
         /// </summary>
         /// <param name="p">场面</param>
         /// <param name="w">随从</param>
@@ -35,7 +35,7 @@ namespace HREngine.Bots
         }
 
         /// <summary>
-        /// 荣耀击杀效果（武器）
+        /// 荣誉击杀效果（武器）
         /// </summary>
         /// <param name="p">场面</param>
         /// <param name="w">武器</param>
@@ -45,10 +45,10 @@ namespace HREngine.Bots
         }
 
         /// <summary>
-        /// 荣耀击杀效果（卡牌）
+        /// 荣誉击杀效果（卡牌）
         /// </summary>
         /// <param name="p">场面</param>
-        /// <param name="m">具有荣耀击杀效果的卡牌</param>
+        /// <param name="m">具有荣誉击杀效果的卡牌</param>
         public virtual void OnHonorableKill(Playfield p, Handmanager.Handcard hc, Minion target)
         {
             return;
@@ -394,6 +394,18 @@ namespace HREngine.Bots
         /// <param name="triggerEffectMinion">有回合开始效果的随从</param>
         /// <param name="turnStartOfOwner">是否己方回合开始</param>
         public virtual void onTurnStartTrigger(Playfield p, Minion triggerEffectMinion, bool turnStartOfOwner)
+        {
+            return;
+        }
+
+        /// <summary>
+        /// 回合开始效果(重载)
+        /// 当卡牌在手牌时,回合开始触发此效果
+        /// </summary>
+        /// <param name="p">场面</param>
+        /// <param name="triggerEffectMinion">有回合开始效果的随从</param>
+        /// <param name="turnStartOfOwner">是否己方回合开始</param>
+        public virtual void onTurnStartTrigger(Playfield p, Handmanager.Handcard hc, bool turnStartOfOwner)
         {
             return;
         }

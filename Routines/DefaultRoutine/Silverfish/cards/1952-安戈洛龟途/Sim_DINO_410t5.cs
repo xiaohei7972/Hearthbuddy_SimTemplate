@@ -15,7 +15,6 @@ namespace HREngine.Bots
 		public override void onDeathrattle(Playfield p, Minion m)
 		{
 			p.callKid(kid, m.zonepos - 1, m.own);
-			p.allMinionOfASideGetBuffed(m.own, 1, 1);
         }
 		
 	}

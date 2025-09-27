@@ -14,8 +14,8 @@ namespace HREngine.Bots
 		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
 		{
 			// 触发发掘效果
-			CardDB.Card treasure = p.handleExcavation();
-            p.drawACard(treasure.cardIDenum, own.own, true);
+			p.drawACard(p.handleExcavation().cardIDenum, own.own, true);
+
 		}
 
 	}

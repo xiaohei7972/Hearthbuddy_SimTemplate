@@ -243,6 +243,8 @@ namespace HREngine.Bots
         public int anzOwnCloakedHuntress = 0;//神秘女猎手
         public int anzOwnRazorfenRockstar = 0; // 剃刀沼泽摇滚明星
         public int anzOwnXB931Housekeeper = 0; // XB-931型家政机
+        public int anzOwnPopGarThePutrid = 0;//我方腐臭淤泥波普加
+        public int anzEnemyPopGarThePutrid = 0;//敌方腐臭淤泥波普加
 
         public int nerubarweblord = 0;
         public int startedWithnerubarweblord = 0;
@@ -722,6 +724,8 @@ namespace HREngine.Bots
             this.anzOwnAviana = 0; //艾维娜
             this.anzOwnScargil = 0; //斯卡基尔
             this.anzOwnCloakedHuntress = 0; //神秘女猎手
+            this.anzOwnPopGarThePutrid = 0;//我方腐臭淤泥波普加
+
             this.nerubarweblord = 0;
             this.myCardsCostLess = 0;
             this.startedWithmyCardsCostLess = 0;
@@ -861,11 +865,15 @@ namespace HREngine.Bots
                     case CardDB.cardNameEN.cloakedhuntress://神秘女猎手
                         this.anzOwnCloakedHuntress++;
                         continue;
-                    case CardDB.cardNameEN.razorfenrockstar: // 剃刀沼泽摇滚明星
+                    case CardDB.cardNameEN.razorfenrockstar: //剃刀沼泽摇滚明星
                         this.anzOwnRazorfenRockstar++;
                         continue;
-                    case CardDB.cardNameEN.xb931housekeeper: // XB-931型家政机
+                    case CardDB.cardNameEN.xb931housekeeper: //XB-931型家政机
                         this.anzOwnXB931Housekeeper++;
+                        continue;
+                    case CardDB.cardNameEN.popgartheputrid://腐臭淤泥波普加
+
+                        this.anzOwnPopGarThePutrid++;
                         continue;
                     case CardDB.cardNameEN.baronrivendare://瑞文戴尔男爵
                         this.ownBaronRivendare++;
@@ -1437,6 +1445,8 @@ namespace HREngine.Bots
             this.anzOwnCloakedHuntress = p.anzOwnCloakedHuntress;//神秘女猎手
             this.anzOwnRazorfenRockstar = p.anzOwnRazorfenRockstar; // 剃刀沼泽摇滚明星
             this.anzOwnXB931Housekeeper = p.anzOwnXB931Housekeeper; // XB-931型家政机
+            this.anzOwnPopGarThePutrid = p.anzOwnPopGarThePutrid;//我方腐臭淤泥波普加
+            
             this.nerubarweblord = p.nerubarweblord;
             this.startedWithnerubarweblord = p.startedWithnerubarweblord;
             this.startedWithDamagedMinions = p.startedWithDamagedMinions;
@@ -4627,7 +4637,7 @@ namespace HREngine.Bots
         }
 
         /// <summary>
-        /// 处理超杀和荣耀击杀效果。
+        /// 处理超杀和荣誉击杀效果。
         /// </summary>
         private void HandleOverkillAndHonorableKill(Minion attacker, Minion defender, int oldHp, int attackerAngr, bool defenderHasDivineshild)
         {
@@ -6694,7 +6704,7 @@ namespace HREngine.Bots
             HandleEndTurnForMinions(this.enemyMinions, ownturn, false, this.enemyTurnEndEffectsTriggerTwice);
 
             // 处理己方手牌的回合结束效果
-            // HandleEndTurnForHandcard(this.owncards, ownturn, true);
+            HandleEndTurnForHandcard(this.owncards, ownturn, true);
 
             // 触发所有伤害触发器，如流血效果、火焰伤害等
             this.doDmgTriggers();
@@ -6739,7 +6749,14 @@ namespace HREngine.Bots
             {
                 hc.card.sim_card.onTurnEndsTrigger(this, hc, ownturn);
             }
+        }
 
+        private void HandleStartTurnForHandcard(List<Handmanager.Handcard> owncards, bool ownturn, bool v)
+        {
+            foreach (Handmanager.Handcard hc in owncards.ToArray())
+            {
+                hc.card.sim_card.onTurnStartTrigger(this, hc, ownturn);
+            }
         }
 
         /// <summary>
@@ -6915,8 +6932,7 @@ namespace HREngine.Bots
                 // 触发随从的回合开始效果（非沉默状态）
                 if (!m.silenced)
                 {
-                    if (m.name == CardDB.cardNameEN.micromachine)
-                        m.handcard.card.sim_card.onTurnStartTrigger(this, m, ownturn);
+                    m.handcard.card.sim_card.onTurnStartTrigger(this, m, ownturn);
                 }
 
                 // 处理随从在己方或敌方回合开始时被摧毁
@@ -6932,7 +6948,7 @@ namespace HREngine.Bots
 
             // 处理英雄和英雄技能的状态
             Minion hero = ownturn ? this.ownHero : this.enemyHero;
-            Handmanager.Handcard ab = ownturn ? this.ownHeroAblility : this.enemyHeroAblility;
+            Handmanager.Handcard heroAblility = ownturn ? this.ownHeroAblility : this.enemyHeroAblility;
 
             // 取消英雄的潜行状态
             if (hero.conceal)
@@ -6942,10 +6958,10 @@ namespace HREngine.Bots
             }
 
             // 触发英雄技能的回合开始效果
-            if (ab.card.nameEN == CardDB.cardNameEN.deathsshadow)
-            {
-                ab.card.sim_card.onTurnStartTrigger(this, null, ownturn);
-            }
+
+            heroAblility.card.sim_card.onTurnStartTrigger(this, heroAblility, ownturn);
+
+            HandleStartTurnForHandcard(this.owncards, ownturn, true);
 
             // 处理回合开始的常规效果
             this.doDmgTriggers();
@@ -9633,6 +9649,11 @@ namespace HREngine.Bots
                 m.wounded = (m.maxHp != m.Hp);
             }
 
+            if (m.Hp <= 0)
+            {
+                m.minionDied(this);
+            }
+
             // 特殊随从：光耀之子
             // if (m.name == CardDB.cardNameEN.lightspawn && !m.silenced)
             // {
@@ -10529,6 +10550,10 @@ namespace HREngine.Bots
 
             // 重新计算并应用所有区域性增益或减益
             minionGetOrEraseAllAreaBuffs(m, true);
+            if (m.Hp <= 0)
+            {
+                m.minionDied(this);
+            }
         }
 
         /// <summary>
@@ -10596,15 +10621,11 @@ namespace HREngine.Bots
         /// <param name="own">是否为己方随从</param>
         /// <param name="damages">伤害值</param>
         /// <param name="frozen">是否同时冻结随从</param>
-        public void allMinionOfASideGetDamage(bool own, int damages, bool frozen = false)
+        public void allMinionOfASideGetDamage(bool own, int damages)
         {
             List<Minion> temp = (own) ? this.ownMinions : this.enemyMinions;
             foreach (Minion m in temp)
             {
-                if (frozen)
-                {
-                    minionGetFrozen(m); // 如果冻结标志为true，先冻结随从
-                }
                 minionGetDamageOrHeal(m, damages, true); // 然后对随从造成伤害
             }
             this.updateBoards(); // 更新游戏板状态

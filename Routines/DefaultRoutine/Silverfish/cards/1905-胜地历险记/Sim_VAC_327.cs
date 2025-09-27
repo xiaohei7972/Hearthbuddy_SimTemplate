@@ -16,7 +16,7 @@ namespace HREngine.Bots
             if (target != null)
             {
                 p.minionGetBuffed(target, 3, 3); // 使目标随从获得+3/+3
-                target.frozen = true; // 使目标随从冻结
+                p.minionGetFrozen(target);
             }
         }
 

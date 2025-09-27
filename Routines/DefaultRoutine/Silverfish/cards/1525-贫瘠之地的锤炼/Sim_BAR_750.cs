@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//<b>嘲讽</b>，<b>战吼：</b>对所有敌方随从造成1点伤害。
 	class Sim_BAR_750 : SimTemplate
 	{
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
+            p.allMinionOfASideGetDamage(!own.own, 1);
+        }
 		
 	}
 }

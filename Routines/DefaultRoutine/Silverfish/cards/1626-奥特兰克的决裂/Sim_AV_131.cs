@@ -4,9 +4,10 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_AV_131 : SimTemplate //* 骑士队长 knightcaptain
-	{
-        //<b>战吼：</b>造成3点伤害。<b>荣誉消灭：</b>获得+3/+3。
+    //* 骑士队长 knightcaptain
+    //<b>战吼：</b>造成3点伤害。<b>荣誉消灭：</b>获得+3/+3。
+    class Sim_AV_131 : SimTemplate
+    {
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {
             if (target != null)
@@ -20,11 +21,16 @@ namespace HREngine.Bots
                 }
             }
         }
-        
+
+        public override void OnHonorableKill(Playfield p, Minion attacker, Minion target)
+        {
+            p.minionGetBuffed(attacker, 3, 3);
+        }
+
         public override PlayReq[] GetPlayReqs()
         {
             return new PlayReq[] {
-                new PlayReq(CardDB.ErrorType2.REQ_TARGET_IF_AVAILABLE),
+                new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY),
             };
         }
 

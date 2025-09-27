@@ -11,7 +11,24 @@ namespace HREngine.Bots
 	//召唤余下的1/1并具有<b>吸血</b>的萤光虫。@召唤{0}只1/1并具有<b>吸血</b>的萤光虫。
 	class Sim_WW_052t2 : SimTemplate
 	{
-		
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.WW_052t);
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice, Handmanager.Handcard hc)
+		{
+
+			int pos = ownplay ? p.ownMinions.Count : p.enemyMinions.Count;
+			for (int i = 0; i < hc.card.TAG_SCRIPT_DATA_NUM_1; i++)
+			{
+				p.callKid(kid, pos, ownplay);
+			}
+
+		}
+
+        public override PlayReq[] GetPlayReqs()
+        {
+			return new PlayReq[]{
+				new PlayReq(CardDB.ErrorType2.REQ_MINION_CAP,1),
+			};
+        }
+
 	}
 }

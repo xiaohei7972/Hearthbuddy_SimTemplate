@@ -11,7 +11,11 @@ namespace HREngine.Bots
 	//<b>嘲讽</b>。<b>亡语：</b>随机召唤两个法力值消耗小于或等于（3）点的<b>亡语</b>随从。
 	class Sim_DEEP_005 : SimTemplate
 	{
-		
+        public override void onDeathrattle(Playfield p, Minion m)
+        {
+			p.callKid(p.getRandomCardForManaMinion(3), m.zonepos - 1, m.own);
+			p.callKid(p.getRandomCardForManaMinion(3), m.zonepos - 1, m.own);
+        }
 		
 	}
 }

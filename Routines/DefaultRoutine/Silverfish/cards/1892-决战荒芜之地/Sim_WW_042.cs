@@ -11,7 +11,14 @@ namespace HREngine.Bots
 	//在你的回合结束时，摧毁你牌库底的三张牌。
 	class Sim_WW_042 : SimTemplate
 	{
-		
-		
+		public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
+		{
+			if (triggerEffectMinion.own == turnEndOfOwner)
+			{
+				if (triggerEffectMinion.own) p.ownDeckSize -= 3;
+				else p.enemyDeckSize -= 3;
+			}
+		}
+
 	}
 }

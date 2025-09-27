@@ -13,12 +13,15 @@ namespace HREngine.Bots
 	{
 		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
-			int dmg = ownplay ? p.getSpellDamageDamage(3) : p.getEnemySpellDamageDamage(3);
-			// 对目标造成3点伤害
-			p.minionGetDamageOrHeal(target, dmg);
-			// 调用发掘方法
-			CardDB.Card treasure = p.handleExcavation();
-			p.drawACard(treasure.cardIDenum, ownplay, true);
+			if (target != null)
+			{
+				int dmg = ownplay ? p.getSpellDamageDamage(3) : p.getEnemySpellDamageDamage(3);
+				// 对目标造成3点伤害
+				p.minionGetDamageOrHeal(target, dmg);
+				// 调用发掘方法
+				p.drawACard(p.handleExcavation().cardIDenum, ownplay, true);
+
+			}
 		}
 		public override PlayReq[] GetPlayReqs()
 		{

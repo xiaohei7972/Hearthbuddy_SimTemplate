@@ -11,7 +11,14 @@ namespace HREngine.Bots
 	//<b>战吼，快枪，亡语：</b><b>发掘</b>一个宝藏。
 	class Sim_WW_417 : SimTemplate
 	{
-		
-		
+        public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
+			p.drawACard(p.handleExcavation().cardIDenum, own.own, true);
+        }
+
+		public override void onDeathrattle(Playfield p, Minion m)
+		{
+			p.drawACard(p.handleExcavation().cardIDenum, m.own, true);
+		}
 	}
 }

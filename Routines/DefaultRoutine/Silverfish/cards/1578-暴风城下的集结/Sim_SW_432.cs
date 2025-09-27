@@ -10,15 +10,21 @@ namespace HREngine.Bots
 		//使一个随从获得+4/+2和<b>突袭</b>。当该随从死亡时，召唤一只科多兽。
 		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
-			p.minionGetBuffed(target, 4, 7);
-		}
+            
+			if (target != null)// && !target.immune)
+            {
+				p.minionGetBuffed(target, 4, 2);
+				p.minionGetRush(target);
+                target.enchs += " SW_432e";
+            }
+		}	
 
 		public override PlayReq[] GetPlayReqs()
         {
             return new PlayReq[] {
-                new PlayReq(CardDB.ErrorType2.REQ_TARGET_IF_AVAILABLE),
+                new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY),
                 new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET),
-                new PlayReq(CardDB.ErrorType2.REQ_ENEMY_TARGET),
+                new PlayReq(CardDB.ErrorType2.REQ_FRIENDLY_TARGET),
             };
         }
 	}

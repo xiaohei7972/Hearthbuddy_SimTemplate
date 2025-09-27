@@ -12,7 +12,7 @@ namespace HREngine.Bots
         {
             int dmg = (ownplay) ? p.getSpellDamageDamage(2) : p.getEnemySpellDamageDamage(2);
     
-            if (m.own == ownplay && hc.card.Secret) p.allMinionOfASideGetDamage(!ownplay, dmg, true);
+            if (m.own == ownplay && hc.card.Secret) p.allMinionOfASideGetDamage(!ownplay, dmg);
 
         }
 

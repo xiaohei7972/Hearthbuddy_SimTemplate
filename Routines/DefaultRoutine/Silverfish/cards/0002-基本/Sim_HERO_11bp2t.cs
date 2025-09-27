@@ -12,6 +12,12 @@ namespace HREngine.Bots
 	class Sim_HERO_11bp2t : SimTemplate
 	{
 		
-		
+		public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
+        {
+			if (triggerEffectMinion.own == turnEndOfOwner)
+			{
+				p.minionGetDestroyed(triggerEffectMinion);
+			}
+        }
 	}
 }

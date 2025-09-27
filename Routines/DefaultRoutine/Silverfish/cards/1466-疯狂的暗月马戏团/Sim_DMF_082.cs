@@ -12,7 +12,6 @@ namespace HREngine.Bots
 		{
             if (own.own)
             {
-                p.anzOwnRaidleader++;
                 foreach (Minion m in p.ownMinions)
                 {
                     if (own.entitiyID != m.entitiyID) p.minionGetBuffed(m, 1, 0);
@@ -33,7 +32,6 @@ namespace HREngine.Bots
         {
             if (own.own)
             {
-                p.anzOwnRaidleader--;
                 foreach (Minion m in p.ownMinions)
                 {
                     if (own.entitiyID != m.entitiyID) p.minionGetBuffed(m, -1, 0);

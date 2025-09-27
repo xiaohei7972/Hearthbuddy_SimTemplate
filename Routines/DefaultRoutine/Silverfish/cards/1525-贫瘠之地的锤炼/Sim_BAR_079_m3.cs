@@ -4,8 +4,8 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	class Sim_BAR_079_m3 : SimTemplate //* 超级魔像 Superior Golem
-	{
+    class Sim_BAR_079_m3 : SimTemplate //* 超级魔像 Superior Golem
+    {
         //{0}{1}
         //{0}{1}
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
@@ -105,7 +105,11 @@ namespace HREngine.Bots
             }
             if (hc.enchs.Contains(CardDB.cardIDEnum.BAR_079t12c))
             {
-                p.allMinionOfASideGetDamage(false, 0, true);
+                List<Minion> temp = (own.own) ? p.enemyMinions : p.ownMinions;
+                foreach (Minion t in temp)
+                {
+                    p.minionGetFrozen(t);
+                }
             }
             if (hc.enchs.Contains(CardDB.cardIDEnum.BAR_079t13))
             {

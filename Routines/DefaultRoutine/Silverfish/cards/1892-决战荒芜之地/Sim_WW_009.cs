@@ -16,8 +16,7 @@ namespace HREngine.Bots
 			if (target != null)
 			{
 				p.minionGetFrozen(target);
-				CardDB.Card treasure = p.handleExcavation();
-				p.drawACard(treasure.cardIDenum, ownplay, true);
+				p.drawACard(p.handleExcavation().cardIDenum, ownplay, true);
 			}
 		}
 

@@ -13,10 +13,8 @@ namespace HREngine.Bots
 	{
 		public override void OnSpellburst(Playfield p, Minion m, Handmanager.Handcard hc)
 		{
-			if (hc.manacost == 0) p.evaluatePenality += 10; // 法力值消耗为0时，惩罚值增加10
-
-			p.minionGetBuffed(p.ownHero, 8, 0); 
-			p.minionGetArmor(p.ownHero, 8); // 使英雄获得8点护甲值
+			p.minionGetTempBuff(m.own ? p.ownHero : p.enemyHero, 8, 0); 
+			p.minionGetArmor(m.own ? p.ownHero : p.enemyHero, 8); // 使英雄获得8点护甲值
 		}
 		
 	}

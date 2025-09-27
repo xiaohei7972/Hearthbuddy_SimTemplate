@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//<b>亡语：</b><b>发掘</b>一个宝藏。
 	class Sim_WW_412 : SimTemplate
 	{
-		
+		public override void onDeathrattle(Playfield p, Minion m)
+		{
+			p.drawACard(p.handleExcavation().cardIDenum, m.own, true);
+		}
 		
 	}
 }

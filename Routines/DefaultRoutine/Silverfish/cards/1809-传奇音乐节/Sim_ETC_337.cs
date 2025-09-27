@@ -11,7 +11,25 @@ namespace HREngine.Bots
 	//<b>圣盾</b>。你的<b>圣盾</b>随从拥有+2攻击力。
 	class Sim_ETC_337 : SimTemplate
 	{
-		
-		
+		public override void onAuraStarts(Playfield p, Minion m)
+		{
+			List<Minion> minions = m.own ? p.ownMinions : p.enemyMinions;
+			foreach (Minion minion in minions)
+			{
+				if (minion.divineshild)
+					p.minionGetBuffed(minion, 0, 2);
+			}
+		}
+
+		public override void onAuraEnds(Playfield p, Minion m)
+		{
+			List<Minion> minions = m.own ? p.ownMinions : p.enemyMinions;
+			foreach (Minion minion in minions)
+			{
+				if (minion.divineshild)
+					p.minionGetBuffed(minion, 0, -2);
+			}
+		}
+
 	}
 }

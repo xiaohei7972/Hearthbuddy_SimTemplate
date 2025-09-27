@@ -11,20 +11,17 @@ namespace HREngine.Bots
 	//<b>突袭</b>。在一个友方随从死亡后，消耗3份<b>残骸</b>以获得<b>复生</b>。
 	class Sim_DINO_416 : SimTemplate
 	{
-        public override void onMinionDiedTrigger(Playfield p, Minion triggerEffectMinion, Minion diedMinion)
-        {
+		public override void onMinionDiedTrigger(Playfield p, Minion triggerEffectMinion, Minion diedMinion)
+		{
 			if (triggerEffectMinion.own == diedMinion.own)
 			{
-				if (!triggerEffectMinion.reborn)
+				if (!triggerEffectMinion.reborn && p.getCorpseCount() >= 3)
 				{
-					if (p.getCorpseCount() >= 3)
-					{
-						p.corpseConsumption(3);
-						triggerEffectMinion.reborn = true;
-					}
+					p.corpseConsumption(3);
+					triggerEffectMinion.reborn = true;
 				}
 			}
-        }
-		
+		}
+
 	}
 }

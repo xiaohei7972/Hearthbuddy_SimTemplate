@@ -11,7 +11,11 @@ namespace HREngine.Bots
 	//<b>亡语：</b>获取一张淤泥桶。<i>有毒废弃物：请妥善处理。</i>
 	class Sim_WW_044 : SimTemplate
 	{
-		
-		
+		public override void onDeathrattle(Playfield p, Minion m)
+		{
+			p.drawACard(CardDB.cardIDEnum.WW_044t, m.own, true);
+
+		}
+
 	}
 }

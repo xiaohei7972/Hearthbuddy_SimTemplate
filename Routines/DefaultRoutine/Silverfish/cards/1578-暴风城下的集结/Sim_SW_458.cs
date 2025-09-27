@@ -10,9 +10,9 @@ namespace HREngine.Bots
 		//使一个随从获得+2/+2和攻击时具有<b>免疫</b>。当该随从死亡时，召唤一只山羊。
 		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
-            p.minionGetBuffed(target, 2, 2);
 			if (target != null)// && !target.immune)
             {
+                p.minionGetBuffed(target, 2, 2);
                 target.immuneWhileAttacking = true;
                 target.enchs += " SW_458e";
             }

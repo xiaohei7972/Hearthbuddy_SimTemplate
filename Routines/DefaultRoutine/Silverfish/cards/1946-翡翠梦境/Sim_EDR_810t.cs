@@ -25,7 +25,7 @@ namespace HREngine.Bots
                 //TAG_SCRIPT_DATA_NUM_1是一般炉石科技区里说的tag2,里面记录这卡会用到的数值
                 if (target != null)
                 {
-                    p.minionGetBuffed(target, 0, -triggerEffectMinion.handcard.card.TAG_SCRIPT_DATA_NUM_1);
+                    p.minionGetBuffed(target, 0, -Math.Max(triggerEffectMinion.handcard.card.TAG_SCRIPT_DATA_NUM_1,target.Hp ));
                     p.minionGetBuffed(triggerEffectMinion.own ? p.ownHero : p.enemyHero, 0, triggerEffectMinion.handcard.card.TAG_SCRIPT_DATA_NUM_1);
                 }
             }

@@ -11,6 +11,16 @@ namespace HREngine.Bots
 		
 		
 
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
+            if (target != null)
+            {
+                p.minionGetBuffed(target, 2, 2);
+
+                target.enchs += "SCH_136e2";
+            }
+        }
+
         public override PlayReq[] GetPlayReqs()
         {
             return new PlayReq[] {

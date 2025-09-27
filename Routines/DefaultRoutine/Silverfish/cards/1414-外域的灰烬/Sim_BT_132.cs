@@ -11,6 +11,20 @@ namespace HREngine.Bots
 		
 		
 
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
+            if (target != null)
+            {
+                p.minionGetBuffed(target, 1, 3);
+                if (!target.taunt)
+                {
+                    if (target.own) p.anzOwnTaunt++;
+                    else p.anzEnemyTaunt++;
+                    target.taunt = true;
+                }
+            }
+        }
+
         public override PlayReq[] GetPlayReqs()
         {
             return new PlayReq[] {

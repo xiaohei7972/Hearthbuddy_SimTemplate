@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//<b>战吼：</b>召唤两个3/4并具有<b>冲锋</b>的狂热者。在本局对战中，你的星灵随从牌的法力值消耗减少（2）点。
 	class Sim_SC_754 : SimTemplate
 	{
-		
-		
+		CardDB.Card kid = CardDB.Instance.getCardDataFromID(CardDB.cardIDEnum.SC_751t); // 狂热者
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			int pos = own.own ? p.ownMinions.Count : p.enemyMinions.Count;
+			p.callKid(kid, pos, own.own);
+			p.callKid(kid, pos, own.own);
+		}
+
 	}
 }

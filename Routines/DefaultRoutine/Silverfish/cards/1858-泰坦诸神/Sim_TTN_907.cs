@@ -11,7 +11,14 @@ namespace HREngine.Bots
 	//在你的回合结束时，如果本随从未攻击，抽两张牌。
 	class Sim_TTN_907 : SimTemplate
 	{
-		
+		public override void onTurnEndsTrigger(Playfield p, Minion triggerEffectMinion, bool turnEndOfOwner)
+        {
+			if (triggerEffectMinion.own == turnEndOfOwner && triggerEffectMinion.numAttacksThisTurn == 0)
+			{
+				p.drawACard(CardDB.cardIDEnum.None, triggerEffectMinion.own);
+				p.drawACard(CardDB.cardIDEnum.None, triggerEffectMinion.own);
+			}
+        }
 		
 	}
 }

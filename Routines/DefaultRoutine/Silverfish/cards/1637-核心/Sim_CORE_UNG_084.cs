@@ -11,7 +11,19 @@ namespace HREngine.Bots
 	//<b>战吼：</b>造成3点伤害。
 	class Sim_CORE_UNG_084 : SimTemplate
 	{
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
+            if (target != null)
+                p.minionGetDamageOrHeal(target, 3);
+        }
+
+        public override PlayReq[] GetPlayReqs()
+        {
+            return new PlayReq[] {
+                new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY),
+                // new PlayReq(CardDB.ErrorType2.REQ_ENEMY_TARGET),
+            };
+        }
 		
 	}
 }

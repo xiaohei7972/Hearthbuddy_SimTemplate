@@ -11,7 +11,31 @@ namespace HREngine.Bots
 	//<b>嘲讽</b>。相邻随从在攻击时<b>免疫</b>。
 	class Sim_CORE_TOY_102 : SimTemplate
 	{
-		
+		public override void onAuraStarts(Playfield p, Minion m)
+		{
+			List<Minion> minions = m.own ? p.ownMinions : p.enemyMinions;
+			foreach (Minion minion in minions)
+			{
+				if (minion.entitiyID == m.entitiyID) continue;
+				if (minion.zonepos == m.zonepos + 1 || minion.zonepos == m.zonepos - 1)
+				{
+					minion.immuneWhileAttacking = true;
+				}
+			}
+		}
+
+		public override void onAuraEnds(Playfield p, Minion m)
+		{
+			List<Minion> minions = m.own ? p.ownMinions : p.enemyMinions;
+			foreach (Minion minion in minions)
+			{
+				if (minion.entitiyID == m.entitiyID) continue;
+				if (minion.zonepos == m.zonepos + 1 || minion.zonepos == m.zonepos - 1)
+				{
+					minion.immuneWhileAttacking = false;
+				}
+			}
+		}
 		
 	}
 }

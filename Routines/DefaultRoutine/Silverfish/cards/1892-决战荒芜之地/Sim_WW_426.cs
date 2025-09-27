@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//<b>战吼：发掘</b>一个宝藏。你每有一张手牌，便随机对一个敌人造成1点伤害。
 	class Sim_WW_426 : SimTemplate
 	{
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			// 触发发掘效果
+			p.drawACard(p.handleExcavation().cardIDenum, own.own, true);
+			int cardNumber = own.own ? p.owncards.Count : p.enemyAnzCards;
+			p.allCharsOfASideGetRandomDamage(!own.own, cardNumber);
+		}
 		
 	}
 }

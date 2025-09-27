@@ -11,7 +11,7 @@ namespace HREngine.Bots
 		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
 		{
             int dmg = (ownplay) ? p.getSpellDamageDamage(2) : p.getEnemySpellDamageDamage(2);
-            p.allMinionOfASideGetDamage(!ownplay, dmg, true);
+            p.allMinionOfASideGetDamage(!ownplay, dmg);
 			List<Minion> temp = (ownplay) ? p.enemyMinions : p.ownMinions;
             foreach (Minion t in temp)
             {
@@ -19,12 +19,5 @@ namespace HREngine.Bots
             }
 		}
 
-        public override PlayReq[] GetPlayReqs()
-        {
-            return new PlayReq[] {
-                new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY), //需要一个目标
-                new PlayReq(CardDB.ErrorType2.REQ_ENEMY_TARGET),//目标只能是敌方
-            };
-        }
 	}
 }

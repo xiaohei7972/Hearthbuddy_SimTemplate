@@ -11,7 +11,11 @@ namespace HREngine.Bots
 	//你的深渊诅咒会为你恢复等同于其造成伤害的生命值。<b>战吼：</b>使你的对手获得一张深渊诅咒。
 	class Sim_TSC_959 : SimTemplate
 	{
-		
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			p.drawACard(CardDB.cardIDEnum.TSC_955t, !own.own, true);
+
+		}
+
 	}
 }

@@ -8,13 +8,16 @@ namespace HREngine.Bots
 //Deal $6 damage.
 //造成$6点伤害。 
 	{
-		
-		
-		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
-		{
-            int dmg = (ownplay) ? p.getSpellDamageDamage(6) : p.getEnemySpellDamageDamage(6);
-            p.minionGetDamageOrHeal(target, dmg);
-		}
+
+
+        public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
+            if (target != null)
+            {
+                int dmg = (ownplay) ? p.getSpellDamageDamage(6) : p.getEnemySpellDamageDamage(6);
+                p.minionGetDamageOrHeal(target, dmg);
+            }
+        }
 
         public override PlayReq[] GetPlayReqs()
         {

@@ -11,12 +11,21 @@ namespace HREngine.Bots
 	//<b>战吼：</b>造成5点伤害。获得8点护甲值。
 	class Sim_TID_716 : SimTemplate
 	{
-		
-				 public override PlayReq[] GetPlayReqs()
-        {
-            return new PlayReq[] {
-                new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY),
-            };
-        }
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+		{
+			if (target != null)
+			{
+				p.minionGetDamageOrHeal(target, 5);
+				p.minionGetArmor(own.own ? p.ownHero : p.enemyHero, 8);
+			}
+		}
+
+		public override PlayReq[] GetPlayReqs()
+		{
+			return new PlayReq[] {
+				new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY),
+			};
+		}
+
 	}
 }
