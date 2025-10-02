@@ -10518,7 +10518,7 @@ namespace HREngine.Bots
         public void minionSetAngrToX(Minion m, int newAngr)
         {
             // 如果随从未被沉默，并且是光耀之子（lightspawn），则不改变其攻击力
-            if (!m.silenced && m.name == CardDB.cardNameEN.lightspawn) return;
+            // if (!m.silenced && m.name == CardDB.cardNameEN.lightspawn) return;
 
             // 设置随从的攻击力为新值，并重置临时攻击力增益
             m.Angr = newAngr;

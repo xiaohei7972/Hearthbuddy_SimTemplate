@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//英雄技能 中立 费用：2
+	//英雄技能 中立 费用：1
 	//Boon of Light
 	//圣光恩泽
 	//Give a minion<b>Divine Shield</b>.

@@ -7,8 +7,8 @@ namespace HREngine.Bots
 	//随从 牧师 费用：0 攻击力：4 生命值：4
 	//Tuskarr Raider
 	//海象人海盗
-	//<b>Battlecry:</b> Give a minion +@/+@. <i>(Improved by each Pirate you've played this game!)</i>
-	//<b>战吼：</b>使一个随从获得+@/+@。<i>（在本局对战中，你每使用过一个海盗都会提升！）</i>
+	//<b>Battlecry, Deathrattle, and Rally:</b> Get a random <b>Bounty</b>.
+	//<b>战吼，亡语，进击：</b>随机获取一张<b>悬赏令</b>。
 	class Sim_TB_BaconShop_HERO_18_Buddy : SimTemplate
 	{
 		

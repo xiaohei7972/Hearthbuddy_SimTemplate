@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：4 生命值：12
+	//随从 战士 费用：0 攻击力：4 生命值：16
 	//Roaring Recruiter
 	//咆哮募兵龙
 	//Whenever another friendly Dragon attacks, give it +{0}/+{1}.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：8 生命值：8
+	//随从 战士 费用：0 攻击力：6 生命值：6
 	//Tarecgosa
 	//泰蕾苟萨
 	//This permanently keeps <b><b>Bonus Keyword</b>s</b> and double stats gained in combat.

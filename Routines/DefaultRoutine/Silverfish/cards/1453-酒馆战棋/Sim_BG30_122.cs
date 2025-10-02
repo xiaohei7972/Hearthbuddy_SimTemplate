@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 萨满祭司 费用：0 攻击力：6 生命值：6
+	//随从 萨满祭司 费用：0 攻击力：8 生命值：6
 	//Mrglin' Burglar
 	//鱼人蟊贼
 	//[x]After you play a Murloc,give a friendly minion anda minion in your hand+{0}/+{1}.

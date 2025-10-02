@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：0 攻击力：6 生命值：4
+	//随从 巫妖王 费用：0 攻击力：4 生命值：2
 	//Campfire Shadow
 	//营火幽影
 	//<b>Rally:</b> Get a plain copy of a random enemy minion.

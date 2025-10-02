@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：4 生命值：4
+	//随从 战士 费用：0 攻击力：2 生命值：2
 	//Prized Promo-Drake
 	//珍稀增强幼龙
 	//<b>Start of Combat:</b> Give your Dragons +{0}/+{1}.

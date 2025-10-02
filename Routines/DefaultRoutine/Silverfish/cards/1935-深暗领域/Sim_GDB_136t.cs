@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Microsoft.Scripting.Utils;
 
 namespace HREngine.Bots
 {
@@ -11,7 +12,8 @@ namespace HREngine.Bots
 	//<b><b>法术迸发</b>：</b>吸收法术的能量！@施放{0}。
 	class Sim_GDB_136t : SimTemplate
 	{
-		PlayReq[] playReqs = new PlayReq[] { };
+		CardDB.Card card = null;
+		PlayReq[] playReqs = new PlayReq[]{ };
 		public override void useLocation(Playfield p, Minion triggerMinion, Minion target)
 		{
 			if (p.mana < p.ownMaxMana)
@@ -35,6 +37,7 @@ namespace HREngine.Bots
 
 		public override PlayReq[] GetUseAbilityReqs()
 		{
+			playReqs.AddRange(card.sim_card.GetPlayReqs());
 			return playReqs;
 		}
 

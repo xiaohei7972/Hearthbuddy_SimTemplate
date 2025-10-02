@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 牧师 费用：3 攻击力：1 生命值：3
+	//随从 牧师 费用：3 攻击力：2 生命值：4
 	//Costume Merchant
 	//装扮商贩
 	//[x]<b>Battlecry:</b> Get a randomMask from another class._<b>Combo:</b> It costs (2) less.

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：0 攻击力：0 生命值：14
+	//随从 巫妖王 费用：0 攻击力：5 生命值：10
 	//Monstrosity
 	//怪物
 	//After a friendly minion dies, gain its Attack.

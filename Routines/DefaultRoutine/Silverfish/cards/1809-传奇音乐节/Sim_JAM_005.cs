@@ -13,10 +13,11 @@ namespace HREngine.Bots
 	{
 		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
 		{
-			if (target != null && target.own && (target.handcard.card.deathrattle || target.deathrattle2 != null))
+			// if (target != null && target.own && (target.handcard.card.deathrattle || target.deathrattle2 != null))
+			if (target != null)
 			{
-				target.handcard.card.sim_card.onDeathrattle(p, target);
-				target.handcard.card.sim_card.onDeathrattle(p, target);
+				p.doDeathrattles(new List<Minion> { target });
+				p.doDeathrattles(new List<Minion> { target });
 			}
 		}
 		public override PlayReq[] GetPlayReqs()

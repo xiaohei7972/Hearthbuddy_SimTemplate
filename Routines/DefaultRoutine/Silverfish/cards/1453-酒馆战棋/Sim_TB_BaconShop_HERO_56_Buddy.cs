@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 战士 费用：0 攻击力：6 生命值：6
+	//随从 战士 费用：0 攻击力：7 生命值：7
 	//Vaelastrasz
 	//瓦拉斯塔兹
-	//<b>Battlecry and Start of Combat:</b> Give your other minions +3/+3.
-	//<b>战吼，战斗开始时：</b>使你的其他随从获得+3/+3。
+	//<b>Rally:</b> Get a random Dragon.
+	//<b>进击：</b>随机获取一张龙牌。
 	class Sim_TB_BaconShop_HERO_56_Buddy : SimTemplate
 	{
 		

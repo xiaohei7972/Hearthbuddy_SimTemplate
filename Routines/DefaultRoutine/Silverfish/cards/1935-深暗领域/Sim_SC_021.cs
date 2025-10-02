@@ -11,7 +11,16 @@ namespace HREngine.Bots
 	//使你的随从获得+1攻击力，使你的异虫额外获得+1/+1。
 	class Sim_SC_021 : SimTemplate
 	{
-		
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+		{
+			List<Minion> minions = ownplay ? p.ownMinions : p.enemyMinions;
+			foreach (Minion minion in minions)
+			{
+				p.minionGetBuffed(minion, 1, 0);
+				if (minion.handcard.card.Zerg)
+					p.minionGetBuffed(minion, 1, 1);
+			}
+		}
+
 	}
 }

@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_094: SimTemplate //* 堕落残阳祭司 Fallen Sun Cleric
-//<b>Battlecry:</b> Give a friendly minion +1/+1.
-//<b>战吼：</b>使一个友方随从获得+1/+1。 
+    //* 堕落残阳祭司 Fallen Sun Cleric
+    //<b>Battlecry:</b> Give a friendly minion +1/+1.
+    //<b>战吼：</b>使一个友方随从获得+1/+1。 
+    class Sim_ICC_094 : SimTemplate
     {
-        
 
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {

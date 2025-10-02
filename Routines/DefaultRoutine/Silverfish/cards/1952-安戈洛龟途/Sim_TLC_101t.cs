@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 无效的 费用：1 攻击力：2 生命值：1
+	//随从 中立 费用：1 攻击力：2 生命值：1
 	//Nesting Raptor
 	//巢居迅猛龙
 	//<b>Rush</b>

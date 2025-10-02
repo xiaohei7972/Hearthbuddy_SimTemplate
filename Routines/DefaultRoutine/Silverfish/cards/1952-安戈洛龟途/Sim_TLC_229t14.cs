@@ -11,7 +11,11 @@ namespace HREngine.Bots
 	//<b>突袭</b>。<b>战吼：</b><b>进化</b>两次。在本局对战的剩余时间内，使你使用的随从获得这些<b><b>进化</b>选项</b>。
 	class Sim_TLC_229t14 : SimTemplate
 	{
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
+			p.getBestAdapt(own);
+			p.getBestAdapt(own);
+        }
 		
 	}
 }

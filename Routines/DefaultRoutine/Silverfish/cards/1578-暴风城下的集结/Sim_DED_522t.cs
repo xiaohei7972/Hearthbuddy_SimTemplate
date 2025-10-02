@@ -1,14 +1,17 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace HREngine.Bots
 {
-    //* 曲奇的搅汤棒 Cookie the Cook
-    //吸血，亡语：装备一把2/3并具有吸血的搅汤棒。
-    //Lifesteal Deathrattle: Equip a 2/3 Stirring Rod with Lifesteal.
-    class Sim_DED_522t : SimTemplate
-    {
-        
-    }
+	//武器 萨满祭司 费用：3 攻击力：2 耐久度：0
+	//Cookie's Stirring Rod
+	//曲奇的搅汤棒
+	//<b>Lifesteal</b>
+	//<b>吸血</b>
+	class Sim_DED_522t : SimTemplate
+	{
+		
+		
+	}
 }

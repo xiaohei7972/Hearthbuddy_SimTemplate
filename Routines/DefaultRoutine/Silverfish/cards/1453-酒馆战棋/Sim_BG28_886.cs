@@ -7,8 +7,8 @@ namespace HREngine.Bots
 	//BATTLEGROUND_SPELL 中立 费用：1
 	//Staff of Enrichment
 	//富足之杖
-	//Minions in the Tavernhave +{0}/+{1} this game.
-	//在本局对战中，酒馆中的随从拥有+{0}/+{1}。
+	//Give minions in the Tavern +{0}/+{1}this game.
+	//使酒馆中的随从在本局对战中获得+{0}/+{1}。
 	class Sim_BG28_886 : SimTemplate
 	{
 		

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：8 攻击力：7 生命值：7
+	//随从 猎人 费用：6 攻击力：7 生命值：5
 	//Ankylodon
 	//甲龙
 	//[x]<b><b>Taunt</b>. Deathrattle:</b> Summontwo random 3-Cost Beasts._They attack random enemies._

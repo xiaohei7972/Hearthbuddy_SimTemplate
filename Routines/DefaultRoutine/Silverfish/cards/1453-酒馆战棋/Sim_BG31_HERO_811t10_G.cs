@@ -7,8 +7,8 @@ namespace HREngine.Bots
 	//随从 中立 费用：0 攻击力：4 生命值：4
 	//Ultralisk
 	//雷兽
-	//[x]Also damages adjacentminions. <b>Start of Combat:</b>Triple this minion's stats.<i>(Morphs each turn!)</i>
-	//同时对其攻击目标相邻的随从造成伤害。<b>战斗开始时：</b>本随从的属性值变为三倍。<i>（每回合变异！）</i>
+	//[x]Also damages adjacentminions. <b>Start of Combat:</b>Triple this minion's stats.<i>(Morphs each turn!)</i>@[x]Also damages adjacentminions.<b>Start of Combat:</b> Triplethis minion's stats.
+	//同时对其攻击目标相邻的随从造成伤害。<b>战斗开始时：</b>本随从的属性值变为三倍。<i>（每回合变异！）</i>@同时对其攻击目标相邻的随从造成伤害。<b>战斗开始时：</b>本随从的属性值变为三倍。
 	class Sim_BG31_HERO_811t10_G : SimTemplate
 	{
 		

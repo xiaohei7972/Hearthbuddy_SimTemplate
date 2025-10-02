@@ -11,7 +11,13 @@ namespace HREngine.Bots
 	//在本随从攻击英雄后，<b>进化</b>。
 	class Sim_UNG_075 : SimTemplate
 	{
-		
+        public override void afterMinionAttack(Playfield p, Minion attacker, Minion defender, bool dontcount)
+        {
+			if (defender.isHero)
+			{
+				p.getBestAdapt(attacker);
+			}
+        }
 		
 	}
 }

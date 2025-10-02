@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_ANOMALY 无效的 费用：0
+	//BATTLEGROUND_ANOMALY 中立 费用：0
 	//Audience's Choice
 	//大众之选
 	//[x]At the start of each turn,one player chooses acard for ALL players toget at end of turn.

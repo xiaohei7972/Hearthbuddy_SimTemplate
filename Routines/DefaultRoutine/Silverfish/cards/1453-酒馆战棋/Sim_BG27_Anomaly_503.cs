@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//BATTLEGROUND_ANOMALY 无效的 费用：0
+	//BATTLEGROUND_ANOMALY 中立 费用：0
 	//The Yogg-iseum
 	//尤格专场
 	//At the start of each turn, spin the SAME Wheel of Yogg-Saron.

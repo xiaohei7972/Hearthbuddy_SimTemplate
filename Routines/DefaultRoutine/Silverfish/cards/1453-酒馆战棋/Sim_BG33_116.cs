@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：0 攻击力：3 生命值：8
+	//随从 巫妖王 费用：0 攻击力：4 生命值：9
 	//Oranomonos, the Wilted
 	//“凋零之枝”奥拉诺莫诺斯
 	//[x]After a friendly minion is<b>Reborn</b>, your Undead have+{0} Attack this game<i>(wherever they are)</i>.

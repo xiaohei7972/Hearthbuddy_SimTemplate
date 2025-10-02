@@ -4,12 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-    class Sim_ICC_903: SimTemplate //* 血色狂欢者 Sanguine Reveler
-//<b>Battlecry:</b> Destroy a friendly minion and gain_+2/+2.
-//<b>战吼：</b>消灭一个友方随从，并获得+2/+2。 
+    //* 血色狂欢者 Sanguine Reveler
+    //<b>Battlecry:</b> Destroy a friendly minion and gain_+2/+2.
+    //<b>战吼：</b>消灭一个友方随从，并获得+2/+2。
+    class Sim_ICC_903 : SimTemplate
     {
-        
-
         public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
         {
             if (target != null)

@@ -7,8 +7,8 @@ namespace HREngine.Bots
 	//随从 猎人 费用：0 攻击力：2 生命值：3
 	//Crabby
 	//大钳蟹
-	//After your Hero Power deals damage, give adjacent minions stats equal to the damage dealt.
-	//在你的英雄技能造成伤害后，使相邻的随从获得等同于所造成伤害的属性值。
+	//After you remove a minion with 'Lock and Load,' get a plain copy of it.
+	//在你用“子弹上膛”移除一个随从后，获取它的一张原始版复制。
 	class Sim_BG22_HERO_000_Buddy : SimTemplate
 	{
 		

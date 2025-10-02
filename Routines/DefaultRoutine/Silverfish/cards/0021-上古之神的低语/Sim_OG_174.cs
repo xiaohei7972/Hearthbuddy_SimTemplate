@@ -14,8 +14,8 @@ namespace HREngine.Bots
 		{
             if (target != null)
 			{
-				own.Hp = target.Hp;
-				own.Angr = target.Angr;
+				p.minionSetAngrToX(own,target.Angr);
+				p.minionSetLifetoX(own,target.Hp);
 			}
 		}
 

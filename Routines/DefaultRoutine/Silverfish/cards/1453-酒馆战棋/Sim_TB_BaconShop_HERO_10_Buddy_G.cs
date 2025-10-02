@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 中立 费用：0 攻击力：12 生命值：6
+	//随从 中立 费用：0 攻击力：12 生命值：10
 	//Bilgewater Mogul
 	//锈水大亨
-	//[x]<b>Choose One - </b>Give a minion+@ Attack; or +@ Health.<i>(Improved by each Gold____you've spent this turn!)</i>
-	//<b>抉择：</b>使一个随从获得+@攻击力；或者+@生命值。<i>（在本回合中你每花费一枚铸币都会提升！）</i>
+	//At the end of your turn, increase your maximum Gold by 2.
+	//在你的回合结束时，你的铸币上限提高2枚。
 	class Sim_TB_BaconShop_HERO_10_Buddy_G : SimTemplate
 	{
 		

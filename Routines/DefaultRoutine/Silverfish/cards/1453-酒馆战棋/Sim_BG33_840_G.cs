@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：0 攻击力：8 生命值：8
+	//随从 猎人 费用：0 攻击力：6 生命值：6
 	//Stomping Stegodon
 	//重踏剑龙
 	//[x]<b>Rally:</b> Give your otherBeasts +{0} Attack andthis <b>Rally</b>.@[x]<b>Rally:</b> Give your otherBeasts +{0}/+{1} andthis <b>Rally</b>.

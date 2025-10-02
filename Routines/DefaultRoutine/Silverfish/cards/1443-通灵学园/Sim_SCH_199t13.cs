@@ -11,7 +11,10 @@ namespace HREngine.Bots
 	//<b>战吼：</b><b>进化</b>。
 	class Sim_SCH_199t13 : SimTemplate
 	{
-		
+		public override void getBattlecryEffect(Playfield p, Minion own, Minion target, int choice)
+        {
+			p.getBestAdapt(own);
+        }
 		
 	}
 }

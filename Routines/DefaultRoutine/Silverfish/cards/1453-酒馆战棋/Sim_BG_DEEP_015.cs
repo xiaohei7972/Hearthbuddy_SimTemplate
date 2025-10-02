@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 巫妖王 费用：3 攻击力：3 生命值：1
+	//随从 巫妖王 费用：0 攻击力：3 生命值：1
 	//Prosthetic Hand
 	//义肢假手
 	//<b>Magnetic</b>, <b>Reborn</b>Can <b>Magnetize</b> toMechs or Undead.

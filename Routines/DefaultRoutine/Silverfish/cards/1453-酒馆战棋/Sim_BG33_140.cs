@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 萨满祭司 费用：0 攻击力：2 生命值：1
+	//随从 萨满祭司 费用：0 攻击力：1 生命值：1
 	//River Skipper
 	//江河弹跳鱼
 	//When you sell this, get a random Tier 1 minion.

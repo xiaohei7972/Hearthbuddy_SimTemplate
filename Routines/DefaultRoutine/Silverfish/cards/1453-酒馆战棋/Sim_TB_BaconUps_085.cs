@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：0 攻击力：10 生命值：10
+	//随从 猎人 费用：0 攻击力：12 生命值：12
 	//Goldrinn, the Great Wolf
 	//巨狼戈德林
 	//<b>Deathrattle:</b> For the rest of this combat, your Beasts have +{0}/+{1}.

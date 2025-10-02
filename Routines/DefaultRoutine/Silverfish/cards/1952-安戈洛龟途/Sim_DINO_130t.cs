@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 德鲁伊 费用：1 攻击力：1 生命值：2
+	//随从 德鲁伊 费用：3 攻击力：3 生命值：3
 	//Little Longneck
 	//小小长颈龙
 	//

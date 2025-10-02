@@ -4,11 +4,11 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 牧师 费用：0 攻击力：4 生命值：7
+	//随从 牧师 费用：0 攻击力：4 生命值：5
 	//Shining Sailor
 	//辉金水手
-	//After you buy 2 Pirates, gain +1/+1 and add a Pirate to the Tavern. <i>(@ left!)</i>
-	//在你购买2个海盗后，获得+1/+1并在酒馆中添加一个海盗。<i>（还剩@个）</i>
+	//<b>Divine Shield</b>The Tavern offers an extra Pirate whenever it is <b>Refreshed</b>.
+	//<b>圣盾</b>。每当酒馆<b>刷新</b>时，总会额外提供一个海盗。
 	class Sim_BG26_HERO_101_Buddy : SimTemplate
 	{
 		

@@ -7,8 +7,8 @@ namespace HREngine.Bots
 	//英雄技能 中立 费用：0
 	//Stay Frosty
 	//冰冷静滞
-	//[x]<b>Freeze</b> a card in the Tavern.<b>Passive:</b> At the end of yourturn, <b>Frozen</b> minionsget +2/+2.
-	//<b>冻结</b>酒馆中的一张牌。<b>被动：</b>在你的回合结束时，被<b>冻结</b>的随从获得+2/+2。
+	//[x]<b><b>Passive</b>.</b> Minions cost (2).The Tavern offers onefewer minion and <b><b>Freeze</b>s</b>at the end of each turn.
+	//<b><b>被动</b></b>随从消耗(2)枚铸币。酒馆中提供的随从减少一个，且每回合结束时都会<b><b>冻结</b></b>。
 	class Sim_TB_BaconShop_HP_014 : SimTemplate
 	{
 		

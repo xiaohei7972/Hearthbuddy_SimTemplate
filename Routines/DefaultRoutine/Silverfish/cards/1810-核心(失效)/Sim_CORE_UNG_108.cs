@@ -11,7 +11,23 @@ namespace HREngine.Bots
 	//使一个友方随从获得+1/+1，然后获得等同于其攻击力的护甲值。
 	class Sim_CORE_UNG_108 : SimTemplate
 	{
-		
+		public override void onCardPlay(Playfield p, bool ownplay, Minion target, int choice)
+        {
+            if (target != null)
+            {
+                p.minionGetBuffed(target, 1, 1);
+                p.minionGetArmor(ownplay ? p.ownHero : p.enemyHero, target.Angr);
+            }
+        }
+
+        public override PlayReq[] GetPlayReqs()
+        {
+            return new PlayReq[] {
+                new PlayReq(CardDB.ErrorType2.REQ_TARGET_TO_PLAY),
+                new PlayReq(CardDB.ErrorType2.REQ_FRIENDLY_TARGET),
+                new PlayReq(CardDB.ErrorType2.REQ_MINION_TARGET),
+            };
+        }
 		
 	}
 }

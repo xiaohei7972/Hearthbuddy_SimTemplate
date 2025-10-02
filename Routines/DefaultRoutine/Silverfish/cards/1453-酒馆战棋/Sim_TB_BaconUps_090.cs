@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HREngine.Bots
 {
-	//随从 猎人 费用：0 攻击力：10 生命值：10
+	//随从 猎人 费用：0 攻击力：12 生命值：12
 	//Mama Bear
 	//熊妈妈
 	//Whenever you summon a Beast, give it +{0}/+{1}.
